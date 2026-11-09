@@ -9,7 +9,6 @@ import '../services/user_stats_service.dart';
 import 'saved_questions_screen.dart';
 import 'wrong_questions_screen.dart';
 import 'saved_current_affairs_screen.dart';
-import '../widgets/donation_widget.dart';
 import '../widgets/app_global_feedback_dialog.dart';
 import '../widgets/mastery_evolution_card.dart';
 import '../widgets/coaching_onboarding_cta_widget.dart';
@@ -616,8 +615,6 @@ class _ProfileScreenState extends State<ProfileScreen> {
               _sectionHead('🏫 Coaching Owners Ke Liye', '', headerTextColor),
               CoachingOnboardingCtaWidget(isDarkMode: isDark),
               const SizedBox(height: 16),
-              DonationWidget(isDarkMode: isDark),
-              const SizedBox(height: 14),
             Container(
               decoration: BoxDecoration(
                 gradient: LinearGradient(

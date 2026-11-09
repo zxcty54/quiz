@@ -1,8 +1,8 @@
-import 'dart:io';
 import 'package:flutter/material.dart';
-import 'package:http/http.dart' as http;
-import 'dart:convert';
 import '../services/knowledge_base_service.dart';
+import '../services/ai_explainer_service.dart';
+import '../services/ai_data_disclosure_service.dart';
+import '../widgets/report_ai_response_button.dart';
 
 class AiDoubtScreen extends StatefulWidget {
   final bool isDarkMode;
@@ -17,34 +17,21 @@ class _AiDoubtScreenState extends State<AiDoubtScreen> {
   final ScrollController _scrollController = ScrollController();
   
   bool _isLoading = false;
-  String _activeEngine = "Checking Engine...";
+  String _activeEngine = "☁️ Cloud AI (question/context sent to AI service)";
+  bool _isConsentPending = false;
   String _retrievedContext = "";
   List<Map<String, String>> _messages = [];
-
-  @override
-  void initState() {
-    super.initState();
-    _checkEngineMode();
-  }
-
-  // 🔍 Check whether Local Model exists in Downloads folder or fallback to Groq
-  Future<void> _checkEngineMode() async {
-    const localModelPath = '/storage/emulated/0/Download/gemma-2-2b-it-Q4_K_M.gguf';
-    final hasLocalModel = await File(localModelPath).exists();
-
-    setState(() {
-      if (hasLocalModel) {
-        _activeEngine = "📱 Local On-Device (Gemma-2B)";
-      } else {
-        _activeEngine = "⚡ Cloud Fallback (Groq Fast Testing)";
-      }
-    });
-  }
 
   // 🚀 Core Execution Pipeline (SQLite RAG + Inference)
   Future<void> _processQuery() async {
     final query = _queryController.text.trim();
-    if (query.isEmpty || _isLoading) return;
+    if (query.isEmpty || _isLoading || _isConsentPending) return;
+
+    setState(() => _isConsentPending = true);
+    final consented = await AiDataDisclosureService.requireConsent(context);
+    if (!mounted) return;
+    setState(() => _isConsentPending = false);
+    if (!consented) return;
 
     setState(() {
       _messages.add({"sender": "user", "text": query});
@@ -65,8 +52,8 @@ class _AiDoubtScreenState extends State<AiDoubtScreen> {
         _retrievedContext = "Retrieved in ${stopwatch.elapsedMilliseconds}ms:\n$contextText";
       });
 
-      // 2. Inference Execution (Cloud Groq Testing Pipeline)
-      final aiResponse = await _fetchGroqInference(query, contextText);
+      // 2. Inference runs through the server-side AI proxy.
+      final aiResponse = await _fetchAiInference(query, contextText);
 
       setState(() {
         _messages.add({"sender": "ai", "text": aiResponse});
@@ -86,48 +73,11 @@ class _AiDoubtScreenState extends State<AiDoubtScreen> {
     );
   }
 
-  Future<String> _fetchGroqInference(String question, String context) async {
-    const String groqApiKey = String.fromEnvironment('GROQ_API_KEY', defaultValue: '');
-    
-    // Assembled Master RAG Prompt
-    final prompt = """
-You are an expert exam tutor for BPSC/SSC candidates.
-Explain the answer in clear, crystal-clear Hinglish using the context provided if relevant.
-Keep explanation step-by-step with zero fluff.
-
-Context:
-$context
-
-Question:
-$question
-""";
-
-    if (groqApiKey.isEmpty) {
-      return "⚠️ GROQ_API_KEY dart-define secret missing. Context retrieved:\n$context";
-    }
-
-    final response = await http.post(
-      Uri.parse("https://api.groq.com/openai/v1/chat/completions"),
-      headers: {
-        "Authorization": "Bearer $groqApiKey",
-        "Content-Type": "application/json",
-      },
-      body: jsonEncode({
-        "model": "llama-3.1-8b-instant",
-        "messages": [
-          {"role": "user", "content": prompt}
-        ],
-        "temperature": 0.3,
-        "max_tokens": 500,
-      }),
+  Future<String> _fetchAiInference(String question, String context) {
+    return AiExplainerService.answerWithContext(
+      question: question,
+      context: context,
     );
-
-    if (response.statusCode == 200) {
-      final data = jsonDecode(utf8.decode(response.bodyBytes));
-      return data['choices'][0]['message']['content'] ?? "No response generated.";
-    } else {
-      return "API Error (${response.statusCode}): ${response.body}";
-    }
   }
 
   @override
@@ -169,30 +119,46 @@ $question
               itemBuilder: (context, index) {
                 final msg = _messages[index];
                 final isUser = msg['sender'] == 'user';
+                final messageText = msg['text'] ?? '';
+                final isGeneratedAnswer = !isUser &&
+                    !messageText.startsWith('❌ Error generating response:');
                 return Align(
                   alignment: isUser ? Alignment.centerRight : Alignment.centerLeft,
-                  child: Container(
-                    margin: const EdgeInsets.symmetric(vertical: 4),
-                    padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 10),
-                    constraints: BoxConstraints(maxWidth: MediaQuery.of(context).size.width * 0.8),
-                    decoration: BoxDecoration(
-                      color: isUser ? const Color(0xFF2563EB) : const Color(0xFFE2E8F0),
-                      borderRadius: BorderRadius.circular(12),
-                    ),
-                    child: Text(
-                      msg['text'] ?? '',
-                      style: TextStyle(
-                        color: isUser ? Colors.white : const Color(0xFF0F172A),
-                        fontSize: 13.5,
+                  child: Column(
+                    mainAxisSize: MainAxisSize.min,
+                    crossAxisAlignment:
+                        isUser ? CrossAxisAlignment.end : CrossAxisAlignment.start,
+                    children: [
+                      Container(
+                        margin: const EdgeInsets.symmetric(vertical: 4),
+                        padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 10),
+                        constraints: BoxConstraints(maxWidth: MediaQuery.of(context).size.width * 0.8),
+                        decoration: BoxDecoration(
+                          color: isUser ? const Color(0xFF2563EB) : const Color(0xFFE2E8F0),
+                          borderRadius: BorderRadius.circular(12),
+                        ),
+                        child: Text(
+                          messageText,
+                          style: TextStyle(
+                            color: isUser ? Colors.white : const Color(0xFF0F172A),
+                            fontSize: 13.5,
+                          ),
+                        ),
                       ),
-                    ),
+                      if (isGeneratedAnswer)
+                        ReportAiResponseButton(
+                          response: messageText,
+                          source: 'ai_doubt_tutor',
+                          isDarkMode: widget.isDarkMode,
+                        ),
+                    ],
                   ),
                 );
               },
             ),
           ),
 
-          if (_isLoading)
+          if (_isLoading || _isConsentPending)
             const Padding(
               padding: EdgeInsets.all(8.0),
               child: LinearProgressIndicator(minHeight: 2),

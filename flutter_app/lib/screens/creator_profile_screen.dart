@@ -3,6 +3,7 @@ import 'package:flutter/services.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
 
+import '../services/community_safety_service.dart';
 import 'creator_profile_header.dart';
 import 'creator_profile_tabs.dart';
 
@@ -241,6 +242,64 @@ class _CreatorProfileScreenState extends State<CreatorProfileScreen>
     } catch (_) {}
   }
 
+  Future<void> _reportCreator() async {
+    final targetHandle = widget.creatorHandle.trim();
+    final reporter = await CommunitySafetyService.currentReporterHandle();
+    if (!mounted ||
+        targetHandle.isEmpty ||
+        CommunitySafetyService.normalizeHandle(targetHandle) ==
+            CommunitySafetyService.normalizeHandle(reporter)) {
+      return;
+    }
+
+    await CommunitySafetyService.promptAndQueueModerationReport(
+      context,
+      reporterHandle: reporter,
+      targetType: 'community_user',
+      targetId: targetHandle,
+      targetHandle: targetHandle,
+      source: 'creator_profile',
+      contentExcerpt: (_profile?['name'] ?? _coaching?['name'] ?? targetHandle).toString(),
+      successMessage: 'Creator reported. Thank you; moderators will review it.',
+    );
+  }
+
+  Future<void> _confirmAndBlockCreator() async {
+    final targetHandle = widget.creatorHandle.trim();
+    final reporter = await CommunitySafetyService.currentReporterHandle();
+    if (!mounted ||
+        targetHandle.isEmpty ||
+        CommunitySafetyService.normalizeHandle(targetHandle) ==
+            CommunitySafetyService.normalizeHandle(reporter)) {
+      return;
+    }
+
+    final confirmed = await showDialog<bool>(
+      context: context,
+      builder: (dialogContext) => AlertDialog(
+        title: const Text('Block this creator?'),
+        content: const Text(
+          'Their community posts and comments will be hidden on this device. You can manage blocked users from Community Feed.',
+        ),
+        actions: [
+          TextButton(
+            onPressed: () => Navigator.of(dialogContext).pop(false),
+            child: const Text('Cancel'),
+          ),
+          FilledButton(
+            onPressed: () => Navigator.of(dialogContext).pop(true),
+            child: const Text('Block creator'),
+          ),
+        ],
+      ),
+    );
+    if (confirmed != true) return;
+
+    await CommunitySafetyService.blockUser(targetHandle);
+    if (!mounted) return;
+    Navigator.of(context).pop();
+  }
+
   @override
   Widget build(BuildContext context) {
     final isDark = widget.isDarkMode;
@@ -280,6 +339,33 @@ class _CreatorProfileScreenState extends State<CreatorProfileScreen>
                   ),
                   onPressed: () => Navigator.pop(context),
                 ),
+                actions: [
+                  PopupMenuButton<String>(
+                    tooltip: 'Creator safety options',
+                    onSelected: (value) {
+                      if (value == 'report') _reportCreator();
+                      if (value == 'block') _confirmAndBlockCreator();
+                    },
+                    itemBuilder: (context) => const [
+                      PopupMenuItem(
+                        value: 'report',
+                        child: ListTile(
+                          dense: true,
+                          leading: Icon(Icons.flag_outlined),
+                          title: Text('Report creator'),
+                        ),
+                      ),
+                      PopupMenuItem(
+                        value: 'block',
+                        child: ListTile(
+                          dense: true,
+                          leading: Icon(Icons.block_outlined),
+                          title: Text('Block creator'),
+                        ),
+                      ),
+                    ],
+                  ),
+                ],
                 flexibleSpace: FlexibleSpaceBar(
                   background: bannerUrl != null && bannerUrl.toString().trim().isNotEmpty
                       ? Image.network(bannerUrl.toString().trim(), fit: BoxFit.cover)

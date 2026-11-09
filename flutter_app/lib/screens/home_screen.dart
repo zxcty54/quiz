@@ -13,6 +13,7 @@ import 'package:app_links/app_links.dart';
 import '../models/question_model.dart';
 import '../services/challenge_service.dart';
 import '../services/ai_explainer_service.dart';
+import '../services/ai_data_disclosure_service.dart';
 import 'challenge_quiz_screen.dart';
 import 'community_feed_screen.dart';
 import 'creator_auth_screen.dart';
@@ -70,7 +71,6 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
     WidgetsBinding.instance.addObserver(this);
     _loadAllConfigs();
     _initChallengeDeepLinks();
-    AiExplainerService.syncBatchMasteryEvolution();
   }
 
   @override
@@ -127,8 +127,7 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
       _fetchLiveAppConfig();
       _fetchSectionalDataLive();
       _fetchSubjectMappingLive();
-      AiExplainerService.syncBatchMasteryEvolution();
-      _loadUnreadNotifications();
+        _loadUnreadNotifications();
     }
   }
 
@@ -731,6 +730,16 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
                         onTap: () {
                           Navigator.pop(context);
                           _openWebsiteUrl('Privacy Policy', 'https://www.mocktester.online/p/privacy.html');
+                        },
+                      ),
+                      _drawerTile(
+                        icon: Icons.cloud_sync_outlined,
+                        color: const Color(0xFF7C3AED),
+                        title: 'AI data processing',
+                        subtitle: 'Review or revoke AI consent',
+                        onTap: () {
+                          Navigator.pop(context);
+                          AiDataDisclosureService.showSettings(context);
                         },
                       ),
                       const SizedBox(height: 10),

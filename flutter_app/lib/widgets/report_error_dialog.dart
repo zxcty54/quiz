@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../services/telegram_service.dart';
+import '../services/community_safety_service.dart';
 
 class ReportErrorDialog extends StatefulWidget {
   final String fileName;
@@ -71,7 +71,7 @@ class _ReportErrorDialogState extends State<ReportErrorDialog> {
               ? null
               : () async {
                   setState(() => _isSending = true);
-                  bool success = await TelegramService.reportError(
+                  bool success = await CommunitySafetyService.reportQuestionError(
                     fileName: widget.fileName,
                     questionIndex: widget.questionIndex,
                     issueType: _selectedIssue,
@@ -84,7 +84,7 @@ class _ReportErrorDialogState extends State<ReportErrorDialog> {
                       SnackBar(
                         content: Text(
                           success
-                              ? '✅ Error reported to team via Telegram!'
+                              ? '✅ Thank you. Our team will review this report.'
                               : '❌ Failed to report error. Try again.',
                         ),
                       ),

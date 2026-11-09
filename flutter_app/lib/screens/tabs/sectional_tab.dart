@@ -4,7 +4,6 @@ import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'package:shared_preferences/shared_preferences.dart';
 
-import '../../services/premium_service.dart';
 import '../sectional_exam_screen.dart';
 
 // --- Content Proxy (Private content_base ka darwaza: Cloudflare Worker) ---
@@ -35,7 +34,6 @@ class _SectionalTabState extends State<SectionalTab> {
 
   // CbtProgressService ka saved data: launchTitle -> {status, score, correct, total...}
   Map<String, Map<String, dynamic>> _progress = {};
-  bool _isPremium = false;
   Timer? _refreshTimer;
   bool _refreshPending = false;
 
@@ -261,15 +259,7 @@ class _SectionalTabState extends State<SectionalTab> {
 
   Future<void> _refreshProgress() async {
     final data = await _loadProgressMap();
-    final until = await PremiumService.fetchPremiumUntil();
-    final owner = await PremiumService.isOwnerMode();
-    if (mounted) {
-      setState(() {
-        _progress = data;
-        _isPremium =
-            owner || (until != null && until.isAfter(DateTime.now()));
-      });
-    }
+    if (mounted) setState(() => _progress = data);
   }
 
   // ---------- JSON -> Groups (purani wali exact logic, dono formats) ----------
@@ -602,14 +592,13 @@ class _SectionalTabState extends State<SectionalTab> {
     final int total = candidate['total'] as int;
     final bool inProgress = candidate['inProgress'] == true;
     final examTitle = _formatExamTitle(examKey, _liveData[examKey]);
-    // Hero card sidha mock kholta hai — yahi lock bhi lagega
-    final int heroSetNum = (candidate['setNum'] as int?) ?? 1;
-    final bool heroLocked = heroSetNum > 1 && !_isPremium;
-
+    // Every available set is unlocked for this Google Play release.
     return InkWell(
-      onTap: heroLocked
-          ? () => _openExam(context, examKey, 0)
-          : () => _launch(context, candidate['title'] as String, candidate['path'] as String),
+      onTap: () => _launch(
+        context,
+        candidate['title'] as String,
+        candidate['path'] as String,
+      ),
       borderRadius: BorderRadius.circular(22),
       child: Container(
         width: double.infinity,
@@ -636,9 +625,7 @@ class _SectionalTabState extends State<SectionalTab> {
               padding: const EdgeInsets.symmetric(horizontal: 9, vertical: 4),
               decoration: BoxDecoration(color: const Color(0xFFF59E0B), borderRadius: BorderRadius.circular(99)),
               child: Text(
-                heroLocked
-                    ? '🔒 YE SET PREMIUM HAI'
-                    : (inProgress ? '✦ SET BEECH ME RUKA HAI' : '✦ NEXT SET READY HAI'),
+                inProgress ? '✦ SET BEECH ME RUKA HAI' : '✦ NEXT SET READY HAI',
                 style: const TextStyle(fontSize: 9, fontWeight: FontWeight.w900, color: Color(0xFF451A03), letterSpacing: 0.8),
               ),
             ),
@@ -649,11 +636,9 @@ class _SectionalTabState extends State<SectionalTab> {
             ),
             const SizedBox(height: 4),
             Text(
-              heroLocked
-                  ? 'Set 01 free hai, iske aage ke set Premium me khulte hai — ₹49/month me saare set unlock.'
-                  : (inProgress
-                      ? 'Ye set aadha attempt hua hai — wahi se resume karo!'
-                      : 'Yahi se apni practice aage badhao — $examTitle ka agla set.'),
+              inProgress
+                  ? 'Ye set aadha attempt hua hai — wahi se resume karo!'
+                  : 'Yahi se apni practice aage badhao — $examTitle ka agla set.',
               style: TextStyle(color: Colors.white.withOpacity(0.85), fontSize: 11.5, fontWeight: FontWeight.w600, height: 1.4),
             ),
             const SizedBox(height: 13),
@@ -678,7 +663,7 @@ class _SectionalTabState extends State<SectionalTab> {
                   padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 8),
                   decoration: BoxDecoration(color: const Color(0xFFF59E0B), borderRadius: BorderRadius.circular(99)),
                   child: Text(
-                    heroLocked ? 'Unlock 👑' : (inProgress ? 'Resume Karo →' : 'Set Start Karo →'),
+                    inProgress ? 'Resume Karo →' : 'Set Start Karo →',
                     style: const TextStyle(fontSize: 12, fontWeight: FontWeight.w900, color: Color(0xFF451A03)),
                   ),
                 ),

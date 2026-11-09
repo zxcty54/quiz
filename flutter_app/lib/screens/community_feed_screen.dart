@@ -8,6 +8,7 @@ import 'package:supabase_flutter/supabase_flutter.dart';
 import 'package:shimmer/shimmer.dart';
 
 import '../widgets/community_post_card.dart';
+import '../services/community_safety_service.dart';
 import 'post_detail_screen.dart';
 
 class CommunityFeedScreen extends StatefulWidget {
@@ -44,6 +45,7 @@ class _CommunityFeedScreenState extends State<CommunityFeedScreen> {
   final Set<int> _viewedPostIds = {};
   final Map<int, int> _userPollSelections = {};
   final Set<int> _savedPostIds = {};
+  final Set<String> _blockedUserHandles = {};
 
   final List<String> _filters = [
     'All',
@@ -120,6 +122,7 @@ class _CommunityFeedScreenState extends State<CommunityFeedScreen> {
     final creatorHandle = prefs.getString('logged_in_creator_handle');
     final userId = prefs.getString('user_id') ?? 'user';
     final followedCreators = prefs.getStringList('followed_creators') ?? [];
+    final blockedHandles = await CommunitySafetyService.loadBlockedHandles();
 
     final activeHandle = (creatorHandle != null && creatorHandle.trim().isNotEmpty)
         ? creatorHandle.trim()
@@ -131,6 +134,9 @@ class _CommunityFeedScreenState extends State<CommunityFeedScreen> {
         _currentLoggedInHandle = activeHandle;
         _isCurrentUserCreator = creatorHandle != null && creatorHandle.trim().isNotEmpty;
         _followedCreatorHandles = followedCreators;
+        _blockedUserHandles
+          ..clear()
+          ..addAll(blockedHandles);
       });
     }
 
@@ -314,6 +320,26 @@ class _CommunityFeedScreenState extends State<CommunityFeedScreen> {
     }
   }
 
+  void _handleUserBlocked(String handle) {
+    final normalized = CommunitySafetyService.normalizeHandle(handle);
+    if (normalized.isEmpty || !mounted) return;
+    setState(() => _blockedUserHandles.add(normalized));
+  }
+
+  Future<void> _openBlockedUsers() async {
+    await CommunitySafetyService.showBlockedUsersDialog(
+      context,
+      onChanged: (handles) {
+        if (!mounted) return;
+        setState(() {
+          _blockedUserHandles
+            ..clear()
+            ..addAll(handles);
+        });
+      },
+    );
+  }
+
   void _openPostDetail(Map<String, dynamic> post) {
     final postId = int.tryParse(post['id']?.toString() ?? '');
     if (postId == null) return;
@@ -358,6 +384,7 @@ class _CommunityFeedScreenState extends State<CommunityFeedScreen> {
           onPostChanged: () {
             if (mounted) setState(() {});
           },
+          onUserBlocked: _handleUserBlocked,
         ),
       ),
     );
@@ -493,6 +520,9 @@ class _CommunityFeedScreenState extends State<CommunityFeedScreen> {
                         : () async {
                             final text = contentCtrl.text.trim();
                             if (text.isEmpty && selectedImage == null) return;
+                            final accepted =
+                                await CommunitySafetyService.requirePostingTerms(context);
+                            if (!accepted || !ctx.mounted) return;
                             setModalState(() => isUploading = true);
 
                             try {
@@ -670,6 +700,9 @@ class _CommunityFeedScreenState extends State<CommunityFeedScreen> {
     final cardSurface = isDark ? _darkCard : _lightCard;
 
     final filteredList = _posts.where((p) {
+      final authorHandle =
+          CommunitySafetyService.normalizeHandle((p['creator_id'] ?? '').toString());
+      if (_blockedUserHandles.contains(authorHandle)) return false;
       if (_activeFilter == 'Saved') return _savedPostIds.contains(p['id']);
 
       if (_activeFilter != 'All') {
@@ -697,6 +730,11 @@ class _CommunityFeedScreenState extends State<CommunityFeedScreen> {
           ),
         ),
         actions: [
+          IconButton(
+            tooltip: 'Blocked users',
+            icon: Icon(Icons.person_off_outlined, color: isDark ? Colors.white70 : const Color(0xFF334155)),
+            onPressed: _openBlockedUsers,
+          ),
           IconButton(
             icon: Icon(Icons.refresh_rounded, color: isDark ? Colors.white70 : const Color(0xFF334155)),
             onPressed: _fetchFeedPosts,
@@ -903,6 +941,7 @@ class _CommunityFeedScreenState extends State<CommunityFeedScreen> {
                                 },
                                 onPollVote: (optIdx) => _userPollSelections[postId] = optIdx,
                                 onPostDeleted: _fetchFeedPosts,
+                                onUserBlocked: _handleUserBlocked,
                               );
                             },
                           ),

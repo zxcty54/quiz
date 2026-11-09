@@ -62,12 +62,29 @@ Future<void> _syncAppConfig() async {
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
 
-  // 🔥 1. Firebase Initialization
-  try {
-    await Firebase.initializeApp();
-    await NotificationService.initialize();
-  } catch (e) {
-    debugPrint("Firebase init error: $e");
+  // Firebase/FCM is enabled only when CI verifies that google-services.json
+  // belongs to this exact Android application ID.
+  const bool firebaseConfigured =
+      bool.fromEnvironment('FIREBASE_CONFIGURED', defaultValue: false);
+  if (firebaseConfigured) {
+    try {
+      await Firebase.initializeApp();
+      await NotificationService.initialize(enablePush: true);
+    } catch (e) {
+      debugPrint("Firebase init error: $e");
+      try {
+        await NotificationService.initialize(enablePush: false);
+      } catch (notificationError) {
+        debugPrint("Local notification init error: $notificationError");
+      }
+    }
+  } else {
+    debugPrint('Firebase is not configured for this application ID; FCM is disabled.');
+    try {
+      await NotificationService.initialize(enablePush: false);
+    } catch (notificationError) {
+      debugPrint("Local notification init error: $notificationError");
+    }
   }
 
   // ⚡ 2. Supabase Initialization (Safe Injection via --dart-define)

@@ -5,20 +5,35 @@ const DEFAULT_MODEL_HIERARCHY = [
   "gemini-3.5-flash-lite"
 ];
 
+const REQUIRED_AI_CONSENT_VERSION = "2026-10-12-v1";
+
 export default {
   // 🌐 1. Dynamic Proxy (Doubt Solver, Why Wrong, etc.)
   async fetch(request, env, ctx) {
     const url = new URL(request.url);
 
-    // 🧪 Direct Manual Mastery Trigger (Testing ke liye active)
+    // Manual sync is an admin operation; never expose a service-role AI trigger publicly.
     if (url.pathname === "/sync-mastery" || url.pathname === "/debug-sync") {
+      if (request.method === "OPTIONS") {
+        return new Response(null, {
+          headers: {
+            "Access-Control-Allow-Origin": "*",
+            "Access-Control-Allow-Methods": "GET, OPTIONS",
+            "Access-Control-Allow-Headers": "Content-Type, Authorization",
+          },
+        });
+      }
+      const expectedToken = env.MASTERY_SYNC_TOKEN;
+      const suppliedToken = request.headers.get("Authorization") || "";
+      if (!expectedToken || suppliedToken !== `Bearer ${expectedToken}`) {
+        return new Response(JSON.stringify({ error: "Unauthorized" }), {
+          status: 401,
+          headers: { "Content-Type": "application/json", "Access-Control-Allow-Origin": "*" },
+        });
+      }
       try {
         console.log("🚀 Manual Mastery Sync triggered via URL:", url.pathname);
-        const clientModels = url.searchParams.get("models")
-          ? url.searchParams.get("models").split(",")
-          : null;
-
-        const result = await handleAutoMasterySync(env, clientModels);
+        const result = await handleAutoMasterySync(env);
         return new Response(JSON.stringify({
           success: true,
           message: "Mastery Sync executed successfully!",
@@ -33,8 +48,7 @@ export default {
         console.error("❌ Sync Error:", err.message);
         return new Response(JSON.stringify({
           success: false,
-          error: err.message,
-          stack: err.stack
+          error: "Mastery sync failed. Check Worker logs for details."
         }), {
           status: 500,
           headers: {
@@ -50,7 +64,7 @@ export default {
         headers: {
           "Access-Control-Allow-Origin": "*",
           "Access-Control-Allow-Methods": "POST, OPTIONS",
-          "Access-Control-Allow-Headers": "Content-Type",
+          "Access-Control-Allow-Headers": "Content-Type, Authorization",
         },
       });
     }
@@ -366,7 +380,7 @@ function mergeProgressDelta(currentReport, modelDeltaRows, cumulativeSubjects) {
 }
 
 // 🧠 Core Engine
-async function handleAutoMasterySync(env, overrideModels = null) {
+async function handleAutoMasterySync(env) {
   const supabaseUrl = env.SUPABASE_URL;
   const supabaseKey = env.SUPABASE_SERVICE_ROLE_KEY;
   const googleKeys = [env.GOOGLE_API_KEY, env.GOOGLE_API_KEY2].filter(k => k && k.trim().length > 0);
@@ -382,29 +396,57 @@ async function handleAutoMasterySync(env, overrideModels = null) {
     'Content-Type': 'application/json'
   };
 
-  // 1️⃣ Fresh un-analyzed attempts uthayenge
-  const attemptsRes = await fetch(
-    `${supabaseUrl}/rest/v1/user_question_attempts?is_analyzed=eq.false&select=id,user_id,user_name,question_text,topic_tag,is_correct,time_taken_seconds,attempted_at&order=attempted_at.asc&limit=150`,
+  // Only users with an explicit, current in-app AI opt-in are eligible.
+  const consentsRes = await fetch(
+    `${supabaseUrl}/rest/v1/ai_processing_consents?select=user_id&consent_version=eq.${encodeURIComponent(REQUIRED_AI_CONSENT_VERSION)}`,
     { headers }
   );
-
-  if (!attemptsRes.ok) {
-    const errText = await attemptsRes.text();
-    throw new Error(`Supabase fetch failed (${attemptsRes.status}): ${errText}`);
+  if (!consentsRes.ok) {
+    const errText = await consentsRes.text();
+    throw new Error(`AI consent lookup failed (${consentsRes.status}): ${errText}`);
+  }
+  const consentRows = await consentsRes.json();
+  const consentedUserIds = [...new Set(
+    (Array.isArray(consentRows) ? consentRows : [])
+      .map(row => String(row.user_id || '').trim())
+      .filter(Boolean)
+  )];
+  if (consentedUserIds.length === 0) {
+    console.log("ℹ️ [MASTERY] No users have opted in to AI processing.");
+    return { status: "No opted-in users." };
   }
 
-  const attempts = await attemptsRes.json();
-  if (!attempts || !Array.isArray(attempts) || attempts.length === 0) {
-    console.log("ℹ️ [MASTERY] No fresh un-analyzed questions found in Supabase.");
-    return { status: "No fresh un-analyzed questions found." };
+  // Query attempts only for consented IDs so non-consenting question content is
+  // not fetched into the Worker. Small ID groups keep PostgREST URLs bounded.
+  const attempts = [];
+  const attemptFields = 'id,user_id,user_name,question_text,topic_tag,is_correct,time_taken_seconds,attempted_at';
+  for (let start = 0; start < consentedUserIds.length && attempts.length < 150; start += 40) {
+    const ids = consentedUserIds.slice(start, start + 40);
+    const url = new URL(`${supabaseUrl}/rest/v1/user_question_attempts`);
+    url.searchParams.set('is_analyzed', 'eq.false');
+    url.searchParams.set('user_id', `in.(${ids.map(id => `"${id.replaceAll('\\', '\\\\').replaceAll('"', '\\"')}"`).join(',')})`);
+    url.searchParams.set('select', attemptFields);
+    url.searchParams.set('order', 'attempted_at.asc');
+    url.searchParams.set('limit', String(150 - attempts.length));
+
+    const attemptsRes = await fetch(url, { headers });
+    if (!attemptsRes.ok) {
+      const errText = await attemptsRes.text();
+      throw new Error(`Supabase attempts fetch failed (${attemptsRes.status}): ${errText}`);
+    }
+    const batch = await attemptsRes.json();
+    if (Array.isArray(batch)) attempts.push(...batch);
   }
 
-  console.log(`📊 [MASTERY] Found ${attempts.length} un-analyzed attempts to process.`);
-
-  let remoteModels = overrideModels;
-  if (!remoteModels || remoteModels.length === 0) {
-    remoteModels = await fetchModelsFromRemoteConfig(env);
+  attempts.sort((a, b) => String(a.attempted_at).localeCompare(String(b.attempted_at)));
+  if (attempts.length === 0) {
+    console.log("ℹ️ [MASTERY] No fresh attempts for opted-in users.");
+    return { status: "No fresh attempts for opted-in users." };
   }
+
+  console.log(`📊 [MASTERY] Found ${attempts.length} opted-in un-analyzed attempts to process.`);
+
+  const remoteModels = await fetchModelsFromRemoteConfig(env);
 
   const groqPriority = ["openai/gpt-oss-120b", "openai/gpt-oss-20b"];
   const geminiLastFallback = ["gemini-2.5-flash"];

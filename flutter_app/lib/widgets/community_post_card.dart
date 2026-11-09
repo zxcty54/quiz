@@ -5,6 +5,7 @@ import 'package:flutter/services.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
 import 'package:url_launcher/url_launcher.dart';
 
+import '../services/community_safety_service.dart';
 import '../models/question_model.dart';
 import '../screens/creator_profile_screen.dart';
 import '../screens/sectional_cbt_screen.dart';
@@ -317,6 +318,7 @@ class CommunityPostCard extends StatefulWidget {
   final VoidCallback? onPostDeleted;
   final Function(String newContent)? onPostUpdated;
   final Function(int postId)? onPostViewed;
+  final ValueChanged<String>? onUserBlocked;
 
   /// Post Detail page par comment button bekaar hai (replies pehle se
   /// dikhai de rahe hote hain), isliye wahan ise chhupa sakte hain.
@@ -337,6 +339,7 @@ class CommunityPostCard extends StatefulWidget {
     this.onPostDeleted,
     this.onPostUpdated,
     this.onPostViewed,
+    this.onUserBlocked,
     this.showCommentAction = true,
   });
 
@@ -897,6 +900,39 @@ Download Free: https://play.google.com/store/apps/details?id=com.mocktester.onli
                       _reportPost();
                     },
                   ),
+                  Divider(
+                    height: 1,
+                    thickness: 0.5,
+                    color: widget.isDarkMode ? const Color(0xFF334155) : const Color(0xFFE2E8F0),
+                    indent: 16,
+                    endIndent: 16,
+                  ),
+                  ListTile(
+                    leading: const Icon(Icons.person_search_outlined, color: Colors.deepOrange),
+                    title: Text(
+                      'Report User',
+                      style: TextStyle(color: textColor, fontWeight: FontWeight.w600, fontSize: 14),
+                    ),
+                    onTap: () {
+                      Navigator.pop(ctx);
+                      _reportPostAuthor();
+                    },
+                  ),
+                  ListTile(
+                    leading: const Icon(Icons.person_off_outlined, color: Colors.redAccent),
+                    title: const Text(
+                      'Block User',
+                      style: TextStyle(color: Colors.redAccent, fontWeight: FontWeight.w600, fontSize: 14),
+                    ),
+                    subtitle: const Text(
+                      'Hide this user’s posts and comments on this device',
+                      style: TextStyle(fontSize: 11, color: Colors.grey),
+                    ),
+                    onTap: () {
+                      Navigator.pop(ctx);
+                      _confirmAndBlockPostAuthor();
+                    },
+                  ),
                 ],
                 const SizedBox(height: 6),
               ],
@@ -972,41 +1008,77 @@ Download Free: https://play.google.com/store/apps/details?id=com.mocktester.onli
     );
   }
 
-  void _reportPost() async {
-    final postId = widget.post['id'];
-    try {
-      await Supabase.instance.client.from('post_reports').insert({
-        'post_id': postId,
-        'reported_by': widget.currentLoggedInHandle,
-        'reason': 'Inappropriate / Spam content',
-      });
+  Future<void> _reportPost() async {
+    final postId = widget.post['id']?.toString().trim() ?? '';
+    if (postId.isEmpty) return;
 
-      if (mounted) {
-        ScaffoldMessenger.of(context).showSnackBar(
-          const SnackBar(
-            content: Row(
-              children: [
-                Icon(Icons.flag_rounded, color: Colors.white, size: 18),
-                SizedBox(width: 8),
-                Expanded(
-                  child: Text('Post reported. If 10 unique reports are received, it will be automatically removed.'),
-                ),
-              ],
-            ),
-            backgroundColor: Color(0xFFD97706),
-          ),
-        );
-      }
-    } catch (e) {
-      if (mounted) {
-        ScaffoldMessenger.of(context).showSnackBar(
-          const SnackBar(
-            content: Text('You have already reported this post.'),
-            backgroundColor: Colors.grey,
-          ),
-        );
-      }
+    await CommunitySafetyService.promptAndQueueModerationReport(
+      context,
+      reporterHandle: widget.currentLoggedInHandle,
+      targetType: 'community_post',
+      targetId: postId,
+      postId: int.tryParse(postId),
+      source: 'community_feed_post',
+      contentExcerpt: widget.post['content']?.toString(),
+      successMessage: 'Post reported. Thank you; moderators will review it.',
+    );
+  }
+
+  Future<void> _reportPostAuthor() async {
+    final handle = (widget.post['creator_id'] ?? '').toString().trim();
+    if (handle.isEmpty ||
+        CommunitySafetyService.normalizeHandle(handle) ==
+            CommunitySafetyService.normalizeHandle(widget.currentLoggedInHandle)) {
+      return;
     }
+
+    await CommunitySafetyService.promptAndQueueModerationReport(
+      context,
+      reporterHandle: widget.currentLoggedInHandle,
+      targetType: 'community_user',
+      targetId: handle,
+      targetHandle: handle,
+      postId: int.tryParse(widget.post['id']?.toString() ?? ''),
+      source: 'community_post_menu',
+      successMessage: 'Thank you. The user report was sent for review.',
+    );
+  }
+
+  Future<void> _confirmAndBlockPostAuthor() async {
+    final handle = (widget.post['creator_id'] ?? '').toString().trim();
+    if (handle.isEmpty ||
+        CommunitySafetyService.normalizeHandle(handle) ==
+            CommunitySafetyService.normalizeHandle(widget.currentLoggedInHandle)) {
+      return;
+    }
+
+    final confirmed = await showDialog<bool>(
+      context: context,
+      builder: (dialogContext) => AlertDialog(
+        title: const Text('Block this user?'),
+        content: const Text(
+          'Their posts and comments will be hidden on this device. You can unblock them later from the Community Feed.',
+        ),
+        actions: [
+          TextButton(
+            onPressed: () => Navigator.of(dialogContext).pop(false),
+            child: const Text('Cancel'),
+          ),
+          FilledButton(
+            onPressed: () => Navigator.of(dialogContext).pop(true),
+            child: const Text('Block user'),
+          ),
+        ],
+      ),
+    );
+    if (confirmed != true) return;
+
+    await CommunitySafetyService.blockUser(handle);
+    if (!mounted) return;
+    ScaffoldMessenger.of(context).showSnackBar(
+      const SnackBar(content: Text('User blocked on this device.')),
+    );
+    widget.onUserBlocked?.call(handle);
   }
 
   void _launchAttachedMock(Map<String, dynamic> mock) {

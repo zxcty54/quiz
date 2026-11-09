@@ -5,6 +5,7 @@ import 'package:url_launcher/url_launcher.dart';
 
 import '../models/question_model.dart';
 import '../services/cbt_progress_service.dart';
+import '../services/community_safety_service.dart';
 import 'sectional_cbt_screen.dart';
 import 'student_cbt_report_screen.dart';
 
@@ -133,6 +134,24 @@ class _BatchClassroomScreenState extends State<BatchClassroomScreen>
     }
 
     _openTestScreen(test, parsedQuestions);
+  }
+
+  Future<void> _reportBatchTest(Map<String, dynamic> test) async {
+    final testId = test['id']?.toString().trim() ?? '';
+    if (testId.isEmpty) return;
+
+    final reporter = await CommunitySafetyService.currentReporterHandle();
+    if (!mounted) return;
+    await CommunitySafetyService.promptAndQueueModerationReport(
+      context,
+      reporterHandle: reporter,
+      targetType: 'batch_test',
+      targetId: testId,
+      source: 'batch_classroom_test',
+      contentExcerpt:
+          '${test['test_title'] ?? 'Batch test'} • ${widget.batchData['batch_name'] ?? 'Classroom batch'} • ${test['subject'] ?? 'General'}',
+      successMessage: 'Batch test reported. Thank you; moderators will review it.',
+    );
   }
 
   void _openTestScreen(Map<String, dynamic> test, List<Question> parsedQuestions) {
@@ -266,18 +285,33 @@ class _BatchClassroomScreenState extends State<BatchClassroomScreen>
                                           ),
                                         ),
                                       ),
-                                      if (isInProgress)
-                                        Text(
-                                          '$answered / $totalQs Answered',
-                                          style: const TextStyle(fontSize: 11, fontWeight: FontWeight.bold, color: Colors.amber),
-                                        )
-                                      else if (isCompleted)
-                                        Text(
-                                          'Score: ${progress?['score'] ?? 0} Marks',
-                                          style: const TextStyle(fontSize: 11.5, fontWeight: FontWeight.bold, color: Color(0xFF16A34A)),
-                                        )
-                                      else
-                                        Text('$duration Mins Duration', style: const TextStyle(fontSize: 11.5, color: Colors.grey)),
+                                      Row(
+                                        mainAxisSize: MainAxisSize.min,
+                                        children: [
+                                          if (isInProgress)
+                                            Text(
+                                              '$answered / $totalQs Answered',
+                                              style: const TextStyle(fontSize: 11, fontWeight: FontWeight.bold, color: Colors.amber),
+                                            )
+                                          else if (isCompleted)
+                                            Text(
+                                              'Score: ${progress?['score'] ?? 0} Marks',
+                                              style: const TextStyle(fontSize: 11.5, fontWeight: FontWeight.bold, color: Color(0xFF16A34A)),
+                                            )
+                                          else
+                                            Text('$duration Mins Duration', style: const TextStyle(fontSize: 11.5, color: Colors.grey)),
+                                          IconButton(
+                                            tooltip: 'Report batch test',
+                                            visualDensity: VisualDensity.compact,
+                                            iconSize: 18,
+                                            color: Colors.grey[600],
+                                            icon: const Icon(Icons.flag_outlined),
+                                            onPressed: () => _reportBatchTest(
+                                              Map<String, dynamic>.from(t as Map),
+                                            ),
+                                          ),
+                                        ],
+                                      ),
                                     ],
                                   ),
                                   const SizedBox(height: 8),

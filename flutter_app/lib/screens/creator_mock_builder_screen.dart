@@ -4,6 +4,8 @@ import 'package:flutter/services.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:google_mlkit_text_recognition/google_mlkit_text_recognition.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
+import '../services/community_safety_service.dart';
+import '../services/ai_data_disclosure_service.dart';
 import '../services/ai_explainer_service.dart';
 import '../services/ai_rate_limiter_service.dart';
 import '../widgets/math_text.dart';
@@ -414,6 +416,8 @@ class _CreatorMockBuilderScreenState extends State<CreatorMockBuilderScreen> {
         return;
       }
 
+      final consented = await AiDataDisclosureService.requireConsent(modalCtx);
+      if (!modalCtx.mounted || !consented) return;
       setModalState(() => isAiLoading = true);
 
       try {
@@ -987,6 +991,8 @@ class _CreatorMockBuilderScreenState extends State<CreatorMockBuilderScreen> {
       return;
     }
 
+    if (!await CommunitySafetyService.requirePostingTerms(context)) return;
+    if (!mounted) return;
     setState(() => _isPublishing = true);
 
     try {

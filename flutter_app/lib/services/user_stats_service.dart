@@ -2,6 +2,7 @@ import 'dart:convert';
 import 'package:flutter/foundation.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
+import 'ai_data_disclosure_service.dart';
 
 class UserStatsService {
   static const String _keyQuestions = 'stats_questions_solved';
@@ -200,7 +201,8 @@ class UserStatsService {
             ? (wrongQuestionJson['qe'] ?? wrongQuestionJson['qh'] ?? '')
             : '');
 
-    if (qClean.trim().isNotEmpty) {
+    if (qClean.trim().isNotEmpty &&
+        await AiDataDisclosureService.hasAccepted()) {
       final String? userId = prefs.getString('user_id');
       final String userName = prefs.getString('user_name') ?? 'Aspirant';
       final String district = prefs.getString('user_district') ?? 'Patna';

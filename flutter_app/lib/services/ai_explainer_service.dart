@@ -1,17 +1,17 @@
 import 'dart:convert';
 import 'package:flutter/foundation.dart';
 import 'package:http/http.dart' as http;
-import 'package:shared_preferences/shared_preferences.dart';
 import 'ai_rate_limiter_service.dart';
 
 class AiExplainerService {
-  // 🌐 Dynamic Fallback Models (Unchanged)
-  static List<String> activeModelHierarchy = [
-    "gemini-2.0-flash",
-    "gemini-1.5-flash",
-    "llama-3.3-70b-versatile",
-    "llama-3.1-8b-instant"
+  static const List<String> _requiredModelPrefix = [
+    "openai/gpt-oss-120b",
+    "openai/gpt-oss-20b",
+    "gemini-3.5-flash-lite",
   ];
+
+  // Dynamic config may add fallbacks only after preserving the Worker order.
+  static List<String> activeModelHierarchy = [..._requiredModelPrefix];
   static bool isAiActive = true;
 
   // 🔄 Dynamic Config Sync from GitHub root app_config.json (Unchanged)
@@ -34,7 +34,19 @@ class AiExplainerService {
         }
 
         if (loadedList.isNotEmpty) {
-          activeModelHierarchy = loadedList;
+          final keepsRequiredOrder = loadedList.length >= _requiredModelPrefix.length &&
+              listEquals(
+                loadedList.take(_requiredModelPrefix.length).toList(),
+                _requiredModelPrefix,
+              );
+          if (keepsRequiredOrder) {
+            activeModelHierarchy = loadedList;
+          } else {
+            activeModelHierarchy = [..._requiredModelPrefix];
+            debugPrint(
+              'Ignoring an incompatible remote AI model order; using the required Worker fallback order.',
+            );
+          }
         }
         if (aiCfg['is_ai_active'] != null) {
           isAiActive = aiCfg['is_ai_active'] == true;
@@ -117,6 +129,35 @@ STUDENT'S DOUBT: "$userDoubt"
 """;
 
     return await _generateWithHybridRouting(systemPrompt, userPrompt, maxTokens: 1000, temperature: 0.5);
+  }
+
+  /// General RAG answer for the standalone doubt tutor. Provider credentials
+  /// remain on the existing server-side AI proxy; no provider key is shipped
+  /// in the Flutter binary.
+  static Future<String> answerWithContext({
+    required String question,
+    required String context,
+  }) async {
+    const String systemPrompt = """
+You are an exam tutor for BPSC and SSC candidates. Explain concepts in clear,
+conversational Hinglish. Use the supplied context when relevant, show the key
+reasoning, avoid unsupported claims, and keep the answer concise.
+""";
+
+    final String userPrompt = """
+RETRIEVED STUDY CONTEXT:
+$context
+
+STUDENT QUESTION:
+$question
+""";
+
+    return _generateWithHybridRouting(
+      systemPrompt,
+      userPrompt,
+      maxTokens: 800,
+      temperature: 0.3,
+    );
   }
 
   // 2️⃣ DOCTOR DIAGNOSIS & PRESCRIPTION HEALTH AUDIT (Unchanged)
@@ -282,31 +323,6 @@ RULES:
       await AiRateLimiterService.recordSuccess();
     }
     return result;
-  }
-
-  // 6️⃣ 🧠 CLEAN BACKEND DELEGATOR: NO CLIENT-SIDE PROMPT
-  // Saara analysis Cloudflare Worker backend par hota hai, Flutter sirf trigger bhejta hai.
-  static Future<void> syncBatchMasteryEvolution({bool forceSync = false}) async {
-    final prefs = await SharedPreferences.getInstance();
-    final int lastSync = prefs.getInt('last_ai_mastery_sync_timestamp') ?? 0;
-    final int now = DateTime.now().millisecondsSinceEpoch;
-    final int minutesPassed = ((now - lastSync) / (1000 * 60)).floor();
-
-    if (!forceSync && minutesPassed < 15) {
-      return;
-    }
-
-    try {
-      const String syncUrl = "https://ai-proxy.nitesh-skyhigh.workers.dev/sync-mastery";
-      final response = await http.get(Uri.parse(syncUrl)).timeout(const Duration(seconds: 15));
-
-      if (response.statusCode == 200) {
-        await prefs.setInt('last_ai_mastery_sync_timestamp', now);
-        debugPrint("✅ Cloudflare Worker Mastery Sync triggered successfully.");
-      }
-    } catch (e) {
-      debugPrint("Mastery trigger error (Worker will sync via cron anyway): $e");
-    }
   }
 
   // 🧹 Helper: Clean & Parse JSON Array (Unchanged)

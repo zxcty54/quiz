@@ -1,359 +1,247 @@
-name: Build MockTester Offline Android APK
+name: Build MockTester Signed Android APK
 
 on:
   push:
     branches:
-      - main
+      - arena/203fc61a-quiz
     paths:
-      - 'flutter_app/**.dart'
+      - "flutter_app/**"
+      - ".github/workflows/build_apk.yml"
   workflow_dispatch:
+    inputs:
+      version_code:
+        description: "Optional positive Android versionCode (defaults to the workflow run number)"
+        required: false
+        type: string
+        default: ""
+
+permissions:
+  contents: read
 
 jobs:
   build:
-    name: Build Release APK
+    name: Build signed Android APK
     runs-on: ubuntu-latest
-    timeout-minutes: 25
-
+    timeout-minutes: 45
     steps:
-      - name: Checkout Code
+      - name: Checkout source
         uses: actions/checkout@v4
 
-      - name: Setup Java JDK 17
+      - name: Set up Java 17
         uses: actions/setup-java@v4
         with:
-          distribution: "temurin"
+          distribution: temurin
           java-version: "17"
 
-      - name: Setup Gradle Build Cache
+      - name: Set up Gradle cache
         uses: gradle/actions/setup-gradle@v3
 
-      - name: Setup Flutter
+      - name: Set up Flutter stable
         uses: subosito/flutter-action@v2
         with:
-          channel: "stable"
+          channel: stable
           cache: true
 
-      - name: Clean & Force Android Scaffold
+      - name: Validate release inputs and upload-key secrets
+        id: release
+        env:
+          VERSION_CODE_INPUT: ${{ inputs.version_code }}
+          KEYSTORE_BASE64: ${{ secrets.KEYSTORE_BASE64 }}
+          KEYSTORE_PASSWORD: ${{ secrets.KEYSTORE_PASSWORD }}
+          KEY_ALIAS: ${{ secrets.KEY_ALIAS }}
+          KEY_PASSWORD: ${{ secrets.KEY_PASSWORD }}
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_ANON_KEY: ${{ secrets.SUPABASE_ANON_KEY }}
+        run: |
+          set -euo pipefail
+          for name in KEYSTORE_BASE64 KEYSTORE_PASSWORD KEY_ALIAS KEY_PASSWORD SUPABASE_URL SUPABASE_ANON_KEY; do
+            if [ -z "${!name}" ]; then
+              echo "::error title=Missing release setting::$name is required; no debug-signed release is permitted."
+              exit 1
+            fi
+          done
+
+          VERSION_CODE="$VERSION_CODE_INPUT"
+          if [ -z "$VERSION_CODE" ]; then VERSION_CODE="$GITHUB_RUN_NUMBER"; fi
+          if ! [[ "$VERSION_CODE" =~ ^[1-9][0-9]*$ ]]; then
+            echo "::error title=Invalid versionCode::Use a positive integer."
+            exit 1
+          fi
+          echo "version_code=$VERSION_CODE" >> "$GITHUB_OUTPUT"
+
+          mkdir -p "$RUNNER_TEMP/play-release"
+          export KEYSTORE_PATH="$RUNNER_TEMP/play-release/upload-key.jks"
+          python3 - <<'PY'
+          import base64, os, pathlib, sys
+          encoded = os.environ.get('KEYSTORE_BASE64', '').strip()
+          try:
+              data = base64.b64decode(encoded, validate=True)
+          except Exception as exc:
+              print(f'::error title=Invalid upload keystore::{exc}')
+              sys.exit(1)
+          if not data:
+              print('::error title=Empty upload keystore::KEYSTORE_BASE64 decoded to an empty file.')
+              sys.exit(1)
+          pathlib.Path(os.environ['KEYSTORE_PATH']).write_bytes(data)
+          PY
+          keytool -list -keystore "$KEYSTORE_PATH" -storepass "$KEYSTORE_PASSWORD" -alias "$KEY_ALIAS" >/dev/null
+
+      - name: Stage optional Firebase configuration
+        env:
+          GOOGLE_SERVICES_JSON_BASE64: ${{ secrets.GOOGLE_SERVICES_JSON_BASE64 }}
+        run: |
+          set -euo pipefail
+          if [ -z "$GOOGLE_SERVICES_JSON_BASE64" ]; then
+            echo "No Firebase descriptor secret supplied; FCM will remain disabled."
+            exit 0
+          fi
+          printf '%s' "$GOOGLE_SERVICES_JSON_BASE64" | base64 --decode > "$RUNNER_TEMP/google-services.json"
+          python3 - <<'PY'
+          import json, os, pathlib, sys
+          path = pathlib.Path(os.environ['RUNNER_TEMP']) / 'google-services.json'
+          try:
+              data = json.loads(path.read_text())
+              packages = [
+                  client.get('client_info', {}).get('android_client_info', {}).get('package_name')
+                  for client in data.get('client', [])
+              ]
+          except Exception as exc:
+              print(f'::error title=Invalid Firebase configuration::{exc}')
+              sys.exit(1)
+          if 'com.mocktester.app' not in packages:
+              print('::error title=Wrong Firebase application ID::The supplied descriptor must contain a client for com.mocktester.app.')
+              sys.exit(1)
+          PY
+
+      - name: Generate fresh Android scaffold and apply release overlay
         working-directory: flutter_app
         run: |
-          rm -rf android/app/src/main/java
-          rm -rf android/app/src/main/kotlin
+          set -euo pipefail
+          saved_google_services="$RUNNER_TEMP/google-services.json"
+          if [ ! -f "$saved_google_services" ] && [ -f android/app/google-services.json ]; then
+            cp android/app/google-services.json "$saved_google_services"
+          fi
+          rm -rf android
           flutter create . --platforms=android --org com.mocktester --project-name mocktester
+          rm -rf android/app/src/main/java android/app/src/main/kotlin
+          if [ -f "$saved_google_services" ]; then
+            cp "$saved_google_services" android/app/google-services.json
+          fi
+          cp -R android_overlay/app/. android/app/
 
-      # 🎨 NAYA STEP: Native Smoke Splash Screen (Replaces 1-sec white screen)
-      - name: Inject Native Smoke Splash Screen
-        working-directory: flutter_app
-        run: |
-          mkdir -p android/app/src/main/res/drawable
-          mkdir -p android/app/src/main/res/drawable-v21
-          
-          # Copy your splash logo into drawable
-          cp assets/data/launch_logo.png android/app/src/main/res/drawable/splash_bg.png
-          
-          # Setup launch_background.xml for Android splash
-          cat << 'EOF' > android/app/src/main/res/drawable/launch_background.xml
-          <?xml version="1.0" encoding="utf-8"?>
-          <layer-list xmlns:android="http://schemas.android.com/apk/res/android">
-              <item android:drawable="@android:color/white" />
-              <item>
-                  <bitmap
-                      android:gravity="center"
-                      android:src="@drawable/splash_bg" />
-              </item>
-          </layer-list>
-          EOF
-          
-          cp android/app/src/main/res/drawable/launch_background.xml android/app/src/main/res/drawable-v21/launch_background.xml
-
-      # 🛠️ FIX: Reliable Gradle Wrapper Injection with Gradle 9.3.1
-      - name: Fix Gradle Wrapper Distribution URL
+      - name: Declare Google Services Gradle plugin
         working-directory: flutter_app/android
         run: |
-          mkdir -p gradle/wrapper
-          cat << 'EOF' > gradle/wrapper/gradle-wrapper.properties
-          distributionBase=GRADLE_USER_HOME
-          distributionPath=wrapper/dists
-          zipStoreBase=GRADLE_USER_HOME
-          zipStorePath=wrapper/dists
-          distributionUrl=https\://services.gradle.org/distributions/gradle-9.3.1-all.zip
-          EOF
+          python3 - <<'PY'
+          import pathlib, sys
+          path = pathlib.Path('settings.gradle.kts')
+          if not path.exists():
+              print('::error title=Unexpected Android scaffold::settings.gradle.kts was not generated.')
+              sys.exit(1)
+          lines = path.read_text().splitlines()
+          if not any('com.google.gms.google-services' in line for line in lines):
+              plugin_index = next(
+                  (i for i, line in enumerate(lines)
+                   if 'id("org.jetbrains.kotlin.android")' in line
+                   or 'id("kotlin-android")' in line),
+                  None,
+              )
+              if plugin_index is None:
+                  print('::error title=Firebase Gradle configuration::Could not locate the Kotlin plugin declaration.')
+                  sys.exit(1)
+              lines.insert(
+                  plugin_index + 1,
+                  '    id("com.google.gms.google-services") version "4.4.2" apply false',
+              )
+              path.write_text('\n'.join(lines) + '\n')
+          PY
 
-      - name: Configure Global Gradle Properties
-        working-directory: flutter_app/android
+      - name: Check whether Firebase is configured for this application ID
+        id: firebase
+        working-directory: flutter_app/android/app
         run: |
-          cat << 'EOF' >> gradle.properties
-          android.useAndroidX=true
-          android.enableJetifier=false
-          android.suppressUnsupportedCompileSdk=36,Baklava
-          android.experimental.disableCompileSdkChecks=true
-          org.gradle.jvmargs=-Xmx3072m -XX:MaxMetaspaceSize=768m
-          org.gradle.daemon=false
-          org.gradle.parallel=true
-          org.gradle.vfs.watch=false
-          EOF
+          python3 - <<'PY' >> "$GITHUB_OUTPUT"
+          import json, pathlib
+          path = pathlib.Path('google-services.json')
+          packages = []
+          if path.exists():
+              try:
+                  data = json.loads(path.read_text())
+                  packages = [
+                      client.get('client_info', {}).get('android_client_info', {}).get('package_name')
+                      for client in data.get('client', [])
+                  ]
+              except Exception:
+                  pass
+          configured = 'com.mocktester.app' in packages
+          print(f'configured={str(configured).lower()}')
+          if not configured:
+              print('::warning title=Push notifications disabled::Replace google-services.json with the Firebase Android configuration for com.mocktester.app to enable FCM.')
+          PY
 
-      - name: Inject Clean Flutter MainActivity.kt
-        run: |
-          mkdir -p flutter_app/android/app/src/main/kotlin/com/mocktester/app
-          cat << 'EOF' > flutter_app/android/app/src/main/kotlin/com/mocktester/app/MainActivity.kt
-          package com.mocktester.app
-
-          import io.flutter.embedding.android.FlutterActivity
-
-          class MainActivity: FlutterActivity() {
-          }
-          EOF
-
-      # 🛠️ FIX: Complete Manifest with Camera, Storage, and LargeHeap
-      - name: Inject Valid AndroidManifest.xml
-        run: |
-          cat << 'EOF' > flutter_app/android/app/src/main/AndroidManifest.xml
-          <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-              package="com.mocktester.app">
-
-              <!-- Network & Core Permissions -->
-              <uses-permission android:name="android.permission.INTERNET"/>
-              <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
-              <uses-permission android:name="android.permission.VIBRATE"/>
-
-              <!-- 📸 Camera Hardware & Permission -->
-              <uses-permission android:name="android.permission.CAMERA"/>
-              <uses-feature android:name="android.hardware.camera" android:required="false" />
-              <uses-feature android:name="android.hardware.camera.autofocus" android:required="false" />
-
-              <!-- 📁 Storage Permissions for Downloads & Resized Images -->
-              <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" android:maxSdkVersion="32" />
-              <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" android:maxSdkVersion="29" />
-              <uses-permission android:name="android.permission.READ_MEDIA_IMAGES"/>
-
-              <!-- Queries for External Links / Browser -->
-              <queries>
-                  <intent>
-                      <action android:name="android.intent.action.VIEW" />
-                      <data android:scheme="https" />
-                  </intent>
-                  <intent>
-                      <action android:name="android.intent.action.VIEW" />
-                      <data android:scheme="http" />
-                  </intent>
-                  <intent>
-                      <action android:name="android.intent.action.DIAL" />
-                      <data android:scheme="tel" />
-                  </intent>
-              </queries>
-
-              <application
-                  android:label="MockTester"
-                  android:name="${applicationName}"
-                  android:icon="@mipmap/ic_launcher"
-                  android:usesCleartextTraffic="true"
-                  android:requestLegacyExternalStorage="true"
-                  android:largeHeap="true"
-                  android:hardwareAccelerated="true">
-
-                  <meta-data
-                      android:name="flutterEmbedding"
-                      android:value="2" />
-
-                  <activity
-                      android:name=".MainActivity"
-                      android:exported="true"
-                      android:launchMode="singleTop"
-                      android:taskAffinity=""
-                      android:theme="@style/LaunchTheme"
-                      android:configChanges="orientation|keyboardHidden|keyboard|screenSize|smallestScreenSize|locale|layoutDirection|fontScale|screenLayout|density|uiMode"
-                      android:hardwareAccelerated="true"
-                      android:windowSoftInputMode="adjustResize">
-
-                      <meta-data
-                          android:name="io.flutter.embedding.android.NormalTheme"
-                          android:resource="@style/NormalTheme" />
-
-                      <intent-filter>
-                          <action android:name="android.intent.action.MAIN"/>
-                          <category android:name="android.intent.category.LAUNCHER"/>
-                      </intent-filter>
-                  </activity>
-              </application>
-          </manifest>
-          EOF
-
-      # 🎨 Custom App Launcher Icon (Manifest inject hone ke baad)
-      - name: Generate Custom App Launcher Icons
+      - name: Resolve Flutter dependencies and launcher icons
         working-directory: flutter_app
         run: |
           flutter pub get
           dart run flutter_launcher_icons
 
-      - name: Force CompileSdk 36 on All Plugins (Fix file_picker & webview)
-        working-directory: flutter_app
-        run: |
-          SETTINGS_KTS="android/settings.gradle.kts"
-          SETTINGS_GROOVY="android/settings.gradle"
-
-          if [ -f "$SETTINGS_KTS" ]; then
-            printf "\n\ngradle.beforeProject {\n    plugins.withId(\"com.android.library\") {\n        extensions.findByName(\"android\")?.let { ext ->\n            try {\n                ext.javaClass.getMethod(\"setCompileSdkVersion\", Int::class.javaPrimitiveType).invoke(ext, 36)\n            } catch (_: Exception) {}\n        }\n    }\n}\n" >> "$SETTINGS_KTS"
-          fi
-
-          if [ -f "$SETTINGS_GROOVY" ]; then
-            printf "\n\ngradle.beforeProject { project ->\n    project.plugins.withId('com.android.library') { plugin ->\n        project.android.compileSdkVersion = 36\n    }\n}\n" >> "$SETTINGS_GROOVY"
-          fi
-
-          ROOT_BUILD="android/build.gradle"
-          if [ -f "$ROOT_BUILD" ]; then
-            printf "\n\nsubprojects {\n    afterEvaluate { project ->\n        if (project.hasProperty('android')) {\n            project.android {\n                compileSdkVersion 36\n            }\n        }\n    }\n}\n" >> "$ROOT_BUILD"
-          fi
-
-      - name: Setup Build Configuration, Desugaring & Permanent Signing
-        working-directory: flutter_app
+      - name: Validate package, target API, manifest, and signing configuration
+        working-directory: flutter_app/android/app
         env:
-          KEYSTORE_BASE64: ${{ secrets.KEYSTORE_BASE64 }}
-        run: |
-          python3 -c "import base64, os; data = os.environ.get('KEYSTORE_BASE64', '').strip(); open('android/app/mocktester_key.jks', 'wb').write(base64.b64decode(data))"
-
-          APP_KTS="android/app/build.gradle.kts"
-          APP_GROOVY="android/app/build.gradle"
-
-          if [ -f "$APP_KTS" ]; then
-            sed -i 's/compileSdk = flutter.compileSdkVersion/compileSdk = 36/g' "$APP_KTS"
-            sed -i 's/compileSdk = 34/compileSdk = 36/g' "$APP_KTS"
-            sed -i 's/minSdk = flutter.minSdkVersion/minSdk = 26/g' "$APP_KTS"
-            sed -i 's/minSdk = 24/minSdk = 26/g' "$APP_KTS"
-
-            cat << 'EOF' >> "$APP_KTS"
-
-            android {
-                namespace = "com.mocktester.app"
-                compileSdk = 36
-                defaultConfig {
-                    applicationId = "com.mocktester.app"
-                    minSdk = 26
-                    targetSdk = 34
-                }
-                signingConfigs {
-                    create("release") {
-                        storeFile = file("mocktester_key.jks")
-                        storePassword = System.getenv("KEYSTORE_PASSWORD") ?: "mocktester123"
-                        keyAlias = System.getenv("KEY_ALIAS") ?: "mocktester"
-                        keyPassword = System.getenv("KEY_PASSWORD") ?: "mocktester123"
-                    }
-                }
-                buildTypes {
-                    getByName("release") {
-                        signingConfig = signingConfigs.getByName("release")
-                        isMinifyEnabled = false
-                        isShrinkResources = false
-                    }
-                }
-                compileOptions {
-                    isCoreLibraryDesugaringEnabled = true
-                }
-            }
-
-            dependencies {
-                coreLibraryDesugaring("com.android.tools:desugar_jdk_libs:2.1.4")
-            }
-          EOF
-          elif [ -f "$APP_GROOVY" ]; then
-            sed -i 's/compileSdkVersion flutter.compileSdkVersion/compileSdkVersion 36/g' "$APP_GROOVY"
-            sed -i 's/compileSdkVersion 34/compileSdkVersion 36/g' "$APP_GROOVY"
-            sed -i 's/minSdkVersion flutter.minSdkVersion/minSdkVersion 26/g' "$APP_GROOVY"
-            sed -i 's/minSdkVersion 24/minSdkVersion 26/g' "$APP_GROOVY"
-
-            cat << 'EOF' >> "$APP_GROOVY"
-
-            android {
-                namespace 'com.mocktester.app'
-                compileSdkVersion 36
-                defaultConfig {
-                    applicationId "com.mocktester.app"
-                    minSdkVersion 26
-                    targetSdkVersion 34
-                }
-                signingConfigs {
-                    release {
-                        storeFile file("mocktester_key.jks")
-                        storePassword System.getenv("KEYSTORE_PASSWORD") ?: "mocktester123"
-                        keyAlias System.getenv("KEY_ALIAS") ?: "mocktester"
-                        keyPassword System.getenv("KEY_PASSWORD") ?: "mocktester123"
-                    }
-                }
-                buildTypes {
-                    release {
-                        signingConfig signingConfigs.release
-                        minifyEnabled false
-                        shrinkResources false
-                    }
-                }
-                compileOptions {
-                    coreLibraryDesugaringEnabled true
-                }
-            }
-
-            dependencies {
-                coreLibraryDesugaring 'com.android.tools:desugar_jdk_libs:2.1.4'
-            }
-          EOF
-          fi
-
-      - name: Build Pure Offline Release APK via Flutter
-        working-directory: flutter_app
-        env:
+          KEYSTORE_PATH: ${{ runner.temp }}/play-release/upload-key.jks
           KEYSTORE_PASSWORD: ${{ secrets.KEYSTORE_PASSWORD }}
           KEY_ALIAS: ${{ secrets.KEY_ALIAS }}
           KEY_PASSWORD: ${{ secrets.KEY_PASSWORD }}
         run: |
-          flutter clean
-          flutter pub get
+          set -euo pipefail
+          grep -Fq 'applicationId = "com.mocktester.app"' build.gradle.kts
+          grep -Fq 'targetSdk = 36' build.gradle.kts
+          grep -Fq 'compileSdk = 36' build.gradle.kts
+          grep -Fq 'signingConfig = signingConfigs.getByName("release")' build.gradle.kts
+          ! grep -qi 'signingConfigs.getByName("debug")' build.gradle.kts
+          grep -Fq 'android:usesCleartextTraffic="false"' src/main/AndroidManifest.xml
+          ! grep -Eq 'READ_MEDIA_(IMAGES|VIDEO|AUDIO)|READ_EXTERNAL_STORAGE|WRITE_EXTERNAL_STORAGE|requestLegacyExternalStorage' src/main/AndroidManifest.xml
+          keytool -list -keystore "$KEYSTORE_PATH" -storepass "$KEYSTORE_PASSWORD" -alias "$KEY_ALIAS" >/dev/null
 
-          # 🛠️ AGP 9.0+ Proguard auto-patch
-          TARGET_FILES=$(find /home/runner/.pub-cache -name "build.gradle" -path "*/flutter_inappwebview_android*/*")
-          for f in $TARGET_FILES; do
-            echo "Patching: $f"
-            sed -i "s/proguard-android.txt/proguard-android-optimize.txt/g" "$f"
-          done
-
-          flutter build apk --release --no-pub \
-            --target-platform=android-arm64 \
-            --no-tree-shake-icons \
-            --build-number=${{ github.run_number }} \
-            --dart-define=SUPABASE_URL=${{ secrets.SUPABASE_URL }} \
-            --dart-define=SUPABASE_ANON_KEY=${{ secrets.SUPABASE_ANON_KEY }}
-
-      - name: Locate & Package Clean ZIP
+      - name: Analyze and test
         working-directory: flutter_app
         run: |
-          mkdir -p build/app/outputs/flutter-apk
-          APK_FILE=$(find build/app/outputs -type f -name "*release*.apk" | head -n 1)
-          if [ -z "$APK_FILE" ]; then
-            APK_FILE=$(find build/app/outputs -type f -name "*.apk" | head -n 1)
-          fi
-          echo "Found APK at: $APK_FILE"
-          
-          # Rename cleanly
-          cp "$APK_FILE" build/app/outputs/flutter-apk/MockTester_Build_${{ github.run_number }}.apk
-          
-          # Reliable fast zip without buffer drops
-          cd build/app/outputs/flutter-apk
-          zip -1 -j MockTester_Build_${{ github.run_number }}.zip MockTester_Build_${{ github.run_number }}.apk
-          
-          # Verify file size
-          ls -lh MockTester_Build_${{ github.run_number }}.zip
+          flutter analyze --no-pub
+          if [ -d test ]; then flutter test --no-pub; else echo "No Flutter test directory; skipping unit tests."; fi
 
-      - name: Send Reliable Zip Direct To Telegram via Curl
+      - name: Build signed Android APK
+        working-directory: flutter_app
         env:
-          BOT_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
-          CHAT_ID: ${{ secrets.TELEGRAM_TO }}
-          BUILD_NUM: ${{ github.run_number }}
+          KEYSTORE_PATH: ${{ runner.temp }}/play-release/upload-key.jks
+          KEYSTORE_PASSWORD: ${{ secrets.KEYSTORE_PASSWORD }}
+          KEY_ALIAS: ${{ secrets.KEY_ALIAS }}
+          KEY_PASSWORD: ${{ secrets.KEY_PASSWORD }}
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_ANON_KEY: ${{ secrets.SUPABASE_ANON_KEY }}
+          FIREBASE_CONFIGURED: ${{ steps.firebase.outputs.configured }}
+          VERSION_CODE: ${{ steps.release.outputs.version_code }}
         run: |
-          ZIP_PATH="flutter_app/build/app/outputs/flutter-apk/MockTester_Build_${BUILD_NUM}.zip"
-          
-          echo "Uploading $ZIP_PATH to Telegram..."
-          
-          curl -v -F chat_id="${CHAT_ID}" \
-               -F caption="🚀 MockTester Build #${BUILD_NUM} Ready (ZIP)!" \
-               -F document=@"${ZIP_PATH}" \
-               --connect-timeout 60 \
-               --retry 5 \
-               --retry-delay 5 \
-               "https://api.telegram.org/bot${BOT_TOKEN}/sendDocument"
+          set -euo pipefail
+          flutter clean
+          flutter build apk --release --no-pub \
+            --build-number="$VERSION_CODE" \
+            --dart-define="SUPABASE_URL=$SUPABASE_URL" \
+            --dart-define="SUPABASE_ANON_KEY=$SUPABASE_ANON_KEY" \
+            --dart-define="FIREBASE_CONFIGURED=$FIREBASE_CONFIGURED"
+
+          APK="build/app/outputs/flutter-apk/app-release.apk"
+          test -s "$APK"
+          ANDROID_SDK="${ANDROID_HOME:-${ANDROID_SDK_ROOT:-}}"
+          test -n "$ANDROID_SDK"
+          APKSIGNER="$(find "$ANDROID_SDK/build-tools" -type f -name apksigner | sort -V | tail -n 1)"
+          test -x "$APKSIGNER"
+          "$APKSIGNER" verify --verbose "$APK"
+          echo "APK_PATH=$APK" >> "$GITHUB_ENV"
+
+      - name: Upload signed APK artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: MockTester_Android_APK_${{ steps.release.outputs.version_code }}
+          path: flutter_app/build/app/outputs/flutter-apk/app-release.apk
+          if-no-files-found: error
+          retention-days: 14

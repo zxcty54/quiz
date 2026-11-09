@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import '../models/question_model.dart';
+import '../services/community_safety_service.dart';
 import 'batch_classroom_screen.dart';
 import 'sectional_cbt_screen.dart';
 
@@ -367,6 +368,28 @@ class CreatorFreeMocksTab extends StatelessWidget {
     );
   }
 
+  Future<void> _reportPublicMock(
+    BuildContext context,
+    Map<String, dynamic> mock,
+  ) async {
+    final mockId = mock['id']?.toString().trim() ?? '';
+    if (mockId.isEmpty) return;
+
+    final reporter = await CommunitySafetyService.currentReporterHandle();
+    if (!context.mounted) return;
+    await CommunitySafetyService.promptAndQueueModerationReport(
+      context,
+      reporterHandle: reporter,
+      targetType: 'public_mock',
+      targetId: mockId,
+      targetHandle: mock['creator_id']?.toString(),
+      source: 'creator_profile_mock',
+      contentExcerpt:
+          '${mock['title'] ?? 'Creator mock'} • ${mock['subject'] ?? 'General'}',
+      successMessage: 'Mock reported. Thank you; moderators will review it.',
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     final cardSurface = isDarkMode ? const Color(0xFF1E293B) : Colors.white;
@@ -408,7 +431,23 @@ class CreatorFreeMocksTab extends StatelessWidget {
                       style: const TextStyle(color: _primaryBlue, fontSize: 10.5, fontWeight: FontWeight.bold),
                     ),
                   ),
-                  Text('$attempts attempts', style: TextStyle(fontSize: 11.5, color: Colors.grey[500])),
+                  Row(
+                    mainAxisSize: MainAxisSize.min,
+                    children: [
+                      Text('$attempts attempts', style: TextStyle(fontSize: 11.5, color: Colors.grey[500])),
+                      IconButton(
+                        tooltip: 'Report mock',
+                        visualDensity: VisualDensity.compact,
+                        iconSize: 18,
+                        color: Colors.grey[600],
+                        icon: const Icon(Icons.flag_outlined),
+                        onPressed: () => _reportPublicMock(
+                          context,
+                          Map<String, dynamic>.from(m as Map),
+                        ),
+                      ),
+                    ],
+                  ),
                 ],
               ),
               const SizedBox(height: 6),
