@@ -5,7 +5,9 @@ import 'package:flutter/services.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
 import '../main.dart';
+import '../services/account_deletion_service.dart';
 import '../services/user_stats_service.dart';
+import 'onboarding_welcome_screen.dart';
 import 'saved_questions_screen.dart';
 import 'wrong_questions_screen.dart';
 import 'saved_current_affairs_screen.dart';
@@ -613,6 +615,33 @@ class _ProfileScreenState extends State<ProfileScreen> {
                 ),
               ),
 
+              // ===== Account & Data =====
+              _sectionHead('🔐 Account & Data', 'Privacy', headerTextColor, tagColor: const Color(0xFFEF5350)),
+              Card(
+                color: cardBg,
+                shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(19), side: BorderSide(color: cardBorder)),
+                child: Column(
+                  children: [
+                    ListTile(
+                      leading: const Icon(Icons.privacy_tip_outlined, color: Color(0xFF2563EB), size: 22),
+                      title: Text('Privacy Policy & Deletion Request', style: TextStyle(fontSize: 13, fontWeight: FontWeight.w700, color: headerTextColor)),
+                      subtitle: Text('Delete your data on the web too', style: TextStyle(fontSize: 10.5, fontWeight: FontWeight.w600, color: subTextColor)),
+                      trailing: const Icon(Icons.open_in_new_rounded, size: 16, color: Colors.grey),
+                      onTap: () {
+                        AccountDeletionService.openWebDeletionPage();
+                      },
+                    ),
+                    Divider(height: 1, color: cardBorder),
+                    ListTile(
+                      leading: const Icon(Icons.delete_forever_outlined, color: Color(0xFFEF5350), size: 22),
+                      title: const Text('Delete Account & Data', style: TextStyle(fontSize: 13, fontWeight: FontWeight.w800, color: Color(0xFFEF5350))),
+                      subtitle: Text('Erase everything linked to this device', style: TextStyle(fontSize: 10.5, fontWeight: FontWeight.w600, color: subTextColor)),
+                      onTap: _confirmDeleteAccount,
+                    ),
+                  ],
+                ),
+              ),
+
               // ===== Coaching Owners =====
               _sectionHead('🏫 Coaching Owners Ke Liye', '', headerTextColor),
               CoachingOnboardingCtaWidget(isDarkMode: isDark),
@@ -767,6 +796,19 @@ class _ProfileScreenState extends State<ProfileScreen> {
           ),
         );
       },
+    );
+  }
+
+  /// Play asks for an in-app way to delete the account and its data. The
+  /// service erases every server row linked to this device's identity and then
+  /// clears the local copy, so the app restarts at onboarding with a fresh one.
+  Future<void> _confirmDeleteAccount() async {
+    final bool deleted = await AccountDeletionService.promptAndDelete(context);
+    if (!deleted || !mounted) return;
+
+    Navigator.of(context).pushAndRemoveUntil<void>(
+      MaterialPageRoute<void>(builder: (_) => const OnboardingWelcomeScreen()),
+      (route) => false,
     );
   }
 
