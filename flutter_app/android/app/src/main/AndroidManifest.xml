@@ -1,5 +1,5 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="online.mocktester.app">
+    package="com.mocktester.app">
 
     <!-- Network Access -->
     <uses-permission android:name="android.permission.INTERNET"/>
@@ -10,18 +10,11 @@
 
     <!-- Camera for Doubt Photos / Profile Uploads -->
     <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-feature android:name="android.hardware.camera" android:required="false"/>
+    <uses-feature android:name="android.hardware.camera.autofocus" android:required="false"/>
 
     <!-- Android 13+ Push Notification Permission -->
     <uses-permission android:name="android.permission.POST_NOTIFICATIONS"/>
-
-    <!-- Standard Storage Permissions -->
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" android:maxSdkVersion="32" />
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" android:maxSdkVersion="29" />
-
-    <!-- Android 13+ (API 33+) Media Permissions -->
-    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES"/>
-    <uses-permission android:name="android.permission.READ_MEDIA_VIDEO"/>
-    <uses-permission android:name="android.permission.READ_MEDIA_AUDIO"/>
 
     <!-- url_launcher package visibility queries for Android 11+ (API 30+) -->
     <queries>
@@ -46,8 +39,6 @@
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher"
         android:usesCleartextTraffic="false"
-        android:requestLegacyExternalStorage="true"
-        android:largeHeap="true"
         android:hardwareAccelerated="true">
         
         <!-- Flutter v2 Embedding Meta-Data -->
