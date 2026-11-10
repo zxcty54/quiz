@@ -2,7 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:fl_chart/fl_chart.dart';
 import 'package:http/http.dart' as http;
 import '../services/ai_explainer_service.dart';
+import '../services/ai_data_disclosure_service.dart';
 import 'math_text.dart';
+import 'report_ai_response_button.dart';
 
 // 1️⃣ TCS QUESTION PALETTE DRAWER
 class CbtPaletteDrawer extends StatelessWidget {
@@ -226,6 +228,13 @@ class _AiExplanationButtonState extends State<AiExplanationButton> {
                                 text: chat['response']!,
                                 textStyle: const TextStyle(fontSize: 12.5, height: 1.4, color: Colors.black87),
                               ),
+                              Align(
+                                alignment: Alignment.centerRight,
+                                child: ReportAiResponseButton(
+                                  response: chat['response']!,
+                                  source: 'exam_question_custom_doubt',
+                                ),
+                              ),
                             ],
                           ),
                         )),
@@ -256,6 +265,9 @@ class _AiExplanationButtonState extends State<AiExplanationButton> {
                               ? null
                               : () async {
                                   if (doubtController.text.trim().isEmpty) return;
+                                  final consented =
+                                      await AiDataDisclosureService.requireConsent(context);
+                                  if (!mounted || !consented) return;
                                   setModalState(() => isAsking = true);
 
                                   String userQuery = doubtController.text.trim();
