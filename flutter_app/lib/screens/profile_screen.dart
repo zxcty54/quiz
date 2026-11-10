@@ -192,7 +192,9 @@ class _ProfileScreenState extends State<ProfileScreen> {
                 }
 
                 if (mounted) {
-                  Navigator.pop(ctx);
+                  if (ctx.mounted) {
+                    Navigator.pop(ctx);
+                  }
                   _loadProfileData();
                   ScaffoldMessenger.of(context).showSnackBar(
                     const SnackBar(
