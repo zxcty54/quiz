@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
+import '../services/community_safety_service.dart';
 
 class ContentPublisherModal {
   static void openPublishSheet({
@@ -155,6 +156,9 @@ class ContentPublisherModal {
                         : () async {
                             final rawContent = contentCtrl.text.trim();
                             if (rawContent.isEmpty) return;
+                            final accepted =
+                                await CommunitySafetyService.requirePostingTerms(context);
+                            if (!accepted || !ctx.mounted) return;
 
                             setModalState(() => isSubmitting = true);
 
