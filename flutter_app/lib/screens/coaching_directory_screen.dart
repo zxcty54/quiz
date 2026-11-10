@@ -31,7 +31,7 @@ class _CoachingDirectoryScreenState extends State<CoachingDirectoryScreen> {
           .eq('is_approved', true)
           .order('created_at', ascending: false);
 
-      final List data = res ?? [];
+      final List data = res;
       final Set<String> activeCities = {'All'};
 
       for (var c in data) {
@@ -139,7 +139,7 @@ class _CoachingDirectoryScreenState extends State<CoachingDirectoryScreen> {
                               return FilterChip(
                                 label: Text(city),
                                 selected: isSel,
-                                selectedColor: const Color(0xFF10B981).withOpacity(0.18),
+                                selectedColor: const Color(0xFF10B981).withValues(alpha: 0.18),
                                 checkmarkColor: const Color(0xFF10B981),
                                 backgroundColor: chipBg,
                                 labelStyle: TextStyle(
@@ -204,7 +204,7 @@ class _CoachingDirectoryScreenState extends State<CoachingDirectoryScreen> {
                             Container(
                               padding: const EdgeInsets.all(16),
                               decoration: BoxDecoration(
-                                color: const Color(0xFF2563EB).withOpacity(0.1),
+                                color: const Color(0xFF2563EB).withValues(alpha: 0.1),
                                 shape: BoxShape.circle,
                               ),
                               child: const Icon(Icons.school_outlined, size: 40, color: Color(0xFF2563EB)),
@@ -262,7 +262,7 @@ class _CoachingDirectoryScreenState extends State<CoachingDirectoryScreen> {
                               border: Border.all(color: cardBorder, width: 1),
                               boxShadow: [
                                 BoxShadow(
-                                  color: Colors.black.withOpacity(isDark ? 0.25 : 0.04),
+                                  color: Colors.black.withValues(alpha: isDark ? 0.25 : 0.04),
                                   blurRadius: 8,
                                   offset: const Offset(0, 2),
                                 ),
@@ -372,7 +372,7 @@ class _CoachingDirectoryScreenState extends State<CoachingDirectoryScreen> {
                                           return Container(
                                             padding: const EdgeInsets.symmetric(horizontal: 7, vertical: 2.5),
                                             decoration: BoxDecoration(
-                                              color: const Color(0xFF2563EB).withOpacity(isDark ? 0.14 : 0.08),
+                                              color: const Color(0xFF2563EB).withValues(alpha: isDark ? 0.14 : 0.08),
                                               borderRadius: BorderRadius.circular(6),
                                             ),
                                             child: Text(
