@@ -60,7 +60,7 @@ class _DistrictLeaderboardScreenState extends State<DistrictLeaderboardScreen> {
 
       if (mounted) {
         setState(() {
-          _ranks = List<Map<String, dynamic>>.from(res ?? []);
+          _ranks = List<Map<String, dynamic>>.from(res);
           _isLoading = false;
         });
       }
