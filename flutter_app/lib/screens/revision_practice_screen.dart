@@ -412,7 +412,7 @@ class _RevisionPracticeScreenState extends State<RevisionPracticeScreen> {
               boxShadow: [
                 if (!_isAnswered)
                   BoxShadow(
-                    color: Colors.black.withOpacity(isDark ? 0.08 : 0.025),
+                    color: Colors.black.withValues(alpha: isDark ? 0.08 : 0.025),
                     blurRadius: 5,
                     offset: const Offset(0, 2),
                   ),
@@ -463,12 +463,12 @@ class _RevisionPracticeScreenState extends State<RevisionPracticeScreen> {
       child: Container(
         padding: const EdgeInsets.all(8),
         decoration: BoxDecoration(
-          color: isDark ? const Color(0xFF172033).withOpacity(0.98) : Colors.white.withOpacity(0.98),
+          color: isDark ? const Color(0xFF172033).withValues(alpha: 0.98) : Colors.white.withValues(alpha: 0.98),
           borderRadius: BorderRadius.circular(18),
           border: Border.all(color: isDark ? const Color(0xFF29364D) : const Color(0xFFE2E8F0)),
           boxShadow: [
             BoxShadow(
-              color: Colors.black.withOpacity(isDark ? 0.30 : 0.10),
+              color: Colors.black.withValues(alpha: isDark ? 0.30 : 0.10),
               blurRadius: 20,
               offset: const Offset(0, 7),
             ),
