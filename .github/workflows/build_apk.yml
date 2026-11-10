@@ -14,6 +14,10 @@ on:
         required: false
         type: string
         default: ""
+      send_to_telegram:
+        description: "Send the signed APK archive to the configured Telegram chat"
+        type: boolean
+        default: true
 
 permissions:
   contents: read
@@ -342,3 +346,60 @@ jobs:
           path: flutter_app/build/app/outputs/flutter-apk/app-release.apk
           if-no-files-found: error
           retention-days: 14
+
+      - name: Send signed APK to Telegram
+        if: ${{ github.event_name == 'push' || inputs.send_to_telegram }}
+        working-directory: flutter_app
+        env:
+          BOT_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
+          CHAT_ID: ${{ secrets.TELEGRAM_TO }}
+          VERSION_CODE: ${{ steps.release.outputs.version_code }}
+        run: |
+          set -euo pipefail
+          APK="build/app/outputs/flutter-apk/app-release.apk"
+          ARCHIVE="build/app/outputs/flutter-apk/MockTester_Android_${VERSION_CODE}.zip"
+          if [ -z "$BOT_TOKEN" ] || [ -z "$CHAT_ID" ]; then
+            echo "::error title=Telegram configuration::TELEGRAM_TOKEN and TELEGRAM_TO repository secrets are required."
+            exit 1
+          fi
+          if [ ! -s "$APK" ]; then
+            echo "::error title=Telegram upload::Signed APK is missing or empty: $APK"
+            exit 1
+          fi
+          # Compress the already-signed APK as much as possible for Telegram's 50 MB bot limit.
+          zip -9 -j "$ARCHIVE" "$APK"
+          SIZE=$(stat -c%s "$ARCHIVE")
+          echo "Telegram archive size: $SIZE bytes"
+          if [ "$SIZE" -gt 50000000 ]; then
+            echo "::warning title=Telegram file-size limit::Archive exceeds the Bot API's 50 MB upload limit; Telegram may reject it."
+          fi
+
+          if ! response=$(curl -sS -w '\n%{http_code}' \
+            -F "chat_id=$CHAT_ID" \
+            -F "caption=MockTester signed Android APK v$VERSION_CODE (ZIP; extract APK to install)" \
+            -F "document=@$ARCHIVE" \
+            --connect-timeout 60 --max-time 600 --retry 5 --retry-delay 5 \
+            "https://api.telegram.org/bot${BOT_TOKEN}/sendDocument"); then
+            echo "::error title=Telegram upload::The Telegram Bot API request failed."
+            exit 1
+          fi
+          python3 - "$response" "$ARCHIVE" "$SIZE" <<'PY_TELEGRAM'
+          import json, sys
+          response, archive, size = sys.argv[1:]
+          body, separator, status = response.rpartition('\n')
+          def escape(value):
+              return value.replace('%', '%25').replace('\r', '%0D').replace('\n', '%0A')
+          if status != '200':
+              print(f'::error title=Telegram upload failed::HTTP {escape(status)}: {escape(body[:800])}')
+              sys.exit(1)
+          try:
+              payload = json.loads(body)
+          except Exception as exc:
+              print(f'::error title=Telegram upload failed::Could not parse Bot API response: {escape(str(exc))}')
+              sys.exit(1)
+          if payload.get('ok') is not True:
+              description = str(payload.get('description', 'Telegram rejected the document.'))
+              print(f'::error title=Telegram upload failed::{escape(description)}')
+              sys.exit(1)
+          print(f'::notice title=Telegram upload::Telegram accepted {archive} ({size} bytes).')
+          PY_TELEGRAM
