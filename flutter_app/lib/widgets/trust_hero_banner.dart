@@ -16,10 +16,10 @@ class TrustHeroBannerWidget extends StatelessWidget {
       decoration: BoxDecoration(
         color: const Color(0xFF0B132B),
         borderRadius: BorderRadius.circular(24),
-        border: Border.all(color: Colors.white.withOpacity(0.12), width: 1.2),
+        border: Border.all(color: Colors.white.withValues(alpha: 0.12), width: 1.2),
         boxShadow: [
           BoxShadow(
-            color: const Color(0xFF2563EB).withOpacity(0.25),
+            color: const Color(0xFF2563EB).withValues(alpha: 0.25),
             blurRadius: 30,
             offset: const Offset(0, 10),
           ),
@@ -55,9 +55,9 @@ class TrustHeroBannerWidget extends StatelessWidget {
                       Container(
                         padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
                         decoration: BoxDecoration(
-                          color: const Color(0xFF2563EB).withOpacity(0.2),
+                          color: const Color(0xFF2563EB).withValues(alpha: 0.2),
                           borderRadius: BorderRadius.circular(20),
-                          border: Border.all(color: const Color(0xFF38BDF8).withOpacity(0.4)),
+                          border: Border.all(color: const Color(0xFF38BDF8).withValues(alpha: 0.4)),
                         ),
                         child: const Row(
                           children: [
@@ -78,9 +78,9 @@ class TrustHeroBannerWidget extends StatelessWidget {
                       Container(
                         padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
                         decoration: BoxDecoration(
-                          color: Colors.white.withOpacity(0.08),
+                          color: Colors.white.withValues(alpha: 0.08),
                           borderRadius: BorderRadius.circular(20),
-                          border: Border.all(color: Colors.white.withOpacity(0.15)),
+                          border: Border.all(color: Colors.white.withValues(alpha: 0.15)),
                         ),
                         child: const Text(
                           'BPSC • BSSC • SSC • Railway',
@@ -118,9 +118,9 @@ class TrustHeroBannerWidget extends StatelessWidget {
                   Container(
                     padding: const EdgeInsets.symmetric(vertical: 12),
                     decoration: BoxDecoration(
-                      color: Colors.white.withOpacity(0.06),
+                      color: Colors.white.withValues(alpha: 0.06),
                       borderRadius: BorderRadius.circular(16),
-                      border: Border.all(color: Colors.white.withOpacity(0.1)),
+                      border: Border.all(color: Colors.white.withValues(alpha: 0.1)),
                     ),
                     child: const Row(
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -156,9 +156,9 @@ class TrustHeroBannerWidget extends StatelessWidget {
                     width: double.infinity,
                     padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 10),
                     decoration: BoxDecoration(
-                      color: Colors.white.withOpacity(0.04),
+                      color: Colors.white.withValues(alpha: 0.04),
                       borderRadius: BorderRadius.circular(12),
-                      border: Border.all(color: const Color(0xFFFBBF24).withOpacity(0.2)),
+                      border: Border.all(color: const Color(0xFFFBBF24).withValues(alpha: 0.2)),
                     ),
                     child: const Row(
                       crossAxisAlignment: CrossAxisAlignment.start,
