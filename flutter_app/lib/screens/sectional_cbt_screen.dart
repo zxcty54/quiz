@@ -51,8 +51,6 @@ class _SectionalCbtScreenState extends State<SectionalCbtScreen> {
   final Set<int> _markedForReview = {};
   final Map<int, int> _questionTimers = {};
 
-  int _currentQTime = 0;
-
   bool _isExamSubmitted = false;
   bool _isSubmitting = false;
 
@@ -219,8 +217,6 @@ class _SectionalCbtScreenState extends State<SectionalCbtScreen> {
       const Duration(seconds: 1),
       (timer) {
         if (!mounted || _isExamSubmitted) return;
-
-        _currentQTime++;
 
         _questionTimers[_currentIndex] =
             (_questionTimers[_currentIndex] ?? 0) + 1;
@@ -2254,9 +2250,7 @@ class _SectionalCbtScreenState extends State<SectionalCbtScreen> {
                     color:
                         const Color(
                                 0xFF2563EB)
-                            .withOpacity(
-                      0.25,
-                    ),
+                            .withValues(alpha: 0.25),
                     width: 1.2,
                   ),
                 ),
