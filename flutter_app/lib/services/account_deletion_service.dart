@@ -24,9 +24,10 @@ class AccountDeletionService {
   AccountDeletionService._();
 
   /// Web page offering the same deletion. Play asks for a link next to the
-  /// in-app action; point this at a dedicated deletion page when one exists.
+  /// in-app action, so this opens the deletion section of the privacy policy
+  /// (anchor `#deletion`) rather than the top of the page.
   static const String webDeletionUrl =
-      'https://www.mocktester.online/p/privacy.html';
+      'https://www.mocktester.online/p/privacy.html#deletion';
 
   /// Rows that are cleared, grouped by the identity that owns them.
   static const List<String> _userIdTables = <String>[
