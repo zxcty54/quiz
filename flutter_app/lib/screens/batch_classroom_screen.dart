@@ -1,13 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
-import 'package:url_launcher/url_launcher.dart';
 
 import '../models/question_model.dart';
 import '../services/cbt_progress_service.dart';
 import '../services/community_safety_service.dart';
 import 'sectional_cbt_screen.dart';
-import 'student_cbt_report_screen.dart';
 
 class BatchClassroomScreen extends StatefulWidget {
   final Map<String, dynamic> batchData;
@@ -55,7 +53,7 @@ class _BatchClassroomScreenState extends State<BatchClassroomScreen>
           .eq('batch_id', batchId)
           .order('created_at', ascending: false);
 
-      final tests = res ?? [];
+      final tests = res;
 
       // Load local progress for each test
       for (var test in tests) {

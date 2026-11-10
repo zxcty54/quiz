@@ -1,4 +1,3 @@
-import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:image_picker/image_picker.dart';
@@ -135,7 +134,7 @@ class _CreatorMockBuilderScreenState extends State<CreatorMockBuilderScreen> {
 
         if (mounted) {
           setState(() {
-            _myBatches = List<Map<String, dynamic>>.from(batchesRes ?? []);
+            _myBatches = List<Map<String, dynamic>>.from(batchesRes);
             if (_myBatches.isNotEmpty) {
               _selectedBatchId = _myBatches.first['id'].toString();
             }

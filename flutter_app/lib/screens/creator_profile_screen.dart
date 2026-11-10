@@ -186,7 +186,7 @@ class _CreatorProfileScreenState extends State<CreatorProfileScreen>
           .eq('creator_id', widget.creatorHandle)
           .order('created_at', ascending: false);
 
-      _mocks = res ?? [];
+      _mocks = res;
     } catch (e) {
       debugPrint("Mocks fetch error: $e");
     }
@@ -203,7 +203,7 @@ class _CreatorProfileScreenState extends State<CreatorProfileScreen>
           .eq('coaching_id', coachingId)
           .order('created_at', ascending: false);
 
-      _selections = res ?? [];
+      _selections = res;
     } catch (e) {
       debugPrint("Selections fetch error: $e");
     }

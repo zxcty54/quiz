@@ -7,7 +7,6 @@ import 'package:supabase_flutter/supabase_flutter.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'services/notification_service.dart';
 import 'services/ai_explainer_service.dart';
-import 'screens/home_screen.dart';
 import 'screens/onboarding_welcome_screen.dart';
 import 'screens/splash_screen.dart';
 

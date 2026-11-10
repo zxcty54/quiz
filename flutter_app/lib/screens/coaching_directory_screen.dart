@@ -31,7 +31,7 @@ class _CoachingDirectoryScreenState extends State<CoachingDirectoryScreen> {
           .eq('is_approved', true)
           .order('created_at', ascending: false);
 
-      final List data = res ?? [];
+      final List data = res;
       final Set<String> activeCities = {'All'};
 
       for (var c in data) {
