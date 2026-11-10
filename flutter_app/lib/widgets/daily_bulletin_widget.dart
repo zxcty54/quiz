@@ -209,7 +209,7 @@ class DailyBulletinWidgetState extends State<DailyBulletinWidget> {
                 Container(
                   padding: const EdgeInsets.all(6),
                   decoration: BoxDecoration(
-                    color: const Color(0xFF4F46E5).withOpacity(0.12),
+                    color: const Color(0xFF4F46E5).withValues(alpha: 0.12),
                     borderRadius: BorderRadius.circular(10),
                   ),
                   child: const Icon(Icons.newspaper_rounded, size: 20, color: Color(0xFF4F46E5)),
@@ -349,7 +349,7 @@ class DailyBulletinWidgetState extends State<DailyBulletinWidget> {
         ),
         boxShadow: [
           BoxShadow(
-            color: Colors.black.withOpacity(widget.isDarkMode ? 0.2 : 0.03),
+            color: Colors.black.withValues(alpha: widget.isDarkMode ? 0.2 : 0.03),
             blurRadius: 8,
             offset: const Offset(0, 3),
           ),
