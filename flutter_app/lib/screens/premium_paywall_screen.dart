@@ -50,7 +50,7 @@ class PremiumPaywallScreen extends StatelessWidget {
                   'There is no payment or subscription flow in this Google Play build.',
                   textAlign: TextAlign.center,
                   style: TextStyle(
-                    color: foreground.withOpacity(0.72),
+                    color: foreground.withValues(alpha: 0.72),
                     height: 1.4,
                   ),
                 ),
