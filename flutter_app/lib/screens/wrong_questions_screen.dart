@@ -168,7 +168,7 @@ class _WrongQuestionsScreenState extends State<WrongQuestionsScreen> {
                                 if (isCorrect) {
                                   score++;
                                   bool graduated = await UserStatsService.incrementQuestionMasteryByText(_questionId(currentJson));
-                                  if (graduated && mounted) {
+                                  if (graduated && context.mounted) {
                                     ScaffoldMessenger.of(context).showSnackBar(
                                       const SnackBar(content: Text("🎉 Question Cleared from Vault!"), duration: Duration(seconds: 1)),
                                     );
