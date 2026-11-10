@@ -1,12 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
-import 'package:url_launcher/url_launcher.dart';
 
 import '../models/question_model.dart';
 import '../services/cbt_progress_service.dart';
+import '../services/community_safety_service.dart';
 import 'sectional_cbt_screen.dart';
-import 'student_cbt_report_screen.dart';
 
 class BatchClassroomScreen extends StatefulWidget {
   final Map<String, dynamic> batchData;
@@ -54,7 +53,7 @@ class _BatchClassroomScreenState extends State<BatchClassroomScreen>
           .eq('batch_id', batchId)
           .order('created_at', ascending: false);
 
-      final tests = res ?? [];
+      final tests = res;
 
       // Load local progress for each test
       for (var test in tests) {
@@ -133,6 +132,24 @@ class _BatchClassroomScreenState extends State<BatchClassroomScreen>
     }
 
     _openTestScreen(test, parsedQuestions);
+  }
+
+  Future<void> _reportBatchTest(Map<String, dynamic> test) async {
+    final testId = test['id']?.toString().trim() ?? '';
+    if (testId.isEmpty) return;
+
+    final reporter = await CommunitySafetyService.currentReporterHandle();
+    if (!mounted) return;
+    await CommunitySafetyService.promptAndQueueModerationReport(
+      context,
+      reporterHandle: reporter,
+      targetType: 'batch_test',
+      targetId: testId,
+      source: 'batch_classroom_test',
+      contentExcerpt:
+          '${test['test_title'] ?? 'Batch test'} • ${widget.batchData['batch_name'] ?? 'Classroom batch'} • ${test['subject'] ?? 'General'}',
+      successMessage: 'Batch test reported. Thank you; moderators will review it.',
+    );
   }
 
   void _openTestScreen(Map<String, dynamic> test, List<Question> parsedQuestions) {
@@ -231,8 +248,8 @@ class _BatchClassroomScreenState extends State<BatchClassroomScreen>
                               borderRadius: BorderRadius.circular(14),
                               side: BorderSide(
                                 color: isCompleted
-                                    ? const Color(0xFF16A34A).withOpacity(0.3)
-                                    : (isInProgress ? Colors.amber.withOpacity(0.4) : Colors.grey.withOpacity(0.15)),
+                                    ? const Color(0xFF16A34A).withValues(alpha: 0.3)
+                                    : (isInProgress ? Colors.amber.withValues(alpha: 0.4) : Colors.grey.withValues(alpha: 0.15)),
                                 width: isInProgress || isCompleted ? 1.2 : 1,
                               ),
                             ),
@@ -249,8 +266,8 @@ class _BatchClassroomScreenState extends State<BatchClassroomScreen>
                                         padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 3),
                                         decoration: BoxDecoration(
                                           color: isCompleted
-                                              ? const Color(0xFF16A34A).withOpacity(0.12)
-                                              : (isInProgress ? Colors.amber.withOpacity(0.15) : const Color(0xFF2563EB).withOpacity(0.12)),
+                                              ? const Color(0xFF16A34A).withValues(alpha: 0.12)
+                                              : (isInProgress ? Colors.amber.withValues(alpha: 0.15) : const Color(0xFF2563EB).withValues(alpha: 0.12)),
                                           borderRadius: BorderRadius.circular(6),
                                         ),
                                         child: Text(
@@ -266,18 +283,33 @@ class _BatchClassroomScreenState extends State<BatchClassroomScreen>
                                           ),
                                         ),
                                       ),
-                                      if (isInProgress)
-                                        Text(
-                                          '$answered / $totalQs Answered',
-                                          style: const TextStyle(fontSize: 11, fontWeight: FontWeight.bold, color: Colors.amber),
-                                        )
-                                      else if (isCompleted)
-                                        Text(
-                                          'Score: ${progress?['score'] ?? 0} Marks',
-                                          style: const TextStyle(fontSize: 11.5, fontWeight: FontWeight.bold, color: Color(0xFF16A34A)),
-                                        )
-                                      else
-                                        Text('$duration Mins Duration', style: const TextStyle(fontSize: 11.5, color: Colors.grey)),
+                                      Row(
+                                        mainAxisSize: MainAxisSize.min,
+                                        children: [
+                                          if (isInProgress)
+                                            Text(
+                                              '$answered / $totalQs Answered',
+                                              style: const TextStyle(fontSize: 11, fontWeight: FontWeight.bold, color: Colors.amber),
+                                            )
+                                          else if (isCompleted)
+                                            Text(
+                                              'Score: ${progress?['score'] ?? 0} Marks',
+                                              style: const TextStyle(fontSize: 11.5, fontWeight: FontWeight.bold, color: Color(0xFF16A34A)),
+                                            )
+                                          else
+                                            Text('$duration Mins Duration', style: const TextStyle(fontSize: 11.5, color: Colors.grey)),
+                                          IconButton(
+                                            tooltip: 'Report batch test',
+                                            visualDensity: VisualDensity.compact,
+                                            iconSize: 18,
+                                            color: Colors.grey[600],
+                                            icon: const Icon(Icons.flag_outlined),
+                                            onPressed: () => _reportBatchTest(
+                                              Map<String, dynamic>.from(t as Map),
+                                            ),
+                                          ),
+                                        ],
+                                      ),
                                     ],
                                   ),
                                   const SizedBox(height: 8),
@@ -301,7 +333,7 @@ class _BatchClassroomScreenState extends State<BatchClassroomScreen>
                                       child: LinearProgressIndicator(
                                         value: progressFraction,
                                         minHeight: 5,
-                                        backgroundColor: Colors.grey.withOpacity(0.15),
+                                        backgroundColor: Colors.grey.withValues(alpha: 0.15),
                                         valueColor: const AlwaysStoppedAnimation<Color>(Colors.amber),
                                       ),
                                     ),
@@ -327,7 +359,7 @@ class _BatchClassroomScreenState extends State<BatchClassroomScreen>
                                       ),
                                       style: ElevatedButton.styleFrom(
                                         backgroundColor: isCompleted
-                                            ? const Color(0xFF16A34A).withOpacity(0.12)
+                                            ? const Color(0xFF16A34A).withValues(alpha: 0.12)
                                             : (isInProgress ? Colors.amber.shade700 : const Color(0xFF2563EB)),
                                         foregroundColor: isCompleted ? const Color(0xFF16A34A) : Colors.white,
                                         elevation: 0,
