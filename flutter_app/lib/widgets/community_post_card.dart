@@ -361,21 +361,6 @@ class _CommunityPostCardState extends State<CommunityPostCard> {
     Color(0xFF9333EA),
   ];
 
-  String _initials(String name) {
-    final parts = name.trim().split(RegExp(r'\s+')).where((e) => e.isNotEmpty).toList();
-    if (parts.isEmpty) return 'A';
-    if (parts.length == 1) return parts.first[0].toUpperCase();
-    return (parts[0][0] + parts[1][0]).toUpperCase();
-  }
-
-  Color _avatarColor(String seed) {
-    var hash = 0;
-    for (final unit in seed.codeUnits) {
-      hash = (hash * 31 + unit) & 0x7fffffff;
-    }
-    return _avatarPalette[hash % _avatarPalette.length];
-  }
-
   Widget _authorAvatar({
     required String name,
     required String seed,

@@ -917,7 +917,6 @@ class _CommunityCommentsSheetState extends State<CommunityCommentsSheet> {
                           itemBuilder: (context, cIdx) {
                             final c = displayComments[cIdx];
                             final bool isReply = c['parent_comment_id'] != null;
-                            final bool isMyComment = (c['user_handle'] ?? '').toString() == widget.currentLoggedInHandle;
 
                             final cid = int.tryParse(c['id']?.toString() ?? '');
                             final liked = cid != null && _likedCommentIds.contains(cid);
