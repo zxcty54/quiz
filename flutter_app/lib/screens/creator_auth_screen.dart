@@ -4,6 +4,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
 import 'package:url_launcher/url_launcher.dart';
 import '../services/admin_telegram_alert.dart';
+import '../services/community_safety_service.dart';
 import 'admin_control_hub_screen.dart';
 import 'creator_dashboard_screen.dart';
 
@@ -289,6 +290,8 @@ class _CreatorAuthScreenState extends State<CreatorAuthScreen> {
                               return;
                             }
 
+                            if (!await CommunitySafetyService.requirePostingTerms(ctx)) return;
+                            if (!ctx.mounted) return;
                             setModalState(() => isSubmitting = true);
                             try {
                               final existing = await Supabase.instance.client
