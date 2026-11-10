@@ -213,7 +213,48 @@ jobs:
       - name: Analyze and test
         working-directory: flutter_app
         run: |
-          flutter analyze --no-pub
+          set -euo pipefail
+          analysis_log="$RUNNER_TEMP/flutter-analyze.log"
+          set +e
+          flutter analyze --no-pub 2>&1 | tee "$analysis_log"
+          analyze_status=${PIPESTATUS[0]}
+          set -e
+          python3 - "$analysis_log" <<'PY_ANALYZER'
+          import pathlib, re, sys
+
+          def escape(value):
+              return value.replace('%', '%25').replace('\r', '%0D').replace('\n', '%0A')
+
+          log_path = pathlib.Path(sys.argv[1])
+          for raw in log_path.read_text(errors='replace').splitlines():
+              parts = raw.split(' • ')
+              if len(parts) < 4:
+                  continue
+              severity = parts[0].strip()
+              if severity not in {'warning', 'error'}:
+                  continue
+              location = parts[-2].strip()
+              match = re.match(r'^(.*):(\d+):(\d+)$', location)
+              if not match:
+                  print(f'::error title=Flutter analyzer::{escape(raw)}')
+                  continue
+              file_path, line, column = match.groups()
+              if file_path.startswith('/'):
+                  marker = '/flutter_app/'
+                  file_path = file_path.split(marker, 1)[-1] if marker in file_path else file_path
+              if not file_path.startswith('flutter_app/'):
+                  file_path = f'flutter_app/{file_path}'
+              message = parts[1].strip()
+              rule = parts[-1].strip()
+              print(
+                  f'::{"error" if severity == "error" else "warning"} file={escape(file_path)},line={line},col={column},'
+                  f'title=Flutter analyzer ({severity})::{escape(message)} [{escape(rule)}]'
+              )
+          PY_ANALYZER
+          if [ "$analyze_status" -ne 0 ]; then
+            echo "::error title=Flutter analyzer::flutter analyze exited with status $analyze_status."
+            exit "$analyze_status"
+          fi
           if [ -d test ] && find test -type f -name '*_test.dart' -print -quit | grep -q .; then
             flutter test --no-pub
           else
