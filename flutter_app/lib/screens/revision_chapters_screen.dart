@@ -130,7 +130,7 @@ class _RevisionChaptersScreenState extends State<RevisionChaptersScreen> {
               borderRadius: BorderRadius.circular(20),
               boxShadow: [
                 BoxShadow(
-                  color: widget.brandColor.withOpacity(0.30),
+                  color: widget.brandColor.withValues(alpha: 0.30),
                   blurRadius: 14,
                   offset: const Offset(0, 6),
                 ),
@@ -142,9 +142,9 @@ class _RevisionChaptersScreenState extends State<RevisionChaptersScreen> {
                   width: 46,
                   height: 46,
                   decoration: BoxDecoration(
-                    color: Colors.white.withOpacity(0.20),
+                    color: Colors.white.withValues(alpha: 0.20),
                     borderRadius: BorderRadius.circular(14),
-                    border: Border.all(color: Colors.white.withOpacity(0.35)),
+                    border: Border.all(color: Colors.white.withValues(alpha: 0.35)),
                   ),
                   child: Center(child: Text(widget.icon, style: const TextStyle(fontSize: 22))),
                 ),
@@ -162,7 +162,7 @@ class _RevisionChaptersScreenState extends State<RevisionChaptersScreen> {
                         widget.customBody != null
                             ? 'Month-wise National + Bihar sets'
                             : '$totalChapters chapters • ${widget.sections.map((s) => s.label).join(' • ')}',
-                        style: TextStyle(color: Colors.white.withOpacity(0.88), fontSize: 11, fontWeight: FontWeight.w600, height: 1.35),
+                        style: TextStyle(color: Colors.white.withValues(alpha: 0.88), fontSize: 11, fontWeight: FontWeight.w600, height: 1.35),
                       ),
                     ],
                   ),
@@ -318,7 +318,7 @@ class RevisionChapterRow extends StatelessWidget {
                   width: 32,
                   height: 32,
                   decoration: BoxDecoration(
-                    color: brandColor.withOpacity(isDark ? 0.25 : 0.10),
+                    color: brandColor.withValues(alpha: isDark ? 0.25 : 0.10),
                     borderRadius: BorderRadius.circular(10),
                   ),
                   child: Center(
