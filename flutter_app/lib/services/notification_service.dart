@@ -30,59 +30,54 @@ class NotificationService {
   static DateTime? _lastSmartSchedule;
   static bool _resumeObserverAdded = false;
 
-  static Future<void> initialize() async {
-    // 1️⃣ Permission for Android 13+
-    await _messaging.requestPermission(
-      alert: true,
-      badge: true,
-      sound: true,
-    );
+  static Future<void> initialize({bool enablePush = true}) async {
+    if (enablePush) {
+      await _messaging.requestPermission(
+        alert: true,
+        badge: true,
+        sound: true,
+      );
+    }
 
-    // 2️⃣ Local Notification Setup
+    // Local reminders work independently of Firebase/FCM.
     const AndroidInitializationSettings androidSettings =
         AndroidInitializationSettings('@mipmap/ic_launcher');
     const InitializationSettings initSettings =
         InitializationSettings(android: androidSettings);
 
     await _localNotifications.initialize(initSettings);
-
     await _localNotifications
         .resolvePlatformSpecificImplementation<
             AndroidFlutterLocalNotificationsPlugin>()
         ?.createNotificationChannel(_channel);
 
-    // 3️⃣ Background handler
-    FirebaseMessaging.onBackgroundMessage(_firebaseMessagingBackgroundHandler);
-
-    // 4️⃣ Foreground message handler
-    FirebaseMessaging.onMessage.listen((RemoteMessage message) {
-      RemoteNotification? notification = message.notification;
-      AndroidNotification? android = message.notification?.android;
-
-      if (notification != null && android != null) {
-        _localNotifications.show(
-          notification.hashCode,
-          notification.title,
-          notification.body,
-          NotificationDetails(
-            android: AndroidNotificationDetails(
-              _channel.id,
-              _channel.name,
-              channelDescription: _channel.description,
-              icon: '@mipmap/ic_launcher',
-              importance: Importance.high,
-              priority: Priority.high,
+    if (enablePush) {
+      FirebaseMessaging.onBackgroundMessage(_firebaseMessagingBackgroundHandler);
+      FirebaseMessaging.onMessage.listen((RemoteMessage message) {
+        final RemoteNotification? notification = message.notification;
+        final AndroidNotification? android = message.notification?.android;
+        if (notification != null && android != null) {
+          _localNotifications.show(
+            notification.hashCode,
+            notification.title,
+            notification.body,
+            NotificationDetails(
+              android: AndroidNotificationDetails(
+                _channel.id,
+                _channel.name,
+                channelDescription: _channel.description,
+                icon: '@mipmap/ic_launcher',
+                importance: Importance.high,
+                priority: Priority.high,
+              ),
             ),
-          ),
-          payload: jsonEncode(message.data),
-        );
-      }
-    });
+            payload: jsonEncode(message.data),
+          );
+        }
+      });
+      await _messaging.subscribeToTopic('all_users');
+    }
 
-    // 5️⃣ Topic Subscription (Broadcast notifications ke liye)
-    await _messaging.subscribeToTopic('all_users');
-
-    // 6️⃣ Smart Personal Reminders (activity ke hisaab se)
     try {
       tz_data.initializeTimeZones();
       tz.setLocalLocation(tz.getLocation('Asia/Kolkata'));
