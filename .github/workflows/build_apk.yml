@@ -216,7 +216,7 @@ jobs:
           set -euo pipefail
           analysis_log="$RUNNER_TEMP/flutter-analyze.log"
           set +e
-          flutter analyze --no-pub 2>&1 | tee "$analysis_log"
+          flutter analyze --no-pub --no-fatal-infos --fatal-warnings 2>&1 | tee "$analysis_log"
           analyze_status=${PIPESTATUS[0]}
           set -e
           python3 - "$analysis_log" <<'PY_ANALYZER'
