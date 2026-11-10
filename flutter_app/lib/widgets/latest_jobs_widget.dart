@@ -340,7 +340,7 @@ class LatestJobsWidgetState extends State<LatestJobsWidget>
         border: Border.all(color: borderColor, width: 1.2),
         boxShadow: [
           BoxShadow(
-            color: Colors.black.withOpacity(isDark ? 0.25 : 0.04),
+            color: Colors.black.withValues(alpha: isDark ? 0.25 : 0.04),
             blurRadius: 16,
             offset: const Offset(0, 6),
           ),
@@ -398,7 +398,7 @@ class LatestJobsWidgetState extends State<LatestJobsWidget>
       decoration: BoxDecoration(
         color: bg,
         borderRadius: BorderRadius.circular(20),
-        border: Border.all(color: Colors.grey.withOpacity(0.15)),
+        border: Border.all(color: Colors.grey.withValues(alpha: 0.15)),
       ),
       child: const Center(
         child: SizedBox(
@@ -417,7 +417,7 @@ class LatestJobsWidgetState extends State<LatestJobsWidget>
           width: 36,
           height: 36,
           decoration: BoxDecoration(
-            color: primaryBlue.withOpacity(0.12),
+            color: primaryBlue.withValues(alpha: 0.12),
             borderRadius: BorderRadius.circular(10),
           ),
           child: const Icon(Icons.campaign_rounded, color: primaryBlue, size: 20),
@@ -470,9 +470,9 @@ class LatestJobsWidgetState extends State<LatestJobsWidget>
           child: Container(
             padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
             decoration: BoxDecoration(
-              color: green.withOpacity(.12),
+              color: green.withValues(alpha: .12),
               borderRadius: BorderRadius.circular(20),
-              border: Border.all(color: green.withOpacity(.35), width: 1),
+              border: Border.all(color: green.withValues(alpha: .35), width: 1),
             ),
             child: Row(
               mainAxisSize: MainAxisSize.min,
@@ -492,7 +492,7 @@ class LatestJobsWidgetState extends State<LatestJobsWidget>
                         height: 6,
                         decoration: BoxDecoration(
                           shape: BoxShape.circle,
-                          color: green.withOpacity(_pulseAnimation.value),
+                          color: green.withValues(alpha: _pulseAnimation.value),
                           boxShadow: const [
                             BoxShadow(color: green, blurRadius: 4, spreadRadius: 0.5),
                           ],
@@ -623,7 +623,7 @@ class LatestJobsWidgetState extends State<LatestJobsWidget>
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(14),
           side: BorderSide(
-            color: urgent ? red.withOpacity(0.4) : itemBorder,
+            color: urgent ? red.withValues(alpha: 0.4) : itemBorder,
             width: urgent ? 1.2 : 1,
           ),
         ),
@@ -784,7 +784,7 @@ class LatestJobsWidgetState extends State<LatestJobsWidget>
                     Container(
                       padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
                       decoration: BoxDecoration(
-                        color: primaryBlue.withOpacity(0.08),
+                        color: primaryBlue.withValues(alpha: 0.08),
                         borderRadius: BorderRadius.circular(6),
                       ),
                       child: const Row(
@@ -817,7 +817,7 @@ class LatestJobsWidgetState extends State<LatestJobsWidget>
     return Container(
       padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 2.5),
       decoration: BoxDecoration(
-        color: isSolid ? color : color.withOpacity(.10),
+        color: isSolid ? color : color.withValues(alpha: .10),
         borderRadius: BorderRadius.circular(5),
       ),
       child: Text(
@@ -890,7 +890,7 @@ class LatestJobsWidgetState extends State<LatestJobsWidget>
       child: Center(
         child: Column(
           children: [
-            Icon(Icons.search_off_rounded, size: 28, color: subText.withOpacity(.5)),
+            Icon(Icons.search_off_rounded, size: 28, color: subText.withValues(alpha: .5)),
             const SizedBox(height: 6),
             Text(
               'No active jobs in this category',
@@ -909,8 +909,8 @@ class LatestJobsWidgetState extends State<LatestJobsWidget>
         onPressed: _showAllJobs,
         style: OutlinedButton.styleFrom(
           foregroundColor: primaryBlue,
-          side: BorderSide(color: primaryBlue.withOpacity(.3)),
-          backgroundColor: primaryBlue.withOpacity(.04),
+          side: BorderSide(color: primaryBlue.withValues(alpha: .3)),
+          backgroundColor: primaryBlue.withValues(alpha: .04),
           padding: const EdgeInsets.symmetric(vertical: 10),
           shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
         ),
@@ -967,7 +967,7 @@ class LatestJobsWidgetState extends State<LatestJobsWidget>
                       width: 36,
                       height: 4,
                       decoration: BoxDecoration(
-                        color: Colors.grey.withOpacity(0.4),
+                        color: Colors.grey.withValues(alpha: 0.4),
                         borderRadius: BorderRadius.circular(10),
                       ),
                     ),
