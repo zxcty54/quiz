@@ -43,7 +43,6 @@ class _DistrictTopLeaderboardWidgetState
   List<Map<String, dynamic>> _topRankers = [];
 
   // Dynamic User Rank Performance Data
-  String _currentUserName = 'Aspirant';
   int _userScore = 0;
   int _userTime = 0;
   int _userRank = 0;
@@ -110,7 +109,6 @@ class _DistrictTopLeaderboardWidgetState
     if (mounted) {
       setState(() {
         _selectedDistrict = district;
-        _currentUserName = standardName;
         if (cachedScore != null) {
           _userScore = cachedScore;
           _userTime = cachedTime > 0 ? cachedTime : 15;
@@ -141,7 +139,7 @@ class _DistrictTopLeaderboardWidgetState
           .limit(1);
 
       Map<String, dynamic>? overallTopper;
-      if (stateRes != null && stateRes.isNotEmpty) {
+      if (stateRes.isNotEmpty) {
         overallTopper = Map<String, dynamic>.from(stateRes.first);
       }
 
@@ -155,7 +153,7 @@ class _DistrictTopLeaderboardWidgetState
           .limit(50);
 
       final List<Map<String, dynamic>> allRankers =
-          List<Map<String, dynamic>>.from(res ?? []);
+          List<Map<String, dynamic>>.from(res);
 
       int foundRank = 0;
       int myScore = 0;
