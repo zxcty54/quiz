@@ -9,7 +9,6 @@ import '../services/user_stats_service.dart';
 import 'saved_questions_screen.dart';
 import 'wrong_questions_screen.dart';
 import 'saved_current_affairs_screen.dart';
-import '../widgets/donation_widget.dart';
 import '../widgets/app_global_feedback_dialog.dart';
 import '../widgets/mastery_evolution_card.dart';
 import '../widgets/coaching_onboarding_cta_widget.dart';
@@ -616,8 +615,6 @@ class _ProfileScreenState extends State<ProfileScreen> {
               _sectionHead('🏫 Coaching Owners Ke Liye', '', headerTextColor),
               CoachingOnboardingCtaWidget(isDarkMode: isDark),
               const SizedBox(height: 16),
-              DonationWidget(isDarkMode: isDark),
-              const SizedBox(height: 14),
             Container(
               decoration: BoxDecoration(
                 gradient: LinearGradient(
@@ -771,13 +768,6 @@ class _ProfileScreenState extends State<ProfileScreen> {
     );
   }
 
-  String _avatarInitials(String name) {
-    final parts = name.trim().split(RegExp(r'\s+')).where((e) => e.isNotEmpty).toList();
-    if (parts.isEmpty) return 'A';
-    if (parts.length == 1) return parts.first[0].toUpperCase();
-    return (parts[0][0] + parts[1][0]).toUpperCase();
-  }
-
   Widget _sectionHead(String title, String tag, Color textColor, {Color tagColor = const Color(0xFF2563EB)}) {
     return Padding(
       padding: const EdgeInsets.only(top: 20, bottom: 10),
@@ -860,42 +850,6 @@ class _ProfileScreenState extends State<ProfileScreen> {
     if (totalQs < 500) return '3 (Explorer)';
     if (totalQs < 1000) return '4 (Scholar)';
     return '5 (Master)';
-  }
-
-  Widget _buildProfileStatTile(String label, String value, IconData icon, Color color, bool isDark) {
-    return Container(
-      padding: const EdgeInsets.all(12),
-      decoration: BoxDecoration(
-        color: color.withOpacity(isDark ? 0.15 : 0.08),
-        borderRadius: BorderRadius.circular(12),
-        border: Border.all(color: color.withOpacity(isDark ? 0.35 : 0.2)),
-      ),
-      child: Row(
-        children: [
-          Icon(icon, size: 24, color: color),
-          const SizedBox(width: 10),
-          Expanded(
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Text(value, style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold, color: color)),
-                Text(
-                  label,
-                  style: TextStyle(
-                    fontSize: 9.5,
-                    color: isDark ? const Color(0xFF94A3B8) : Colors.grey.shade600,
-                    fontWeight: FontWeight.w600,
-                  ),
-                  maxLines: 1,
-                  overflow: TextOverflow.ellipsis,
-                ),
-              ],
-            ),
-          ),
-        ],
-      ),
-    );
   }
 
   Widget _buildBar(String day, int count, double heightFactor, Color color, Color textColor, {bool isToday = false}) {
