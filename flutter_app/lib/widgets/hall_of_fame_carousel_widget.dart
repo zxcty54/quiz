@@ -231,7 +231,7 @@ class HallOfFameCarouselWidgetState
             vertical: 5,
           ),
           decoration: BoxDecoration(
-            color: const Color(0xFF16A34A).withOpacity(.10),
+            color: const Color(0xFF16A34A).withValues(alpha: .10),
             borderRadius: BorderRadius.circular(8),
           ),
           child: const Row(
@@ -277,7 +277,7 @@ class HallOfFameCarouselWidgetState
         borderRadius: BorderRadius.circular(22),
         boxShadow: [
           BoxShadow(
-            color: const Color(0xFF1E40AF).withOpacity(0.35),
+            color: const Color(0xFF1E40AF).withValues(alpha: 0.35),
             blurRadius: 18,
             offset: const Offset(0, 8),
           ),
@@ -294,7 +294,7 @@ class HallOfFameCarouselWidgetState
                 width: 170,
                 height: 170,
                 decoration: BoxDecoration(
-                  color: Colors.white.withOpacity(0.06),
+                  color: Colors.white.withValues(alpha: 0.06),
                   shape: BoxShape.circle,
                 ),
               ),
@@ -306,7 +306,7 @@ class HallOfFameCarouselWidgetState
                 width: 110,
                 height: 110,
                 decoration: BoxDecoration(
-                  color: const Color(0xFFF59E0B).withOpacity(0.14),
+                  color: const Color(0xFFF59E0B).withValues(alpha: 0.14),
                   shape: BoxShape.circle,
                 ),
               ),
@@ -323,10 +323,10 @@ class HallOfFameCarouselWidgetState
                       vertical: 5,
                     ),
                     decoration: BoxDecoration(
-                      color: const Color(0xFFF59E0B).withOpacity(0.18),
+                      color: const Color(0xFFF59E0B).withValues(alpha: 0.18),
                       borderRadius: BorderRadius.circular(99),
                       border: Border.all(
-                        color: const Color(0xFFF59E0B).withOpacity(0.45),
+                        color: const Color(0xFFF59E0B).withValues(alpha: 0.45),
                       ),
                     ),
                     child: Row(
@@ -461,7 +461,7 @@ class HallOfFameCarouselWidgetState
                     decoration: BoxDecoration(
                       border: Border(
                         top: BorderSide(
-                          color: Colors.white.withOpacity(0.16),
+                          color: Colors.white.withValues(alpha: 0.16),
                         ),
                       ),
                     ),
@@ -471,7 +471,7 @@ class HallOfFameCarouselWidgetState
                           width: 27,
                           height: 27,
                           decoration: BoxDecoration(
-                            color: Colors.white.withOpacity(0.14),
+                            color: Colors.white.withValues(alpha: 0.14),
                             borderRadius: BorderRadius.circular(8),
                           ),
                           child: const Icon(
@@ -610,7 +610,7 @@ class HallOfFameCarouselWidgetState
           ),
           boxShadow: [
             BoxShadow(
-              color: Colors.black.withOpacity(isDark ? 0.22 : 0.05),
+              color: Colors.black.withValues(alpha: isDark ? 0.22 : 0.05),
               blurRadius: 10,
               offset: const Offset(0, 4),
             ),
@@ -647,7 +647,7 @@ class HallOfFameCarouselWidgetState
             Container(
               padding: const EdgeInsets.symmetric(horizontal: 7, vertical: 3),
               decoration: BoxDecoration(
-                color: const Color(0xFF2563EB).withOpacity(isDark ? 0.22 : 0.08),
+                color: const Color(0xFF2563EB).withValues(alpha: isDark ? 0.22 : 0.08),
                 borderRadius: BorderRadius.circular(99),
               ),
               child: FittedBox(
@@ -769,7 +769,7 @@ class HallOfFameCarouselWidgetState
         shape: BoxShape.circle,
         boxShadow: [
           BoxShadow(
-            color: const Color(0xFF2563EB).withOpacity(0.18),
+            color: const Color(0xFF2563EB).withValues(alpha: 0.18),
             blurRadius: 16,
             offset: const Offset(0, 6),
           ),
