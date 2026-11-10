@@ -279,20 +279,59 @@ jobs:
           VERSION_CODE: ${{ steps.release.outputs.version_code }}
         run: |
           set -euo pipefail
-          flutter clean
+          clean_log="$RUNNER_TEMP/flutter-clean.log"
+          set +e
+          flutter clean 2>&1 | tee "$clean_log"
+          clean_status=${PIPESTATUS[0]}
+          set -e
+          if [ "$clean_status" -ne 0 ]; then
+            echo "::error title=Flutter clean::flutter clean failed with status $clean_status."
+            exit "$clean_status"
+          fi
+
+          build_log="$RUNNER_TEMP/flutter-apk-build.log"
+          set +e
           flutter build apk --release --no-pub \
             --build-number="$VERSION_CODE" \
             --dart-define="SUPABASE_URL=$SUPABASE_URL" \
             --dart-define="SUPABASE_ANON_KEY=$SUPABASE_ANON_KEY" \
-            --dart-define="FIREBASE_CONFIGURED=$FIREBASE_CONFIGURED"
+            --dart-define="FIREBASE_CONFIGURED=$FIREBASE_CONFIGURED" 2>&1 | tee "$build_log"
+          build_status=${PIPESTATUS[0]}
+          set -e
+          if [ "$build_status" -ne 0 ]; then
+            python3 - "$build_log" <<'PY_BUILD_ERROR'
+          import os, pathlib, sys
+          text = '\n'.join(pathlib.Path(sys.argv[1]).read_text(errors='replace').splitlines()[-60:])
+          for name in ('SUPABASE_URL', 'SUPABASE_ANON_KEY', 'KEYSTORE_PASSWORD', 'KEY_PASSWORD'):
+              secret = os.environ.get(name, '')
+              if secret:
+                  text = text.replace(secret, '***')
+          text = text[-8000:]
+          escaped = text.replace('%', '%25').replace('\r', '%0D').replace('\n', '%0A')
+          print(f'::error title=Flutter APK build failed::{escaped}')
+          PY_BUILD_ERROR
+            exit "$build_status"
+          fi
 
           APK="build/app/outputs/flutter-apk/app-release.apk"
-          test -s "$APK"
+          if [ ! -s "$APK" ]; then
+            echo "::error title=APK output::Flutter reported success but the APK is missing or empty: $APK"
+            exit 1
+          fi
           ANDROID_SDK="${ANDROID_HOME:-${ANDROID_SDK_ROOT:-}}"
-          test -n "$ANDROID_SDK"
+          if [ -z "$ANDROID_SDK" ]; then
+            echo "::error title=Android SDK::ANDROID_HOME and ANDROID_SDK_ROOT are both empty."
+            exit 1
+          fi
           APKSIGNER="$(find "$ANDROID_SDK/build-tools" -type f -name apksigner | sort -V | tail -n 1)"
-          test -x "$APKSIGNER"
-          "$APKSIGNER" verify --verbose "$APK"
+          if [ ! -x "$APKSIGNER" ]; then
+            echo "::error title=APK signing verification::Could not find an executable apksigner under $ANDROID_SDK/build-tools."
+            exit 1
+          fi
+          if ! "$APKSIGNER" verify --verbose "$APK"; then
+            echo "::error title=APK signing verification::apksigner rejected the release APK."
+            exit 1
+          fi
           echo "APK_PATH=$APK" >> "$GITHUB_ENV"
 
       - name: Upload signed APK artifact
