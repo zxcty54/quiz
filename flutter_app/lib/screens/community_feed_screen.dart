@@ -549,7 +549,7 @@ class _CommunityFeedScreenState extends State<CommunityFeedScreen> {
                                 'bookmarks_count': 0,
                               });
 
-                              if (context.mounted) {
+                              if (mounted && ctx.mounted) {
                                 Navigator.pop(ctx);
                                 _fetchFeedPosts();
                                 ScaffoldMessenger.of(context).showSnackBar(
@@ -562,7 +562,7 @@ class _CommunityFeedScreenState extends State<CommunityFeedScreen> {
                             } catch (err) {
                               debugPrint("Post creation failed: $err");
                               setModalState(() => isUploading = false);
-                              if (context.mounted) {
+                              if (mounted) {
                                 ScaffoldMessenger.of(context).showSnackBar(
                                   SnackBar(
                                     content: Text('Error: $err'),
