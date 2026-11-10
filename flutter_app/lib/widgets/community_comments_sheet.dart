@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
+import '../services/community_safety_service.dart';
 import '../utils/security_content_guard.dart';
 
 class CommunityCommentsSheet extends StatefulWidget {
@@ -19,6 +20,7 @@ class CommunityCommentsSheet extends StatefulWidget {
   /// Current user asal me creator account se login hai ya nahi.
   /// Verified badge sirf inhi ke comment par lagega.
   final bool isCurrentUserCreator;
+  final ValueChanged<String>? onUserBlocked;
 
   const CommunityCommentsSheet({
     super.key,
@@ -31,6 +33,7 @@ class CommunityCommentsSheet extends StatefulWidget {
     required this.onCommentAdded,
     this.embedded = false,
     this.isCurrentUserCreator = false,
+    this.onUserBlocked,
   });
 
   @override
@@ -48,6 +51,7 @@ class _CommunityCommentsSheetState extends State<CommunityCommentsSheet> {
   bool _isLoadingComments = true;
   final Set<int> _likedCommentIds = {};
   final Set<int> _likingInProgress = {};
+  final Set<String> _blockedHandles = {};
 
   static const Color _primaryBlue = Color(0xFF2563EB);
   static const Color _lightDivider = Color(0xFFE2E8F0);
@@ -167,10 +171,20 @@ class _CommunityCommentsSheetState extends State<CommunityCommentsSheet> {
           .select()
           .eq('post_id', widget.postId)
           .order('created_at', ascending: true);
+      final blockedHandles = await CommunitySafetyService.loadBlockedHandles();
+      final visibleComments = List<Map<String, dynamic>>.from(data).where((comment) {
+        final handle = CommunitySafetyService.normalizeHandle(
+          (comment['user_handle'] ?? '').toString(),
+        );
+        return !blockedHandles.contains(handle);
+      }).toList();
 
       if (mounted) {
         setState(() {
-          _comments = _threadOrdered(List<Map<String, dynamic>>.from(data));
+          _blockedHandles
+            ..clear()
+            ..addAll(blockedHandles);
+          _comments = _threadOrdered(visibleComments);
           _isLoadingComments = false;
         });
         _fetchMyCommentLikes();
@@ -501,6 +515,8 @@ class _CommunityCommentsSheetState extends State<CommunityCommentsSheet> {
 
   void _openCommentOptionsSheet(Map<String, dynamic> comment) {
     HapticFeedback.lightImpact();
+    final isMyComment =
+        (comment['user_handle'] ?? '').toString() == widget.currentLoggedInHandle;
 
     showModalBottomSheet(
       context: context,
@@ -528,35 +544,75 @@ class _CommunityCommentsSheetState extends State<CommunityCommentsSheet> {
                     borderRadius: BorderRadius.circular(2),
                   ),
                 ),
-                ListTile(
-                  leading: const Icon(Icons.edit_outlined, color: _primaryBlue),
-                  title: Text(
-                    'Edit Reply',
-                    style: TextStyle(color: textColor, fontWeight: FontWeight.w600, fontSize: 14),
+                if (isMyComment) ...[
+                  ListTile(
+                    leading: const Icon(Icons.edit_outlined, color: _primaryBlue),
+                    title: Text(
+                      'Edit Reply',
+                      style: TextStyle(color: textColor, fontWeight: FontWeight.w600, fontSize: 14),
+                    ),
+                    onTap: () {
+                      Navigator.pop(ctx);
+                      _openEditCommentModal(comment);
+                    },
                   ),
-                  onTap: () {
-                    Navigator.pop(ctx);
-                    _openEditCommentModal(comment);
-                  },
-                ),
-                Divider(
-                  height: 1,
-                  thickness: 0.5,
-                  color: widget.isDarkMode ? const Color(0xFF334155) : const Color(0xFFE2E8F0),
-                  indent: 16,
-                  endIndent: 16,
-                ),
-                ListTile(
-                  leading: const Icon(Icons.delete_outline_rounded, color: Colors.redAccent),
-                  title: const Text(
-                    'Delete Reply',
-                    style: TextStyle(color: Colors.redAccent, fontWeight: FontWeight.w600, fontSize: 14),
+                  Divider(
+                    height: 1,
+                    thickness: 0.5,
+                    color: widget.isDarkMode ? const Color(0xFF334155) : const Color(0xFFE2E8F0),
+                    indent: 16,
+                    endIndent: 16,
                   ),
-                  onTap: () {
-                    Navigator.pop(ctx);
-                    _confirmDeleteComment(comment['id']);
-                  },
-                ),
+                  ListTile(
+                    leading: const Icon(Icons.delete_outline_rounded, color: Colors.redAccent),
+                    title: const Text(
+                      'Delete Reply',
+                      style: TextStyle(color: Colors.redAccent, fontWeight: FontWeight.w600, fontSize: 14),
+                    ),
+                    onTap: () {
+                      Navigator.pop(ctx);
+                      _confirmDeleteComment(comment['id']);
+                    },
+                  ),
+                ] else ...[
+                  ListTile(
+                    leading: const Icon(Icons.flag_outlined, color: Colors.orange),
+                    title: Text(
+                      'Report Comment',
+                      style: TextStyle(color: textColor, fontWeight: FontWeight.w600, fontSize: 14),
+                    ),
+                    onTap: () {
+                      Navigator.pop(ctx);
+                      _reportComment(comment);
+                    },
+                  ),
+                  ListTile(
+                    leading: const Icon(Icons.person_search_outlined, color: Colors.deepOrange),
+                    title: Text(
+                      'Report User',
+                      style: TextStyle(color: textColor, fontWeight: FontWeight.w600, fontSize: 14),
+                    ),
+                    onTap: () {
+                      Navigator.pop(ctx);
+                      _reportCommentAuthor(comment);
+                    },
+                  ),
+                  ListTile(
+                    leading: const Icon(Icons.person_off_outlined, color: Colors.redAccent),
+                    title: const Text(
+                      'Block User',
+                      style: TextStyle(color: Colors.redAccent, fontWeight: FontWeight.w600, fontSize: 14),
+                    ),
+                    subtitle: const Text(
+                      'Hide their posts and comments on this device',
+                      style: TextStyle(fontSize: 11, color: Colors.grey),
+                    ),
+                    onTap: () {
+                      Navigator.pop(ctx);
+                      _confirmBlockCommentAuthor(comment);
+                    },
+                  ),
+                ],
                 const SizedBox(height: 6),
               ],
             ),
@@ -564,6 +620,81 @@ class _CommunityCommentsSheetState extends State<CommunityCommentsSheet> {
         );
       },
     );
+  }
+
+  Future<void> _reportComment(Map<String, dynamic> comment) async {
+    final commentId = comment['id']?.toString() ?? '';
+    if (commentId.isEmpty) return;
+    await CommunitySafetyService.promptAndQueueModerationReport(
+      context,
+      reporterHandle: widget.currentLoggedInHandle,
+      targetType: 'community_comment',
+      targetId: commentId,
+      targetHandle: (comment['user_handle'] ?? '').toString(),
+      postId: widget.postId,
+      source: 'community_comment_menu',
+      successMessage: 'Thank you. The comment was reported for review.',
+    );
+  }
+
+  Future<void> _reportCommentAuthor(Map<String, dynamic> comment) async {
+    final handle = (comment['user_handle'] ?? '').toString().trim();
+    if (handle.isEmpty || handle == widget.currentLoggedInHandle) return;
+    await CommunitySafetyService.promptAndQueueModerationReport(
+      context,
+      reporterHandle: widget.currentLoggedInHandle,
+      targetType: 'community_user',
+      targetId: handle,
+      targetHandle: handle,
+      postId: widget.postId,
+      source: 'community_comment_menu',
+      successMessage: 'Thank you. The user report was sent for review.',
+    );
+  }
+
+  Future<void> _confirmBlockCommentAuthor(Map<String, dynamic> comment) async {
+    final handle = (comment['user_handle'] ?? '').toString().trim();
+    final normalized = CommunitySafetyService.normalizeHandle(handle);
+    if (normalized.isEmpty ||
+        normalized == CommunitySafetyService.normalizeHandle(widget.currentLoggedInHandle)) {
+      return;
+    }
+
+    final confirmed = await showDialog<bool>(
+      context: context,
+      builder: (dialogContext) => AlertDialog(
+        title: const Text('Block this user?'),
+        content: const Text(
+          'Their posts and comments will be hidden on this device. You can unblock them later from the Community Feed.',
+        ),
+        actions: [
+          TextButton(
+            onPressed: () => Navigator.of(dialogContext).pop(false),
+            child: const Text('Cancel'),
+          ),
+          FilledButton(
+            onPressed: () => Navigator.of(dialogContext).pop(true),
+            child: const Text('Block user'),
+          ),
+        ],
+      ),
+    );
+    if (confirmed != true) return;
+
+    await CommunitySafetyService.blockUser(handle);
+    if (!mounted) return;
+    setState(() {
+      _blockedHandles.add(normalized);
+      _comments.removeWhere((item) =>
+          CommunitySafetyService.normalizeHandle(
+            (item['user_handle'] ?? '').toString(),
+          ) ==
+          normalized);
+    });
+    ScaffoldMessenger.of(context).showSnackBar(
+      const SnackBar(content: Text('User blocked on this device.')),
+    );
+    widget.onUserBlocked?.call(handle);
   }
 
   Future<void> _submitComment() async {
@@ -578,6 +709,8 @@ class _CommunityCommentsSheetState extends State<CommunityCommentsSheet> {
       return;
     }
 
+    if (!await CommunitySafetyService.requirePostingTerms(context)) return;
+    if (!mounted) return;
     setState(() => _isSubmitting = true);
     try {
       Map<String, dynamic> insertData = {
@@ -784,7 +917,6 @@ class _CommunityCommentsSheetState extends State<CommunityCommentsSheet> {
                           itemBuilder: (context, cIdx) {
                             final c = displayComments[cIdx];
                             final bool isReply = c['parent_comment_id'] != null;
-                            final bool isMyComment = (c['user_handle'] ?? '').toString() == widget.currentLoggedInHandle;
 
                             final cid = int.tryParse(c['id']?.toString() ?? '');
                             final liked = cid != null && _likedCommentIds.contains(cid);
@@ -863,8 +995,7 @@ class _CommunityCommentsSheetState extends State<CommunityCommentsSheet> {
                                                 ],
                                               ),
                                             ),
-                                            if (isMyComment)
-                                              InkWell(
+                                            InkWell(
                                                 borderRadius: BorderRadius.circular(14),
                                                 onTap: () => _openCommentOptionsSheet(c),
                                                 child: Padding(
