@@ -1,13 +1,13 @@
-import 'dart:io';
 import 'package:flutter/material.dart';
-import 'package:file_picker/file_picker.dart';
-import 'package:shared_preferences/shared_preferences.dart';
-import 'package:mocktester/services/offline_llm_service.dart';
+
+import '../services/ai_data_disclosure_service.dart';
+import '../services/ai_explainer_service.dart';
+import '../widgets/report_ai_response_button.dart';
 
 class AiChatScreen extends StatefulWidget {
   final bool isDarkMode;
 
-  const AiChatScreen({Key? key, this.isDarkMode = false}) : super(key: key);
+  const AiChatScreen({super.key, this.isDarkMode = false});
 
   @override
   State<AiChatScreen> createState() => _AiChatScreenState();
@@ -16,7 +16,8 @@ class AiChatScreen extends StatefulWidget {
 class _ChatMessage {
   final String text;
   final bool isUser;
-  _ChatMessage({required this.text, required this.isUser});
+
+  const _ChatMessage({required this.text, required this.isUser});
 }
 
 class _AiChatScreenState extends State<AiChatScreen> {
@@ -24,108 +25,32 @@ class _AiChatScreenState extends State<AiChatScreen> {
   final ScrollController _scrollController = ScrollController();
   final List<_ChatMessage> _messages = [];
 
-  bool _isModelLoaded = false;
-  bool _isLoading = false;
   bool _isGenerating = false;
-  String _statusMessage = "Tap folder icon to select .gguf model";
-  String _currentModelName = "";
+  bool _isConsentPending = false;
 
   @override
-  void initState() {
-    super.initState();
-    _checkSavedModel();
-  }
-
-  Future<void> _checkSavedModel() async {
-    final prefs = await SharedPreferences.getInstance();
-    final savedPath = prefs.getString('saved_model_path');
-    if (savedPath != null && await File(savedPath).exists()) {
-      _initModel(savedPath);
-    }
-  }
-
-  Future<void> _pickModelFile() async {
-    setState(() {
-      _isLoading = true;
-      _statusMessage = "Opening file picker...";
-    });
-
-    try {
-      FilePickerResult? result = await FilePicker.platform.pickFiles(
-        type: FileType.any,
-      );
-
-      if (result == null || result.files.single.path == null) {
-        setState(() {
-          _isLoading = false;
-          _statusMessage = _isModelLoaded ? "$_currentModelName Active" : "Selection cancelled";
-        });
-        return;
-      }
-
-      final pickedPath = result.files.single.path!;
-
-      if (!pickedPath.toLowerCase().endsWith('.gguf')) {
-        setState(() {
-          _isLoading = false;
-          _statusMessage = "Galat format: sirf .gguf select karein";
-        });
-        return;
-      }
-
-      await _initModel(pickedPath);
-    } catch (e) {
-      setState(() {
-        _isLoading = false;
-        _statusMessage = "Picker error: $e";
-      });
-    }
-  }
-
-  Future<void> _initModel(String path) async {
-    setState(() {
-      _isLoading = true;
-      _statusMessage = "Reading file directly from storage...";
-    });
-
-    try {
-      final file = File(path);
-      if (!await file.exists()) {
-        throw Exception("File path read nahi ho raha: $path");
-      }
-
-      final fileName = path.split('/').last;
-      final sizeMB = (await file.length()) / (1024 * 1024);
-
-      setState(() {
-        _statusMessage = "Allocating ${sizeMB.toStringAsFixed(0)}MB to engine...";
-      });
-
-      await Future.delayed(const Duration(milliseconds: 150));
-
-      await OfflineLlmAgentService.instance.loadModelManually(modelPath: path);
-
-      final prefs = await SharedPreferences.getInstance();
-      await prefs.setString('saved_model_path', path);
-
-      setState(() {
-        _isModelLoaded = true;
-        _isLoading = false;
-        _currentModelName = fileName;
-        _statusMessage = "$fileName Active (Offline)";
-      });
-    } catch (e) {
-      setState(() {
-        _isLoading = false;
-        _isModelLoaded = false;
-        _statusMessage = "Load failed: $e";
-      });
-    }
+  void dispose() {
+    _textController.dispose();
+    _scrollController.dispose();
+    super.dispose();
   }
 
   Future<void> _sendMessage() async {
     final text = _textController.text.trim();
-    if (text.isEmpty || !_isModelLoaded || _isGenerating) return;
+    if (text.isEmpty || _isGenerating || _isConsentPending) return;
+
+    setState(() => _isConsentPending = true);
+    final consented = await AiDataDisclosureService.requireConsent(context);
+    if (!mounted) return;
+    setState(() => _isConsentPending = false);
+    if (!consented) return;
+
+    final recentMessages = _messages.length > 6
+        ? _messages.sublist(_messages.length - 6)
+        : _messages;
+    final chatHistory = recentMessages
+        .map((message) => '${message.isUser ? 'Student' : 'Tutor'}: ${message.text.trim()}')
+        .join('\n');
 
     _textController.clear();
     setState(() {
@@ -135,31 +60,21 @@ class _AiChatScreenState extends State<AiChatScreen> {
     _scrollToBottom();
 
     try {
-      String chatHistory = "";
-      if (_messages.length > 1) {
-        final previousMessages = _messages.sublist(0, _messages.length - 1);
-        final recent = previousMessages.length > 4
-            ? previousMessages.sublist(previousMessages.length - 4)
-            : previousMessages;
-
-        chatHistory = recent
-            .map((m) => "${m.isUser ? 'User' : 'Assistant'}: ${m.text.trim()}")
-            .join("\n");
-      }
-
-      final String response = await OfflineLlmAgentService.instance.executeLlmAgent(
-        userInput: text,
+      final response = await AiExplainerService.answerWithContext(
+        question: text,
         context: chatHistory,
-        task: LlmTaskType.duolingoExplanation,
       );
-
+      if (!mounted) return;
       setState(() {
         _messages.add(_ChatMessage(text: response, isUser: false));
         _isGenerating = false;
       });
-    } catch (e) {
+    } catch (error) {
+      if (!mounted) return;
       setState(() {
-        _messages.add(_ChatMessage(text: "Inference Error: $e", isUser: false));
+        _messages.add(
+          _ChatMessage(text: 'Inference Error: $error', isUser: false),
+        );
         _isGenerating = false;
       });
     }
@@ -187,95 +102,115 @@ class _AiChatScreenState extends State<AiChatScreen> {
     return Scaffold(
       backgroundColor: bgColor,
       appBar: AppBar(
-        title: Column(
+        title: const Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            const Text("Offline AI Assistant", style: TextStyle(fontSize: 16)),
+            Text('AI Assistant', style: TextStyle(fontSize: 16)),
             Text(
-              _statusMessage,
-              style: TextStyle(
-                fontSize: 11,
-                color: _isModelLoaded
-                    ? Colors.greenAccent
-                    : (_statusMessage.contains("failed") || _statusMessage.contains("error")
-                        ? Colors.redAccent
-                        : Colors.white70),
-              ),
+              'Cloud AI · your prompt and recent chat context are sent to the AI service',
+              style: TextStyle(fontSize: 10, color: Colors.white70),
+              maxLines: 2,
               overflow: TextOverflow.ellipsis,
             ),
           ],
         ),
-        actions: [
-          IconButton(
-            icon: const Icon(Icons.folder_open),
-            tooltip: "Select Model (.gguf)",
-            onPressed: _isLoading ? null : _pickModelFile,
-          ),
-        ],
       ),
       body: Column(
         children: [
-          if (_isLoading) const LinearProgressIndicator(),
           Expanded(
             child: _messages.isEmpty
                 ? Center(
                     child: Padding(
-                      padding: const EdgeInsets.all(24.0),
+                      padding: const EdgeInsets.all(24),
                       child: Text(
-                        _isModelLoaded
-                            ? "$_currentModelName Ready! Apna sawal puchiye..."
-                            : _statusMessage,
+                        'Ask a study question. You will be asked to review how AI features use your data before the first request.',
                         textAlign: TextAlign.center,
-                        style: TextStyle(color: isDark ? Colors.grey.shade400 : Colors.grey),
+                        style: TextStyle(
+                          color: isDark ? Colors.grey.shade400 : Colors.grey,
+                        ),
                       ),
                     ),
                   )
                 : ListView.builder(
                     controller: _scrollController,
-                    padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
+                    padding: const EdgeInsets.symmetric(
+                      horizontal: 12,
+                      vertical: 8,
+                    ),
                     itemCount: _messages.length,
                     itemBuilder: (context, index) {
-                      final msg = _messages[index];
+                      final message = _messages[index];
+                      final isReportable = !message.isUser &&
+                          !message.text.startsWith('Inference Error:') &&
+                          !message.text.startsWith('⚠️ AI Service busy');
 
                       return Align(
-                        alignment: msg.isUser ? Alignment.centerRight : Alignment.centerLeft,
-                        child: Container(
-                          margin: const EdgeInsets.symmetric(vertical: 4),
-                          padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 10),
-                          constraints: BoxConstraints(
-                            maxWidth: MediaQuery.of(context).size.width * 0.82,
-                          ),
-                          decoration: BoxDecoration(
-                            color: msg.isUser
-                                ? Colors.blueAccent
-                                : (isDark ? const Color(0xFF242424) : const Color(0xFFF1F1F4)),
-                            borderRadius: BorderRadius.circular(14),
-                          ),
-                          child: SelectableText(
-                            msg.text.trim(),
-                            style: TextStyle(
-                              color: msg.isUser
-                                  ? Colors.white
-                                  : (isDark ? Colors.white : Colors.black87),
-                              fontSize: 14.5,
-                              height: 1.35,
+                        alignment: message.isUser
+                            ? Alignment.centerRight
+                            : Alignment.centerLeft,
+                        child: Column(
+                          mainAxisSize: MainAxisSize.min,
+                          crossAxisAlignment: message.isUser
+                              ? CrossAxisAlignment.end
+                              : CrossAxisAlignment.start,
+                          children: [
+                            Container(
+                              margin: const EdgeInsets.symmetric(vertical: 4),
+                              padding: const EdgeInsets.symmetric(
+                                horizontal: 14,
+                                vertical: 10,
+                              ),
+                              constraints: BoxConstraints(
+                                maxWidth: MediaQuery.of(context).size.width * 0.82,
+                              ),
+                              decoration: BoxDecoration(
+                                color: message.isUser
+                                    ? Colors.blueAccent
+                                    : (isDark
+                                        ? const Color(0xFF242424)
+                                        : const Color(0xFFF1F1F4)),
+                                borderRadius: BorderRadius.circular(14),
+                              ),
+                              child: SelectableText(
+                                message.text.trim(),
+                                style: TextStyle(
+                                  color: message.isUser
+                                      ? Colors.white
+                                      : (isDark ? Colors.white : Colors.black87),
+                                  fontSize: 14.5,
+                                  height: 1.35,
+                                ),
+                              ),
                             ),
-                          ),
+                            if (isReportable)
+                              ReportAiResponseButton(
+                                response: message.text,
+                                source: 'ai_chat_assistant',
+                                isDarkMode: isDark,
+                              ),
+                          ],
                         ),
                       );
                     },
                   ),
           ),
-          if (_isGenerating)
+          if (_isGenerating || _isConsentPending)
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 6),
               child: Row(
                 children: [
-                  const SizedBox(width: 14, height: 14, child: CircularProgressIndicator(strokeWidth: 2)),
+                  const SizedBox(
+                    width: 14,
+                    height: 14,
+                    child: CircularProgressIndicator(strokeWidth: 2),
+                  ),
                   const SizedBox(width: 8),
                   Text(
-                    "AI soch raha hai...",
-                    style: TextStyle(fontSize: 12, color: isDark ? Colors.grey.shade400 : Colors.grey),
+                    _isConsentPending ? 'Waiting for your choice…' : 'AI is thinking…',
+                    style: TextStyle(
+                      fontSize: 12,
+                      color: isDark ? Colors.grey.shade400 : Colors.grey,
+                    ),
                   ),
                 ],
               ),
@@ -285,7 +220,11 @@ class _AiChatScreenState extends State<AiChatScreen> {
             decoration: BoxDecoration(
               color: isDark ? const Color(0xFF1E1E1E) : Colors.white,
               boxShadow: const [
-                BoxShadow(color: Colors.black12, blurRadius: 4, offset: Offset(0, -1))
+                BoxShadow(
+                  color: Colors.black12,
+                  blurRadius: 4,
+                  offset: Offset(0, -1),
+                ),
               ],
             ),
             child: Row(
@@ -293,11 +232,13 @@ class _AiChatScreenState extends State<AiChatScreen> {
                 Expanded(
                   child: TextField(
                     controller: _textController,
-                    enabled: _isModelLoaded && !_isGenerating,
+                    enabled: !_isGenerating && !_isConsentPending,
                     style: TextStyle(color: textColor),
                     decoration: InputDecoration(
-                      hintText: _isModelLoaded ? "Type your question..." : "Select model first...",
-                      hintStyle: TextStyle(color: isDark ? Colors.grey.shade500 : Colors.grey),
+                      hintText: 'Type your question…',
+                      hintStyle: TextStyle(
+                        color: isDark ? Colors.grey.shade500 : Colors.grey,
+                      ),
                       border: InputBorder.none,
                       contentPadding: const EdgeInsets.symmetric(horizontal: 12),
                     ),
@@ -306,7 +247,9 @@ class _AiChatScreenState extends State<AiChatScreen> {
                 ),
                 IconButton(
                   icon: const Icon(Icons.send, color: Colors.blueAccent),
-                  onPressed: (_isModelLoaded && !_isGenerating) ? _sendMessage : null,
+                  onPressed: (!_isGenerating && !_isConsentPending)
+                      ? _sendMessage
+                      : null,
                 ),
               ],
             ),
