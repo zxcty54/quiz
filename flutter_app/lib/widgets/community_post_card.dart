@@ -769,7 +769,7 @@ Download Free: https://play.google.com/store/apps/details?id=com.mocktester.onli
 
                             widget.onPostUpdated?.call(updatedText);
 
-                            if (mounted) {
+                            if (mounted && ctx.mounted) {
                               Navigator.pop(ctx);
                               ScaffoldMessenger.of(context).showSnackBar(
                                 const SnackBar(

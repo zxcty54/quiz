@@ -1903,10 +1903,10 @@ class _SectionalCbtScreenState extends State<SectionalCbtScreen> {
         backgroundColor: Colors.white,
         body: Center(
           child: Padding(
-            padding: const EdgeInsets.all(32),
+            padding: EdgeInsets.all(32),
             child: Column(
               mainAxisSize: MainAxisSize.min,
-              children: const [
+              children: [
                 CircularProgressIndicator(
                   color: Color(0xFF2563EB),
                 ),

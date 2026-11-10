@@ -459,7 +459,7 @@ class _CreatorMockBuilderScreenState extends State<CreatorMockBuilderScreen> {
             _activeJumpIndex = _questionCards.length - 1;
           });
 
-          if (mounted) {
+          if (mounted && modalCtx.mounted) {
             Navigator.pop(modalCtx);
             ScaffoldMessenger.of(context).showSnackBar(
               SnackBar(content: Text('✨ AI added ${converted.length} Questions successfully!'), backgroundColor: const Color(0xFF16A34A)),

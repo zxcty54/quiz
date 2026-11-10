@@ -409,7 +409,7 @@ class _CommunityCommentsSheetState extends State<CommunityCommentsSheet> {
                               });
                             }
 
-                            if (mounted) {
+                            if (mounted && ctx.mounted) {
                               Navigator.pop(ctx);
                               ScaffoldMessenger.of(context).showSnackBar(
                                 const SnackBar(

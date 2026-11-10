@@ -549,7 +549,7 @@ class _CommunityFeedScreenState extends State<CommunityFeedScreen> {
                                 'bookmarks_count': 0,
                               });
 
-                              if (mounted) {
+                              if (mounted && ctx.mounted) {
                                 Navigator.pop(ctx);
                                 _fetchFeedPosts();
                                 ScaffoldMessenger.of(context).showSnackBar(
