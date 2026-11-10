@@ -1,5 +1,4 @@
 import 'dart:io';
-import 'dart:typed_data';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_image_compress/flutter_image_compress.dart';
@@ -478,7 +477,7 @@ class _ExamPhotoResizerScreenState extends State<ExamPhotoResizerScreen> {
         color: isDark ? const Color(0xFF1E1B18) : Colors.white,
         borderRadius: BorderRadius.circular(18),
         border: Border.all(
-          color: const Color(0xFFB45309).withOpacity(0.25),
+          color: const Color(0xFFB45309).withValues(alpha: 0.25),
           width: 1.4,
         ),
       ),
@@ -536,7 +535,7 @@ class _ExamPhotoResizerScreenState extends State<ExamPhotoResizerScreen> {
                       Container(
                         padding: const EdgeInsets.all(16),
                         decoration: BoxDecoration(
-                          color: const Color(0xFFB45309).withOpacity(0.12),
+                          color: const Color(0xFFB45309).withValues(alpha: 0.12),
                           shape: BoxShape.circle,
                         ),
                         child: const Icon(
@@ -579,7 +578,7 @@ class _ExamPhotoResizerScreenState extends State<ExamPhotoResizerScreen> {
       decoration: BoxDecoration(
         color: isDark ? const Color(0xFF1E1B18) : Colors.white,
         borderRadius: BorderRadius.circular(16),
-        border: Border.all(color: const Color(0xFF16A34A).withOpacity(0.3)),
+        border: Border.all(color: const Color(0xFF16A34A).withValues(alpha: 0.3)),
       ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,

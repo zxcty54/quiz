@@ -1308,7 +1308,7 @@ class _BrandMark extends StatelessWidget {
         borderRadius: BorderRadius.circular(r),
         boxShadow: [
           BoxShadow(
-            color: const Color(0xFF2563EB).withOpacity(0.34),
+            color: const Color(0xFF2563EB).withValues(alpha: 0.34),
             blurRadius: 12,
             offset: const Offset(0, 5),
           ),
@@ -1324,8 +1324,8 @@ class _BrandMark extends StatelessWidget {
                   begin: Alignment.topLeft,
                   end: Alignment.bottomRight,
                   colors: [
-                    Colors.white.withOpacity(0.22),
-                    Colors.white.withOpacity(0.04),
+                    Colors.white.withValues(alpha: 0.22),
+                    Colors.white.withValues(alpha: 0.04),
                   ],
                 ),
                 borderRadius: BorderRadius.circular(r),
@@ -1374,7 +1374,7 @@ class _AuroraLoadingScreen extends StatelessWidget {
                       borderRadius: BorderRadius.circular(26),
                       boxShadow: [
                         BoxShadow(
-                          color: const Color(0xFF2563EB).withOpacity(0.40),
+                          color: const Color(0xFF2563EB).withValues(alpha: 0.40),
                           blurRadius: 24,
                           offset: const Offset(0, 8),
                         ),
@@ -1392,8 +1392,8 @@ class _AuroraLoadingScreen extends StatelessWidget {
                                 begin: Alignment.topLeft,
                                 end: Alignment.bottomRight,
                                 colors: [
-                                  Colors.white.withOpacity(0.22),
-                                  Colors.white.withOpacity(0.04),
+                                  Colors.white.withValues(alpha: 0.22),
+                                  Colors.white.withValues(alpha: 0.04),
                                 ],
                               ),
                             ),
@@ -1452,7 +1452,7 @@ class _AuroraLoadingScreen extends StatelessWidget {
                       child: LinearProgressIndicator(
                         value: null,
                         minHeight: 4,
-                        backgroundColor: Colors.white.withOpacity(0.12),
+                        backgroundColor: Colors.white.withValues(alpha: 0.12),
                         valueColor: const AlwaysStoppedAnimation<Color>(
                           Color(0xFF38BDF8),
                         ),
@@ -1466,7 +1466,7 @@ class _AuroraLoadingScreen extends StatelessWidget {
                   Text(
                     'BPSC \u2022 BSSC \u2022 Bihar Police \u2022 All Bihar Exams',
                     style: TextStyle(
-                      color: Colors.white.withOpacity(0.55),
+                      color: Colors.white.withValues(alpha: 0.55),
                       fontSize: 10.5,
                       fontWeight: FontWeight.w700,
                       letterSpacing: 0.6,
@@ -1548,8 +1548,8 @@ class _AuroraPainter extends CustomPainter {
 
       paint.shader = RadialGradient(
         colors: [
-          _colors[i].withOpacity(0.35),
-          _colors[i].withOpacity(0.0),
+          _colors[i].withValues(alpha: 0.35),
+          _colors[i].withValues(alpha: 0.0),
         ],
       ).createShader(Rect.fromCircle(center: center, radius: radius));
 
@@ -1561,7 +1561,7 @@ class _AuroraPainter extends CustomPainter {
       ..shader = RadialGradient(
         colors: [
           Colors.transparent,
-          const Color(0xFF070B14).withOpacity(0.60),
+          const Color(0xFF070B14).withValues(alpha: 0.60),
         ],
         stops: const [0.55, 1.0],
       ).createShader(Offset.zero & size);

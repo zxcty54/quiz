@@ -76,7 +76,7 @@ class HeroHeaderWidget extends StatelessWidget {
         ),
         boxShadow: [
           BoxShadow(
-            color: const Color(0xFF2563EB).withOpacity(0.3),
+            color: const Color(0xFF2563EB).withValues(alpha: 0.3),
             blurRadius: 10,
             offset: const Offset(0, 4),
           )
@@ -95,7 +95,7 @@ class HeroHeaderWidget extends StatelessWidget {
                 Container(
                   padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
                   decoration: BoxDecoration(
-                    color: Colors.white.withOpacity(0.15),
+                    color: Colors.white.withValues(alpha: 0.15),
                     borderRadius: BorderRadius.circular(20),
                   ),
                   child: const Row(
@@ -141,9 +141,9 @@ class HeroHeaderWidget extends StatelessWidget {
       width: double.infinity,
       padding: const EdgeInsets.all(8),
       decoration: BoxDecoration(
-        color: Colors.white.withOpacity(0.1),
+        color: Colors.white.withValues(alpha: 0.1),
         borderRadius: BorderRadius.circular(10),
-        border: Border.all(color: Colors.white.withOpacity(0.1)),
+        border: Border.all(color: Colors.white.withValues(alpha: 0.1)),
       ),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.center,
@@ -229,10 +229,10 @@ class WebHubCardWidget extends StatelessWidget {
           decoration: BoxDecoration(
             color: Theme.of(context).cardColor,
             borderRadius: BorderRadius.circular(14),
-            border: Border.all(color: themeColor.withOpacity(0.35), width: 1.3),
+            border: Border.all(color: themeColor.withValues(alpha: 0.35), width: 1.3),
             boxShadow: [
               BoxShadow(
-                color: themeColor.withOpacity(0.05),
+                color: themeColor.withValues(alpha: 0.05),
                 blurRadius: 8,
                 offset: const Offset(0, 3),
               ),
@@ -258,7 +258,7 @@ class WebHubCardWidget extends StatelessWidget {
                   ],
                 ),
                 const SizedBox(height: 8),
-                Divider(color: themeColor.withOpacity(0.2), height: 1),
+                Divider(color: themeColor.withValues(alpha: 0.2), height: 1),
                 const SizedBox(height: 10),
 
                 ...items.map((item) => Padding(
@@ -291,9 +291,9 @@ class WebHubCardWidget extends StatelessWidget {
                     child: Container(
                       padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
                       decoration: BoxDecoration(
-                        color: themeColor.withOpacity(0.08),
+                        color: themeColor.withValues(alpha: 0.08),
                         borderRadius: BorderRadius.circular(6),
-                        border: Border.all(color: themeColor.withOpacity(0.3)),
+                        border: Border.all(color: themeColor.withValues(alpha: 0.3)),
                       ),
                       child: Text(
                         buttonText,
@@ -342,12 +342,12 @@ class EligibilityCheckerWidget extends StatelessWidget {
           end: Alignment.bottomRight,
         ),
         border: Border.all(
-          color: isDarkMode ? const Color(0xFF3B82F6).withOpacity(0.4) : const Color(0xFF60A5FA),
+          color: isDarkMode ? const Color(0xFF3B82F6).withValues(alpha: 0.4) : const Color(0xFF60A5FA),
           width: 1.5,
         ),
         boxShadow: [
           BoxShadow(
-            color: const Color(0xFF2563EB).withOpacity(isDarkMode ? 0.2 : 0.1),
+            color: const Color(0xFF2563EB).withValues(alpha: isDarkMode ? 0.2 : 0.1),
             blurRadius: 12,
             offset: const Offset(0, 5),
           ),
@@ -366,7 +366,7 @@ class EligibilityCheckerWidget extends StatelessWidget {
                   Container(
                     padding: const EdgeInsets.all(7),
                     decoration: BoxDecoration(
-                      color: const Color(0xFF2563EB).withOpacity(0.15),
+                      color: const Color(0xFF2563EB).withValues(alpha: 0.15),
                       shape: BoxShape.circle,
                     ),
                     child: const Text('🎯', style: TextStyle(fontSize: 18)),
@@ -422,7 +422,7 @@ class EligibilityCheckerWidget extends StatelessWidget {
           Container(
             padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 8),
             decoration: BoxDecoration(
-              color: isDarkMode ? const Color(0xFF0F172A).withOpacity(0.6) : Colors.white.withOpacity(0.8),
+              color: isDarkMode ? const Color(0xFF0F172A).withValues(alpha: 0.6) : Colors.white.withValues(alpha: 0.8),
               borderRadius: BorderRadius.circular(12),
               border: Border.all(
                 color: isDarkMode ? Colors.white12 : const Color(0xFFBFDBFE),
@@ -463,7 +463,7 @@ class EligibilityCheckerWidget extends StatelessWidget {
                 padding: const EdgeInsets.symmetric(vertical: 12),
                 shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
                 elevation: 3,
-                shadowColor: const Color(0xFF2563EB).withOpacity(0.4),
+                shadowColor: const Color(0xFF2563EB).withValues(alpha: 0.4),
               ),
               onPressed: () => onTapUrl("Job Eligibility Checker", eligibilityToolUrl),
               child: const Row(

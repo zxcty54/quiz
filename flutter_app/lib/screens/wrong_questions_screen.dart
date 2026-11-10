@@ -561,9 +561,9 @@ class _WrongQuestionsScreenState extends State<WrongQuestionsScreen> {
                                   Container(
                                     padding: const EdgeInsets.symmetric(horizontal: 5, vertical: 3),
                                     decoration: BoxDecoration(
-                                      color: isDue ? const Color(0xFFE11D48).withOpacity(isDark ? 0.22 : 0.10) : (isDark ? const Color(0xFF0F172A) : Colors.grey.shade100),
+                                      color: isDue ? const Color(0xFFE11D48).withValues(alpha: isDark ? 0.22 : 0.10) : (isDark ? const Color(0xFF0F172A) : Colors.grey.shade100),
                                       borderRadius: BorderRadius.circular(6),
-                                      border: Border.all(color: isDue ? const Color(0xFFE11D48).withOpacity(0.45) : (isDark ? const Color(0xFF475569) : Colors.grey.shade300)),
+                                      border: Border.all(color: isDue ? const Color(0xFFE11D48).withValues(alpha: 0.45) : (isDark ? const Color(0xFF475569) : Colors.grey.shade300)),
                                     ),
                                     child: Text(
                                       _dueLabel(qJson),
@@ -575,9 +575,9 @@ class _WrongQuestionsScreenState extends State<WrongQuestionsScreen> {
                                     Container(
                                       padding: const EdgeInsets.symmetric(horizontal: 5, vertical: 3),
                                       decoration: BoxDecoration(
-                                        color: const Color(0xFFE11D48).withOpacity(isDark ? 0.25 : 0.12),
+                                        color: const Color(0xFFE11D48).withValues(alpha: isDark ? 0.25 : 0.12),
                                         borderRadius: BorderRadius.circular(6),
-                                        border: Border.all(color: const Color(0xFFE11D48).withOpacity(0.5)),
+                                        border: Border.all(color: const Color(0xFFE11D48).withValues(alpha: 0.5)),
                                       ),
                                       child: Text(
                                         '🔁 $timesWrong baar galat',
@@ -869,7 +869,7 @@ class _WrongQuestionsScreenState extends State<WrongQuestionsScreen> {
       child: Container(
         padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
         decoration: BoxDecoration(
-          color: isSelected ? color.withOpacity(0.15) : (widget.isDarkMode ? const Color(0xFF0F172A) : Colors.grey.shade100),
+          color: isSelected ? color.withValues(alpha: 0.15) : (widget.isDarkMode ? const Color(0xFF0F172A) : Colors.grey.shade100),
           borderRadius: BorderRadius.circular(12),
           border: Border.all(color: isSelected ? color : (widget.isDarkMode ? const Color(0xFF475569) : Colors.grey.shade300), width: isSelected ? 1.5 : 1),
         ),

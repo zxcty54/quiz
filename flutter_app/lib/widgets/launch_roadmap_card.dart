@@ -37,7 +37,7 @@ class LaunchRoadmapCardWidget extends StatelessWidget {
               Container(
                 padding: const EdgeInsets.all(6),
                 decoration: BoxDecoration(
-                  color: const Color(0xFF2563EB).withOpacity(0.12),
+                  color: const Color(0xFF2563EB).withValues(alpha: 0.12),
                   borderRadius: BorderRadius.circular(8),
                 ),
                 child: const Icon(Icons.rocket_launch_rounded, size: 16, color: Color(0xFF2563EB)),
@@ -66,7 +66,7 @@ class LaunchRoadmapCardWidget extends StatelessWidget {
               padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 10),
               decoration: BoxDecoration(
                 color: isDarkMode
-                    ? const Color(0xFF0F172A).withOpacity(0.5)
+                    ? const Color(0xFF0F172A).withValues(alpha: 0.5)
                     : const Color(0xFFE2E8F0),
                 borderRadius: BorderRadius.circular(12),
                 border: Border.all(
@@ -90,7 +90,7 @@ class LaunchRoadmapCardWidget extends StatelessWidget {
                       text,
                       style: TextStyle(
                         fontSize: 12,
-                        color: isDarkMode ? Colors.white.withOpacity(0.9) : const Color(0xFF1E293B),
+                        color: isDarkMode ? Colors.white.withValues(alpha: 0.9) : const Color(0xFF1E293B),
                         fontWeight: FontWeight.w600,
                       ),
                     ),

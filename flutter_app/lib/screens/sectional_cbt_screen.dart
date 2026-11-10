@@ -2250,9 +2250,7 @@ class _SectionalCbtScreenState extends State<SectionalCbtScreen> {
                     color:
                         const Color(
                                 0xFF2563EB)
-                            .withOpacity(
-                      0.25,
-                    ),
+                            .withValues(alpha: 0.25),
                     width: 1.2,
                   ),
                 ),

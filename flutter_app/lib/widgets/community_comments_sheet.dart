@@ -540,7 +540,7 @@ class _CommunityCommentsSheetState extends State<CommunityCommentsSheet> {
                   height: 4,
                   margin: const EdgeInsets.symmetric(vertical: 8),
                   decoration: BoxDecoration(
-                    color: Colors.grey.withOpacity(0.3),
+                    color: Colors.grey.withValues(alpha: 0.3),
                     borderRadius: BorderRadius.circular(2),
                   ),
                 ),
@@ -1085,7 +1085,7 @@ class _CommunityCommentsSheetState extends State<CommunityCommentsSheet> {
             if (_replyingToCommentId != null)
               Container(
                 padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
-                color: _primaryBlue.withOpacity(0.1),
+                color: _primaryBlue.withValues(alpha: 0.1),
                 child: Row(
                   children: [
                     Text(

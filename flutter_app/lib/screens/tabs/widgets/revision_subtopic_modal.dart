@@ -40,7 +40,7 @@ class RevisionSubTopicModal {
                     Container(
                       padding: const EdgeInsets.all(6),
                       decoration: BoxDecoration(
-                        color: themeColor.withOpacity(0.15),
+                        color: themeColor.withValues(alpha: 0.15),
                         borderRadius: BorderRadius.circular(8),
                       ),
                       child: Icon(Icons.folder_open_rounded, color: themeColor, size: 20),
@@ -78,8 +78,8 @@ class RevisionSubTopicModal {
                   children: subTypes.entries.map((entry) {
                     return ActionChip(
                       elevation: 1,
-                      backgroundColor: isDark ? themeColor.withOpacity(0.2) : const Color(0xFFEEF2FF),
-                      side: BorderSide(color: themeColor.withOpacity(0.4)),
+                      backgroundColor: isDark ? themeColor.withValues(alpha: 0.2) : const Color(0xFFEEF2FF),
+                      side: BorderSide(color: themeColor.withValues(alpha: 0.4)),
                       label: Text(
                         entry.key,
                         style: TextStyle(

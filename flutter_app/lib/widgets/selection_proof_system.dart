@@ -38,12 +38,12 @@ class StarSelectionCard extends StatelessWidget {
         color: bgCard,
         borderRadius: BorderRadius.circular(16),
         border: Border.all(
-          color: isVerified ? const Color(0xFF16A34A).withOpacity(0.3) : borderColor,
+          color: isVerified ? const Color(0xFF16A34A).withValues(alpha: 0.3) : borderColor,
           width: isVerified ? 1.4 : 1.0,
         ),
         boxShadow: [
           BoxShadow(
-            color: Colors.black.withOpacity(isDarkMode ? 0.25 : 0.04),
+            color: Colors.black.withValues(alpha: isDarkMode ? 0.25 : 0.04),
             blurRadius: 10,
             offset: const Offset(0, 4),
           ),
@@ -56,7 +56,7 @@ class StarSelectionCard extends StatelessWidget {
             children: [
               CircleAvatar(
                 radius: 22,
-                backgroundColor: const Color(0xFF2563EB).withOpacity(0.12),
+                backgroundColor: const Color(0xFF2563EB).withValues(alpha: 0.12),
                 child: Text(
                   name.isNotEmpty ? name[0].toUpperCase() : 'A',
                   style: const TextStyle(
@@ -106,7 +106,7 @@ class StarSelectionCard extends StatelessWidget {
                 Container(
                   padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
                   decoration: BoxDecoration(
-                    color: const Color(0xFF16A34A).withOpacity(0.12),
+                    color: const Color(0xFF16A34A).withValues(alpha: 0.12),
                     borderRadius: BorderRadius.circular(20),
                   ),
                   child: const Text(
@@ -126,7 +126,7 @@ class StarSelectionCard extends StatelessWidget {
             Container(
               padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 10),
               decoration: BoxDecoration(
-                color: isDarkMode ? const Color(0xFF0F172A).withOpacity(0.5) : const Color(0xFFF8FAFC),
+                color: isDarkMode ? const Color(0xFF0F172A).withValues(alpha: 0.5) : const Color(0xFFF8FAFC),
                 borderRadius: BorderRadius.circular(10),
                 border: Border.all(color: borderColor),
               ),
@@ -342,7 +342,7 @@ class _StudentClaimSelectionSheetState extends State<StudentClaimSelectionSheet>
             Container(
               padding: const EdgeInsets.all(16),
               decoration: BoxDecoration(
-                color: (isVerified ? const Color(0xFF16A34A) : const Color(0xFF2563EB)).withOpacity(0.12),
+                color: (isVerified ? const Color(0xFF16A34A) : const Color(0xFF2563EB)).withValues(alpha: 0.12),
                 shape: BoxShape.circle,
               ),
               child: Icon(
@@ -429,7 +429,7 @@ class _StudentClaimSelectionSheetState extends State<StudentClaimSelectionSheet>
                 Container(
                   padding: const EdgeInsets.all(8),
                   decoration: BoxDecoration(
-                    color: const Color(0xFF16A34A).withOpacity(0.12),
+                    color: const Color(0xFF16A34A).withValues(alpha: 0.12),
                     borderRadius: BorderRadius.circular(10),
                   ),
                   child: const Icon(Icons.military_tech_rounded, color: Color(0xFF16A34A), size: 24),

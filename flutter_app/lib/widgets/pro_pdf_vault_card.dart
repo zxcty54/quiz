@@ -195,7 +195,7 @@ class ProPdfVaultCardState extends State<ProPdfVaultCard> {
               borderRadius: BorderRadius.circular(18),
               boxShadow: [
                 BoxShadow(
-                  color: const Color(0xFF1E40AF).withOpacity(isDark ? 0.25 : 0.22),
+                  color: const Color(0xFF1E40AF).withValues(alpha: isDark ? 0.25 : 0.22),
                   blurRadius: 14,
                   offset: const Offset(0, 6),
                 ),
@@ -322,7 +322,7 @@ class ProPdfVaultCardState extends State<ProPdfVaultCard> {
         border: Border.all(color: borderColor, width: 1),
         boxShadow: [
           BoxShadow(
-            color: Colors.black.withOpacity(isDark ? 0.3 : 0.05),
+            color: Colors.black.withValues(alpha: isDark ? 0.3 : 0.05),
             blurRadius: 12,
             offset: const Offset(0, 4),
           ),
@@ -342,7 +342,7 @@ class ProPdfVaultCardState extends State<ProPdfVaultCard> {
                     Container(
                       padding: const EdgeInsets.all(8),
                       decoration: BoxDecoration(
-                        color: const Color(0xFF2563EB).withOpacity(0.12),
+                        color: const Color(0xFF2563EB).withValues(alpha: 0.12),
                         borderRadius: BorderRadius.circular(10),
                       ),
                       child: const Icon(Icons.menu_book_rounded, size: 20, color: Color(0xFF2563EB)),
@@ -483,7 +483,7 @@ class ProPdfVaultCardState extends State<ProPdfVaultCard> {
                               width: 38,
                               height: 44,
                               decoration: BoxDecoration(
-                                color: accent.withOpacity(0.12),
+                                color: accent.withValues(alpha: 0.12),
                                 borderRadius: BorderRadius.circular(8),
                               ),
                               child: Column(

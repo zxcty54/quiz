@@ -305,7 +305,7 @@ class _DistrictTopLeaderboardWidgetState
         ),
         boxShadow: [
           BoxShadow(
-            color: Colors.black.withOpacity(isDark ? 0.35 : 0.05),
+            color: Colors.black.withValues(alpha: isDark ? 0.35 : 0.05),
             blurRadius: 18,
             offset: const Offset(0, 8),
           ),
@@ -393,7 +393,7 @@ class _DistrictTopLeaderboardWidgetState
               borderRadius: BorderRadius.circular(14),
               boxShadow: [
                 BoxShadow(
-                  color: const Color(0xFF6366F1).withOpacity(0.28),
+                  color: const Color(0xFF6366F1).withValues(alpha: 0.28),
                   blurRadius: 10,
                   offset: const Offset(0, 4),
                 ),
@@ -514,7 +514,7 @@ class _DistrictTopLeaderboardWidgetState
         border: Border.all(color: const Color(0xFFF59E0B), width: 1.4),
         boxShadow: [
           BoxShadow(
-            color: const Color(0xFFF59E0B).withOpacity(isDark ? 0.25 : 0.18),
+            color: const Color(0xFFF59E0B).withValues(alpha: isDark ? 0.25 : 0.18),
             blurRadius: 10,
             offset: const Offset(0, 3),
           ),
@@ -696,7 +696,7 @@ class _DistrictTopLeaderboardWidgetState
         color: cardBgColor,
         borderRadius: BorderRadius.circular(16),
         border: Border.all(
-          color: borderColor.withOpacity(isDark ? 0.45 : 0.4),
+          color: borderColor.withValues(alpha: isDark ? 0.45 : 0.4),
           width: rank == 1 ? 1.4 : 1.1,
         ),
       ),
@@ -760,12 +760,12 @@ class _DistrictTopLeaderboardWidgetState
                 padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
                 decoration: BoxDecoration(
                   color: isDark
-                      ? const Color(0xFF064E3B).withOpacity(0.6)
+                      ? const Color(0xFF064E3B).withValues(alpha: 0.6)
                       : const Color(0xFFDCFCE7),
                   borderRadius: BorderRadius.circular(7),
                   border: Border.all(
                     color: isDark
-                        ? const Color(0xFF059669).withOpacity(0.6)
+                        ? const Color(0xFF059669).withValues(alpha: 0.6)
                         : const Color(0xFF86EFAC),
                   ),
                 ),
@@ -893,7 +893,7 @@ class _DistrictTopLeaderboardWidgetState
         border: Border.all(color: const Color(0xFF14B8A6), width: 1.2),
         boxShadow: [
           BoxShadow(
-            color: const Color(0xFF042F2C).withOpacity(0.25),
+            color: const Color(0xFF042F2C).withValues(alpha: 0.25),
             blurRadius: 10,
             offset: const Offset(0, 4),
           ),

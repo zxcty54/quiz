@@ -137,7 +137,7 @@ class _SavedQuestionsScreenState extends State<SavedQuestionsScreen> {
                   border: Border.all(color: borderColor),
                   boxShadow: [
                     BoxShadow(
-                      color: Colors.black.withOpacity(isDark ? 0.2 : 0.04),
+                      color: Colors.black.withValues(alpha: isDark ? 0.2 : 0.04),
                       blurRadius: 8,
                       offset: const Offset(0, 2),
                     ),
@@ -152,7 +152,7 @@ class _SavedQuestionsScreenState extends State<SavedQuestionsScreen> {
                         Container(
                           padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 3),
                           decoration: BoxDecoration(
-                            color: const Color(0xFF2563EB).withOpacity(0.12),
+                            color: const Color(0xFF2563EB).withValues(alpha: 0.12),
                             borderRadius: BorderRadius.circular(6),
                           ),
                           child: Text(
@@ -204,7 +204,7 @@ class _SavedQuestionsScreenState extends State<SavedQuestionsScreen> {
                     ...List.generate(q.options.length, (optIdx) {
                       final bool isCorrect = optIdx == targetCorrectIdx;
                       final Color optBg = isCorrect
-                          ? (isDark ? const Color(0xFF14532D).withOpacity(0.35) : const Color(0xFFDCFCE7))
+                          ? (isDark ? const Color(0xFF14532D).withValues(alpha: 0.35) : const Color(0xFFDCFCE7))
                           : (isDark ? const Color(0xFF334155) : const Color(0xFFF1F5F9));
                       final Color optBorder = isCorrect
                           ? const Color(0xFF16A34A)
@@ -252,7 +252,7 @@ class _SavedQuestionsScreenState extends State<SavedQuestionsScreen> {
                         child: Container(
                           padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
                           decoration: BoxDecoration(
-                            color: isDark ? const Color(0xFF334155).withOpacity(0.5) : const Color(0xFFF1F5F9),
+                            color: isDark ? const Color(0xFF334155).withValues(alpha: 0.5) : const Color(0xFFF1F5F9),
                             borderRadius: BorderRadius.circular(8),
                             border: Border.all(color: borderColor),
                           ),
@@ -287,7 +287,7 @@ class _SavedQuestionsScreenState extends State<SavedQuestionsScreen> {
                           decoration: BoxDecoration(
                             color: isDark ? const Color(0xFF1E293B) : const Color(0xFFF8FAFC),
                             borderRadius: BorderRadius.circular(8),
-                            border: Border.all(color: Colors.amber.withOpacity(0.3)),
+                            border: Border.all(color: Colors.amber.withValues(alpha: 0.3)),
                           ),
                           child: MathFormattedText(
                             text: q.explanation,

@@ -188,7 +188,7 @@ class _OnboardingWelcomeScreenState
             shape: BoxShape.circle,
             boxShadow: [
               BoxShadow(
-                color: blue.withOpacity(0.8),
+                color: blue.withValues(alpha: 0.8),
                 blurRadius: 10,
                 spreadRadius: 2,
               ),
@@ -249,9 +249,9 @@ class _OnboardingWelcomeScreenState
                     width: 52,
                     height: 52,
                     decoration: BoxDecoration(
-                      color: blue.withOpacity(.12),
+                      color: blue.withValues(alpha: .12),
                       borderRadius: BorderRadius.circular(16),
-                      border: Border.all(color: blue.withOpacity(.25)),
+                      border: Border.all(color: blue.withValues(alpha: .25)),
                     ),
                     child: const Center(
                       child: Icon(
@@ -827,7 +827,7 @@ class _OnboardingWelcomeScreenState
             borderRadius: BorderRadius.circular(17),
             boxShadow: [
               BoxShadow(
-                color: const Color(0xFF0284C7).withOpacity(.3),
+                color: const Color(0xFF0284C7).withValues(alpha: .3),
                 blurRadius: 20,
                 offset: const Offset(0, 9),
               ),
@@ -939,8 +939,8 @@ class _BackgroundPainter extends CustomPainter {
 
   @override
   void paint(Canvas canvas, Size size) {
-    final bluePaint = Paint()..color = const Color(0xFF0E1C38).withOpacity(.85);
-    final violetPaint = Paint()..color = const Color(0xFF1E1B4B).withOpacity(.6);
+    final bluePaint = Paint()..color = const Color(0xFF0E1C38).withValues(alpha: .85);
+    final violetPaint = Paint()..color = const Color(0xFF1E1B4B).withValues(alpha: .6);
 
     final move1 = math.sin(animation * math.pi * 2) * 18;
     final move2 = math.cos(animation * math.pi * 2) * 15;

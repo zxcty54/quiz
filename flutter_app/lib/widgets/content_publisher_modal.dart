@@ -111,7 +111,7 @@ class ContentPublisherModal {
                             onTap: () => setModalState(() => correctIdx = idx),
                             child: CircleAvatar(
                               radius: 14,
-                              backgroundColor: isCorrect ? const Color(0xFF16A34A) : Colors.grey.withOpacity(0.3),
+                              backgroundColor: isCorrect ? const Color(0xFF16A34A) : Colors.grey.withValues(alpha: 0.3),
                               child: Text(
                                 String.fromCharCode(65 + idx),
                                 style: TextStyle(

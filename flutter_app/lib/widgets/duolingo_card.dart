@@ -5,7 +5,7 @@ class DuolingoCard extends StatefulWidget {
   final DuolingoPayload payload;
   final bool isDarkMode;
 
-  const DuolingoCard({Key? key, required this.payload, this.isDarkMode = false}) : super(key: key);
+  const DuolingoCard({super.key, required this.payload, this.isDarkMode = false});
 
   @override
   State<DuolingoCard> createState() => _DuolingoCardState();
@@ -36,7 +36,7 @@ class _DuolingoCardState extends State<DuolingoCard> {
           Container(
             padding: const EdgeInsets.all(10),
             decoration: BoxDecoration(
-              color: Colors.amber.withOpacity(0.15),
+              color: Colors.amber.withValues(alpha: 0.15),
               borderRadius: BorderRadius.circular(10),
             ),
             child: Row(
@@ -99,14 +99,14 @@ class _DuolingoCardState extends State<DuolingoCard> {
 
               if (_submitted) {
                 if (isCorrect) {
-                  btnColor = Colors.green.withOpacity(0.2);
+                  btnColor = Colors.green.withValues(alpha: 0.2);
                   borderCol = Colors.green;
                 } else if (isChosen && !isCorrect) {
-                  btnColor = Colors.red.withOpacity(0.2);
+                  btnColor = Colors.red.withValues(alpha: 0.2);
                   borderCol = Colors.red;
                 }
               } else if (isChosen) {
-                btnColor = Colors.blue.withOpacity(0.2);
+                btnColor = Colors.blue.withValues(alpha: 0.2);
                 borderCol = Colors.blueAccent;
               }
 
@@ -161,7 +161,7 @@ class _DuolingoCardState extends State<DuolingoCard> {
                 margin: const EdgeInsets.only(top: 8),
                 padding: const EdgeInsets.all(8),
                 decoration: BoxDecoration(
-                  color: _selectedOption == payload.correctAnswer ? Colors.green.withOpacity(0.1) : Colors.red.withOpacity(0.1),
+                  color: _selectedOption == payload.correctAnswer ? Colors.green.withValues(alpha: 0.1) : Colors.red.withValues(alpha: 0.1),
                   borderRadius: BorderRadius.circular(8),
                 ),
                 child: Text(

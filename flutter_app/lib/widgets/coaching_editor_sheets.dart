@@ -68,10 +68,10 @@ class CoachingEditorSheets {
                   height: 160,
                   width: double.infinity,
                   decoration: BoxDecoration(
-                    color: Colors.grey.withOpacity(0.1),
+                    color: Colors.grey.withValues(alpha: 0.1),
                     borderRadius: BorderRadius.circular(14),
                     border: Border.all(
-                      color: const Color(0xFF2563EB).withOpacity(0.3),
+                      color: const Color(0xFF2563EB).withValues(alpha: 0.3),
                     ),
                   ),
                   child: newImage != null
@@ -606,7 +606,7 @@ class CoachingEditorSheets {
                                     child: CircleAvatar(
                                       radius: 32,
                                       backgroundColor: const Color(0xFF2563EB)
-                                          .withOpacity(0.12),
+                                          .withValues(alpha: 0.12),
                                       backgroundImage: mentorPhoto != null
                                           ? FileImage(mentorPhoto!)
                                           : null,
@@ -745,7 +745,7 @@ class CoachingEditorSheets {
                         leading: CircleAvatar(
                           radius: 18,
                           backgroundColor:
-                              const Color(0xFF2563EB).withOpacity(0.12),
+                              const Color(0xFF2563EB).withValues(alpha: 0.12),
                           backgroundImage:
                               photoUrl.isNotEmpty ? NetworkImage(photoUrl) : null,
                           child: photoUrl.isEmpty
@@ -922,7 +922,7 @@ class CoachingEditorSheets {
                           child: CircleAvatar(
                             radius: 34,
                             backgroundColor:
-                                const Color(0xFF16A34A).withOpacity(0.12),
+                                const Color(0xFF16A34A).withValues(alpha: 0.12),
                             backgroundImage: studentPhoto != null
                                 ? FileImage(studentPhoto!)
                                 : (currentPhotoUrl.isNotEmpty

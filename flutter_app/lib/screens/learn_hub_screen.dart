@@ -191,7 +191,7 @@ class _LearnHubScreenState extends State<LearnHubScreen> {
                     Container(
                       padding: const EdgeInsets.symmetric(horizontal: 7, vertical: 2),
                       decoration: BoxDecoration(
-                        color: const Color(0xFF059669).withOpacity(0.12),
+                        color: const Color(0xFF059669).withValues(alpha: 0.12),
                         borderRadius: BorderRadius.circular(6),
                       ),
                       child: const Text(
@@ -237,7 +237,7 @@ class _LearnHubScreenState extends State<LearnHubScreen> {
                     margin: const EdgeInsets.only(right: 8),
                     padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 6),
                     decoration: BoxDecoration(
-                      color: isSelected ? color : color.withOpacity(0.08),
+                      color: isSelected ? color : color.withValues(alpha: 0.08),
                       borderRadius: BorderRadius.circular(20),
                       border: Border.all(
                         color: isSelected ? color : Colors.transparent,
@@ -288,7 +288,7 @@ class _LearnHubScreenState extends State<LearnHubScreen> {
                           child: ListTile(
                             contentPadding: const EdgeInsets.symmetric(horizontal: 16, vertical: 6),
                             leading: CircleAvatar(
-                              backgroundColor: subjectColor.withOpacity(0.12),
+                              backgroundColor: subjectColor.withValues(alpha: 0.12),
                               child: Text(
                                 '${index + 1}',
                                 style: TextStyle(fontWeight: FontWeight.bold, color: subjectColor),

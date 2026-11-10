@@ -118,12 +118,12 @@ class _HomeGreetingHeaderState extends State<HomeGreetingHeader> {
         ),
         borderRadius: BorderRadius.circular(24),
         border: Border.all(
-          color: Colors.white.withOpacity(isDark ? 0.08 : 0.16),
+          color: Colors.white.withValues(alpha: isDark ? 0.08 : 0.16),
           width: 1.2,
         ),
         boxShadow: [
           BoxShadow(
-            color: const Color(0xFF1E40AF).withOpacity(isDark ? 0.35 : 0.28),
+            color: const Color(0xFF1E40AF).withValues(alpha: isDark ? 0.35 : 0.28),
             blurRadius: 18,
             offset: const Offset(0, 8),
           ),
@@ -142,7 +142,7 @@ class _HomeGreetingHeaderState extends State<HomeGreetingHeader> {
                 height: 120,
                 decoration: BoxDecoration(
                   shape: BoxShape.circle,
-                  color: Colors.white.withOpacity(0.04),
+                  color: Colors.white.withValues(alpha: 0.04),
                 ),
               ),
             ),
@@ -154,7 +154,7 @@ class _HomeGreetingHeaderState extends State<HomeGreetingHeader> {
                 height: 90,
                 decoration: BoxDecoration(
                   shape: BoxShape.circle,
-                  color: const Color(0xFFF59E0B).withOpacity(0.08),
+                  color: const Color(0xFFF59E0B).withValues(alpha: 0.08),
                 ),
               ),
             ),
@@ -164,7 +164,7 @@ class _HomeGreetingHeaderState extends State<HomeGreetingHeader> {
               child: Icon(
                 Icons.school_rounded,
                 size: 82,
-                color: Colors.white.withOpacity(0.04),
+                color: Colors.white.withValues(alpha: 0.04),
               ),
             ),
             Padding(
@@ -214,7 +214,7 @@ class _HomeGreetingHeaderState extends State<HomeGreetingHeader> {
                                   shape: BoxShape.circle,
                                   boxShadow: [
                                     BoxShadow(
-                                      color: Colors.black.withOpacity(0.25),
+                                      color: Colors.black.withValues(alpha: 0.25),
                                       blurRadius: 10,
                                       offset: const Offset(0, 4),
                                     ),
@@ -251,7 +251,7 @@ class _HomeGreetingHeaderState extends State<HomeGreetingHeader> {
                                       maxLines: 1,
                                       overflow: TextOverflow.ellipsis,
                                       style: TextStyle(
-                                        color: Colors.white.withOpacity(0.85),
+                                        color: Colors.white.withValues(alpha: 0.85),
                                         fontSize: 11,
                                         fontWeight: FontWeight.w700,
                                         letterSpacing: 0.25,
@@ -285,7 +285,7 @@ class _HomeGreetingHeaderState extends State<HomeGreetingHeader> {
                                 borderRadius: BorderRadius.circular(20),
                                 boxShadow: [
                                   BoxShadow(
-                                    color: Colors.black.withOpacity(0.20),
+                                    color: Colors.black.withValues(alpha: 0.20),
                                     blurRadius: 8,
                                     offset: const Offset(0, 3),
                                   ),
@@ -323,9 +323,9 @@ class _HomeGreetingHeaderState extends State<HomeGreetingHeader> {
                                 Container(
                                   padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 3.5),
                                   decoration: BoxDecoration(
-                                    color: Colors.black.withOpacity(0.18),
+                                    color: Colors.black.withValues(alpha: 0.18),
                                     borderRadius: BorderRadius.circular(99),
-                                    border: Border.all(color: Colors.white.withOpacity(0.15)),
+                                    border: Border.all(color: Colors.white.withValues(alpha: 0.15)),
                                   ),
                                   child: Text(
                                     isNewUser ? 'START TODAY' : goalDone ? 'GOAL COMPLETE' : "TODAY'S MISSION",
@@ -353,7 +353,7 @@ class _HomeGreetingHeaderState extends State<HomeGreetingHeader> {
                                 Text(
                                   '${d.todayQuestions}/$_dailyGoal sawal aaj',
                                   style: TextStyle(
-                                    color: Colors.white.withOpacity(0.80),
+                                    color: Colors.white.withValues(alpha: 0.80),
                                     fontSize: 11,
                                     fontWeight: FontWeight.w700,
                                   ),
@@ -374,7 +374,7 @@ class _HomeGreetingHeaderState extends State<HomeGreetingHeader> {
                                   child: CircularProgressIndicator(
                                     value: goalProgress,
                                     strokeWidth: 5.5,
-                                    backgroundColor: Colors.black.withOpacity(0.25),
+                                    backgroundColor: Colors.black.withValues(alpha: 0.25),
                                     valueColor: const AlwaysStoppedAnimation<Color>(Color(0xFFF59E0B)),
                                   ),
                                 ),
@@ -392,7 +392,7 @@ class _HomeGreetingHeaderState extends State<HomeGreetingHeader> {
                                     Text(
                                       'GOAL',
                                       style: TextStyle(
-                                        color: Colors.white.withOpacity(0.75),
+                                        color: Colors.white.withValues(alpha: 0.75),
                                         fontSize: 7.5,
                                         fontWeight: FontWeight.w900,
                                         letterSpacing: 0.8,
@@ -430,9 +430,9 @@ class _HomeGreetingHeaderState extends State<HomeGreetingHeader> {
                         Container(
                           padding: const EdgeInsets.symmetric(horizontal: 11, vertical: 8.5),
                           decoration: BoxDecoration(
-                            color: const Color(0xFFEF4444).withOpacity(0.20),
+                            color: const Color(0xFFEF4444).withValues(alpha: 0.20),
                             borderRadius: BorderRadius.circular(12),
-                            border: Border.all(color: const Color(0xFFFCA5A5).withOpacity(0.28)),
+                            border: Border.all(color: const Color(0xFFFCA5A5).withValues(alpha: 0.28)),
                           ),
                           child: Row(
                             children: [
@@ -470,9 +470,9 @@ class _HomeGreetingHeaderState extends State<HomeGreetingHeader> {
       child: Container(
         padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 9),
         decoration: BoxDecoration(
-          color: Colors.black.withOpacity(0.20),
+          color: Colors.black.withValues(alpha: 0.20),
           borderRadius: BorderRadius.circular(14),
-          border: Border.all(color: Colors.white.withOpacity(0.12)),
+          border: Border.all(color: Colors.white.withValues(alpha: 0.12)),
         ),
         child: Column(
           children: [
@@ -480,7 +480,7 @@ class _HomeGreetingHeaderState extends State<HomeGreetingHeader> {
               width: 26,
               height: 26,
               decoration: BoxDecoration(
-                color: accent.withOpacity(0.20),
+                color: accent.withValues(alpha: 0.20),
                 shape: BoxShape.circle,
               ),
               child: Icon(icon, size: 14, color: accent),
@@ -501,7 +501,7 @@ class _HomeGreetingHeaderState extends State<HomeGreetingHeader> {
               maxLines: 1,
               overflow: TextOverflow.ellipsis,
               style: TextStyle(
-                color: Colors.white.withOpacity(0.75),
+                color: Colors.white.withValues(alpha: 0.75),
                 fontSize: 9.5,
                 fontWeight: FontWeight.w700,
               ),

@@ -350,7 +350,7 @@ class _StudentIntelligenceSheetState
               selected
                   ? [
                     BoxShadow(
-                      color: primary.withOpacity(.16),
+                      color: primary.withValues(alpha: .16),
                       blurRadius: 8,
                       offset: const Offset(0, 3),
                     ),
@@ -525,7 +525,7 @@ class _StudentIntelligenceSheetState
               width: 30,
               height: 30,
               decoration: BoxDecoration(
-                color: color.withOpacity(.10),
+                color: color.withValues(alpha: .10),
                 borderRadius: BorderRadius.circular(8),
               ),
               child: Icon(
@@ -589,10 +589,10 @@ class _StudentIntelligenceSheetState
         vertical: 7,
       ),
       decoration: BoxDecoration(
-        color: color.withOpacity(.09),
+        color: color.withValues(alpha: .09),
         borderRadius: BorderRadius.circular(10),
         border: Border.all(
-          color: color.withOpacity(.20),
+          color: color.withValues(alpha: .20),
         ),
       ),
       child: Column(
@@ -609,7 +609,7 @@ class _StudentIntelligenceSheetState
           Text(
             'SCORE',
             style: TextStyle(
-              color: color.withOpacity(.8),
+              color: color.withValues(alpha: .8),
               fontSize: 7.5,
               fontWeight: FontWeight.w800,
               letterSpacing: .5,
@@ -677,11 +677,11 @@ class _StudentIntelligenceSheetState
         color: cardColor,
         borderRadius: BorderRadius.circular(14),
         border: Border.all(
-          color: success.withOpacity(0.25),
+          color: success.withValues(alpha: 0.25),
         ),
         boxShadow: [
           BoxShadow(
-            color: Colors.black.withOpacity(widget.isDarkMode ? .10 : .03),
+            color: Colors.black.withValues(alpha: widget.isDarkMode ? .10 : .03),
             blurRadius: 8,
             offset: const Offset(0, 2),
           ),
@@ -691,7 +691,7 @@ class _StudentIntelligenceSheetState
         children: [
           CircleAvatar(
             radius: 20,
-            backgroundColor: success.withOpacity(0.12),
+            backgroundColor: success.withValues(alpha: 0.12),
             child: Text(
               student['name'].toString().isNotEmpty
                   ? student['name'][0].toUpperCase()
@@ -750,7 +750,7 @@ class _StudentIntelligenceSheetState
               Container(
                 padding: const EdgeInsets.symmetric(horizontal: 7, vertical: 2.5),
                 decoration: BoxDecoration(
-                  color: primary.withOpacity(0.1),
+                  color: primary.withValues(alpha: 0.1),
                   borderRadius: BorderRadius.circular(5),
                 ),
                 child: Text(
@@ -818,8 +818,8 @@ class _StudentIntelligenceSheetState
         ),
         boxShadow: [
           BoxShadow(
-            color: Colors.black.withOpacity(
-              widget.isDarkMode ? .10 : .035,
+            color: Colors.black.withValues(
+              alpha: widget.isDarkMode ? .10 : .035,
             ),
             blurRadius: 10,
             offset: const Offset(0, 3),
@@ -838,7 +838,7 @@ class _StudentIntelligenceSheetState
                   width: 40,
                   height: 40,
                   decoration: BoxDecoration(
-                    color: primary.withOpacity(.10),
+                    color: primary.withValues(alpha: .10),
                     borderRadius: BorderRadius.circular(11),
                   ),
                   alignment: Alignment.center,
@@ -882,11 +882,11 @@ class _StudentIntelligenceSheetState
                                 vertical: 3,
                               ),
                               decoration: BoxDecoration(
-                                color: success.withOpacity(.09),
+                                color: success.withValues(alpha: .09),
                                 borderRadius:
                                     BorderRadius.circular(5),
                                 border: Border.all(
-                                  color: success.withOpacity(.20),
+                                  color: success.withValues(alpha: .20),
                                 ),
                               ),
                               child: const Text(
@@ -998,10 +998,10 @@ class _StudentIntelligenceSheetState
                 width: double.infinity,
                 padding: const EdgeInsets.all(10),
                 decoration: BoxDecoration(
-                  color: weaknessColor.withOpacity(.055),
+                  color: weaknessColor.withValues(alpha: .055),
                   borderRadius: BorderRadius.circular(10),
                   border: Border.all(
-                    color: weaknessColor.withOpacity(.16),
+                    color: weaknessColor.withValues(alpha: .16),
                   ),
                 ),
                 child: Row(
@@ -1012,7 +1012,7 @@ class _StudentIntelligenceSheetState
                       width: 27,
                       height: 27,
                       decoration: BoxDecoration(
-                        color: weaknessColor.withOpacity(.10),
+                        color: weaknessColor.withValues(alpha: .10),
                         borderRadius: BorderRadius.circular(7),
                       ),
                       child: Icon(
@@ -1046,7 +1046,7 @@ class _StudentIntelligenceSheetState
                                     ),
                                 decoration: BoxDecoration(
                                   color: weaknessColor
-                                      .withOpacity(.10),
+                                      .withValues(alpha: .10),
                                   borderRadius:
                                       BorderRadius.circular(4),
                                 ),
@@ -1277,7 +1277,7 @@ class _StudentIntelligenceSheetState
                 width: 38,
                 height: 4,
                 decoration: BoxDecoration(
-                  color: Colors.grey.withOpacity(.35),
+                  color: Colors.grey.withValues(alpha: .35),
                   borderRadius: BorderRadius.circular(10),
                 ),
               ),
@@ -1295,7 +1295,7 @@ class _StudentIntelligenceSheetState
                       width: 42,
                       height: 42,
                       decoration: BoxDecoration(
-                        color: primary.withOpacity(.10),
+                        color: primary.withValues(alpha: .10),
                         borderRadius: BorderRadius.circular(12),
                       ),
                       child: const Icon(
@@ -1444,7 +1444,7 @@ class _StudentIntelligenceSheetState
                                 : const [Color(0xFFEFF6FF), Colors.white],
                           ),
                           borderRadius: BorderRadius.circular(16),
-                          border: Border.all(color: primary.withOpacity(.14)),
+                          border: Border.all(color: primary.withValues(alpha: .14)),
                         ),
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
@@ -1466,7 +1466,7 @@ class _StudentIntelligenceSheetState
                                 Container(
                                   padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
                                   decoration: BoxDecoration(
-                                    color: primary.withOpacity(.09),
+                                    color: primary.withValues(alpha: .09),
                                     borderRadius: BorderRadius.circular(6),
                                   ),
                                   child: Text(
@@ -1518,7 +1518,7 @@ class _StudentIntelligenceSheetState
                                   Container(
                                     padding: const EdgeInsets.all(6),
                                     decoration: BoxDecoration(
-                                      color: danger.withOpacity(.10),
+                                      color: danger.withValues(alpha: .10),
                                       borderRadius: BorderRadius.circular(8),
                                     ),
                                     child: const Icon(
@@ -1683,7 +1683,7 @@ class _StudentIntelligenceSheetState
             width: 50,
             height: 50,
             decoration: BoxDecoration(
-              color: primary.withOpacity(.08),
+              color: primary.withValues(alpha: .08),
               shape: BoxShape.circle,
             ),
             child: Icon(icon, color: primary, size: 24),

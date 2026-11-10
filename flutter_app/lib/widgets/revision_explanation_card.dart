@@ -120,7 +120,7 @@ class RevisionExplanationCard extends StatelessWidget {
         border: Border.all(color: cardBorder, width: 1),
         boxShadow: [
           BoxShadow(
-            color: Colors.black.withOpacity(isDark ? 0.18 : 0.035),
+            color: Colors.black.withValues(alpha: isDark ? 0.18 : 0.035),
             blurRadius: 18,
             offset: const Offset(0, 6),
           ),
@@ -133,7 +133,7 @@ class RevisionExplanationCard extends StatelessWidget {
           Container(
             padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 13),
             decoration: BoxDecoration(
-              color: isDark ? const Color(0xFF064E3B).withOpacity(0.28) : const Color(0xFFECFDF5),
+              color: isDark ? const Color(0xFF064E3B).withValues(alpha: 0.28) : const Color(0xFFECFDF5),
               borderRadius: const BorderRadius.vertical(top: Radius.circular(17)),
               border: Border(
                 bottom: BorderSide(color: isDark ? const Color(0xFF065F46) : const Color(0xFFA7F3D0)),

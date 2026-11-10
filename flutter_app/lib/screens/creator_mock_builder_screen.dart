@@ -531,9 +531,9 @@ class _CreatorMockBuilderScreenState extends State<CreatorMockBuilderScreen> {
                 Container(
                   padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 7),
                   decoration: BoxDecoration(
-                    color: const Color(0xFF8B5CF6).withOpacity(0.09),
+                    color: const Color(0xFF8B5CF6).withValues(alpha: 0.09),
                     borderRadius: BorderRadius.circular(8),
-                    border: Border.all(color: const Color(0xFF8B5CF6).withOpacity(0.25)),
+                    border: Border.all(color: const Color(0xFF8B5CF6).withValues(alpha: 0.25)),
                   ),
                   child: const Row(
                     children: [
@@ -716,7 +716,7 @@ class _CreatorMockBuilderScreenState extends State<CreatorMockBuilderScreen> {
                     Container(
                       padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
                       decoration: BoxDecoration(
-                        color: const Color(0xFF2563EB).withOpacity(0.12),
+                        color: const Color(0xFF2563EB).withValues(alpha: 0.12),
                         borderRadius: BorderRadius.circular(6),
                       ),
                       child: const Row(
@@ -759,7 +759,7 @@ class _CreatorMockBuilderScreenState extends State<CreatorMockBuilderScreen> {
                     Container(
                       padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 2),
                       decoration: BoxDecoration(
-                        color: const Color(0xFF2563EB).withOpacity(0.1),
+                        color: const Color(0xFF2563EB).withValues(alpha: 0.1),
                         borderRadius: BorderRadius.circular(6),
                       ),
                       child: Text(
@@ -829,7 +829,7 @@ class _CreatorMockBuilderScreenState extends State<CreatorMockBuilderScreen> {
                                 padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 12),
                                 decoration: BoxDecoration(
                                   color: isSelected
-                                      ? const Color(0xFF2563EB).withOpacity(0.12)
+                                      ? const Color(0xFF2563EB).withValues(alpha: 0.12)
                                       : (isDark ? const Color(0xFF1E293B) : Colors.white),
                                   borderRadius: BorderRadius.circular(10),
                                   border: Border.all(
@@ -878,9 +878,9 @@ class _CreatorMockBuilderScreenState extends State<CreatorMockBuilderScreen> {
                             width: double.infinity,
                             padding: const EdgeInsets.all(12),
                             decoration: BoxDecoration(
-                              color: const Color(0xFF16A34A).withOpacity(0.08),
+                              color: const Color(0xFF16A34A).withValues(alpha: 0.08),
                               borderRadius: BorderRadius.circular(10),
-                              border: Border.all(color: const Color(0xFF16A34A).withOpacity(0.3)),
+                              border: Border.all(color: const Color(0xFF16A34A).withValues(alpha: 0.3)),
                             ),
                             child: Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
@@ -1087,7 +1087,7 @@ class _CreatorMockBuilderScreenState extends State<CreatorMockBuilderScreen> {
                         avatar: const Icon(Icons.public_rounded, size: 16),
                         label: const Text('🌐 Public Feed', style: TextStyle(fontSize: 12)),
                         selected: _publishTarget == 'PUBLIC',
-                        selectedColor: const Color(0xFF2563EB).withOpacity(0.18),
+                        selectedColor: const Color(0xFF2563EB).withValues(alpha: 0.18),
                         onSelected: (_) => setState(() => _publishTarget = 'PUBLIC'),
                       ),
                     ),
@@ -1097,7 +1097,7 @@ class _CreatorMockBuilderScreenState extends State<CreatorMockBuilderScreen> {
                         avatar: const Icon(Icons.lock_rounded, size: 16),
                         label: const Text('🔒 Private Batch', style: TextStyle(fontSize: 12)),
                         selected: _publishTarget == 'BATCH',
-                        selectedColor: const Color(0xFF16A34A).withOpacity(0.18),
+                        selectedColor: const Color(0xFF16A34A).withValues(alpha: 0.18),
                         onSelected: (_) => setState(() => _publishTarget = 'BATCH'),
                       ),
                     ),
@@ -1290,7 +1290,7 @@ class _CreatorMockBuilderScreenState extends State<CreatorMockBuilderScreen> {
                                   onTap: () => setState(() => q.answerIndex = oIdx),
                                   child: CircleAvatar(
                                     radius: 14,
-                                    backgroundColor: isCorrect ? const Color(0xFF16A34A) : Colors.grey.withOpacity(0.3),
+                                    backgroundColor: isCorrect ? const Color(0xFF16A34A) : Colors.grey.withValues(alpha: 0.3),
                                     child: Text(
                                       String.fromCharCode(65 + oIdx),
                                       style: TextStyle(
@@ -1386,7 +1386,7 @@ class _CreatorMockBuilderScreenState extends State<CreatorMockBuilderScreen> {
               color: cardBg,
               boxShadow: [
                 BoxShadow(
-                  color: Colors.black.withOpacity(0.06),
+                  color: Colors.black.withValues(alpha: 0.06),
                   blurRadius: 10,
                   offset: const Offset(0, -3),
                 ),

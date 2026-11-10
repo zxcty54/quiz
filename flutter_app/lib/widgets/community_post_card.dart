@@ -831,7 +831,7 @@ Download Free: https://play.google.com/store/apps/details?id=com.mocktester.onli
                   height: 4,
                   margin: const EdgeInsets.symmetric(vertical: 8),
                   decoration: BoxDecoration(
-                    color: Colors.grey.withOpacity(0.3),
+                    color: Colors.grey.withValues(alpha: 0.3),
                     borderRadius: BorderRadius.circular(2),
                   ),
                 ),
@@ -1198,7 +1198,7 @@ Download Free: https://play.google.com/store/apps/details?id=com.mocktester.onli
       decoration: BoxDecoration(
         color: widget.isDarkMode ? const Color(0xFF0F172A) : const Color(0xFFF1F5F9),
         borderRadius: BorderRadius.circular(10),
-        border: Border.all(color: _primaryBlue.withOpacity(0.18)),
+        border: Border.all(color: _primaryBlue.withValues(alpha: 0.18)),
       ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -1221,9 +1221,9 @@ Download Free: https://play.google.com/store/apps/details?id=com.mocktester.onli
             Color tileColor = widget.isDarkMode ? const Color(0xFF1E293B) : Colors.white;
             if (hasVoted) {
               if (isCorrect) {
-                tileColor = const Color(0xFF16A34A).withOpacity(0.18);
+                tileColor = const Color(0xFF16A34A).withValues(alpha: 0.18);
               } else if (isSelected) {
-                tileColor = Colors.redAccent.withOpacity(0.18);
+                tileColor = Colors.redAccent.withValues(alpha: 0.18);
               }
             }
 
@@ -1258,7 +1258,7 @@ Download Free: https://play.google.com/store/apps/details?id=com.mocktester.onli
             const SizedBox(height: 6),
             Container(
               padding: const EdgeInsets.all(8),
-              decoration: BoxDecoration(color: _primaryBlue.withOpacity(0.08), borderRadius: BorderRadius.circular(6)),
+              decoration: BoxDecoration(color: _primaryBlue.withValues(alpha: 0.08), borderRadius: BorderRadius.circular(6)),
               child: Row(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
@@ -1300,7 +1300,7 @@ Download Free: https://play.google.com/store/apps/details?id=com.mocktester.onli
                     Container(
                       padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 3),
                       decoration: BoxDecoration(
-                        color: const Color(0xFF16A34A).withOpacity(0.14),
+                        color: const Color(0xFF16A34A).withValues(alpha: 0.14),
                         borderRadius: BorderRadius.circular(6),
                       ),
                       child: const Row(
@@ -1384,7 +1384,7 @@ Download Free: https://play.google.com/store/apps/details?id=com.mocktester.onli
               width: double.infinity,
               padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
               decoration: BoxDecoration(
-                color: widget.isDarkMode ? const Color(0xFF1E3A8A).withOpacity(0.5) : const Color(0xFFDBEAFE).withOpacity(0.5),
+                color: widget.isDarkMode ? const Color(0xFF1E3A8A).withValues(alpha: 0.5) : const Color(0xFFDBEAFE).withValues(alpha: 0.5),
                 borderRadius: const BorderRadius.vertical(bottom: Radius.circular(13)),
               ),
               child: Row(
@@ -1535,7 +1535,7 @@ Download Free: https://play.google.com/store/apps/details?id=com.mocktester.onli
               Container(
                 padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 3),
                 decoration: BoxDecoration(
-                  color: _primaryBlue.withOpacity(0.08),
+                  color: _primaryBlue.withValues(alpha: 0.08),
                   borderRadius: BorderRadius.circular(5),
                 ),
                 child: Text(

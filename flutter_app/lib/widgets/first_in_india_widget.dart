@@ -221,13 +221,13 @@ class FirstInIndiaWidgetState extends State<FirstInIndiaWidget> {
       ),
       boxShadow: [
         BoxShadow(
-          color: const Color(0xFF1E40AF).withOpacity(isDark ? 0.10 : 0.08),
+          color: const Color(0xFF1E40AF).withValues(alpha: isDark ? 0.10 : 0.08),
           blurRadius: 22,
           offset: const Offset(0, 8),
           spreadRadius: 1,
         ),
         BoxShadow(
-          color: Colors.black.withOpacity(isDark ? 0.35 : 0.03),
+          color: Colors.black.withValues(alpha: isDark ? 0.35 : 0.03),
           blurRadius: 10,
           offset: const Offset(0, 3),
         ),
@@ -254,7 +254,7 @@ class FirstInIndiaWidgetState extends State<FirstInIndiaWidget> {
                       borderRadius: BorderRadius.circular(10),
                       boxShadow: [
                         BoxShadow(
-                          color: const Color(0xFFD97706).withOpacity(0.35),
+                          color: const Color(0xFFD97706).withValues(alpha: 0.35),
                           blurRadius: 8,
                           offset: const Offset(0, 2),
                         ),
@@ -295,7 +295,7 @@ class FirstInIndiaWidgetState extends State<FirstInIndiaWidget> {
                   borderRadius: BorderRadius.circular(20),
                   boxShadow: [
                     BoxShadow(
-                      color: const Color(0xFF1E40AF).withOpacity(0.3),
+                      color: const Color(0xFF1E40AF).withValues(alpha: 0.3),
                       blurRadius: 6,
                       offset: const Offset(0, 2),
                     ),
@@ -400,7 +400,7 @@ class FirstInIndiaWidgetState extends State<FirstInIndiaWidget> {
                                     size: 13,
                                     color: _activeIndex > 0
                                         ? const Color(0xFF2563EB)
-                                        : Colors.grey.withOpacity(0.35),
+                                        : Colors.grey.withValues(alpha: 0.35),
                                   ),
                                   const SizedBox(width: 4),
                                   Text(
@@ -410,7 +410,7 @@ class FirstInIndiaWidgetState extends State<FirstInIndiaWidget> {
                                       fontWeight: FontWeight.w700,
                                       color: _activeIndex > 0
                                           ? const Color(0xFF2563EB)
-                                          : Colors.grey.withOpacity(0.35),
+                                          : Colors.grey.withValues(alpha: 0.35),
                                     ),
                                   ),
                                 ],
@@ -422,7 +422,7 @@ class FirstInIndiaWidgetState extends State<FirstInIndiaWidget> {
                           Container(
                             padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
                             decoration: BoxDecoration(
-                              color: isDark ? Colors.white.withOpacity(0.06) : const Color(0xFFF8FAFC),
+                              color: isDark ? Colors.white.withValues(alpha: 0.06) : const Color(0xFFF8FAFC),
                               borderRadius: BorderRadius.circular(20),
                               border: Border.all(
                                 color: isDark ? Colors.white12 : const Color(0xFFE2E8F0),
@@ -464,7 +464,7 @@ class FirstInIndiaWidgetState extends State<FirstInIndiaWidget> {
                                   borderRadius: BorderRadius.circular(12),
                                   boxShadow: [
                                     BoxShadow(
-                                      color: const Color(0xFF1E40AF).withOpacity(0.35),
+                                      color: const Color(0xFF1E40AF).withValues(alpha: 0.35),
                                       blurRadius: 8,
                                       offset: const Offset(0, 3),
                                     ),
@@ -499,7 +499,7 @@ class FirstInIndiaWidgetState extends State<FirstInIndiaWidget> {
                         color: isDark ? const Color(0xFF1E293B) : const Color(0xFFEFF6FF),
                         borderRadius: BorderRadius.circular(12),
                         border: Border.all(
-                          color: const Color(0xFF2563EB).withOpacity(isDark ? 0.3 : 0.25),
+                          color: const Color(0xFF2563EB).withValues(alpha: isDark ? 0.3 : 0.25),
                           width: 1,
                         ),
                       ),
@@ -598,7 +598,7 @@ class FirstInIndiaWidgetState extends State<FirstInIndiaWidget> {
                   padding: const EdgeInsets.all(7),
                   decoration: BoxDecoration(
                     color: isSaved
-                        ? const Color(0xFFF59E0B).withOpacity(0.2)
+                        ? const Color(0xFFF59E0B).withValues(alpha: 0.2)
                         : (isDark ? const Color(0xFF1E293B) : const Color(0xFFF1F5F9)),
                     borderRadius: BorderRadius.circular(8),
                     border: Border.all(
@@ -647,7 +647,7 @@ class FirstInIndiaWidgetState extends State<FirstInIndiaWidget> {
               Container(
                 padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
                 decoration: BoxDecoration(
-                  color: const Color(0xFF2563EB).withOpacity(isDark ? 0.20 : 0.09),
+                  color: const Color(0xFF2563EB).withValues(alpha: isDark ? 0.20 : 0.09),
                   borderRadius: BorderRadius.circular(99),
                 ),
                 child: Row(
@@ -670,7 +670,7 @@ class FirstInIndiaWidgetState extends State<FirstInIndiaWidget> {
               Container(
                 padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
                 decoration: BoxDecoration(
-                  color: isDark ? Colors.white.withOpacity(0.07) : const Color(0xFFF1F5F9),
+                  color: isDark ? Colors.white.withValues(alpha: 0.07) : const Color(0xFFF1F5F9),
                   borderRadius: BorderRadius.circular(99),
                 ),
                 child: Row(

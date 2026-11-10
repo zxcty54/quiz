@@ -202,7 +202,7 @@ class _MasteryEvolutionCardState extends State<MasteryEvolutionCard>
                 padding: const EdgeInsets.all(10),
                 decoration: BoxDecoration(
                   shape: BoxShape.circle,
-                  color: const Color(0xFF2563EB).withOpacity(0.12),
+                  color: const Color(0xFF2563EB).withValues(alpha: 0.12),
                 ),
                 child: const Icon(
                   Icons.psychology_rounded,
@@ -284,7 +284,7 @@ class _MasteryEvolutionCardState extends State<MasteryEvolutionCard>
         border: Border.all(color: borderColor),
         boxShadow: [
           BoxShadow(
-            color: Colors.black.withOpacity(isDark ? 0.25 : 0.04),
+            color: Colors.black.withValues(alpha: isDark ? 0.25 : 0.04),
             blurRadius: 12,
             offset: const Offset(0, 4),
           )
@@ -328,7 +328,7 @@ class _MasteryEvolutionCardState extends State<MasteryEvolutionCard>
                       padding:
                           const EdgeInsets.symmetric(horizontal: 7, vertical: 2.5),
                       decoration: BoxDecoration(
-                        color: const Color(0xFF2563EB).withOpacity(0.12),
+                        color: const Color(0xFF2563EB).withValues(alpha: 0.12),
                         borderRadius: BorderRadius.circular(6),
                       ),
                       child: Text(
@@ -356,7 +356,7 @@ class _MasteryEvolutionCardState extends State<MasteryEvolutionCard>
                       confidenceReason,
                       style: TextStyle(
                         fontSize: 8.5,
-                        color: subColor.withOpacity(0.85),
+                        color: subColor.withValues(alpha: 0.85),
                       ),
                       textAlign: TextAlign.end,
                       maxLines: 2,
@@ -431,10 +431,10 @@ class _MasteryEvolutionCardState extends State<MasteryEvolutionCard>
 
                 final chipBg = isStrong
                     ? (isDark
-                        ? const Color(0xFF14532D).withOpacity(0.4)
+                        ? const Color(0xFF14532D).withValues(alpha: 0.4)
                         : const Color(0xFFDCFCE7))
                     : (isDark
-                        ? const Color(0xFF713F12).withOpacity(0.4)
+                        ? const Color(0xFF713F12).withValues(alpha: 0.4)
                         : const Color(0xFFFEF9C3));
 
                 final chipText = isStrong
@@ -447,7 +447,7 @@ class _MasteryEvolutionCardState extends State<MasteryEvolutionCard>
                   decoration: BoxDecoration(
                     color: chipBg,
                     borderRadius: BorderRadius.circular(6),
-                    border: Border.all(color: chipText.withOpacity(0.3)),
+                    border: Border.all(color: chipText.withValues(alpha: 0.3)),
                   ),
                   child: Text(
                     "$name $acc%",
@@ -505,11 +505,11 @@ class _MasteryEvolutionCardState extends State<MasteryEvolutionCard>
               // Soft Color Hierarchy: Severe errors get deeper rose/crimson, moderate get warm amber
               final isSevere = errors >= 3;
               final trapBorderColor = isSevere
-                  ? const Color(0xFFE11D48).withOpacity(0.25)
-                  : const Color(0xFFEA580C).withOpacity(0.25);
+                  ? const Color(0xFFE11D48).withValues(alpha: 0.25)
+                  : const Color(0xFFEA580C).withValues(alpha: 0.25);
               final trapBgColor = isSevere
-                  ? const Color(0xFFE11D48).withOpacity(0.05)
-                  : const Color(0xFFEA580C).withOpacity(0.05);
+                  ? const Color(0xFFE11D48).withValues(alpha: 0.05)
+                  : const Color(0xFFEA580C).withValues(alpha: 0.05);
               final trapTextColor = isSevere
                   ? (isDark ? const Color(0xFFFDA4AF) : const Color(0xFFBE123C))
                   : (isDark ? const Color(0xFFFDBA74) : const Color(0xFFC2410C));
@@ -714,7 +714,7 @@ class _MasteryEvolutionCardState extends State<MasteryEvolutionCard>
                                   FractionallySizedBox(
                                     widthFactor: (fromPct / 100).clamp(0.0, 1.0),
                                     child: Container(
-                                      color: subColor.withOpacity(0.3),
+                                      color: subColor.withValues(alpha: 0.3),
                                     ),
                                   ),
                                   // Live animated bar
