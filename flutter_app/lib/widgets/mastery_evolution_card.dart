@@ -3,6 +3,7 @@ import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
+import 'report_ai_response_button.dart';
 
 class MasteryEvolutionCard extends StatefulWidget {
   final bool isDarkMode;
@@ -824,6 +825,18 @@ class _MasteryEvolutionCardState extends State<MasteryEvolutionCard>
                 ),
               ),
             ],
+          ),
+          Align(
+            alignment: Alignment.centerRight,
+            child: ReportAiResponseButton(
+              response: [
+                verdict,
+                pattern,
+                ...prescriptions.take(2).map((item) => item.toString()),
+              ].where((item) => item.trim().isNotEmpty).join('\n'),
+              source: 'mastery_summary',
+              isDarkMode: isDark,
+            ),
           ),
         ],
       ),
