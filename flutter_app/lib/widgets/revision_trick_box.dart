@@ -1,6 +1,5 @@
-import 'dart:convert';
 import 'package:flutter/material.dart';
-import 'package:http/http.dart' as http;
+import '../services/telegram_worker.dart';
 
 class RevisionTrickSubmitBox extends StatefulWidget {
   final String testTitle;
@@ -24,9 +23,6 @@ class _RevisionTrickSubmitBoxState extends State<RevisionTrickSubmitBox> {
   bool _isSubmitting = false;
   bool _isSubmitted = false;
   bool _isOpen = false;
-
-  static const String _botToken = "1809778528:AAFlwdQMKgiezltaJYyAU5u6vNjblBiIPmo";
-  static const String _chatId = "785009742";
 
   Future<void> _submitTrickToTelegram() async {
     final trickText = _trickController.text.trim();
@@ -59,17 +55,12 @@ $trickText
 """;
 
     try {
-      final res = await http.post(
-        Uri.parse("https://api.telegram.org/bot$_botToken/sendMessage"),
-        headers: {"Content-Type": "application/json"},
-        body: jsonEncode({
-          "chat_id": _chatId,
-          "text": telegramMsg,
-          "parse_mode": "Markdown",
-        }),
+      final success = await TelegramWorker.send(
+        text: telegramMsg,
+        parseMode: 'Markdown',
       );
 
-      if (res.statusCode == 200 && mounted) {
+      if (success && mounted) {
         setState(() {
           _isSubmitting = false;
           _isSubmitted = true;
