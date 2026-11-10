@@ -24,13 +24,13 @@ class AppGlobalFeedbackCard extends StatelessWidget {
         borderRadius: BorderRadius.circular(16),
         border: Border.all(
           color: isDark
-              ? const Color(0xFFF59E0B).withOpacity(0.5)
+              ? const Color(0xFFF59E0B).withValues(alpha: 0.5)
               : const Color(0xFFF59E0B),
           width: 1.4,
         ),
         boxShadow: [
           BoxShadow(
-            color: const Color(0xFFF59E0B).withOpacity(isDark ? 0.2 : 0.15),
+            color: const Color(0xFFF59E0B).withValues(alpha: isDark ? 0.2 : 0.15),
             blurRadius: 12,
             offset: const Offset(0, 4),
           ),
@@ -63,7 +63,7 @@ class AppGlobalFeedbackCard extends StatelessWidget {
                     borderRadius: BorderRadius.circular(12),
                     boxShadow: [
                       BoxShadow(
-                        color: const Color(0xFFF59E0B).withOpacity(0.4),
+                        color: const Color(0xFFF59E0B).withValues(alpha: 0.4),
                         blurRadius: 8,
                         offset: const Offset(0, 2),
                       ),
@@ -90,9 +90,9 @@ class AppGlobalFeedbackCard extends StatelessWidget {
                           Container(
                             padding: const EdgeInsets.symmetric(horizontal: 5, vertical: 1.5),
                             decoration: BoxDecoration(
-                              color: const Color(0xFF16A34A).withOpacity(0.18),
+                              color: const Color(0xFF16A34A).withValues(alpha: 0.18),
                               borderRadius: BorderRadius.circular(4),
-                              border: Border.all(color: const Color(0xFF16A34A).withOpacity(0.4)),
+                              border: Border.all(color: const Color(0xFF16A34A).withValues(alpha: 0.4)),
                             ),
                             child: const Text(
                               'DEV TEAM',
@@ -124,7 +124,7 @@ class AppGlobalFeedbackCard extends StatelessWidget {
                     borderRadius: BorderRadius.circular(8),
                     boxShadow: [
                       BoxShadow(
-                        color: const Color(0xFFD97706).withOpacity(0.3),
+                        color: const Color(0xFFD97706).withValues(alpha: 0.3),
                         blurRadius: 4,
                         offset: const Offset(0, 2),
                       ),
@@ -393,9 +393,9 @@ class _AppGlobalFeedbackDialogState extends State<AppGlobalFeedbackDialog> {
                           Container(
                             padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
                             decoration: BoxDecoration(
-                              color: const Color(0xFFF59E0B).withOpacity(0.12),
+                              color: const Color(0xFFF59E0B).withValues(alpha: 0.12),
                               borderRadius: BorderRadius.circular(20),
-                              border: Border.all(color: const Color(0xFFF59E0B).withOpacity(0.3)),
+                              border: Border.all(color: const Color(0xFFF59E0B).withValues(alpha: 0.3)),
                             ),
                             child: Text(
                               "${currentMeta['emoji']} ${currentMeta['label']}",
@@ -498,7 +498,7 @@ class _AppGlobalFeedbackDialogState extends State<AppGlobalFeedbackDialog> {
                       style: TextStyle(fontSize: 13, color: textColor),
                       decoration: InputDecoration(
                         hintText: 'Aapko kya achha laga ya kya naya feature chahiye...',
-                        hintStyle: TextStyle(fontSize: 12, color: subTextColor.withOpacity(0.7)),
+                        hintStyle: TextStyle(fontSize: 12, color: subTextColor.withValues(alpha: 0.7)),
                         filled: true,
                         fillColor: fieldBg,
                         contentPadding: const EdgeInsets.all(12),
@@ -527,7 +527,7 @@ class _AppGlobalFeedbackDialogState extends State<AppGlobalFeedbackDialog> {
                       style: TextStyle(fontSize: 12.5, color: textColor),
                       decoration: InputDecoration(
                         hintText: '@telegram_handle ya email (agar update chahiye)',
-                        hintStyle: TextStyle(fontSize: 11.5, color: subTextColor.withOpacity(0.7)),
+                        hintStyle: TextStyle(fontSize: 11.5, color: subTextColor.withValues(alpha: 0.7)),
                         filled: true,
                         fillColor: fieldBg,
                         isDense: true,
