@@ -283,7 +283,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                   borderRadius: BorderRadius.circular(24),
                   boxShadow: [
                     BoxShadow(
-                      color: const Color(0xFF1E40AF).withOpacity(0.30),
+                      color: const Color(0xFF1E40AF).withValues(alpha: 0.30),
                       blurRadius: 16,
                       offset: const Offset(0, 8),
                     ),
@@ -319,13 +319,13 @@ class _ProfileScreenState extends State<ProfileScreen> {
                               const SizedBox(height: 3),
                               Text(
                                 _userDistrict.isNotEmpty ? '🎯 Exam Aspirant • 📍 $_userDistrict' : '🎯 Exam Aspirant',
-                                style: TextStyle(fontSize: 11, fontWeight: FontWeight.w600, color: Colors.white.withOpacity(0.85)),
+                                style: TextStyle(fontSize: 11, fontWeight: FontWeight.w600, color: Colors.white.withValues(alpha: 0.85)),
                               ),
                               if (_userEmail.isNotEmpty) ...[
                                 const SizedBox(height: 2),
                                 Text(
                                   _userEmail,
-                                  style: TextStyle(fontSize: 11, color: Colors.white.withOpacity(0.75), fontWeight: FontWeight.w500),
+                                  style: TextStyle(fontSize: 11, color: Colors.white.withValues(alpha: 0.75), fontWeight: FontWeight.w500),
                                   overflow: TextOverflow.ellipsis,
                                 ),
                               ],
@@ -333,7 +333,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                 const SizedBox(height: 2),
                                 Text(
                                   _userMobile,
-                                  style: TextStyle(fontSize: 11, color: Colors.white.withOpacity(0.75), fontWeight: FontWeight.w500),
+                                  style: TextStyle(fontSize: 11, color: Colors.white.withValues(alpha: 0.75), fontWeight: FontWeight.w500),
                                 ),
                               ],
                             ],
@@ -345,9 +345,9 @@ class _ProfileScreenState extends State<ProfileScreen> {
                           child: Container(
                             padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 7),
                             decoration: BoxDecoration(
-                              color: Colors.white.withOpacity(0.16),
+                              color: Colors.white.withValues(alpha: 0.16),
                               borderRadius: BorderRadius.circular(99),
-                              border: Border.all(color: Colors.white.withOpacity(0.35)),
+                              border: Border.all(color: Colors.white.withValues(alpha: 0.35)),
                             ),
                             child: const Text('✏️ Edit', style: TextStyle(fontSize: 11, fontWeight: FontWeight.w800, color: Colors.white)),
                           ),
@@ -370,9 +370,9 @@ class _ProfileScreenState extends State<ProfileScreen> {
                         Container(
                           padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
                           decoration: BoxDecoration(
-                            color: Colors.black.withOpacity(0.22),
+                            color: Colors.black.withValues(alpha: 0.22),
                             borderRadius: BorderRadius.circular(99),
-                            border: Border.all(color: Colors.white.withOpacity(0.20)),
+                            border: Border.all(color: Colors.white.withValues(alpha: 0.20)),
                           ),
                           child: Text(
                             '🏅 Level ${_calculateLevel(solvedQs)}',
@@ -385,9 +385,9 @@ class _ProfileScreenState extends State<ProfileScreen> {
                     Container(
                       padding: const EdgeInsets.symmetric(vertical: 11, horizontal: 6),
                       decoration: BoxDecoration(
-                        color: Colors.black.withOpacity(0.22),
+                        color: Colors.black.withValues(alpha: 0.22),
                         borderRadius: BorderRadius.circular(16),
-                        border: Border.all(color: Colors.white.withOpacity(0.13)),
+                        border: Border.all(color: Colors.white.withValues(alpha: 0.13)),
                       ),
                       child: Row(
                         children: [
@@ -626,12 +626,12 @@ class _ProfileScreenState extends State<ProfileScreen> {
                 ),
                 borderRadius: BorderRadius.circular(16),
                 border: Border.all(
-                  color: isDark ? const Color(0xFFF59E0B).withOpacity(0.5) : const Color(0xFFF59E0B),
+                  color: isDark ? const Color(0xFFF59E0B).withValues(alpha: 0.5) : const Color(0xFFF59E0B),
                   width: 1.4,
                 ),
                 boxShadow: [
                   BoxShadow(
-                    color: const Color(0xFFF59E0B).withOpacity(isDark ? 0.2 : 0.15),
+                    color: const Color(0xFFF59E0B).withValues(alpha: isDark ? 0.2 : 0.15),
                     blurRadius: 12,
                     offset: const Offset(0, 4),
                   ),
@@ -664,7 +664,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                             borderRadius: BorderRadius.circular(12),
                             boxShadow: [
                               BoxShadow(
-                                color: const Color(0xFFF59E0B).withOpacity(0.4),
+                                color: const Color(0xFFF59E0B).withValues(alpha: 0.4),
                                 blurRadius: 8,
                                 offset: const Offset(0, 2),
                               ),
@@ -691,9 +691,9 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                   Container(
                                     padding: const EdgeInsets.symmetric(horizontal: 5, vertical: 1.5),
                                     decoration: BoxDecoration(
-                                      color: const Color(0xFF16A34A).withOpacity(0.18),
+                                      color: const Color(0xFF16A34A).withValues(alpha: 0.18),
                                       borderRadius: BorderRadius.circular(4),
-                                      border: Border.all(color: const Color(0xFF16A34A).withOpacity(0.4)),
+                                      border: Border.all(color: const Color(0xFF16A34A).withValues(alpha: 0.4)),
                                     ),
                                     child: const Text(
                                       'DEV TEAM',
@@ -725,7 +725,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                             borderRadius: BorderRadius.circular(8),
                             boxShadow: [
                               BoxShadow(
-                                color: const Color(0xFFD97706).withOpacity(0.3),
+                                color: const Color(0xFFD97706).withValues(alpha: 0.3),
                                 blurRadius: 4,
                                 offset: const Offset(0, 2),
                               ),
@@ -790,7 +790,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
           const SizedBox(height: 2),
           Text(
             label,
-            style: TextStyle(fontSize: 8.5, fontWeight: FontWeight.w800, letterSpacing: 0.5, color: Colors.white.withOpacity(0.75)),
+            style: TextStyle(fontSize: 8.5, fontWeight: FontWeight.w800, letterSpacing: 0.5, color: Colors.white.withValues(alpha: 0.75)),
           ),
         ],
       ),
@@ -824,7 +824,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
               Container(
                 width: 38,
                 height: 38,
-                decoration: BoxDecoration(color: isDark ? bg.withOpacity(0.22) : bg, borderRadius: BorderRadius.circular(12)),
+                decoration: BoxDecoration(color: isDark ? bg.withValues(alpha: 0.22) : bg, borderRadius: BorderRadius.circular(12)),
                 child: Center(child: Text(icon, style: const TextStyle(fontSize: 18))),
               ),
               const SizedBox(height: 8),
@@ -890,13 +890,13 @@ class _ProfileScreenState extends State<ProfileScreen> {
     required bool isDark,
   }) {
     final Color bgColor = isUnlocked
-        ? activeColor.withOpacity(isDark ? 0.2 : 0.12)
+        ? activeColor.withValues(alpha: isDark ? 0.2 : 0.12)
         : (isDark ? const Color(0xFF1E293B) : Colors.grey.shade100);
     final Color borderColor = isUnlocked
         ? activeColor
         : (isDark ? const Color(0xFF334155) : Colors.grey.shade300);
     final Color textColor = isUnlocked
-        ? (isDark ? activeColor.withOpacity(0.9) : activeColor)
+        ? (isDark ? activeColor.withValues(alpha: 0.9) : activeColor)
         : (isDark ? const Color(0xFF64748B) : Colors.grey.shade500);
 
     return Container(
