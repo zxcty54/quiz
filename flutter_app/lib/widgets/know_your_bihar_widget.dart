@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import '../models/bpsc_daily_card_model.dart';
 import '../services/bpsc_rotation_service.dart';
 
 class KnowYourBiharWidget extends StatefulWidget {
