@@ -173,7 +173,7 @@ class CommunitySafetyService {
         builder: (dialogContext, setDialogState) => AlertDialog(
           title: const Text('Report content or user'),
           content: DropdownButtonFormField<String>(
-            value: selectedReason,
+            initialValue: selectedReason,
             isExpanded: true,
             decoration: const InputDecoration(labelText: 'Reason'),
             items: reportReasons

@@ -769,7 +769,7 @@ Download Free: https://play.google.com/store/apps/details?id=com.mocktester.onli
 
                             widget.onPostUpdated?.call(updatedText);
 
-                            if (context.mounted) {
+                            if (mounted) {
                               Navigator.pop(ctx);
                               ScaffoldMessenger.of(context).showSnackBar(
                                 const SnackBar(
@@ -967,7 +967,7 @@ Download Free: https://play.google.com/store/apps/details?id=com.mocktester.onli
                     .eq('id', widget.post['id'])
                     .eq('creator_id', widget.currentLoggedInHandle);
 
-                if (context.mounted) {
+                if (mounted) {
                   ScaffoldMessenger.of(context).showSnackBar(
                     const SnackBar(
                       content: Row(

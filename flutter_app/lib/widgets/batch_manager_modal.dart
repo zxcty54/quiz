@@ -210,7 +210,7 @@ class _BatchManagerModalState extends State<BatchManagerModal> {
                               .from('batches')
                               .update({'status': val}).eq('id', b['id']);
                           widget.onRefresh();
-                          if (mounted) Navigator.pop(context);
+                          if (context.mounted) Navigator.pop(context);
                         }
                       },
                       itemBuilder: (_) => [
@@ -288,7 +288,7 @@ class _BatchManagerModalState extends State<BatchManagerModal> {
                             'batch_code': bCode,
                             'status': newBatchStatus,
                           });
-                          if (mounted) Navigator.pop(context);
+                          if (context.mounted) Navigator.pop(context);
                           widget.onRefresh();
                         } catch (_) {
                           if (mounted) setState(() => isCreating = false);

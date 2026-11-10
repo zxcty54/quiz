@@ -235,7 +235,7 @@ class _CreatorAuthScreenState extends State<CreatorAuthScreen> {
                 const SizedBox(height: 10),
 
                 DropdownButtonFormField<String>(
-                  value: selectedCategory,
+                  initialValue: selectedCategory,
                   isExpanded: true,
                   decoration: const InputDecoration(
                     labelText: 'Target Exam Specialty',
@@ -302,7 +302,7 @@ class _CreatorAuthScreenState extends State<CreatorAuthScreen> {
 
                               if (existing.isNotEmpty) {
                                 setModalState(() => isSubmitting = false);
-                                if (ctx.mounted) {
+                                if (mounted) {
                                   ScaffoldMessenger.of(context).showSnackBar(
                                     const SnackBar(content: Text('Handle ID pehle se registered hai! Doosra chunein.')),
                                   );
@@ -341,7 +341,7 @@ class _CreatorAuthScreenState extends State<CreatorAuthScreen> {
 
                               if (ctx.mounted) Navigator.pop(ctx);
 
-                              if (context.mounted) {
+                              if (mounted) {
                                 showDialog(
                                   context: context,
                                   barrierDismissible: false,
@@ -405,7 +405,7 @@ class _CreatorAuthScreenState extends State<CreatorAuthScreen> {
                               }
                             } catch (err) {
                               setModalState(() => isSubmitting = false);
-                              if (ctx.mounted) {
+                              if (mounted) {
                                 ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text('Registration Error: $err')));
                               }
                             }

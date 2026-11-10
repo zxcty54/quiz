@@ -250,7 +250,7 @@ class CoachingEditorSheets {
                 ),
                 const SizedBox(height: 10),
                 DropdownButtonFormField<String>(
-                  value: selectedDistrict,
+                  initialValue: selectedDistrict,
                   decoration: const InputDecoration(
                     labelText: 'District',
                     border: OutlineInputBorder(),
@@ -272,7 +272,11 @@ class CoachingEditorSheets {
                 ),
                 const SizedBox(height: 10),
                 DropdownButtonFormField<String>(
-                  value: selectedCity,
+                  // Changing the district rebuilds the town list, so the field is
+                  // keyed to pick up its new initial value instead of keeping the
+                  // previously selected town.
+                  key: ValueKey(selectedCity),
+                  initialValue: selectedCity,
                   decoration: const InputDecoration(
                     labelText: 'Town / Education Hub',
                     border: OutlineInputBorder(),
@@ -697,7 +701,9 @@ class CoachingEditorSheets {
                                             'photo_url': uploadedPhoto,
                                           });
                                         });
-                                        Navigator.pop(dCtx);
+                                        if (dCtx.mounted) {
+                                          Navigator.pop(dCtx);
+                                        }
                                       },
                                 child: isUploading
                                     ? const SizedBox(
@@ -1074,24 +1080,28 @@ class CoachingEditorSheets {
                                 setModalState(() => isLoadingSelections = true);
                                 onSaved();
 
-                                ScaffoldMessenger.of(context).showSnackBar(
-                                  SnackBar(
-                                    content: Text(
-                                      isEditing
-                                          ? 'Selection update ho gaya!'
-                                          : 'Star selection publish ho gaya!',
+                                if (context.mounted) {
+                                  ScaffoldMessenger.of(context).showSnackBar(
+                                    SnackBar(
+                                      content: Text(
+                                        isEditing
+                                            ? 'Selection update ho gaya!'
+                                            : 'Star selection publish ho gaya!',
+                                      ),
+                                      backgroundColor: const Color(0xFF16A34A),
                                     ),
-                                    backgroundColor: const Color(0xFF16A34A),
-                                  ),
-                                );
+                                  );
+                                }
                               } catch (e) {
                                 setDialogState(() => isUploading = false);
-                                ScaffoldMessenger.of(context).showSnackBar(
-                                  SnackBar(
-                                    content: Text('Error: $e'),
-                                    backgroundColor: Colors.red,
-                                  ),
-                                );
+                                if (context.mounted) {
+                                  ScaffoldMessenger.of(context).showSnackBar(
+                                    SnackBar(
+                                      content: Text('Error: $e'),
+                                      backgroundColor: Colors.red,
+                                    ),
+                                  );
+                                }
                               }
                             },
                       child: isUploading
@@ -1281,6 +1291,7 @@ class CoachingEditorSheets {
                             imageQuality: 80,
                           );
                           if (picked != null) {
+                            if (!ctx.mounted) return;
                             if (!await CommunitySafetyService.requirePostingTerms(ctx)) return;
                             if (!ctx.mounted) return;
                             setModalState(() => isSaving = true);

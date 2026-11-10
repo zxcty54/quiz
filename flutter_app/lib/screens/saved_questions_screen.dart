@@ -167,7 +167,7 @@ class _SavedQuestionsScreenState extends State<SavedQuestionsScreen> {
                             await UserStatsService.toggleBookmark(qJson);
                             _loadData();
                             // Galti se star dab jaye to wapas lane ka mauka
-                            if (mounted) {
+                            if (context.mounted) {
                               ScaffoldMessenger.of(context).showSnackBar(
                                 SnackBar(
                                   content: const Text('Bookmark hataya gaya'),
@@ -259,8 +259,8 @@ class _SavedQuestionsScreenState extends State<SavedQuestionsScreen> {
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
-                              Row(
-                                children: const [
+                              const Row(
+                                children: [
                                   Icon(Icons.lightbulb_outline_rounded, size: 16, color: Colors.amber),
                                   SizedBox(width: 6),
                                   Text(

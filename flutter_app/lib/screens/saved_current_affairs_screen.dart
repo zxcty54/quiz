@@ -110,11 +110,11 @@ class _SavedCurrentAffairsScreenState extends State<SavedCurrentAffairsScreen> {
                 children: [
                   pw.Text(
                     'MockTester • Saved Current Affairs Magazine',
-                    style: pw.TextStyle(fontSize: 10, fontWeight: pw.FontWeight.bold, color: PdfColors.blue800),
+                    style: const pw.TextStyle(fontSize: 10, fontWeight: pw.FontWeight.bold, color: PdfColors.blue800),
                   ),
                   pw.Text(
                     '🌐 mocktester.online',
-                    style: pw.TextStyle(fontSize: 10, fontWeight: pw.FontWeight.bold, color: PdfColors.blue700),
+                    style: const pw.TextStyle(fontSize: 10, fontWeight: pw.FontWeight.bold, color: PdfColors.blue700),
                   ),
                 ],
               ),
@@ -137,7 +137,7 @@ class _SavedCurrentAffairsScreenState extends State<SavedCurrentAffairsScreen> {
                   ),
                   pw.Text(
                     'Page ${context.pageNumber} of ${context.pagesCount}',
-                    style: pw.TextStyle(fontSize: 8.5, fontWeight: pw.FontWeight.bold, color: PdfColors.grey800),
+                    style: const pw.TextStyle(fontSize: 8.5, fontWeight: pw.FontWeight.bold, color: PdfColors.grey800),
                   ),
                 ],
               ),
@@ -160,7 +160,7 @@ class _SavedCurrentAffairsScreenState extends State<SavedCurrentAffairsScreen> {
                   children: [
                     pw.Text(
                       '📌 SAVED CURRENT AFFAIRS DIGEST',
-                      style: pw.TextStyle(fontSize: 14, fontWeight: pw.FontWeight.bold, color: PdfColors.blue900),
+                      style: const pw.TextStyle(fontSize: 14, fontWeight: pw.FontWeight.bold, color: PdfColors.blue900),
                     ),
                     pw.SizedBox(height: 3),
                     pw.Text(
@@ -194,13 +194,13 @@ class _SavedCurrentAffairsScreenState extends State<SavedCurrentAffairsScreen> {
                         ),
                         child: pw.Text(
                           tag,
-                          style: pw.TextStyle(fontSize: 8, fontWeight: pw.FontWeight.bold, color: PdfColors.amber900),
+                          style: const pw.TextStyle(fontSize: 8, fontWeight: pw.FontWeight.bold, color: PdfColors.amber900),
                         ),
                       ),
                       pw.SizedBox(height: 5),
                       pw.Text(
                         title,
-                        style: pw.TextStyle(fontSize: 11, fontWeight: pw.FontWeight.bold, color: PdfColors.black),
+                        style: const pw.TextStyle(fontSize: 11, fontWeight: pw.FontWeight.bold, color: PdfColors.black),
                       ),
                       pw.SizedBox(height: 6),
                       ...bullets.map((b) => pw.Padding(
@@ -208,7 +208,7 @@ class _SavedCurrentAffairsScreenState extends State<SavedCurrentAffairsScreen> {
                             child: pw.Row(
                               crossAxisAlignment: pw.CrossAxisAlignment.start,
                               children: [
-                                pw.Text('• ', style: pw.TextStyle(fontWeight: pw.FontWeight.bold, color: PdfColors.blue700)),
+                                pw.Text('• ', style: const pw.TextStyle(fontWeight: pw.FontWeight.bold, color: PdfColors.blue700)),
                                 pw.Expanded(
                                   child: pw.Text(
                                     b.toString(),

@@ -738,7 +738,7 @@ class _StudentIntelligenceSheetState
                   'Recent: ${student['last_attempted_test']}',
                   maxLines: 1,
                   overflow: TextOverflow.ellipsis,
-                  style: TextStyle(color: primary, fontSize: 10, fontWeight: FontWeight.w600),
+                  style: const TextStyle(color: primary, fontSize: 10, fontWeight: FontWeight.w600),
                 ),
               ],
             ),
