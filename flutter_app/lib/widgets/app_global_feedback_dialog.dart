@@ -243,7 +243,7 @@ class _AppGlobalFeedbackDialogState extends State<AppGlobalFeedbackDialog> {
     };
 
     try {
-      final res = await http.post(
+      await http.post(
         Uri.parse(_googleSheetWebhookUrl),
         headers: {"Content-Type": "application/json"},
         body: jsonEncode(payload),

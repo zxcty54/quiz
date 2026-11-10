@@ -167,7 +167,7 @@ class _BiharEventsCarouselWidgetState extends State<BiharEventsCarouselWidget>
             .select('id')
             .eq('event_id', eventId);
 
-        if (mounted && res is List) {
+        if (mounted) {
           setState(() {
             ev['going_count'] = res.length;
           });

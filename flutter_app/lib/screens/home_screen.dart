@@ -6,7 +6,6 @@ import 'package:flutter/services.dart';
 import 'package:http/http.dart' as http;
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
-import 'package:shimmer/shimmer.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:app_links/app_links.dart';
 
@@ -822,13 +821,6 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
     );
   }
 
-  String _drawerInitials(String name) {
-    final parts = name.trim().split(RegExp(r'\s+')).where((e) => e.isNotEmpty).toList();
-    if (parts.isEmpty) return 'A';
-    if (parts.length == 1) return parts.first[0].toUpperCase();
-    return (parts[0][0] + parts[1][0]).toUpperCase();
-  }
-
   Widget _drawerSection(String label) {
     return Padding(
       padding: const EdgeInsets.fromLTRB(24, 18, 24, 7),
@@ -1044,25 +1036,6 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
             ),
           ],
         ),
-      ],
-    );
-  }
-
-  Widget _buildSkeletonLoading() {
-    // Skeleton ab theme follow karta hai (pehle hamesha white boxes the,
-    // dark mode me wo screen jal rahi thi).
-    final Color base = _isDarkMode ? const Color(0xFF1B2438) : const Color(0xFFE8EDF6);
-    final Color highlight = _isDarkMode ? const Color(0xFF243050) : const Color(0xFFF6F8FC);
-
-    return ListView(
-      padding: const EdgeInsets.all(16),
-      children: [
-        _SkeletonBox(height: 132, base: base, highlight: highlight),
-        const SizedBox(height: 16),
-        for (int i = 0; i < 3; i++) ...[
-          _SkeletonBox(height: 96, base: base, highlight: highlight),
-          const SizedBox(height: 16),
-        ],
       ],
     );
   }
@@ -1365,35 +1338,6 @@ class _BrandMark extends StatelessWidget {
     );
   }
 }
-
-/// Loading state ka ek shimmering placeholder block.
-class _SkeletonBox extends StatelessWidget {
-  const _SkeletonBox({
-    required this.height,
-    required this.base,
-    required this.highlight,
-  });
-
-  final double height;
-  final Color base;
-  final Color highlight;
-
-  @override
-  Widget build(BuildContext context) {
-    return Shimmer.fromColors(
-      baseColor: base,
-      highlightColor: highlight,
-      child: Container(
-        height: height,
-        decoration: BoxDecoration(
-          color: base,
-          borderRadius: BorderRadius.circular(18),
-        ),
-      ),
-    );
-  }
-}
-
 
 // ============================================================
 // Branded Dark-Aurora Loading Screen (splash wala roop)

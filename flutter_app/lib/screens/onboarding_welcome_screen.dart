@@ -54,8 +54,6 @@ class _OnboardingWelcomeScreenState
   static const Color faint = Color(0xFF64748B);       // Subtle Muted Label
 
   static const Color blue = Color(0xFF38BDF8);        // Electric Horizon Cyan
-  static const Color blueDeep = Color(0xFF2563EB);    // Deep Indigo Accent
-  static const Color blueLight = Color(0xFF0E1C38);   // Atmospheric Glow / Card Surface
 
   static const Color border = Color(0x1FFFFFFF);      // Subtle Border
 
