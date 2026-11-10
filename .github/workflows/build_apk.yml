@@ -1,4 +1,4 @@
-name: Build MockTester Signed Android APK + Play AAB
+name: Build MockTester Signed Android Release (APK or AAB)
 
 on:
   push:
@@ -14,6 +14,14 @@ on:
         required: false
         type: string
         default: ""
+      build_target:
+        description: "What to produce: APK (current behaviour), Play AAB, or both"
+        type: choice
+        default: apk
+        options:
+          - apk
+          - aab
+          - both
       send_to_telegram:
         description: "Send the signed APK archive to the configured Telegram chat"
         type: boolean
@@ -271,6 +279,7 @@ jobs:
           fi
 
       - name: Build signed Android APK
+        if: ${{ github.event_name == 'push' || inputs.build_target == 'apk' || inputs.build_target == 'both' }}
         working-directory: flutter_app
         env:
           KEYSTORE_PATH: ${{ runner.temp }}/play-release/upload-key.jks
@@ -342,6 +351,7 @@ jobs:
       # Google Play accepts an Android App Bundle for new apps and updates; the
       # APK above is only for direct/sideload distribution and Telegram.
       - name: Build signed Android App Bundle
+        if: ${{ github.event_name != 'push' && (inputs.build_target == 'aab' || inputs.build_target == 'both') }}
         working-directory: flutter_app
         env:
           KEYSTORE_PATH: ${{ runner.temp }}/play-release/upload-key.jks
@@ -395,6 +405,7 @@ jobs:
           echo "AAB_PATH=$AAB" >> "$GITHUB_ENV"
 
       - name: Upload signed AAB artifact
+        if: ${{ github.event_name != 'push' && (inputs.build_target == 'aab' || inputs.build_target == 'both') }}
         uses: actions/upload-artifact@v4
         with:
           name: MockTester_Play_AAB_${{ steps.release.outputs.version_code }}
@@ -403,6 +414,7 @@ jobs:
           retention-days: 14
 
       - name: Upload signed APK artifact
+        if: ${{ github.event_name == 'push' || inputs.build_target == 'apk' || inputs.build_target == 'both' }}
         uses: actions/upload-artifact@v4
         with:
           name: MockTester_Android_APK_${{ steps.release.outputs.version_code }}
@@ -414,7 +426,7 @@ jobs:
       # 50 MB document cap, so an arm64-only signed build is produced just for
       # the chat delivery. The Play artifact above stays universal.
       - name: Build a compact arm64 signed APK for Telegram
-        if: ${{ github.event_name == 'push' || inputs.send_to_telegram }}
+        if: ${{ (github.event_name == 'push' || inputs.send_to_telegram) && (github.event_name == 'push' || inputs.build_target != 'aab') }}
         working-directory: flutter_app
         env:
           KEYSTORE_PATH: ${{ runner.temp }}/play-release/upload-key.jks
@@ -485,19 +497,23 @@ jobs:
           fi
           OUTPUT_DIR="build/app/outputs/flutter-apk"
           APK="${TELEGRAM_APK_PATH:-$OUTPUT_DIR/app-release.apk}"
-          if [ ! -s "$APK" ]; then
-            echo "::error title=Telegram upload::Signed APK is missing or empty: $APK"
-            exit 1
-          fi
+          AAB="${AAB_PATH:-}"
+          HAS_APK=false
+          [ -s "$APK" ] && HAS_APK=true
+          HAS_AAB=false
+          [ -n "$AAB" ] && [ -s "$AAB" ] && HAS_AAB=true
           # The Bot API rejects documents above 50 MB, so anything larger is
           # split into parts the recipient rejoins with `cat`.
           SINGLE_LIMIT=49000000
           PART_SIZE=45000000
           ZIP_PATH="$OUTPUT_DIR/MockTester_Android_${VERSION_CODE}.zip"
-          rm -f "$ZIP_PATH" "$ZIP_PATH".*.part
-          zip -9 -j "$ZIP_PATH" "$APK"
-          ZIP_SIZE=$(stat -c%s "$ZIP_PATH")
-          echo "Telegram archive: $ZIP_PATH ($ZIP_SIZE bytes)"
+          ZIP_SIZE=0
+          if [ "$HAS_APK" = true ]; then
+            rm -f "$ZIP_PATH" "$ZIP_PATH".*.part
+            zip -9 -j "$ZIP_PATH" "$APK"
+            ZIP_SIZE=$(stat -c%s "$ZIP_PATH")
+            echo "Telegram archive: $ZIP_PATH ($ZIP_SIZE bytes)"
+          fi
 
           RESPONSE_FILE="$RUNNER_TEMP/telegram_response.json"
           CHECK_SCRIPT="$RUNNER_TEMP/telegram_check.py"
@@ -540,7 +556,13 @@ jobs:
           }
 
           RUN_URL="https://github.com/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID"
-          if [ "$ZIP_SIZE" -le "$SINGLE_LIMIT" ]; then
+          if [ "$HAS_APK" != true ] && [ "$HAS_AAB" != true ]; then
+            echo "::error title=Telegram upload::This run produced neither a signed APK nor an AAB, so there is nothing to send."
+            exit 1
+          fi
+          if [ "$HAS_APK" != true ]; then
+            echo "::notice title=Telegram upload::No APK was built for this run (AAB-only target); sending the Play bundle information only."
+          elif [ "$ZIP_SIZE" -le "$SINGLE_LIMIT" ]; then
             send_document "$ZIP_PATH" \
               "MockTester signed Android APK v$VERSION_CODE (ZIP; extract the APK to install). Full universal APK: $RUN_URL"
           else
@@ -563,11 +585,12 @@ jobs:
 
           # The Play bundle is sent separately so it can be taken straight from
           # the chat into Play Console. It stays in the workflow artifacts when
-          # it is too large for the Bot API.
-          if [ -n "${AAB_PATH:-}" ] && [ -s "$AAB_PATH" ]; then
+          # it is too large for the Bot API (this bundle is ~94 MB, so the
+          # artifact is normally the only way to retrieve it).
+          if [ "$HAS_AAB" = true ]; then
             AAB_ZIP="$OUTPUT_DIR/MockTester_Play_AAB_${VERSION_CODE}.zip"
             rm -f "$AAB_ZIP"
-            zip -9 -j "$AAB_ZIP" "$AAB_PATH"
+            zip -9 -j "$AAB_ZIP" "$AAB"
             AAB_ZIP_SIZE=$(stat -c%s "$AAB_ZIP")
             echo "Telegram AAB archive: $AAB_ZIP ($AAB_ZIP_SIZE bytes)"
             if [ "$AAB_ZIP_SIZE" -le "$SINGLE_LIMIT" ]; then
