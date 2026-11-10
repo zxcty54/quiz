@@ -2,6 +2,7 @@ import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
+import '../services/community_safety_service.dart';
 import '../utils/bihar_location_data.dart';
 
 class CoachingEditorSheets {
@@ -106,6 +107,8 @@ class CoachingEditorSheets {
                   onPressed: (isSaving || newImage == null)
                       ? null
                       : () async {
+                          if (!await CommunitySafetyService.requirePostingTerms(ctx)) return;
+                          if (!ctx.mounted) return;
                           setModalState(() => isSaving = true);
                           try {
                             final bytes = await newImage!.readAsBytes();
@@ -329,6 +332,8 @@ class CoachingEditorSheets {
                     onPressed: isSaving
                         ? null
                         : () async {
+                            if (!await CommunitySafetyService.requirePostingTerms(ctx)) return;
+                            if (!ctx.mounted) return;
                             setModalState(() => isSaving = true);
                             try {
                               final updatedName = nameCtrl.text.trim().isNotEmpty
@@ -487,6 +492,8 @@ class CoachingEditorSheets {
                     onPressed: isSaving
                         ? null
                         : () async {
+                            if (!await CommunitySafetyService.requirePostingTerms(ctx)) return;
+                            if (!ctx.mounted) return;
                             setModalState(() => isSaving = true);
                             try {
                               if (coachingData?['id'] != null) {
@@ -791,6 +798,8 @@ class CoachingEditorSheets {
                   onPressed: isSaving
                       ? null
                       : () async {
+                          if (!await CommunitySafetyService.requirePostingTerms(ctx)) return;
+                          if (!ctx.mounted) return;
                           setModalState(() => isSaving = true);
                           try {
                             if (coachingId != null) {
@@ -1272,6 +1281,8 @@ class CoachingEditorSheets {
                             imageQuality: 80,
                           );
                           if (picked != null) {
+                            if (!await CommunitySafetyService.requirePostingTerms(ctx)) return;
+                            if (!ctx.mounted) return;
                             setModalState(() => isSaving = true);
                             try {
                               final bytes = await File(picked.path).readAsBytes();
@@ -1366,6 +1377,8 @@ class CoachingEditorSheets {
                       onPressed: isSaving
                           ? null
                           : () async {
+                              if (!await CommunitySafetyService.requirePostingTerms(ctx)) return;
+                              if (!ctx.mounted) return;
                               setModalState(() => isSaving = true);
                               try {
                                 if (coachingId != null) {
