@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import '../models/question_model.dart';
 import '../services/ai_explainer_service.dart';
+import '../services/ai_data_disclosure_service.dart';
+import '../widgets/report_ai_response_button.dart';
 import '../services/user_stats_service.dart';
 import '../widgets/math_text.dart';
 
@@ -269,8 +271,14 @@ class _WrongQuestionsScreenState extends State<WrongQuestionsScreen> {
       return;
     }
 
-    _lastVaultAiCallTime = DateTime.now();
     setState(() => _whyWrongLoading[qid] = true);
+    final consented = await AiDataDisclosureService.requireConsent(context);
+    if (!mounted) return;
+    if (!consented) {
+      setState(() => _whyWrongLoading[qid] = false);
+      return;
+    }
+    _lastVaultAiCallTime = DateTime.now();
 
     String selectedOpt = (userChoice.trim().isNotEmpty && 
                           userChoice != "Attempted Option" && 
@@ -704,6 +712,14 @@ class _WrongQuestionsScreenState extends State<WrongQuestionsScreen> {
                                 MathFormattedText(
                                   text: whyWrongAiText,
                                   textStyle: TextStyle(fontSize: 11.5, color: isDark ? const Color(0xFFFECDD3) : const Color(0xFF881337), height: 1.35),
+                                ),
+                                Align(
+                                  alignment: Alignment.centerRight,
+                                  child: ReportAiResponseButton(
+                                    response: whyWrongAiText,
+                                    source: 'wrong_question_explanation',
+                                    isDarkMode: isDark,
+                                  ),
                                 ),
                               ] else ...[
                                 const SizedBox(height: 6),
