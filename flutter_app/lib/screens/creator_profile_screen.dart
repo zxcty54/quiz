@@ -373,7 +373,7 @@ class _CreatorProfileScreenState extends State<CreatorProfileScreen>
                           decoration: BoxDecoration(
                             gradient: LinearGradient(
                               colors: [
-                                _primaryBlue.withOpacity(0.85),
+                                _primaryBlue.withValues(alpha: 0.85),
                                 const Color(0xFF1E3A8A),
                               ],
                               begin: Alignment.topLeft,
