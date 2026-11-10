@@ -7,7 +7,6 @@ import 'package:supabase_flutter/supabase_flutter.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'services/notification_service.dart';
 import 'services/ai_explainer_service.dart';
-import 'screens/home_screen.dart';
 import 'screens/onboarding_welcome_screen.dart';
 import 'screens/splash_screen.dart';
 
@@ -62,12 +61,29 @@ Future<void> _syncAppConfig() async {
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
 
-  // 🔥 1. Firebase Initialization
-  try {
-    await Firebase.initializeApp();
-    await NotificationService.initialize();
-  } catch (e) {
-    debugPrint("Firebase init error: $e");
+  // Firebase/FCM is enabled only when CI verifies that google-services.json
+  // belongs to this exact Android application ID.
+  const bool firebaseConfigured =
+      bool.fromEnvironment('FIREBASE_CONFIGURED', defaultValue: false);
+  if (firebaseConfigured) {
+    try {
+      await Firebase.initializeApp();
+      await NotificationService.initialize(enablePush: true);
+    } catch (e) {
+      debugPrint("Firebase init error: $e");
+      try {
+        await NotificationService.initialize(enablePush: false);
+      } catch (notificationError) {
+        debugPrint("Local notification init error: $notificationError");
+      }
+    }
+  } else {
+    debugPrint('Firebase is not configured for this application ID; FCM is disabled.');
+    try {
+      await NotificationService.initialize(enablePush: false);
+    } catch (notificationError) {
+      debugPrint("Local notification init error: $notificationError");
+    }
   }
 
   // ⚡ 2. Supabase Initialization (Safe Injection via --dart-define)
@@ -76,7 +92,7 @@ void main() async {
 
   await Supabase.initialize(
     url: supabaseUrl,
-    anonKey: supabaseAnonKey,
+    publishableKey: supabaseAnonKey,
   );
 
   // 📱 3. SharedPreferences: Theme & Onboarding Check
