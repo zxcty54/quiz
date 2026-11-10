@@ -84,9 +84,9 @@ class _KnowYourBiharWidgetState extends State<KnowYourBiharWidget> {
                 Container(
                   padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 4.5),
                   decoration: BoxDecoration(
-                    color: themeColor.withOpacity(0.12),
+                    color: themeColor.withValues(alpha: 0.12),
                     borderRadius: BorderRadius.circular(8),
-                    border: Border.all(color: themeColor.withOpacity(0.25)),
+                    border: Border.all(color: themeColor.withValues(alpha: 0.25)),
                   ),
                   child: Row(
                     mainAxisSize: MainAxisSize.min,
@@ -283,9 +283,9 @@ class _KnowYourBiharWidgetState extends State<KnowYourBiharWidget> {
                     margin: const EdgeInsets.only(bottom: 8),
                     padding: const EdgeInsets.all(12),
                     decoration: BoxDecoration(
-                      color: const Color(0xFFF59E0B).withOpacity(0.08),
+                      color: const Color(0xFFF59E0B).withValues(alpha: 0.08),
                       borderRadius: BorderRadius.circular(12),
-                      border: Border.all(color: const Color(0xFFF59E0B).withOpacity(0.2)),
+                      border: Border.all(color: const Color(0xFFF59E0B).withValues(alpha: 0.2)),
                     ),
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
@@ -340,7 +340,7 @@ class _KnowYourBiharWidgetState extends State<KnowYourBiharWidget> {
         decoration: BoxDecoration(
           color: widget.isDarkMode ? const Color(0xFF1E293B) : Colors.white,
           borderRadius: BorderRadius.circular(18),
-          border: Border.all(color: Colors.red.withOpacity(0.3)),
+          border: Border.all(color: Colors.red.withValues(alpha: 0.3)),
         ),
         child: Row(
           children: [
@@ -387,7 +387,7 @@ class _KnowYourBiharWidgetState extends State<KnowYourBiharWidget> {
                     width: 34,
                     height: 34,
                     decoration: BoxDecoration(
-                      color: themeColor.withOpacity(isDark ? 0.22 : 0.12),
+                      color: themeColor.withValues(alpha: isDark ? 0.22 : 0.12),
                       borderRadius: BorderRadius.circular(11),
                     ),
                     child: Icon(Icons.map_rounded, size: 18, color: themeColor),
@@ -420,7 +420,7 @@ class _KnowYourBiharWidgetState extends State<KnowYourBiharWidget> {
               Container(
                 padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 3.5),
                 decoration: BoxDecoration(
-                  color: themeColor.withOpacity(0.12),
+                  color: themeColor.withValues(alpha: 0.12),
                   borderRadius: BorderRadius.circular(8),
                 ),
                 child: Text(
@@ -443,12 +443,12 @@ class _KnowYourBiharWidgetState extends State<KnowYourBiharWidget> {
             color: isDark ? const Color(0xFF1E293B) : Colors.white,
             borderRadius: BorderRadius.circular(22),
             border: Border.all(
-              color: isDark ? Colors.white.withOpacity(0.08) : const Color(0xFFE2E8F0),
+              color: isDark ? Colors.white.withValues(alpha: 0.08) : const Color(0xFFE2E8F0),
               width: 1.2,
             ),
             boxShadow: [
               BoxShadow(
-                color: isDark ? Colors.black45 : const Color(0xFF0F172A).withOpacity(0.04),
+                color: isDark ? Colors.black45 : const Color(0xFF0F172A).withValues(alpha: 0.04),
                 blurRadius: 18,
                 offset: const Offset(0, 6),
               ),
@@ -494,7 +494,7 @@ class _KnowYourBiharWidgetState extends State<KnowYourBiharWidget> {
                                 child: Container(
                                   padding: const EdgeInsets.symmetric(horizontal: 9, vertical: 4.5),
                                   decoration: BoxDecoration(
-                                    color: themeColor.withOpacity(0.12),
+                                    color: themeColor.withValues(alpha: 0.12),
                                     borderRadius: BorderRadius.circular(8),
                                   ),
                                   child: Row(
@@ -522,7 +522,7 @@ class _KnowYourBiharWidgetState extends State<KnowYourBiharWidget> {
                               Container(
                                 padding: const EdgeInsets.symmetric(horizontal: 7, vertical: 3.5),
                                 decoration: BoxDecoration(
-                                  color: isDark ? Colors.white.withOpacity(0.06) : const Color(0xFFF1F5F9),
+                                  color: isDark ? Colors.white.withValues(alpha: 0.06) : const Color(0xFFF1F5F9),
                                   borderRadius: BorderRadius.circular(6),
                                 ),
                                 child: const Text(
@@ -634,7 +634,7 @@ class _KnowYourBiharWidgetState extends State<KnowYourBiharWidget> {
                                 color: isDark ? const Color(0xFF0F172A) : const Color(0xFFF8FAFC),
                                 borderRadius: BorderRadius.circular(12),
                                 border: Border.all(
-                                  color: isDark ? Colors.white.withOpacity(0.05) : const Color(0xFFE2E8F0),
+                                  color: isDark ? Colors.white.withValues(alpha: 0.05) : const Color(0xFFE2E8F0),
                                 ),
                               ),
                               child: Column(
@@ -651,7 +651,7 @@ class _KnowYourBiharWidgetState extends State<KnowYourBiharWidget> {
                                           height: 18,
                                           alignment: Alignment.center,
                                           decoration: BoxDecoration(
-                                            color: themeColor.withOpacity(0.14),
+                                            color: themeColor.withValues(alpha: 0.14),
                                             shape: BoxShape.circle,
                                           ),
                                           child: Text(
@@ -687,10 +687,10 @@ class _KnowYourBiharWidgetState extends State<KnowYourBiharWidget> {
                               width: double.infinity,
                               padding: const EdgeInsets.all(12),
                               decoration: BoxDecoration(
-                                color: const Color(0xFFF59E0B).withOpacity(isDark ? 0.12 : 0.08),
+                                color: const Color(0xFFF59E0B).withValues(alpha: isDark ? 0.12 : 0.08),
                                 borderRadius: BorderRadius.circular(10),
                                 border: Border.all(
-                                  color: const Color(0xFFF59E0B).withOpacity(0.22),
+                                  color: const Color(0xFFF59E0B).withValues(alpha: 0.22),
                                 ),
                               ),
                               child: Row(
