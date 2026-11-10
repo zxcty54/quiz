@@ -464,8 +464,8 @@ class _MasteryEvolutionCardState extends State<MasteryEvolutionCard>
           const SizedBox(height: 14),
 
           // ⚠️ Critical Traps Monitor (Expandable + Soft Tone)
-          Row(
-            children: const [
+          const Row(
+            children: [
               Icon(Icons.warning_amber_rounded, size: 15, color: Color(0xFFEA580C)),
               SizedBox(width: 4),
               Text(
@@ -607,8 +607,8 @@ class _MasteryEvolutionCardState extends State<MasteryEvolutionCard>
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      Row(
-                        children: const [
+                      const Row(
+                        children: [
                           Icon(Icons.trending_up_rounded,
                               size: 15, color: Color(0xFF059669)),
                           SizedBox(width: 4),
@@ -762,8 +762,8 @@ class _MasteryEvolutionCardState extends State<MasteryEvolutionCard>
           // 🎯 Tactical Prescription
           if (prescriptions.isNotEmpty) ...[
             const Divider(height: 18),
-            Row(
-              children: const [
+            const Row(
+              children: [
                 Icon(Icons.gps_fixed_rounded, size: 14, color: Color(0xFF2563EB)),
                 SizedBox(width: 4),
                 Text(
