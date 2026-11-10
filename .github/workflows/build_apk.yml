@@ -347,6 +347,66 @@ jobs:
           if-no-files-found: error
           retention-days: 14
 
+      # The universal release APK is ~56 MB, above the Telegram Bot API's
+      # 50 MB document cap, so an arm64-only signed build is produced just for
+      # the chat delivery. The Play artifact above stays universal.
+      - name: Build a compact arm64 signed APK for Telegram
+        if: ${{ github.event_name == 'push' || inputs.send_to_telegram }}
+        working-directory: flutter_app
+        env:
+          KEYSTORE_PATH: ${{ runner.temp }}/play-release/upload-key.jks
+          KEYSTORE_PASSWORD: ${{ secrets.KEYSTORE_PASSWORD }}
+          KEY_ALIAS: ${{ secrets.KEY_ALIAS }}
+          KEY_PASSWORD: ${{ secrets.KEY_PASSWORD }}
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_ANON_KEY: ${{ secrets.SUPABASE_ANON_KEY }}
+          FIREBASE_CONFIGURED: ${{ steps.firebase.outputs.configured }}
+          VERSION_CODE: ${{ steps.release.outputs.version_code }}
+        run: |
+          set -uo pipefail
+          ANDROID_SDK="${ANDROID_HOME:-${ANDROID_SDK_ROOT:-}}"
+          if [ -z "$ANDROID_SDK" ]; then
+            echo "::error title=Android SDK::ANDROID_HOME and ANDROID_SDK_ROOT are both empty."
+            exit 1
+          fi
+          APKSIGNER="$(find "$ANDROID_SDK/build-tools" -type f -name apksigner | sort -V | tail -n 1)"
+          if [ ! -x "$APKSIGNER" ]; then
+            echo "::error title=APK signing verification::Could not find an executable apksigner under $ANDROID_SDK/build-tools."
+            exit 1
+          fi
+
+          compact_log="$RUNNER_TEMP/flutter-arm64-build.log"
+          flutter build apk --release --no-pub \
+            --split-per-abi --target-platform=android-arm64 \
+            --build-number="$VERSION_CODE" \
+            --dart-define="SUPABASE_URL=$SUPABASE_URL" \
+            --dart-define="SUPABASE_ANON_KEY=$SUPABASE_ANON_KEY" \
+            --dart-define="FIREBASE_CONFIGURED=$FIREBASE_CONFIGURED" 2>&1 | tee "$compact_log"
+          build_status=${PIPESTATUS[0]}
+          ARM64_APK="build/app/outputs/flutter-apk/app-arm64-v8a-release.apk"
+          if [ "$build_status" -ne 0 ] || [ ! -s "$ARM64_APK" ]; then
+            # The universal APK is still delivered (as split parts), so a compact
+            # build failure degrades the chat delivery instead of failing the run.
+            echo "::warning title=Compact arm64 APK::Build status $build_status; the universal APK will be sent in parts."
+            python3 - "$compact_log" <<'PY_COMPACT_LOG'
+          import os, pathlib, sys
+          text = '\n'.join(pathlib.Path(sys.argv[1]).read_text(errors='replace').splitlines()[-40:])
+          for name in ('SUPABASE_URL', 'SUPABASE_ANON_KEY', 'KEYSTORE_PASSWORD', 'KEY_PASSWORD'):
+              secret = os.environ.get(name, '')
+              if secret:
+                  text = text.replace(secret, '***')
+          escaped = text[-8000:].replace('%', '%25').replace('\r', '%0D').replace('\n', '%0A')
+          print(f'::warning title=Compact arm64 build log::{escaped}')
+          PY_COMPACT_LOG
+            exit 0
+          fi
+          if ! "$APKSIGNER" verify --verbose "$ARM64_APK"; then
+            echo "::error title=APK signing verification::apksigner rejected the compact arm64 APK."
+            exit 1
+          fi
+          echo "Compact arm64 APK: $(stat -c%s "$ARM64_APK") bytes"
+          echo "TELEGRAM_APK_PATH=$ARM64_APK" >> "$GITHUB_ENV"
+
       - name: Send signed APK to Telegram
         if: ${{ github.event_name == 'push' || inputs.send_to_telegram }}
         working-directory: flutter_app
@@ -356,50 +416,84 @@ jobs:
           VERSION_CODE: ${{ steps.release.outputs.version_code }}
         run: |
           set -euo pipefail
-          APK="build/app/outputs/flutter-apk/app-release.apk"
-          ARCHIVE="build/app/outputs/flutter-apk/MockTester_Android_${VERSION_CODE}.zip"
           if [ -z "$BOT_TOKEN" ] || [ -z "$CHAT_ID" ]; then
             echo "::error title=Telegram configuration::TELEGRAM_TOKEN and TELEGRAM_TO repository secrets are required."
             exit 1
           fi
+          OUTPUT_DIR="build/app/outputs/flutter-apk"
+          APK="${TELEGRAM_APK_PATH:-$OUTPUT_DIR/app-release.apk}"
           if [ ! -s "$APK" ]; then
             echo "::error title=Telegram upload::Signed APK is missing or empty: $APK"
             exit 1
           fi
-          # Compress the already-signed APK as much as possible for Telegram's 50 MB bot limit.
-          zip -9 -j "$ARCHIVE" "$APK"
-          SIZE=$(stat -c%s "$ARCHIVE")
-          echo "Telegram archive size: $SIZE bytes"
-          if [ "$SIZE" -gt 50000000 ]; then
-            echo "::warning title=Telegram file-size limit::Archive exceeds the Bot API's 50 MB upload limit; Telegram may reject it."
-          fi
+          # The Bot API rejects documents above 50 MB, so anything larger is
+          # split into parts the recipient rejoins with `cat`.
+          SINGLE_LIMIT=49000000
+          PART_SIZE=45000000
+          ZIP_PATH="$OUTPUT_DIR/MockTester_Android_${VERSION_CODE}.zip"
+          rm -f "$ZIP_PATH" "$ZIP_PATH".*.part
+          zip -9 -j "$ZIP_PATH" "$APK"
+          ZIP_SIZE=$(stat -c%s "$ZIP_PATH")
+          echo "Telegram archive: $ZIP_PATH ($ZIP_SIZE bytes)"
 
-          if ! response=$(curl -sS -w '\n%{http_code}' \
-            -F "chat_id=$CHAT_ID" \
-            -F "caption=MockTester signed Android APK v$VERSION_CODE (ZIP; extract APK to install)" \
-            -F "document=@$ARCHIVE" \
-            --connect-timeout 60 --max-time 600 --retry 5 --retry-delay 5 \
-            "https://api.telegram.org/bot${BOT_TOKEN}/sendDocument"); then
-            echo "::error title=Telegram upload::The Telegram Bot API request failed."
-            exit 1
-          fi
-          python3 - "$response" "$ARCHIVE" "$SIZE" <<'PY_TELEGRAM'
-          import json, sys
-          response, archive, size = sys.argv[1:]
-          body, separator, status = response.rpartition('\n')
+          RESPONSE_FILE="$RUNNER_TEMP/telegram_response.json"
+          CHECK_SCRIPT="$RUNNER_TEMP/telegram_check.py"
+          cat > "$CHECK_SCRIPT" <<'PY_CHECK'
+          import json, pathlib, sys
+          status, response_path, document = sys.argv[1:]
           def escape(value):
               return value.replace('%', '%25').replace('\r', '%0D').replace('\n', '%0A')
+          body = pathlib.Path(response_path).read_text(errors='replace')
           if status != '200':
-              print(f'::error title=Telegram upload failed::HTTP {escape(status)}: {escape(body[:800])}')
+              print(f'::error title=Telegram upload failed::HTTP {escape(status)} for {escape(document)}: {escape(body[:800])}')
               sys.exit(1)
           try:
               payload = json.loads(body)
           except Exception as exc:
-              print(f'::error title=Telegram upload failed::Could not parse Bot API response: {escape(str(exc))}')
+              print(f'::error title=Telegram upload failed::Could not parse the Bot API response: {escape(str(exc))}')
               sys.exit(1)
           if payload.get('ok') is not True:
               description = str(payload.get('description', 'Telegram rejected the document.'))
-              print(f'::error title=Telegram upload failed::{escape(description)}')
+              print(f'::error title=Telegram upload failed::{escape(document)}: {escape(description)}')
               sys.exit(1)
-          print(f'::notice title=Telegram upload::Telegram accepted {archive} ({size} bytes).')
-          PY_TELEGRAM
+          print(f'::notice title=Telegram upload::Telegram accepted {escape(document)} ({escape(body[:200])}).')
+          PY_CHECK
+
+          send_document() {
+            local document="$1" caption="$2" response status
+            echo "sending $document ($(stat -c%s "$document") bytes)"
+            if ! response=$(curl -sS -w '\n%{http_code}' \
+              -F "chat_id=$CHAT_ID" \
+              -F "caption=$caption" \
+              -F "document=@$document" \
+              --connect-timeout 60 --max-time 900 --retry 5 --retry-delay 5 \
+              "https://api.telegram.org/bot${BOT_TOKEN}/sendDocument"); then
+              echo "::error title=Telegram upload::curl could not complete the Bot API request for $document."
+              return 1
+            fi
+            status=$(printf '%s\n' "$response" | tail -n 1)
+            printf '%s\n' "$response" | sed '$d' > "$RESPONSE_FILE"
+            python3 "$CHECK_SCRIPT" "$status" "$RESPONSE_FILE" "$document"
+          }
+
+          RUN_URL="https://github.com/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID"
+          if [ "$ZIP_SIZE" -le "$SINGLE_LIMIT" ]; then
+            send_document "$ZIP_PATH" \
+              "MockTester signed Android APK v$VERSION_CODE (ZIP; extract the APK to install). Full universal APK: $RUN_URL"
+          else
+            echo "::warning title=Telegram file-size limit::$ZIP_PATH is $ZIP_SIZE bytes, above the Bot API's 50 MB cap; sending it in parts."
+            split --bytes="$PART_SIZE" --numeric-suffixes=1 --suffix-length=2 \
+              --additional-suffix=.part "$ZIP_PATH" "$ZIP_PATH."
+            PARTS=("$ZIP_PATH".*.part)
+            if [ "${#PARTS[@]}" -lt 2 ] || [ ! -s "${PARTS[0]}" ]; then
+              echo "::error title=Telegram upload::Splitting $ZIP_PATH produced ${#PARTS[@]} usable parts."
+              exit 1
+            fi
+            TOTAL=${#PARTS[@]}
+            INDEX=0
+            for part in "${PARTS[@]}"; do
+              INDEX=$((INDEX + 1))
+              send_document "$part" \
+                "MockTester signed Android APK v$VERSION_CODE — part $INDEX of $TOTAL. Save every part, then rejoin them (cat MockTester_Android_${VERSION_CODE}.zip.part-* > MockTester_Android_${VERSION_CODE}.zip) and extract the APK. Full universal APK: $RUN_URL"
+            done
+          fi
