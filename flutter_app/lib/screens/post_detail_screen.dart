@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import '../services/community_safety_service.dart';
 import '../widgets/community_comments_sheet.dart';
 import '../widgets/community_post_card.dart';
 
@@ -29,6 +30,7 @@ class PostDetailScreen extends StatefulWidget {
   /// Feed ko batane ke liye ki is post ka data (jaise comments_count) badla hai,
   /// taaki wapas jaane par feed fresh dikhe.
   final VoidCallback? onPostChanged;
+  final ValueChanged<String>? onUserBlocked;
 
   const PostDetailScreen({
     super.key,
@@ -46,6 +48,7 @@ class PostDetailScreen extends StatefulWidget {
     this.onPostViewed,
     this.onPostDeleted,
     this.onPostChanged,
+    this.onUserBlocked,
   });
 
   @override
@@ -67,6 +70,15 @@ class _PostDetailScreenState extends State<PostDetailScreen> {
 
   int get _postId =>
       int.tryParse(widget.post['id']?.toString() ?? '') ?? 0;
+
+  void _handleBlockedUser(String handle) {
+    widget.onUserBlocked?.call(handle);
+    final postAuthor =
+        CommunitySafetyService.normalizeHandle((widget.post['creator_id'] ?? '').toString());
+    if (CommunitySafetyService.normalizeHandle(handle) == postAuthor && mounted) {
+      Navigator.of(context).pop();
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -131,6 +143,7 @@ class _PostDetailScreenState extends State<PostDetailScreen> {
                     widget.onPostDeleted?.call();
                     if (mounted) Navigator.of(context).pop();
                   },
+                  onUserBlocked: _handleBlockedUser,
                 ),
               ),
             ),
@@ -149,6 +162,7 @@ class _PostDetailScreenState extends State<PostDetailScreen> {
                   isDarkMode: isDark,
                   embedded: true,
                   isCurrentUserCreator: widget.isCurrentUserCreator,
+                  onUserBlocked: _handleBlockedUser,
                   buildRichTextContent: (text, {fontSize = 14.5}) =>
                       Text(text, style: TextStyle(fontSize: fontSize)),
                   onCommentAdded: () {
