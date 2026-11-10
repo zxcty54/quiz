@@ -226,17 +226,22 @@ jobs:
               return value.replace('%', '%25').replace('\r', '%0D').replace('\n', '%0A')
 
           log_path = pathlib.Path(sys.argv[1])
-          for raw in log_path.read_text(errors='replace').splitlines():
+          ansi = re.compile(r'\x1b\[[0-?]*[ -/]*[@-~]')
+          for raw_line in log_path.read_text(errors='replace').splitlines():
+              raw = ansi.sub('', raw_line)
               parts = raw.split(' • ')
-              if len(parts) < 4:
+              if not parts:
                   continue
               severity = parts[0].strip()
-              if severity not in {'warning', 'error'}:
+              if severity not in {'info', 'warning', 'error'}:
+                  continue
+              if len(parts) < 4:
+                  print(f'::notice title=Flutter analyzer::{escape(raw)}')
                   continue
               location = parts[-2].strip()
               match = re.match(r'^(.*):(\d+):(\d+)$', location)
               if not match:
-                  print(f'::error title=Flutter analyzer::{escape(raw)}')
+                  print(f'::{"error" if severity == "error" else "warning" if severity == "warning" else "notice"} title=Flutter analyzer::{escape(raw)}')
                   continue
               file_path, line, column = match.groups()
               if file_path.startswith('/'):
@@ -247,7 +252,7 @@ jobs:
               message = parts[1].strip()
               rule = parts[-1].strip()
               print(
-                  f'::{"error" if severity == "error" else "warning"} file={escape(file_path)},line={line},col={column},'
+                  f'::{"error" if severity == "error" else "warning" if severity == "warning" else "notice"} file={escape(file_path)},line={line},col={column},'
                   f'title=Flutter analyzer ({severity})::{escape(message)} [{escape(rule)}]'
               )
           PY_ANALYZER
