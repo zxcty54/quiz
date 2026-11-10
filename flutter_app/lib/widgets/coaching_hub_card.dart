@@ -122,7 +122,7 @@ class CoachingHubCardState extends State<CoachingHubCard> {
                 style: TextStyle(color: textColor, fontWeight: FontWeight.bold),
                 decoration: InputDecoration(
                   hintText: 'e.g. PATNA100',
-                  hintStyle: TextStyle(color: textMuted.withOpacity(0.6), fontSize: 12),
+                  hintStyle: TextStyle(color: textMuted.withValues(alpha: 0.6), fontSize: 12),
                   filled: true,
                   fillColor: inputBg,
                   border: OutlineInputBorder(borderRadius: BorderRadius.circular(10), borderSide: BorderSide.none),
@@ -232,12 +232,12 @@ class CoachingHubCardState extends State<CoachingHubCard> {
           color: cardBg,
           borderRadius: BorderRadius.circular(22),
           border: Border.all(
-            color: const Color(0xFF10B981).withOpacity(isDark ? 0.4 : 0.6),
+            color: const Color(0xFF10B981).withValues(alpha: isDark ? 0.4 : 0.6),
             width: 1.2,
           ),
           boxShadow: [
             BoxShadow(
-              color: Colors.black.withOpacity(isDark ? 0.4 : 0.05),
+              color: Colors.black.withValues(alpha: isDark ? 0.4 : 0.05),
               blurRadius: 16,
               offset: const Offset(0, 4),
             ),
@@ -262,7 +262,7 @@ class CoachingHubCardState extends State<CoachingHubCard> {
                     Container(
                       padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 3.5),
                       decoration: BoxDecoration(
-                        color: Colors.white.withOpacity(0.18),
+                        color: Colors.white.withValues(alpha: 0.18),
                         borderRadius: BorderRadius.circular(6),
                       ),
                       child: const Row(
@@ -332,9 +332,9 @@ class CoachingHubCardState extends State<CoachingHubCard> {
                         Container(
                           padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 6),
                           decoration: BoxDecoration(
-                            color: const Color(0xFF2563EB).withOpacity(0.1),
+                            color: const Color(0xFF2563EB).withValues(alpha: 0.1),
                             borderRadius: BorderRadius.circular(8),
-                            border: Border.all(color: const Color(0xFF2563EB).withOpacity(0.25)),
+                            border: Border.all(color: const Color(0xFF2563EB).withValues(alpha: 0.25)),
                           ),
                           child: Column(
                             children: [
@@ -425,7 +425,7 @@ class CoachingHubCardState extends State<CoachingHubCard> {
         border: Border.all(color: cardBorder, width: 1.2),
         boxShadow: [
           BoxShadow(
-            color: Colors.black.withOpacity(isDark ? 0.35 : 0.05),
+            color: Colors.black.withValues(alpha: isDark ? 0.35 : 0.05),
             blurRadius: 16,
             offset: const Offset(0, 4),
           ),
@@ -454,7 +454,7 @@ class CoachingHubCardState extends State<CoachingHubCard> {
                     Container(
                       padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 3.5),
                       decoration: BoxDecoration(
-                        color: Colors.white.withOpacity(0.18),
+                        color: Colors.white.withValues(alpha: 0.18),
                         borderRadius: BorderRadius.circular(20),
                         border: Border.all(color: Colors.white24),
                       ),
@@ -474,7 +474,7 @@ class CoachingHubCardState extends State<CoachingHubCard> {
                     Container(
                       padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 3),
                       decoration: BoxDecoration(
-                        color: const Color(0xFF10B981).withOpacity(0.2),
+                        color: const Color(0xFF10B981).withValues(alpha: 0.2),
                         borderRadius: BorderRadius.circular(6),
                       ),
                       child: const Text(
@@ -499,7 +499,7 @@ class CoachingHubCardState extends State<CoachingHubCard> {
                 Text(
                   'Connecting 38 districts: Experience institute-grade CBT assessments and classroom materials wherever you are.',
                   style: TextStyle(
-                    color: Colors.white.withOpacity(0.88),
+                    color: Colors.white.withValues(alpha: 0.88),
                     fontSize: 11.5,
                     height: 1.45,
                   ),
