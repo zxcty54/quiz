@@ -24,9 +24,10 @@ class AccountDeletionService {
   AccountDeletionService._();
 
   /// Web page offering the same deletion. Play asks for a link next to the
-  /// in-app action; point this at a dedicated deletion page when one exists.
+  /// in-app action, so this opens the deletion section of the privacy policy
+  /// (anchor `#deletion`) rather than the top of the page.
   static const String webDeletionUrl =
-      'https://www.mocktester.online/p/privacy.html';
+      'https://www.mocktester.online/p/privacy.html#deletion';
 
   /// Rows that are cleared, grouped by the identity that owns them.
   static const List<String> _userIdTables = <String>[
@@ -160,6 +161,7 @@ class AccountDeletionService {
 
     final cleared = <String>[];
     final failed = <String>[];
+    final retained = <String>[];
 
     Future<void> clear(String table, String column, String value) async {
       final label = '$table.$column';
@@ -172,8 +174,13 @@ class AccountDeletionService {
         final notDeployed = message.contains('schema cache') ||
             message.contains('Could not find the table') ||
             message.contains('42P01');
+        final writeOnly =
+            message.contains('permission denied') || message.contains('42501');
         if (notDeployed) {
           debugPrint('Account deletion: $label is not deployed yet');
+        } else if (writeOnly) {
+          debugPrint('Account deletion: $label is write-only for clients');
+          retained.add(label);
         } else {
           debugPrint('Account deletion: $label failed: $error');
           failed.add(label);
@@ -203,6 +210,7 @@ class AccountDeletionService {
       identities: identities.toList()..sort(),
       cleared: cleared,
       failed: failed,
+      retained: retained,
       localCleared: localCleared,
     );
   }
@@ -344,12 +352,14 @@ class AccountDeletionResult {
     required this.identities,
     required this.cleared,
     required this.failed,
+    required this.retained,
     required this.localCleared,
   });
 
   final List<String> identities;
   final List<String> cleared;
   final List<String> failed;
+  final List<String> retained;
   final bool localCleared;
 
   String get summary {
@@ -360,6 +370,14 @@ class AccountDeletionResult {
       buffer.write('Erased the data linked to ${identities.join(', ')}.');
     }
     buffer.write(' ${cleared.length} server collections cleared.');
+    if (retained.isNotEmpty) {
+      buffer.write(
+        ' Kept because the app is not allowed to erase it: '
+        '${retained.join(', ')}. That is the moderation report queue, which a '
+        'person can file but not delete. Write to support and we will remove '
+        'those records for you.',
+      );
+    }
     if (failed.isNotEmpty) {
       buffer.write(
         ' Could not reach: ${failed.join(', ')}. That happens when the device '
