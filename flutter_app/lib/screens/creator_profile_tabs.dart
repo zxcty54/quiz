@@ -152,7 +152,7 @@ class CreatorBatchesTab extends StatelessWidget {
                 border: Border.all(color: dividerColor, width: 1),
                 boxShadow: [
                   BoxShadow(
-                    color: Colors.black.withOpacity(isDarkMode ? 0.2 : 0.04),
+                    color: Colors.black.withValues(alpha: isDarkMode ? 0.2 : 0.04),
                     blurRadius: 6,
                     offset: const Offset(0, 2),
                   ),
@@ -177,8 +177,8 @@ class CreatorBatchesTab extends StatelessWidget {
                         padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 3.5),
                         decoration: BoxDecoration(
                           color: isUnlocked
-                              ? const Color(0xFF16A34A).withOpacity(0.12)
-                              : Colors.redAccent.withOpacity(0.12),
+                              ? const Color(0xFF16A34A).withValues(alpha: 0.12)
+                              : Colors.redAccent.withValues(alpha: 0.12),
                           borderRadius: BorderRadius.circular(6),
                         ),
                         child: Row(
@@ -225,9 +225,9 @@ class CreatorBatchesTab extends StatelessWidget {
                       Container(
                         padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 3.5),
                         decoration: BoxDecoration(
-                          color: _primaryBlue.withOpacity(0.08),
+                          color: _primaryBlue.withValues(alpha: 0.08),
                           borderRadius: BorderRadius.circular(6),
-                          border: Border.all(color: _primaryBlue.withOpacity(0.25), width: 0.8),
+                          border: Border.all(color: _primaryBlue.withValues(alpha: 0.25), width: 0.8),
                         ),
                         child: Row(
                           mainAxisSize: MainAxisSize.min,
@@ -246,9 +246,9 @@ class CreatorBatchesTab extends StatelessWidget {
                       Container(
                         padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 3.5),
                         decoration: BoxDecoration(
-                          color: const Color(0xFF16A34A).withOpacity(0.08),
+                          color: const Color(0xFF16A34A).withValues(alpha: 0.08),
                           borderRadius: BorderRadius.circular(6),
-                          border: Border.all(color: const Color(0xFF16A34A).withOpacity(0.25), width: 0.8),
+                          border: Border.all(color: const Color(0xFF16A34A).withValues(alpha: 0.25), width: 0.8),
                         ),
                         child: Row(
                           mainAxisSize: MainAxisSize.min,
@@ -268,9 +268,9 @@ class CreatorBatchesTab extends StatelessWidget {
                         Container(
                           padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 3.5),
                           decoration: BoxDecoration(
-                            color: const Color(0xFFD97706).withOpacity(0.08),
+                            color: const Color(0xFFD97706).withValues(alpha: 0.08),
                             borderRadius: BorderRadius.circular(6),
-                            border: Border.all(color: const Color(0xFFD97706).withOpacity(0.25), width: 0.8),
+                            border: Border.all(color: const Color(0xFFD97706).withValues(alpha: 0.25), width: 0.8),
                           ),
                           child: Row(
                             mainAxisSize: MainAxisSize.min,
@@ -423,7 +423,7 @@ class CreatorFreeMocksTab extends StatelessWidget {
                   Container(
                     padding: const EdgeInsets.symmetric(horizontal: 7, vertical: 2),
                     decoration: BoxDecoration(
-                      color: _primaryBlue.withOpacity(0.08),
+                      color: _primaryBlue.withValues(alpha: 0.08),
                       borderRadius: BorderRadius.circular(4),
                     ),
                     child: Text(
@@ -506,7 +506,7 @@ class CreatorWallOfFameTab extends StatelessWidget {
               Container(
                 padding: const EdgeInsets.all(16),
                 decoration: BoxDecoration(
-                  color: const Color(0xFFD97706).withOpacity(0.1),
+                  color: const Color(0xFFD97706).withValues(alpha: 0.1),
                   shape: BoxShape.circle,
                 ),
                 child: const Icon(Icons.military_tech_rounded, size: 42, color: Color(0xFFD97706)),
@@ -555,7 +555,7 @@ class CreatorWallOfFameTab extends StatelessWidget {
             ),
             boxShadow: [
               BoxShadow(
-                color: Colors.black.withOpacity(isDarkMode ? 0.25 : 0.04),
+                color: Colors.black.withValues(alpha: isDarkMode ? 0.25 : 0.04),
                 blurRadius: 8,
                 offset: const Offset(0, 2),
               ),
@@ -573,11 +573,11 @@ class CreatorWallOfFameTab extends StatelessWidget {
                       padding: const EdgeInsets.all(2),
                       decoration: BoxDecoration(
                         shape: BoxShape.circle,
-                        border: Border.all(color: _primaryBlue.withOpacity(0.35), width: 1.5),
+                        border: Border.all(color: _primaryBlue.withValues(alpha: 0.35), width: 1.5),
                       ),
                       child: CircleAvatar(
                         radius: 26,
-                        backgroundColor: _primaryBlue.withOpacity(0.1),
+                        backgroundColor: _primaryBlue.withValues(alpha: 0.1),
                         backgroundImage: photo.isNotEmpty ? NetworkImage(photo) : null,
                         child: photo.isEmpty
                             ? Text(
@@ -633,9 +633,9 @@ class CreatorWallOfFameTab extends StatelessWidget {
                       Container(
                         padding: const EdgeInsets.symmetric(horizontal: 9, vertical: 4),
                         decoration: BoxDecoration(
-                          color: const Color(0xFF16A34A).withOpacity(0.12),
+                          color: const Color(0xFF16A34A).withValues(alpha: 0.12),
                           borderRadius: BorderRadius.circular(6),
-                          border: Border.all(color: const Color(0xFF16A34A).withOpacity(0.25), width: 0.8),
+                          border: Border.all(color: const Color(0xFF16A34A).withValues(alpha: 0.25), width: 0.8),
                         ),
                         child: Text(
                           exam.toUpperCase(),
@@ -658,7 +658,7 @@ class CreatorWallOfFameTab extends StatelessWidget {
                       color: isDarkMode ? const Color(0xFF0F172A) : const Color(0xFFF8FAFC),
                       borderRadius: BorderRadius.circular(8),
                       border: Border.all(
-                        color: dividerColor.withOpacity(0.6),
+                        color: dividerColor.withValues(alpha: 0.6),
                         width: 0.8,
                       ),
                     ),
@@ -770,7 +770,7 @@ class CreatorAboutCampusTab extends StatelessWidget {
                         children: [
                           CircleAvatar(
                             radius: 24,
-                            backgroundColor: _primaryBlue.withOpacity(0.12),
+                            backgroundColor: _primaryBlue.withValues(alpha: 0.12),
                             backgroundImage: photo.isNotEmpty ? NetworkImage(photo) : null,
                             child: photo.isEmpty
                                 ? Text(
@@ -822,7 +822,7 @@ class CreatorAboutCampusTab extends StatelessWidget {
                         fit: BoxFit.cover,
                         errorBuilder: (_, __, ___) => Container(
                           width: 180,
-                          color: Colors.grey.withOpacity(0.1),
+                          color: Colors.grey.withValues(alpha: 0.1),
                           child: const Icon(Icons.image_not_supported_outlined, color: Colors.grey),
                         ),
                       ),
