@@ -231,6 +231,10 @@ jobs:
           flutter analyze --no-pub --no-fatal-infos --fatal-warnings 2>&1 | tee "$analysis_log"
           analyze_status=${PIPESTATUS[0]}
           set -e
+          # Warnings and errors keep their per-line annotations (they are few and
+          # they fail the build). Infos are packed into a handful of chunked
+          # annotations instead: GitHub publishes at most ten annotations per
+          # level, which silently hid all but ten of several hundred infos.
           python3 - "$analysis_log" <<'PY_ANALYZER'
           import pathlib, re, sys
 
@@ -239,6 +243,7 @@ jobs:
 
           log_path = pathlib.Path(sys.argv[1])
           ansi = re.compile(r'\x1b\[[0-?]*[ -/]*[@-~]')
+          infos = []
           for raw_line in log_path.read_text(errors='replace').splitlines():
               raw = ansi.sub('', raw_line)
               parts = raw.split(' • ')
@@ -247,13 +252,19 @@ jobs:
               severity = parts[0].strip()
               if severity not in {'info', 'warning', 'error'}:
                   continue
+              if severity == 'info':
+                  if len(parts) >= 4:
+                      infos.append(f'{parts[-2].strip()} [{parts[-1].strip()}] {parts[1].strip()}')
+                  else:
+                      infos.append(raw.strip())
+                  continue
               if len(parts) < 4:
-                  print(f'::notice title=Flutter analyzer::{escape(raw)}')
+                  print(f'::{"error" if severity == "error" else "warning"} title=Flutter analyzer::{escape(raw)}')
                   continue
               location = parts[-2].strip()
               match = re.match(r'^(.*):(\d+):(\d+)$', location)
               if not match:
-                  print(f'::{"error" if severity == "error" else "warning" if severity == "warning" else "notice"} title=Flutter analyzer::{escape(raw)}')
+                  print(f'::{"error" if severity == "error" else "warning"} title=Flutter analyzer::{escape(raw)}')
                   continue
               file_path, line, column = match.groups()
               if file_path.startswith('/'):
@@ -264,9 +275,23 @@ jobs:
               message = parts[1].strip()
               rule = parts[-1].strip()
               print(
-                  f'::{"error" if severity == "error" else "warning" if severity == "warning" else "notice"} file={escape(file_path)},line={line},col={column},'
+                  f'::{"error" if severity == "error" else "warning"} file={escape(file_path)},line={line},col={column},'
                   f'title=Flutter analyzer ({severity})::{escape(message)} [{escape(rule)}]'
               )
+
+          print(f'analyzer info diagnostics: {len(infos)}')
+          if infos:
+              chunks = [[] for _ in range(8)]
+              for index, item in enumerate(infos):
+                  chunks[index % 8].append(item)
+              chunks = [chunk for chunk in chunks if chunk]
+              total = len(chunks)
+              for number, chunk in enumerate(chunks, start=1):
+                  body = '\n'.join(chunk)
+                  while len(body) > 60000:
+                      body = '\n'.join(chunk[: len(chunk) // 2])
+                      chunk = chunk[: len(chunk) // 2]
+                  print(f'::notice title=Flutter analyzer infos ({number}/{total})::{escape(body)}')
           PY_ANALYZER
           if [ "$analyze_status" -ne 0 ]; then
             echo "::error title=Flutter analyzer::flutter analyze exited with status $analyze_status."
