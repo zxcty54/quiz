@@ -288,6 +288,7 @@ jobs:
             echo "::error title=Flutter clean::flutter clean failed with status $clean_status."
             exit "$clean_status"
           fi
+          flutter pub get
 
           build_log="$RUNNER_TEMP/flutter-apk-build.log"
           set +e
