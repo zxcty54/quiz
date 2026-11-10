@@ -66,8 +66,8 @@ class CreatorMockBuilderScreen extends StatefulWidget {
 
 class _CreatorMockBuilderScreenState extends State<CreatorMockBuilderScreen> {
   final _titleCtrl = TextEditingController(text: 'Special Mock Drill');
-  String _selectedSubject = 'general';
-  int _durationMins = 15;
+  final String _selectedSubject = 'general';
+  final int _durationMins = 15;
   bool _isPublishing = false;
 
   String _publishTarget = 'PUBLIC';
@@ -365,8 +365,11 @@ class _CreatorMockBuilderScreenState extends State<CreatorMockBuilderScreen> {
       final optC = (mD != null) ? block.substring(mC!.end, mD.start).replaceAll('\n', ' ').trim() : '';
 
       int dEnd = block.length;
-      if (mAns != null && mAns.start > (mD?.end ?? 0)) dEnd = mAns.start;
-      else if (mExp != null && mExp.start > (mD?.end ?? 0)) dEnd = mExp.start;
+      if (mAns != null && mAns.start > (mD?.end ?? 0)) {
+        dEnd = mAns.start;
+      } else if (mExp != null && mExp.start > (mD?.end ?? 0)) {
+        dEnd = mExp.start;
+      }
 
       final optD = (mD != null) ? block.substring(mD.end, dEnd).replaceAll('\n', ' ').trim() : '';
 
@@ -456,7 +459,7 @@ class _CreatorMockBuilderScreenState extends State<CreatorMockBuilderScreen> {
             _activeJumpIndex = _questionCards.length - 1;
           });
 
-          if (context.mounted) {
+          if (mounted && modalCtx.mounted) {
             Navigator.pop(modalCtx);
             ScaffoldMessenger.of(context).showSnackBar(
               SnackBar(content: Text('✨ AI added ${converted.length} Questions successfully!'), backgroundColor: const Color(0xFF16A34A)),
@@ -614,6 +617,8 @@ class _CreatorMockBuilderScreenState extends State<CreatorMockBuilderScreen> {
                                 ),
                               );
 
+                              if (!ctx.mounted) return;
+
                               if (useAi == true) {
                                 triggerAiProcessing(ctx, setModalState);
                                 return;
@@ -630,13 +635,17 @@ class _CreatorMockBuilderScreenState extends State<CreatorMockBuilderScreen> {
                                 _questionCards.addAll(localParsed);
                                 _activeJumpIndex = _questionCards.length - 1;
                               });
-                              Navigator.pop(ctx);
-                              ScaffoldMessenger.of(context).showSnackBar(
-                                SnackBar(
-                                  content: Text('✅ Added ${localParsed.length} Questions successfully!'),
-                                  backgroundColor: const Color(0xFF16A34A),
-                                ),
-                              );
+                              if (ctx.mounted) {
+                                Navigator.pop(ctx);
+                              }
+                              if (mounted) {
+                                ScaffoldMessenger.of(context).showSnackBar(
+                                  SnackBar(
+                                    content: Text('✅ Added ${localParsed.length} Questions successfully!'),
+                                    backgroundColor: const Color(0xFF16A34A),
+                                  ),
+                                );
+                              }
                             } else {
                               _showDebugPopup(
                                 'Local Parser Zero Output',
@@ -1109,7 +1118,7 @@ class _CreatorMockBuilderScreenState extends State<CreatorMockBuilderScreen> {
                     const LinearProgressIndicator()
                   else
                     DropdownButtonFormField<String>(
-                      value: _selectedBatchId,
+                      initialValue: _selectedBatchId,
                       decoration: const InputDecoration(labelText: 'Select Target Batch', border: OutlineInputBorder(), isDense: true),
                       items: _myBatches.map((b) => DropdownMenuItem<String>(value: b['id'].toString(), child: Text('${b['batch_name']} (${b['status']})'))).toList(),
                       onChanged: (val) => setState(() => _selectedBatchId = val),
