@@ -1102,7 +1102,9 @@ class _EventCommunityUpdatesWidgetState
       });
 
       _controller.clear();
-      FocusScope.of(context).unfocus();
+      if (mounted) {
+        FocusScope.of(context).unfocus();
+      }
       await _fetchUpdates();
     } catch (e) {
       debugPrint("Post tip error: $e");
