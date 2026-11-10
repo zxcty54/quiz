@@ -1,6 +1,8 @@
 -- Device-based UGC/AI moderation reports used by the Flutter app.
--- Apply this migration in Supabase before releasing the app; it is not applied
--- to the production project by this repository change.
+-- Applied to the production project (tglidhzsjxfppyrmlwxf) on 2026-10-12 as
+-- migration "add_moderation_reports" (recorded version 20261110135715). The
+-- statements are idempotent, so re-applying them with `supabase db push` is
+-- safe even though the recorded version differs from this file name.
 
 CREATE TABLE IF NOT EXISTS public.content_moderation_reports (
   id              bigint GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
