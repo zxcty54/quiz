@@ -1,4 +1,4 @@
-name: Build MockTester Signed Android APK
+name: Build MockTester Signed Android APK + Play AAB
 
 on:
   push:
@@ -339,6 +339,69 @@ jobs:
           fi
           echo "APK_PATH=$APK" >> "$GITHUB_ENV"
 
+      # Google Play accepts an Android App Bundle for new apps and updates; the
+      # APK above is only for direct/sideload distribution and Telegram.
+      - name: Build signed Android App Bundle
+        working-directory: flutter_app
+        env:
+          KEYSTORE_PATH: ${{ runner.temp }}/play-release/upload-key.jks
+          KEYSTORE_PASSWORD: ${{ secrets.KEYSTORE_PASSWORD }}
+          KEY_ALIAS: ${{ secrets.KEY_ALIAS }}
+          KEY_PASSWORD: ${{ secrets.KEY_PASSWORD }}
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_ANON_KEY: ${{ secrets.SUPABASE_ANON_KEY }}
+          FIREBASE_CONFIGURED: ${{ steps.firebase.outputs.configured }}
+          VERSION_CODE: ${{ steps.release.outputs.version_code }}
+        run: |
+          set -euo pipefail
+          bundle_log="$RUNNER_TEMP/flutter-aab-build.log"
+          set +e
+          flutter build appbundle --release --no-pub \
+            --build-number="$VERSION_CODE" \
+            --dart-define="SUPABASE_URL=$SUPABASE_URL" \
+            --dart-define="SUPABASE_ANON_KEY=$SUPABASE_ANON_KEY" \
+            --dart-define="FIREBASE_CONFIGURED=$FIREBASE_CONFIGURED" 2>&1 | tee "$bundle_log"
+          bundle_status=${PIPESTATUS[0]}
+          set -e
+          if [ "$bundle_status" -ne 0 ]; then
+            python3 - "$bundle_log" <<'PY_BUNDLE_ERROR'
+          import os, pathlib, sys
+          text = '\n'.join(pathlib.Path(sys.argv[1]).read_text(errors='replace').splitlines()[-60:])
+          for name in ('SUPABASE_URL', 'SUPABASE_ANON_KEY', 'KEYSTORE_PASSWORD', 'KEY_PASSWORD'):
+              secret = os.environ.get(name, '')
+              if secret:
+                  text = text.replace(secret, '***')
+          escaped = text[-8000:].replace('%', '%25').replace('\r', '%0D').replace('\n', '%0A')
+          print(f'::error title=Android App Bundle build failed::{escaped}')
+          PY_BUNDLE_ERROR
+            exit "$bundle_status"
+          fi
+
+          AAB="build/app/outputs/bundle/release/app-release.aab"
+          if [ ! -s "$AAB" ]; then
+            echo "::error title=AAB output::Flutter reported success but the bundle is missing or empty: $AAB"
+            exit 1
+          fi
+          # apksigner does not read .aab files; the bundle carries JAR signatures.
+          if ! jarsigner -verify -verbose:summary "$AAB" | tail -n 5; then
+            echo "::error title=AAB signing verification::jarsigner could not verify the release bundle."
+            exit 1
+          fi
+          if ! jarsigner -verify "$AAB" >/dev/null 2>&1; then
+            echo "::error title=AAB signing verification::jarsigner rejected the release bundle."
+            exit 1
+          fi
+          echo "AAB: $(stat -c%s "$AAB") bytes"
+          echo "AAB_PATH=$AAB" >> "$GITHUB_ENV"
+
+      - name: Upload signed AAB artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: MockTester_Play_AAB_${{ steps.release.outputs.version_code }}
+          path: flutter_app/build/app/outputs/bundle/release/app-release.aab
+          if-no-files-found: error
+          retention-days: 14
+
       - name: Upload signed APK artifact
         uses: actions/upload-artifact@v4
         with:
@@ -496,4 +559,21 @@ jobs:
               send_document "$part" \
                 "MockTester signed Android APK v$VERSION_CODE — part $INDEX of $TOTAL. Save every part, then rejoin them (cat MockTester_Android_${VERSION_CODE}.zip.part-* > MockTester_Android_${VERSION_CODE}.zip) and extract the APK. Full universal APK: $RUN_URL"
             done
+          fi
+
+          # The Play bundle is sent separately so it can be taken straight from
+          # the chat into Play Console. It stays in the workflow artifacts when
+          # it is too large for the Bot API.
+          if [ -n "${AAB_PATH:-}" ] && [ -s "$AAB_PATH" ]; then
+            AAB_ZIP="$OUTPUT_DIR/MockTester_Play_AAB_${VERSION_CODE}.zip"
+            rm -f "$AAB_ZIP"
+            zip -9 -j "$AAB_ZIP" "$AAB_PATH"
+            AAB_ZIP_SIZE=$(stat -c%s "$AAB_ZIP")
+            echo "Telegram AAB archive: $AAB_ZIP ($AAB_ZIP_SIZE bytes)"
+            if [ "$AAB_ZIP_SIZE" -le "$SINGLE_LIMIT" ]; then
+              send_document "$AAB_ZIP" \
+                "MockTester Google Play App Bundle (AAB) v$VERSION_CODE — ZIP; extract the .aab and upload it in Play Console. $RUN_URL"
+            else
+              echo "::warning title=Telegram file-size limit::$AAB_ZIP is $AAB_ZIP_SIZE bytes, above the Bot API's 50 MB cap; download the AAB from the workflow artifacts instead."
+            fi
           fi
