@@ -92,7 +92,7 @@ void main() async {
 
   await Supabase.initialize(
     url: supabaseUrl,
-    anonKey: supabaseAnonKey,
+    publishableKey: supabaseAnonKey,
   );
 
   // 📱 3. SharedPreferences: Theme & Onboarding Check

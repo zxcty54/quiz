@@ -248,8 +248,8 @@ class _BatchClassroomScreenState extends State<BatchClassroomScreen>
                               borderRadius: BorderRadius.circular(14),
                               side: BorderSide(
                                 color: isCompleted
-                                    ? const Color(0xFF16A34A).withOpacity(0.3)
-                                    : (isInProgress ? Colors.amber.withOpacity(0.4) : Colors.grey.withOpacity(0.15)),
+                                    ? const Color(0xFF16A34A).withValues(alpha: 0.3)
+                                    : (isInProgress ? Colors.amber.withValues(alpha: 0.4) : Colors.grey.withValues(alpha: 0.15)),
                                 width: isInProgress || isCompleted ? 1.2 : 1,
                               ),
                             ),
@@ -266,8 +266,8 @@ class _BatchClassroomScreenState extends State<BatchClassroomScreen>
                                         padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 3),
                                         decoration: BoxDecoration(
                                           color: isCompleted
-                                              ? const Color(0xFF16A34A).withOpacity(0.12)
-                                              : (isInProgress ? Colors.amber.withOpacity(0.15) : const Color(0xFF2563EB).withOpacity(0.12)),
+                                              ? const Color(0xFF16A34A).withValues(alpha: 0.12)
+                                              : (isInProgress ? Colors.amber.withValues(alpha: 0.15) : const Color(0xFF2563EB).withValues(alpha: 0.12)),
                                           borderRadius: BorderRadius.circular(6),
                                         ),
                                         child: Text(
@@ -333,7 +333,7 @@ class _BatchClassroomScreenState extends State<BatchClassroomScreen>
                                       child: LinearProgressIndicator(
                                         value: progressFraction,
                                         minHeight: 5,
-                                        backgroundColor: Colors.grey.withOpacity(0.15),
+                                        backgroundColor: Colors.grey.withValues(alpha: 0.15),
                                         valueColor: const AlwaysStoppedAnimation<Color>(Colors.amber),
                                       ),
                                     ),
@@ -359,7 +359,7 @@ class _BatchClassroomScreenState extends State<BatchClassroomScreen>
                                       ),
                                       style: ElevatedButton.styleFrom(
                                         backgroundColor: isCompleted
-                                            ? const Color(0xFF16A34A).withOpacity(0.12)
+                                            ? const Color(0xFF16A34A).withValues(alpha: 0.12)
                                             : (isInProgress ? Colors.amber.shade700 : const Color(0xFF2563EB)),
                                         foregroundColor: isCompleted ? const Color(0xFF16A34A) : Colors.white,
                                         elevation: 0,

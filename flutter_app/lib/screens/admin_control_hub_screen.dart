@@ -99,7 +99,7 @@ class _AdminControlHubScreenState extends State<AdminControlHubScreen> with Sing
                             .maybeSingle();
 
                         if (res != null) {
-                          if (mounted) {
+                          if (mounted && ctx.mounted) {
                             Navigator.pop(ctx);
                             setState(() => _isAuthorized = true);
                             _loadAllAdminData();

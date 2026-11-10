@@ -17,10 +17,10 @@ class _AiDoubtScreenState extends State<AiDoubtScreen> {
   final ScrollController _scrollController = ScrollController();
   
   bool _isLoading = false;
-  String _activeEngine = "☁️ Cloud AI (question/context sent to AI service)";
+  final String _activeEngine = "☁️ Cloud AI (question/context sent to AI service)";
   bool _isConsentPending = false;
   String _retrievedContext = "";
-  List<Map<String, String>> _messages = [];
+  final List<Map<String, String>> _messages = [];
 
   // 🚀 Core Execution Pipeline (SQLite RAG + Inference)
   Future<void> _processQuery() async {
@@ -100,9 +100,9 @@ class _AiDoubtScreenState extends State<AiDoubtScreen> {
               margin: const EdgeInsets.all(8),
               padding: const EdgeInsets.all(8),
               decoration: BoxDecoration(
-                color: Colors.amber.withOpacity(0.12),
+                color: Colors.amber.withValues(alpha: 0.12),
                 borderRadius: BorderRadius.circular(8),
-                border: Border.all(color: Colors.amber.withOpacity(0.3)),
+                border: Border.all(color: Colors.amber.withValues(alpha: 0.3)),
               ),
               child: Text(
                 "📚 Context: ${_retrievedContext.substring(0, _retrievedContext.length > 180 ? 180 : _retrievedContext.length)}...",
@@ -169,7 +169,7 @@ class _AiDoubtScreenState extends State<AiDoubtScreen> {
             padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 8),
             decoration: BoxDecoration(
               color: Theme.of(context).cardColor,
-              border: Border(top: BorderSide(color: Colors.grey.withOpacity(0.2))),
+              border: Border(top: BorderSide(color: Colors.grey.withValues(alpha: 0.2))),
             ),
             child: Row(
               children: [
