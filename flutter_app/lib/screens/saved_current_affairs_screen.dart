@@ -381,8 +381,8 @@ class _SavedCurrentAffairsScreenState extends State<SavedCurrentAffairsScreen> {
                           padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 3),
                           decoration: BoxDecoration(
                             color: isBihar
-                                ? (isDark ? const Color(0xFFF59E0B).withOpacity(0.18) : const Color(0xFFFEF3C7))
-                                : (isDark ? const Color(0xFF2563EB).withOpacity(0.22) : const Color(0xFFE0E7FF)),
+                                ? (isDark ? const Color(0xFFF59E0B).withValues(alpha: 0.18) : const Color(0xFFFEF3C7))
+                                : (isDark ? const Color(0xFF2563EB).withValues(alpha: 0.22) : const Color(0xFFE0E7FF)),
                             borderRadius: BorderRadius.circular(6),
                           ),
                           child: Text(
