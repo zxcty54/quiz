@@ -167,7 +167,7 @@ class _BiharEventsCarouselWidgetState extends State<BiharEventsCarouselWidget>
             .select('id')
             .eq('event_id', eventId);
 
-        if (mounted && res is List) {
+        if (mounted) {
           setState(() {
             ev['going_count'] = res.length;
           });
@@ -910,7 +910,7 @@ class _EventGoingButtonState extends State<EventGoingButton> {
           .select('user_id')
           .eq('event_id', widget.eventId);
 
-      if (attendeesRes is List && mounted) {
+      if (mounted) {
         setState(() {
           _count = attendeesRes.length;
           _isGoing = attendeesRes.any((item) => item['user_id'] == _deviceId);
@@ -1076,7 +1076,7 @@ class _EventCommunityUpdatesWidgetState
           .order('created_at', ascending: false)
           .limit(10);
 
-      if (mounted && res is List) {
+      if (mounted) {
         setState(() {
           _messages = List<Map<String, dynamic>>.from(res);
         });
