@@ -1897,16 +1897,16 @@ class _SectionalCbtScreenState extends State<SectionalCbtScreen> {
   // Submit ke baad, record hone tak ki intezaar screen — peeche jaana band,
   // taaki aadha record karke student nikal na jaye
   Widget _buildSubmittingScreen() {
-    return PopScope(
+    return const PopScope(
       canPop: false,
       child: Scaffold(
         backgroundColor: Colors.white,
         body: Center(
           child: Padding(
-            padding: const EdgeInsets.all(32),
+            padding: EdgeInsets.all(32),
             child: Column(
               mainAxisSize: MainAxisSize.min,
-              children: const [
+              children: [
                 CircularProgressIndicator(
                   color: Color(0xFF2563EB),
                 ),
