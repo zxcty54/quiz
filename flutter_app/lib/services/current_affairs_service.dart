@@ -56,9 +56,11 @@ class CurrentAffairsService {
             qh: item['qh'] ?? '',
             oe: List<String>.from(item['oe'] ?? []),
             oh: List<String>.from(item['oh'] ?? []),
+            options: List<String>.from(item['oe'] ?? item['oh'] ?? []),
             answerIndex: item['a'] ?? 0,
-            ee: item['e'] ?? '',
-            eh: item['e'] ?? '',
+            explanation: item['e'] ?? item['ee'] ?? item['eh'] ?? '',
+            ee: item['ee'] ?? item['e'] ?? '',
+            eh: item['eh'] ?? item['e'] ?? '',
           );
         }).toList();
 
