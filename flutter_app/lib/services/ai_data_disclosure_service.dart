@@ -78,6 +78,7 @@ class AiDataDisclosureService {
     final isAccepted =
         prefs.getString(_acceptedVersionKey) == _disclosureVersion;
     if (!isAccepted) {
+      if (!context.mounted) return;
       await requireConsent(context);
       return;
     }
