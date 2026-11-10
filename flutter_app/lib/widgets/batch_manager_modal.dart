@@ -164,12 +164,12 @@ class _BatchManagerModalState extends State<BatchManagerModal> {
                 padding: const EdgeInsets.all(12),
                 decoration: BoxDecoration(
                   color: isHidden
-                      ? Colors.grey.withOpacity(0.1)
+                      ? Colors.grey.withValues(alpha: 0.1)
                       : (widget.isDarkMode
                           ? const Color(0xFF0F172A)
                           : const Color(0xFFF8FAFC)),
                   borderRadius: BorderRadius.circular(12),
-                  border: Border.all(color: Colors.grey.withOpacity(0.18)),
+                  border: Border.all(color: Colors.grey.withValues(alpha: 0.18)),
                 ),
                 child: Row(
                   children: [
