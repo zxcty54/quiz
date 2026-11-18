@@ -54,6 +54,39 @@ class ScienceStoryStatusStyle {
   }
 }
 
+const List<String> _monthNames = <String>[
+  'January',
+  'February',
+  'March',
+  'April',
+  'May',
+  'June',
+  'July',
+  'August',
+  'September',
+  'October',
+  'November',
+  'December',
+];
+
+String _monthName(int month) =>
+    (month >= 1 && month <= 12) ? _monthNames[month - 1] : 'Month $month';
+
+String _monthShort(int month) =>
+    (month >= 1 && month <= 12) ? _monthNames[month - 1].substring(0, 3) : '$month';
+
+/// Everything the list screen needs for one load: the month being read plus
+/// which months this build actually has.
+class _StoriesLoad {
+  const _StoriesLoad(this.month, this.bundled);
+
+  static const _StoriesLoad empty =
+      _StoriesLoad(ScienceStoryMonth.empty, <int>[]);
+
+  final ScienceStoryMonth month;
+  final List<int> bundled;
+}
+
 /// The whole bundled month, one row per day.
 class ScienceStoriesScreen extends StatefulWidget {
   final int month;
@@ -70,12 +103,41 @@ class ScienceStoriesScreen extends StatefulWidget {
 }
 
 class _ScienceStoriesScreenState extends State<ScienceStoriesScreen> {
-  late Future<ScienceStoryMonth> _future;
+  late int _month;
+  late Future<_StoriesLoad> _future;
 
   @override
   void initState() {
     super.initState();
-    _future = ScienceStoryService.loadMonth(widget.month);
+    _month = widget.month;
+    _future = _load(_month);
+  }
+
+  Future<_StoriesLoad> _load(int month) async {
+    final bundled = await ScienceStoryService.bundledMonths();
+    final data = await ScienceStoryService.loadMonth(month);
+    return _StoriesLoad(data, bundled);
+  }
+
+  /// Past and current months open freely. A month that has not started yet only
+  /// says when it unlocks, so tomorrow's story stays worth coming back for.
+  void _selectMonth(int month, bool locked) {
+    if (month == _month) return;
+    if (locked) {
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(
+          content: Text(
+            '${_monthName(month)} ki stories 1 ${_monthName(month)} ko khulengi.',
+          ),
+          duration: const Duration(seconds: 2),
+        ),
+      );
+      return;
+    }
+    setState(() {
+      _month = month;
+      _future = _load(month);
+    });
   }
 
   @override
@@ -100,13 +162,14 @@ class _ScienceStoriesScreenState extends State<ScienceStoriesScreen> {
           style: TextStyle(fontSize: 17, fontWeight: FontWeight.w900),
         ),
       ),
-      body: FutureBuilder<ScienceStoryMonth>(
+      body: FutureBuilder<_StoriesLoad>(
         future: _future,
         builder: (context, snapshot) {
           if (snapshot.connectionState != ConnectionState.done) {
             return const Center(child: CircularProgressIndicator());
           }
-          final month = snapshot.data ?? ScienceStoryMonth.empty;
+          final load = snapshot.data ?? _StoriesLoad.empty;
+          final month = load.month;
           if (month.isEmpty) {
             return Center(
               child: Padding(
@@ -128,6 +191,7 @@ class _ScienceStoriesScreenState extends State<ScienceStoriesScreen> {
           return ListView(
             padding: const EdgeInsets.fromLTRB(16, 4, 16, 28),
             children: <Widget>[
+              _monthSelector(load.bundled, cardBg, border, text, sub),
               _header(month, cardBg, border, text, sub),
               const SizedBox(height: 14),
               for (final story in month.stories)
@@ -138,6 +202,82 @@ class _ScienceStoriesScreenState extends State<ScienceStoriesScreen> {
             ],
           );
         },
+      ),
+    );
+  }
+
+  /// Month switcher. Only months bundled in this build are listed; the ones
+  /// that have not started yet carry a lock. Hidden while a single month ships.
+  Widget _monthSelector(
+    List<int> bundled,
+    Color cardBg,
+    Color border,
+    Color text,
+    Color sub,
+  ) {
+    if (bundled.length < 2) return const SizedBox.shrink();
+
+    final now = DateTime.now();
+    return Padding(
+      padding: const EdgeInsets.only(bottom: 12),
+      child: SizedBox(
+        height: 34,
+        child: ListView.separated(
+          scrollDirection: Axis.horizontal,
+          itemCount: bundled.length,
+          separatorBuilder: (context, index) => const SizedBox(width: 7),
+          itemBuilder: (context, index) {
+            final month = bundled[index];
+            final locked = ScienceStoryService.isLocked(month, now);
+            return _monthChip(
+              label: locked ? '\u{1F512} ${_monthShort(month)}' : _monthShort(month),
+              selected: month == _month,
+              locked: locked,
+              cardBg: cardBg,
+              border: border,
+              text: text,
+              sub: sub,
+              onTap: () => _selectMonth(month, locked),
+            );
+          },
+        ),
+      ),
+    );
+  }
+
+  Widget _monthChip({
+    required String label,
+    required bool selected,
+    required bool locked,
+    required Color cardBg,
+    required Color border,
+    required Color text,
+    required Color sub,
+    required VoidCallback onTap,
+  }) {
+    const Color accent = Color(0xFF4338CA);
+    return Material(
+      color: selected ? accent : cardBg,
+      borderRadius: BorderRadius.circular(11),
+      child: InkWell(
+        borderRadius: BorderRadius.circular(11),
+        onTap: onTap,
+        child: Container(
+          alignment: Alignment.center,
+          padding: const EdgeInsets.symmetric(horizontal: 13),
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(11),
+            border: Border.all(color: selected ? accent : border),
+          ),
+          child: Text(
+            label,
+            style: TextStyle(
+              fontSize: 11.5,
+              fontWeight: FontWeight.w800,
+              color: selected ? Colors.white : (locked ? sub : text),
+            ),
+          ),
+        ),
       ),
     );
   }
@@ -176,7 +316,8 @@ class _ScienceStoriesScreenState extends State<ScienceStoriesScreen> {
           ),
           const SizedBox(height: 5),
           Text(
-            '${month.stories.length} din  •  ${month.language.isEmpty ? 'Easy Hinglish' : month.language}',
+            '${_monthName(month.month)}  •  ${month.stories.length} din  •  '
+            '${month.language.isEmpty ? 'Easy Hinglish' : month.language}',
             style: TextStyle(
               fontSize: 11.5,
               fontWeight: FontWeight.w700,

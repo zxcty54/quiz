@@ -65,10 +65,35 @@ class ScienceStoryService {
   /// The month that is always bundled and therefore always available.
   static const int fallbackMonth = 1;
 
+  /// The asset naming covers a full year, one file per month.
+  static const int monthsInYear = 12;
+
   static final Map<int, ScienceStoryMonth> _cache = <int, ScienceStoryMonth>{};
+
+  static List<int>? _bundledMonths;
 
   static String assetForMonth(int month) =>
       '$assetFolder/science_stories_month_${month.toString().padLeft(2, '0')}.json';
+
+  /// Which months actually ship inside this build, probed once by reading each
+  /// asset. A month that is not bundled comes back empty and is simply absent,
+  /// so the UI never offers - or promises - a month the app does not have.
+  static Future<List<int>> bundledMonths() async {
+    final cached = _bundledMonths;
+    if (cached != null) return cached;
+
+    final found = <int>[];
+    for (var month = 1; month <= monthsInYear; month++) {
+      final probe = await _read(assetForMonth(month), month);
+      if (!probe.isEmpty) found.add(month);
+    }
+    _bundledMonths = found;
+    return found;
+  }
+
+  /// True while [month] has not started yet. The file may already be bundled,
+  /// but the story stays locked so the daily card keeps its pull.
+  static bool isLocked(int month, DateTime now) => month > now.month;
 
   /// Stories for [month], falling back to [fallbackMonth] when that month is
   /// not part of the build yet. Results are cached per requested month.
