@@ -10,6 +10,7 @@ import '../../widgets/know_your_bihar_widget.dart';
 import '../../widgets/district_top_leaderboard_widget.dart';
 import '../../widgets/challenge_card_widget.dart';
 import '../../widgets/due_revision_card.dart';
+import '../../widgets/science_story_teaser_card.dart';
 import '../../widgets/home_greeting_header.dart';
 import '../../widgets/promo_banner_carousel.dart';
 
@@ -106,6 +107,10 @@ class _HomeTabState extends State<HomeTab> {
 
             // 2. CONTINUE LEARNING
             _buildLearnPreviewCard(context),
+            const SizedBox(height: 18),
+
+            // 2B. AAJ KI SCIENCE STORY (bundled "365 Din" collection)
+            ScienceStoryTeaserCard(isDarkMode: widget.isDarkMode),
             const SizedBox(height: 18),
 
             // 3. MY COACHING / DISCOVER COACHING
