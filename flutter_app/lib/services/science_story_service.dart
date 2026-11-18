@@ -55,8 +55,13 @@ class ScienceStoryPick {
 /// The library is offline by design: every month is a JSON asset, so the home
 /// card works on the first launch with no network at all. A month that has not
 /// been bundled yet falls back to month 01, and because month 01 covers days
-/// 1-31 the card always has something to show. Adding month 02 later is just a
+/// 1-31 the card always has something to show. Adding another month is just a
 /// new asset file - `assets/data/` is already declared in pubspec.yaml.
+///
+/// Stories are numbered 1-365 straight through the year (month 02 starts at 32,
+/// month 12 at 335). Each file's `coverage.start_day` is used to shift that
+/// into a day of the month for display, while the original number is kept for
+/// matching against the calendar - see [contentDayOfYear].
 class ScienceStoryService {
   ScienceStoryService._();
 
@@ -125,6 +130,18 @@ class ScienceStoryService {
     return result;
   }
 
+  /// The pack is a plain 365-day calendar, so a leap year has one day the
+  /// content does not cover. 29 February repeats day 59 instead of opening
+  /// 1 March early, and from 1 March the real day-of-year is shifted back by
+  /// one to line up with the pack again.
+  static int contentDayOfYear(DateTime date) {
+    final dayOfYear = date.difference(DateTime(date.year)).inDays + 1;
+    final leap =
+        (date.year % 4 == 0 && date.year % 100 != 0) || date.year % 400 == 0;
+    if (!leap || dayOfYear < 60) return dayOfYear;
+    return dayOfYear == 60 ? 59 : dayOfYear - 1;
+  }
+
   /// The story for [date]. Falls back to a rotating pick when the month file
   /// has no entry for that exact day, so the card never renders empty.
   static Future<ScienceStoryPick?> pickForDate(DateTime date) async {
@@ -132,20 +149,48 @@ class ScienceStoryService {
     final usable = month.stories.where((story) => story.isUsable).toList();
     if (usable.isEmpty) return null;
 
+    final int target = contentDayOfYear(date);
     ScienceStory? match;
     for (final story in usable) {
-      if (story.day == date.day) {
+      if (story.yearDay == target) {
         match = story;
         break;
       }
     }
-    final chosen = match ?? usable[(date.day - 1) % usable.length];
+    final chosen = match ?? usable[(target - 1) % usable.length];
 
     return ScienceStoryPick(
       story: chosen,
       month: month.month,
       usedFallback: month.usedFallback,
     );
+  }
+
+  /// How far a month's numbering sits above the day of the month. Taken from
+  /// `coverage.start_day` when that agrees with the actual day values, and from
+  /// the lowest day otherwise, so a file with no coverage block still works.
+  static int _dayOffset(
+    Map<String, dynamic> decoded,
+    List<Map<String, dynamic>> items,
+  ) {
+    final rawDays = items
+        .map((item) => ScienceStory.rawDay(item['day']))
+        .where((day) => day > 0)
+        .toList();
+    if (rawDays.isEmpty) return 0;
+
+    final coverage = decoded['coverage'];
+    if (coverage is Map) {
+      final start = coverage['start_day'];
+      if (start is int && start > 1 && rawDays.every((day) => day >= start)) {
+        return start - 1;
+      }
+    }
+    var lowest = rawDays.first;
+    for (final day in rawDays) {
+      if (day < lowest) lowest = day;
+    }
+    return lowest > 1 ? lowest - 1 : 0;
   }
 
   static Future<ScienceStoryMonth> _read(String asset, int month) async {
@@ -158,15 +203,18 @@ class ScienceStoryService {
       }
 
       final topics = decoded['topics'];
-      final stories = topics is List
+      final items = topics is List
           ? topics
               .whereType<Map>()
-              .map((item) => ScienceStory.fromJson(
-                    item.map((key, value) => MapEntry(key.toString(), value)),
-                  ))
-              .where((story) => story.isUsable)
+              .map((item) =>
+                  item.map((key, value) => MapEntry(key.toString(), value)))
               .toList()
-          : <ScienceStory>[];
+          : <Map<String, dynamic>>[];
+      final dayOffset = _dayOffset(decoded, items);
+      final stories = items
+          .map((item) => ScienceStory.fromJson(item, dayOffset: dayOffset))
+          .where((story) => story.isUsable)
+          .toList();
 
       return ScienceStoryMonth(
         requestedMonth: month,

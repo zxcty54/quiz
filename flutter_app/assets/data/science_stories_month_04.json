@@ -1,0 +1,1507 @@
+{
+  "schema_version": "1.0",
+  "collection": "365 Din, 365 Science Stories",
+  "language": "Easy Hinglish",
+  "month": 4,
+  "coverage": {
+    "start_day": 91,
+    "end_day": 120,
+    "complete_month": true
+  },
+  "topics": [
+    {
+      "day": 91,
+      "category": "Biology",
+      "card": {
+        "title": "Blood red hai, veins blue kyun dikh sakti hain?",
+        "hook": "Skin ke neeche blue line ka matlab andar blue blood hai kya?",
+        "cta": "Puri kahani padhein"
+      },
+      "detail": {
+        "real_life_scene": "Kalai par veins kabhi blue ya greenish dikhti hain.",
+        "central_question": "Kya veins mein blue blood flow hota hai?",
+        "explanation": [
+          {
+            "heading": "Scientists ko kya mila?",
+            "text": "Blood ka red colour haemoglobin se linked hai, jo red blood cells mein oxygen transport karta hai. Oxygen-rich aur oxygen-poor blood ke red shades differ karte hain, lekin normal human blood blue nahi hota."
+          },
+          {
+            "heading": "Aasaan shabdon mein",
+            "text": "Skin aur underlying tissue different wavelengths ki light ko differently absorb aur scatter karte hain. Eyes tak pahunchne wali light vein ki colour appearance ko affect karti hai."
+          },
+          {
+            "heading": "Yeh sawaal important kyun hai?",
+            "text": "Body tak oxygen pahunchane ke liye heart blood ko arteries ke through bhejta hai; tissues oxygen use karte hain aur blood veins se heart ki taraf laut ta hai. Haemoglobin oxygen bind aur release kar sakta hai. Oxygen-rich blood generally bright red aur oxygen-poor blood darker red hota hai, lekin dono red shades hain. Is distinction se school diagrams mein colour coding samajh aati hai."
+          },
+          {
+            "heading": "Kaise kaam karta hai?",
+            "text": "Toh skin ke neeche blue line kyun? White light kai wavelengths ka mixture hai. Skin aur tissue light ko absorb aur scatter karte hain; vein ki depth, surrounding tissue aur illumination se eye tak aane wale colours badalte hain. Brain bhi nearby skin se contrast compare karta hai. Isliye appearance actual blood colour ka direct photograph nahi hai. Har vein har person mein blue nahi dikhegi."
+          },
+          {
+            "heading": "Evidence aur limitations",
+            "text": "Diagrams mein arteries red aur veins blue dikhana ek convenient convention hai, blood ke literal colours ka claim nahi. Arteries aur veins ka basic difference heart se blood le jana versus heart ki taraf lana hai; oxygen level ke exceptions bhi hain, jaise pulmonary vessels. Sudden swelling, pain ya skin colour change ko sirf optics maan kar ignore nahi karna chahiye."
+          }
+        ],
+        "real_world_connection": "Body ke visible features dekhkar health decisions lene se pehle actual measurement aur medical advice zaroori hoti hai.",
+        "reality_check": {
+          "established": "Normal human blood red hota hai, blue nahi.",
+          "misconception": "Blue-looking vein ka matlab uske andar blue blood nahi."
+        },
+        "status": "Proven",
+        "sources": [
+          {
+            "title": "American Red Cross: blood basics",
+            "url": "https://www.redcrossblood.org/donate-blood/blood-types.html"
+          }
+        ]
+      }
+    },
+    {
+      "day": 92,
+      "category": "Space",
+      "card": {
+        "title": "International Space Station mein astronauts float kyun karte hain?",
+        "hook": "Space station par gravity zero nahi hai, phir bhi sab floating kyun dikhta hai?",
+        "cta": "Puri kahani padhein"
+      },
+      "detail": {
+        "real_life_scene": "Fast descending lift ka brief sensation body ko halka feel kara sakta hai.",
+        "central_question": "Astronauts space mein weightless kyun feel karte hain?",
+        "explanation": [
+          {
+            "heading": "Scientists ko kya mila?",
+            "text": "International Space Station Earth ke around orbit karti hai. Station aur uske andar ki cheezen gravity ke under continuously free fall mein hoti hain, lekin forward motion ke saath Earth ke around girti rehti hain."
+          },
+          {
+            "heading": "Aasaan shabdon mein",
+            "text": "Jab astronaut aur station dono almost same rate se fall karte hain, support force bahut small feel hoti hai. Is condition ko microgravity kehte hain."
+          },
+          {
+            "heading": "Yeh sawaal important kyun hai?",
+            "text": "Earth ki gravity ISS ki height par bhi strong hai; station space mein isliye nahi tairta ki gravity khatam ho gayi. Imagine kisi ball ko horizontal throw karo: woh aage badhte hue neeche girti hai. Agar forward speed bahut zyada ho aur air resistance negligible ho, toh Earth ki curved surface bhi neeche hat ti rehti hai aur object orbit mein reh sakta hai."
+          },
+          {
+            "heading": "Kaise kaam karta hai?",
+            "text": "Station, astronaut aur andar ka loose equipment Earth ki taraf lagbhag saath saath accelerate karte hain. Floor astronaut ko normally upar push nahi karta, isliye weightlessness feel hoti hai. Ground par khade hone par floor ka support force weight ka everyday sensation deta hai. Orbit mein tiny differences, station vibrations aur maneuvers ki wajah se environment perfectly zero gravity nahi hota."
+          },
+          {
+            "heading": "Evidence aur limitations",
+            "text": "Microgravity ka study fluids, materials aur human body ko samajhne mein useful hai. Muscles aur bones ka load kam hone se astronauts ko regular exercise karni padti hai; unki health bhi monitor hoti hai. Orbit continually girna hai, Earth se escape karna nahi. Alag orbit ki speed aur height alag ho sakti hain."
+          },
+          {
+            "heading": "Ek aur zaroori baat",
+            "text": "Astronauts ka orbit mein hona unke har motion ko identical nahi banata: slight variations aur station ke movements microgravity environment ko affect karte hain."
+          }
+        ],
+        "real_world_connection": "ISS par experiments low-support-force environment mein materials aur biology study karte hain.",
+        "reality_check": {
+          "established": "Orbital free fall floating sensation ka main reason hai.",
+          "misconception": "ISS ki height par Earth ki gravity zero nahi hoti."
+        },
+        "status": "Proven",
+        "sources": [
+          {
+            "title": "NASA: microgravity",
+            "url": "https://www.nasa.gov/stem-content/microgravity/"
+          }
+        ]
+      }
+    },
+    {
+      "day": 93,
+      "category": "Physics",
+      "card": {
+        "title": "Microwave oven food ko andar se bahar pakaata hai?",
+        "hook": "Oven jaldi heat karta hai, lekin heating ka actual pattern simple myth se alag hai.",
+        "cta": "Puri kahani padhein"
+      },
+      "detail": {
+        "real_life_scene": "Microwave food mein kabhi plate ka ek hissa hot aur doosra cold reh jaata hai.",
+        "central_question": "Microwaves food ko evenly aur inside-out heat karti hain?",
+        "explanation": [
+          {
+            "heading": "Scientists ko kya mila?",
+            "text": "Microwave ovens electromagnetic waves use karte hain jo food ke molecules se interact karti hain. Water-containing foods commonly heat effectively, lekin shape aur composition result affect karte hain."
+          },
+          {
+            "heading": "Aasaan shabdon mein",
+            "text": "Microwave energy food ke andar kuch depth tak penetrate karti hai; distribution aur heat conduction se temperature profile banta hai. Isliye heating uneven ho sakti hai aur stirring helpful hai."
+          },
+          {
+            "heading": "Yeh sawaal important kyun hai?",
+            "text": "Cooking ka aim food ke andar tak enough heat pahunchana hai, taaki taste aur safety dono theek rahein. Traditional pan mein heat pehle contact surface ko warm karti hai aur phir andar conduct hoti hai. Microwave mein waves food ki outer region ke andar tak energy deposit kar sakti hain; iska matlab yeh nahi ki centre magically sabse pehle heat hota hai."
+          },
+          {
+            "heading": "Kaise kaam karta hai?",
+            "text": "Microwave electric field rapidly change hota hai. Water jaise polar molecules aur dissolved ions us field ke response mein move ya reorient hote hain; interactions energy ko thermal motion mein transfer karte hain. Penetration depth food ke composition aur frequency par depend karti hai. Shape aur oven ke wave pattern se kuch places zyada aur kuch kam heat pa sakte hain."
+          },
+          {
+            "heading": "Evidence aur limitations",
+            "text": "Isliye large dish stir ya rotate karna aur recommended standing time dena useful hai: heat baad mein bhi food ke andar spread hoti hai. Dense pieces ka centre thanda reh sakta hai, isliye relevant food-safety guidelines aur thermometer follow karo. Microwave food ko radioactive nahi banata. Sealed container pressure build kar sakta hai, aur metal ke liye manufacturer instructions follow karni chahiye."
+          }
+        ],
+        "real_world_connection": "Food safety ke liye reheating instructions follow karna aur cold spots avoid karna important hai.",
+        "reality_check": {
+          "established": "Microwave heating uneven ho sakti hai aur food ke composition par depend karti hai.",
+          "misconception": "Microwaves har food ko hamesha bilkul centre se outside tak evenly cook nahi karti."
+        },
+        "status": "Proven",
+        "sources": [
+          {
+            "title": "FDA: microwave ovens and safety",
+            "url": "https://www.fda.gov/radiation-emitting-products/home-business-and-entertainment-products/microwave-ovens"
+          }
+        ]
+      }
+    },
+    {
+      "day": 94,
+      "category": "Space",
+      "card": {
+        "title": "Shooting star asal mein star hota hai?",
+        "hook": "Raat ko streak dikhti hai, par usually koi distant star nahi toot raha hota.",
+        "cta": "Puri kahani padhein"
+      },
+      "detail": {
+        "real_life_scene": "Aasman mein ek bright line kuch seconds ke liye dikhkar gayab ho sakti hai.",
+        "central_question": "Shooting star kya cheez hoti hai?",
+        "explanation": [
+          {
+            "heading": "Scientists ko kya mila?",
+            "text": "Astronomers meteors ko atmosphere mein enter karne wale space debris ke visible streaks ke roop mein study karte hain. Meteor showers tab hote hain jab Earth debris streams se guzarti hai."
+          },
+          {
+            "heading": "Aasaan shabdon mein",
+            "text": "Small space rock ya dust particle atmosphere mein enter karke surrounding air ko heat aur glow kar sakta hai. Visible streak meteor hai; agar piece ground tak pahunch jaye toh use meteorite kehte hain."
+          },
+          {
+            "heading": "Yeh sawaal important kyun hai?",
+            "text": "Raat ke sky mein achanak bright line dekhkar lagta hai ki ek star toot raha hai. Lekin stars bahut distant aur massive objects hain; yahan usual source chhota particle ya rock hota hai jo solar system mein travel kar raha tha. Space mein us object ko meteoroid kehte hain. Atmosphere mein usse linked glowing streak meteor hai."
+          },
+          {
+            "heading": "Kaise kaam karta hai?",
+            "text": "High speed par incoming object ke aas-paas air compress aur heat hoti hai, aur object ka material bhi heat hokar vaporize ya break up ho sakta hai. Glowing hot gas aur material ka light path humein streak dikhaata hai. Kuch larger pieces survive karke ground par milte hain; unhe meteorites kehte hain. Har meteor meteorite nahi banata."
+          },
+          {
+            "heading": "Evidence aur limitations",
+            "text": "Earth jab comet ya asteroid ke chhode debris stream se guzarti hai, many meteors ek apparent direction se aate dikh sakte hain; use meteor shower kehte hain. Yeh particles solar system history ke clues dete hain. Kisi bright fireball ki exact origin ya landing location sirf naked-eye se decide karna mushkil hota hai; camera records aur recovered material important evidence hain."
+          },
+          {
+            "heading": "Ek aur zaroori baat",
+            "text": "Meteor shower ki prediction debris stream aur Earth ki position par based hoti hai; weather aur local light pollution visibility ko change kar sakte hain."
+          }
+        ],
+        "real_world_connection": "Meteor showers observe karna astronomy ka accessible real-world activity hai.",
+        "reality_check": {
+          "established": "Shooting star generally atmospheric meteor streak hoti hai.",
+          "misconception": "Yeh actual star ka Earth par girna nahi hai."
+        },
+        "status": "Proven",
+        "sources": [
+          {
+            "title": "NASA: meteors and meteorites",
+            "url": "https://science.nasa.gov/solar-system/meteors-meteorites/"
+          }
+        ]
+      }
+    },
+    {
+      "day": 95,
+      "category": "Biology",
+      "card": {
+        "title": "Kya chameleons sirf background se match karne ke liye rang badalte hain?",
+        "hook": "Camouflage story popular hai, lekin communication aur temperature bhi matter kar sakte hain.",
+        "cta": "Puri kahani padhein"
+      },
+      "detail": {
+        "real_life_scene": "Kapdon ka colour kisi ko message de sakta hai; animals ke colours bhi signals ho sakte hain.",
+        "central_question": "Chameleon colour change ke reasons kya hain?",
+        "explanation": [
+          {
+            "heading": "Scientists ko kya mila?",
+            "text": "Research ne chameleon skin ke microscopic structures aur changing colour patterns study kiye hain. Different species aur situations mein social signals, temperature aur background sab relevant ho sakte hain."
+          },
+          {
+            "heading": "Aasaan shabdon mein",
+            "text": "Skin ke special cells aur light-reflecting structures colours change karne mein contribute karte hain. Colour change ki speed aur range species ke hisaab se alag hoti hai."
+          },
+          {
+            "heading": "Yeh sawaal important kyun hai?",
+            "text": "Chameleon ke rang badalne ki story interesting hai kyunki colour ka kaam sirf hide hona nahi hota. Animals ko rivals aur potential mates ko signal dena, body temperature regulate karna aur surroundings ke saath interact karna hota hai. Species aur context ke hisaab se in functions ki importance badal sakti hai."
+          },
+          {
+            "heading": "Kaise kaam karta hai?",
+            "text": "Kuch chameleons ki skin mein pigment cells ke alawa iridophores hote hain, jinmein tiny ordered crystals light reflect karte hain. Kuch studied species mein crystals ki arrangement badalne se reflected wavelengths badal sakti hain. Different layers aur pigments milkar visible pattern produce karte hain. Yeh simple paint mixing jaisa universal mechanism nahi: species ke beech biology different ho sakti hai."
+          },
+          {
+            "heading": "Evidence aur limitations",
+            "text": "Studies ne particular species aur social situations mein these structural changes examine kiye hain; un results ko har chameleon par automatically apply nahi karna chahiye. Colour change ka matlab animal kisi bhi background ka perfect replica ban sakta hai, aisa nahi. Behaviour aur environment dono observe karne se signal, camouflage aur temperature regulation ki possible roles ko compare kiya ja sakta hai."
+          },
+          {
+            "heading": "Ek aur zaroori baat",
+            "text": "Researchers behaviour ko controlled conditions mein compare karke dekhte hain ki colour signal kis situation mein badalta hai, lekin observation se motive automatically prove nahi hota."
+          }
+        ],
+        "real_world_connection": "Animal communication study karne se behaviour aur survival strategies samajhne mein help milti hai.",
+        "reality_check": {
+          "established": "Chameleon colour change ke multiple functions ho sakte hain.",
+          "misconception": "Woh har background ka exact colour instantly copy nahi karta."
+        },
+        "status": "Proven",
+        "sources": [
+          {
+            "title": "Nature Communications: chameleon colour change",
+            "url": "https://www.nature.com/articles/ncomms7368"
+          }
+        ]
+      }
+    },
+    {
+      "day": 96,
+      "category": "Weather aur technology",
+      "card": {
+        "title": "Weather balloon aasman mein kya measure karta hai?",
+        "hook": "Forecast sirf ground ki hawa dekhkar nahi banta. Ek balloon upar jaate-jaate weather ki kaunsi information bhejta hai?",
+        "cta": "Puri kahani padhein"
+      },
+      "detail": {
+        "real_life_scene": "Subah phone par rain forecast check karte waqt hum usually ground ke weather ke baare mein sochte hain. Lekin baadal aur hawa atmosphere ki alag-alag heights par badalte hain.",
+        "central_question": "Ek weather balloon hawa ki upar wali layers ko kaise measure karta hai?",
+        "explanation": [
+          {
+            "heading": "Balloon ke neeche chhota instrument",
+            "text": "Weather balloon ek instrument package lekar upar jaata hai. Is package ko radiosonde kehte hain. Isme temperature, hawa ka pressure aur humidity measure karne wale sensors hote hain. Humidity ka matlab hawa mein water vapour, yaani paani ki gas, kitni hai. Pressure batata hai ki aas-paas ki hawa kitna force laga rahi hai."
+          },
+          {
+            "heading": "Measurements neeche kaise aati hain?",
+            "text": "Balloon upar uthte waqt sensors alag heights par readings lete hain. Package ka radio transmitter, yaani signal bhejne wala device, data ground station tak bhejta hai. GPS se package ki position track ki ja sakti hai. Position waqt ke saath kaise badli, usse hawa ki speed aur direction ka estimate milta hai."
+          },
+          {
+            "heading": "Forecast mein fayda",
+            "text": "Ground station ko sirf ek number nahi milta, balki height ke saath atmosphere ki condition ka record milta hai. Meteorologists, yaani weather scientists, ise satellites, radar aur doosri measurements ke saath use karte hain. Computer models in observations aur physics ke rules se possible future weather calculate karte hain. Achhi shuruaati information forecast improve kar sakti hai."
+          },
+          {
+            "heading": "Kya balloon exact baarish bata dega?",
+            "text": "Nahi. Ek balloon har jagah aur har waqt measurement nahi karta. Weather rapidly badal sakta hai aur measurements mein uncertainty hoti hai. Isliye scientists observations combine karte hain aur forecast update karte rehte hain. Balloon bhi aam taur par upar jaakar expand hota hai aur phat sakta hai; uska instrument neeche girta hai."
+          }
+        ],
+        "real_world_connection": "Cyclone ya heavy rain ke aas-paas upper-air data weather teams ke liye important ho sakta hai. Apne area ke warnings ke liye local official weather service follow karein; ek forecast probability ko guarantee na samjhein.",
+        "reality_check": {
+          "established": "Weather balloons ke radiosonde sensors height ke saath atmospheric conditions measure karke radio se bhejte hain.",
+          "misconception": "Ek balloon akela har location par exact rain aur time predict nahi karta."
+        },
+        "status": "Proven: weather-balloon observations",
+        "sources": [
+          {
+            "title": "NOAA: weather balloons aur upper-air observations",
+            "url": "https://www.aoml.noaa.gov/upper-air-observations/"
+          },
+          {
+            "title": "NOAA: forecasting tools",
+            "url": "https://www.noaa.gov/stories/6-tools-our-meteorologists-use-to-forecast-weather"
+          }
+        ]
+      }
+    },
+    {
+      "day": 97,
+      "category": "Quantum physics",
+      "card": {
+        "title": "Ek-ek electron bheja, phir bhi wave jaisa pattern bana!",
+        "hook": "Scientists ne particles ek-ek karke bheje. Screen par unke dots ne milkar unexpected pattern bana diya.",
+        "cta": "Puri kahani padhein"
+      },
+      "detail": {
+        "real_life_scene": "Aap ek wall par ball phenkein toh har ball ek jagah hit karegi. Bahut saari balls phenkenge toh hits ka pattern banega.",
+        "central_question": "Kya bahut chhote particles bhi sirf ball ki tarah behave karte hain?",
+        "explanation": [
+          {
+            "heading": "Experiment ki kahani",
+            "text": "1989 mein Akira Tonomura aur unki team ne Hitachi ke laboratory experiment mein electrons ko individually detect kiya. Electron ek tiny particle hai jo atoms ka part hota hai. Unke setup mein electron biprism naam ka device tha, jo electron waves ke paths ko overlap karne deta hai."
+          },
+          {
+            "heading": "Screen par kya dikha?",
+            "text": "Shuru mein detector par scattered individual dots dikhe. Jab aur electrons detect hue, dots milkar bright aur dark bands ka pattern banane lage. Aisa pattern waves ke overlap se bhi milta hai; ise interference pattern kaha jaata hai."
+          },
+          {
+            "heading": "Iska matlab kya hai?",
+            "text": "Har detection ek local spot par hoti hai, lekin bahut saare results ki distribution quantum wave-like behaviour follow karti hai. Experiment yeh nahi batata ki electron ek ordinary tiny ball aur water wave dono literally ek saath hai; quantum description dono se different hai."
+          },
+          {
+            "heading": "Yeh sawaal important kyun hai?",
+            "text": "Is experiment ki zaroorat ek fundamental question se judi thi: agar electrons one by one bheje jayein, kya wave jaisa interference pattern phir bhi milega? Everyday balls independent impacts deti hain, jabki overlapping waves bright aur dark regions create kar sakti hain. Quantum experiments dono familiar pictures ki limits expose karte hain."
+          },
+          {
+            "heading": "Kaise kaam karta hai?",
+            "text": "Electron biprism do possible paths se linked quantum amplitudes ko overlap karata hai; yeh classic two-slit experiment ka identical hardware nahi hai. Detector har electron ko local dot ki tarah register karta hai. Bahut detections ke baad dots ki statistical distribution mein interference bands bante hain. Ek isolated dot se complete pattern nahi dekh sakte."
+          },
+          {
+            "heading": "Evidence aur limitations",
+            "text": "Agar setup mein reliable which-path information mil jaaye, interference change ya disappear ho sakta hai; exact outcome experimental arrangement par depend karta hai. Iska matlab conscious human observer zaroori hai, yeh nahi. Quantum theory probabilities predict karne mein extremely successful hai, lekin uski interpretation par different views hain. Electron ki behaviour ko everyday objects ki single analogy mein fit karna misleading hoga."
+          }
+        ],
+        "real_world_connection": "Electron behaviour samajhna electron microscopes aur modern electronics ki physics mein helpful hai.",
+        "reality_check": {
+          "established": "Single-electron detections se interference pattern build hota hai.",
+          "misconception": "Yeh experiment prove nahi karta ki insaan ki consciousness particle ko control karti hai."
+        },
+        "status": "Proven",
+        "sources": [
+          {
+            "title": "Historical account of electron interference",
+            "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4617474/"
+          },
+          {
+            "title": "Tonomura experiment overview",
+            "url": "https://arxiv.org/html/1211.3493v1"
+          }
+        ]
+      }
+    },
+    {
+      "day": 98,
+      "category": "Quantum technology",
+      "card": {
+        "title": "Electron deewar ke paar kaise pahunch gaya?",
+        "hook": "Ek quantum effect, jise tunnelling kehte hain, microscope ko atoms tak dekhne mein help karta hai.",
+        "cta": "Puri kahani padhein"
+      },
+      "detail": {
+        "real_life_scene": "Agar ball ke paas hill chadhne ki enough energy nahi ho, toh normal experience ke mutabik woh doosri taraf nahi pahunchti.",
+        "central_question": "Quantum world mein energy barrier ke doosri taraf particle milna kaise possible hai?",
+        "explanation": [
+          {
+            "heading": "Quantum rule ka twist",
+            "text": "Quantum physics mein electron ki location aur behaviour ko ordinary ball ki exact path se describe nahi kiya jaata. Kuch conditions mein uske ek barrier ke doosri taraf detect hone ki probability nonzero hoti hai. Is effect ko quantum tunnelling kehte hain."
+          },
+          {
+            "heading": "Practical invention",
+            "text": "1981 mein IBM Zurich ke Gerd Binnig aur Heinrich Rohrer ne scanning tunnelling microscope develop kiya. Ismein ek extremely sharp tip surface ke bahut paas rakhi jaati hai. Tip aur sample ke beech electrons tunnelling karke tiny electric current produce kar sakte hain."
+          },
+          {
+            "heading": "Atoms ka map",
+            "text": "Current tip aur surface ke distance se strongly change hota hai. Instrument surface scan karke measurements se atomic-scale image banata hai. Is invention ke liye Binnig aur Rohrer ko 1986 Physics Nobel ka hissa mila."
+          },
+          {
+            "heading": "Yeh sawaal important kyun hai?",
+            "text": "Classical intuition ke mutabik ball ko hill cross karne ke liye enough energy chahiye. Quantum barrier ke case mein particle ki state wavefunction se describe hoti hai, jo probabilities calculate karne mein help karti hai. Suitable barrier ke across wavefunction ka nonzero contribution mil sakta hai, isliye doosri side detect hone ki chance bhi nonzero hai."
+          },
+          {
+            "heading": "Kaise kaam karta hai?",
+            "text": "Yeh energy-free shortcut nahi: total energy conservation apply hota hai. Barrier ki width aur height tunnelling probability ko strongly affect karti hain; wide barriers ke liye chance bahut small ho sakti hai. Scanning tunnelling microscope mein conductive tip aur sample ke beech tiny gap rakha jaata hai aur voltage apply kiya jaata hai."
+          },
+          {
+            "heading": "Evidence aur limitations",
+            "text": "Tip position change hote hi tunnelling current change hota hai. Feedback system surface scan ke dauran current record ya control karta hai aur data se atomic-scale map construct hota hai. Map electron states aur experimental conditions se bhi affected hota hai, bas ordinary camera photograph nahi. Technique conducting ya suitable surfaces ke liye useful hai; atoms ko naked eye se directly dekhna nahi hota."
+          }
+        ],
+        "real_world_connection": "Atomic-scale surfaces ki imaging materials aur nanotechnology research mein kaam aati hai.",
+        "reality_check": {
+          "established": "Quantum tunnelling measurable hai aur scanning tunnelling microscope uska use karta hai.",
+          "misconception": "Iska matlab insaan ya cricket ball ordinary wall se nikal sakte hain, yeh nahi."
+        },
+        "status": "Proven",
+        "sources": [
+          {
+            "title": "Nobel: Heinrich Rohrer",
+            "url": "https://www.nobelprize.org/prizes/physics/1986/rohrer/facts/"
+          }
+        ]
+      }
+    },
+    {
+      "day": 99,
+      "category": "Space",
+      "card": {
+        "title": "Planet ki first discovery ka credit kis planet ko?",
+        "hook": "Ek planet 1992 mein mila, doosra 1995 mein. Dono ko kabhi “first” kyun bola jaata hai?",
+        "cta": "Puri kahani padhein"
+      },
+      "detail": {
+        "real_life_scene": "Race mein first overall aur first in a particular category alag winners ho sakte hain.",
+        "central_question": "Solar system ke bahar pehla confirmed planet kaunsa tha?",
+        "explanation": [
+          {
+            "heading": "1992: unexpected place",
+            "text": "Aleksander Wolszczan aur Dale Frail ne 1992 mein ek pulsar ke around planets report kiye. Pulsar ek rapidly spinning dense star remnant hai jo regular radio pulses bhej sakta hai."
+          },
+          {
+            "heading": "1995: Sun jaisa star",
+            "text": "Michel Mayor aur Didier Queloz ne 1995 mein 51 Pegasi b announce kiya. Yeh Sun jaise normal star ke around pehla confirmed exoplanet tha. Exoplanet ka matlab solar system ke bahar ka planet hai."
+          },
+          {
+            "heading": "Detect kaise hua?",
+            "text": "Planet ki gravity star ki movement mein tiny wobble produce karti hai. Star ki light mein chhote changes measure karke researchers is motion ka evidence nikaal sakte hain. Pulsar planets ke case mein pulse timing ka use hua."
+          },
+          {
+            "heading": "Yeh sawaal important kyun hai?",
+            "text": "Humare solar system ke beyond planets ki search ka aim hai samajhna ki planetary systems kitne common aur kitne different hain. Kisi distant planet ko direct dekhna hard ho sakta hai kyunki star bahut bright hota hai. Isliye astronomers aksar planet ke star par indirect effect ko precisely measure karte hain."
+          },
+          {
+            "heading": "Kaise kaam karta hai?",
+            "text": "Pulsar extremely regular radio pulses deta hai. Orbiting planet ki gravity pulsar ki motion change karti hai, jis se pulses ke arrival times mein periodic variation mil sakta hai. Normal star ke around radial velocity method star ki light ke spectrum mein small periodic Doppler shifts measure karta hai. Yeh star ki line-of-sight motion ka evidence deta hai."
+          },
+          {
+            "heading": "Evidence aur limitations",
+            "text": "1992 ke pulsar planets aur 1995 ka 51 Pegasi b alag milestones hain: latter first confirmed planet around a Sun-like star tha, not first exoplanet of any kind. Ek detection ke baad independent observations aur alternative explanations check karna zaroori hota hai. Planet discover hona life discover hona nahi; atmosphere aur habitability ko separately investigate karna padta hai."
+          }
+        ],
+        "real_world_connection": "Aaj astronomers planets dhoondhne ke liye star ki brightness aur motion dono study karte hain.",
+        "reality_check": {
+          "established": "1992 pulsar planets aur 1995 Sun-like star ke planet dono historical milestones hain.",
+          "misconception": "51 Pegasi b ko pehla exoplanet without qualification kehne se earlier pulsar discovery miss ho jaati hai."
+        },
+        "status": "Proven",
+        "sources": [
+          {
+            "title": "NASA: Which was the first exoplanet?",
+            "url": "https://science.nasa.gov/universe/exoplanets/will-the-real-first-exoplanet-please-stand-up/"
+          }
+        ]
+      }
+    },
+    {
+      "day": 100,
+      "category": "Physics",
+      "card": {
+        "title": "Mercury thandi hui aur bijli ka resistance gayab!",
+        "hook": "1911 ke experiment mein ek metal ka behaviour achanak badal gaya.",
+        "cta": "Puri kahani padhein"
+      },
+      "detail": {
+        "real_life_scene": "Phone charger aur wires use hone par kuch energy heat ke roop mein nikal sakti hai.",
+        "central_question": "Kya kisi material mein electric current bina resistance ke chal sakta hai?",
+        "explanation": [
+          {
+            "heading": "Experiment",
+            "text": "1911 mein Dutch physicist Heike Kamerlingh Onnes ne mercury metal ko extremely low temperature tak cool kiya. Mercury ka electrical resistance achanak zero tak girta hua mila. Is discovery ko superconductivity kaha gaya."
+          },
+          {
+            "heading": "Resistance kya hota hai?",
+            "text": "Electrical resistance current ke flow mein opposition hai. Ordinary wires mein resistance ki wajah se energy heat ban sakti hai. Superconducting state mein suitable conditions ke under direct current zero electrical resistance ke saath flow kar sakta hai."
+          },
+          {
+            "heading": "Har material mein nahi",
+            "text": "Superconductivity ke liye temperature aur magnetic-field conditions matter karti hain. Bahut se materials ko extremely cold environment chahiye, isliye useful devices banana engineering challenge bhi hai."
+          },
+          {
+            "heading": "Yeh sawaal important kyun hai?",
+            "text": "Electric current ko long distances tak carry karne par ordinary wires mein resistance energy ko heat mein convert karta hai. Agar suitable conductor mein resistance zero ho, toh current ko loss ke bina maintain karna possible hota hai, although complete device mein dusre losses ho sakte hain. Onnes ki discovery ne material ke behaviour ka unexpectedly new state dikhaya."
+          },
+          {
+            "heading": "Kaise kaam karta hai?",
+            "text": "Superconductor ko critical temperature se neeche cool karna hota hai; critical magnetic field aur current ki limits bhi hoti hain. Conventional superconductors mein electrons paired quantum state bana sakte hain, jise BCS theory describe karti hai. Sab superconductors ka mechanism exactly same nahi maana jaata. Superconductivity mein magnetic field expulsion ka effect bhi important hai."
+          },
+          {
+            "heading": "Evidence aur limitations",
+            "text": "MRI machines mein superconducting magnets strong stable fields create karne ke kaam aate hain. Particle accelerators bhi aise magnets use karte hain. Lekin cooling system, equipment aur infrastructure ki cost hoti hai. Room temperature aur ordinary pressure par practical, reproducible superconductivity ka reliable demonstration abhi established nahi hai. Zero electrical resistance ka matlab universal free energy ya no engineering constraints nahi."
+          }
+        ],
+        "real_world_connection": "Superconducting magnets MRI machines aur scientific instruments mein use hote hain.",
+        "reality_check": {
+          "established": "Superconductivity real aur experimentally established phenomenon hai.",
+          "misconception": "Har material room temperature par superconductor nahi hai."
+        },
+        "status": "Proven",
+        "sources": [
+          {
+            "title": "Nobel: Heike Kamerlingh Onnes",
+            "url": "https://www.nobelprize.org/prizes/physics/1913/onnes/facts/"
+          }
+        ]
+      }
+    },
+    {
+      "day": 101,
+      "category": "Space aur physics",
+      "card": {
+        "title": "Kya gravity roshni ko bhi mod sakti hai?",
+        "hook": "1919 ke solar eclipse ne Einstein ki prediction test karne ka rare chance diya.",
+        "cta": "Puri kahani padhein"
+      },
+      "detail": {
+        "real_life_scene": "Paani bhare glass ke peeche straw tedha dikhta hai kyunki light ka path badalta hai.",
+        "central_question": "Space mein kisi heavy object ke paas light ka path badal sakta hai?",
+        "explanation": [
+          {
+            "heading": "Prediction",
+            "text": "Einstein ki general relativity ke mutabik mass space aur time ki geometry ko affect karta hai. Iska ek result yeh hai ki heavy object ke paas se jaane wali light ka path deflect ho sakta hai."
+          },
+          {
+            "heading": "1919 ka test",
+            "text": "29 May 1919 ke total solar eclipse ke dauran Arthur Eddington aur colleagues ki expeditions ne Sun ke paas dikhne wale stars photograph kiye. Eclipse mein Moon ne Sun ki bright surface ko cover kiya, jisse nearby stars ki apparent positions measure karna possible hua."
+          },
+          {
+            "heading": "Aaj ka use",
+            "text": "Astronomers ab galaxies aur galaxy clusters ke around light bending ko gravitational lensing kehte hain. Yeh effect kabhi distant galaxies ki images ko stretch, multiply ya magnify kar sakta hai."
+          },
+          {
+            "heading": "Yeh sawaal important kyun hai?",
+            "text": "Gravity ko log traditionally force ki tarah sochte hain, lekin general relativity ke description mein mass aur energy spacetime ki geometry influence karte hain. Light locally hamesha light speed se travel karti hai, phir bhi curved spacetime mein uska route distant observer ko deflected dikhta hai. Isi prediction ne theory ko observation se test karne ka mauka diya."
+          },
+          {
+            "heading": "Kaise kaam karta hai?",
+            "text": "1919 mein eclipse ke time Sun ke close apparent star positions photograph kiye gaye aur unhe comparison positions se milaya gaya. Teams ne relativity ke compatible deflection report kiya. Initial measurements difficult aur uncertain the; aaj light deflection aur relativity ko multiple independent methods se bahut accurately test kiya gaya hai."
+          },
+          {
+            "heading": "Evidence aur limitations",
+            "text": "Gravitational lensing mein foreground mass distant source ki image distort karta hai. Multiple images, arcs ya magnification mil sakti hai, geometry par depend karke. Researchers clusters ke mass distribution aur unseen matter ke gravitational effect estimate karne mein iska use karte hain. Lensing mass ka effect dikhati hai; us mass ke particles ka identity directly reveal nahi karti."
+          }
+        ],
+        "real_world_connection": "Gravitational lensing ki madad se astronomers distant objects aur invisible mass ke distribution ke clues dhoondhte hain.",
+        "reality_check": {
+          "established": "Gravity ke saath light deflection aur gravitational lensing observe hui hai.",
+          "misconception": "Glass mein bending aur gravity se bending ki physical mechanism same nahi hai."
+        },
+        "status": "Proven",
+        "sources": [
+          {
+            "title": "NASA: gravitational lenses and 1919 eclipse",
+            "url": "https://science.nasa.gov/mission/hubble/science/science-behind-the-discoveries/hubble-gravitational-lenses/"
+          }
+        ]
+      }
+    },
+    {
+      "day": 102,
+      "category": "Space",
+      "card": {
+        "title": "Suraj itni der se jal raha hai—uska fuel kya hai?",
+        "hook": "Agar Sun ek giant fire hota, toh kya woh billions of years tak chal pata?",
+        "cta": "Puri kahani padhein"
+      },
+      "detail": {
+        "real_life_scene": "Wood ya gas jalti hai toh fuel dheere-dheere khatam hota hai.",
+        "central_question": "Sun itne lambe time tak energy kaise produce karta hai?",
+        "explanation": [
+          {
+            "heading": "Purana puzzle",
+            "text": "19th century mein scientists ne Sun ki energy ke alag sources consider kiye. Ordinary chemical burning ya gravitational contraction se Sun ki long lifetime explain karna difficult tha."
+          },
+          {
+            "heading": "Nuclear fusion",
+            "text": "1930s mein Hans Bethe aur other physicists ne stars ke andar nuclear reactions ka theory develop kiya. Sun ke centre mein hydrogen nuclei reactions ke through helium banate hain; is process ko nuclear fusion kehte hain."
+          },
+          {
+            "heading": "Energy kahan se aati hai?",
+            "text": "Reaction ke products ki total mass starting ingredients se thodi kam hoti hai. Yeh mass difference energy ke roop mein release hota hai. Sun ke core se nikli energy eventually surface tak pahunchti hai aur light aur heat ke form mein bahar aati hai."
+          },
+          {
+            "heading": "Yeh sawaal important kyun hai?",
+            "text": "Sun Earth ko light aur heat deta hai, isliye uske energy source ki samajh life aur stars ki history dono ke liye important hai. Coal ki tarah chemical fuel jalne se Sun ko billions of years tak power karne ka adequate explanation nahi milta. Nuclear reactions ki discovery ne much larger energy reservoir ka explanation diya."
+          },
+          {
+            "heading": "Kaise kaam karta hai?",
+            "text": "Core mein extreme temperature aur pressure ke under hydrogen nuclei several steps mein helium banate hain. Sun ke liye proton-proton chain dominant hai; neutrinos aur radiation bhi produce hote hain. Products aur initial particles ki mass ka difference energy balance mein contribute karta hai, jise E equals mc squared se express karte hain."
+          },
+          {
+            "heading": "Evidence aur limitations",
+            "text": "Energy dense interior se multiple interactions ke through bahar transfer hoti hai, phir surface se radiation space mein travel karti hai. Sun ki roshni Earth tak roughly eight minutes mein pahunchti hai, lekin core se surface tak energy transport ka time bahut longer hai. Solar neutrino observations aur stellar models fusion picture support karte hain. Sun combustion ke liye air nahi jala raha."
+          }
+        ],
+        "real_world_connection": "Sun ki energy Earth ke climate, photosynthesis aur life ke liye essential hai.",
+        "reality_check": {
+          "established": "Hydrogen fusion Sun ke energy source ka established explanation hai.",
+          "misconception": "Sun ki energy ordinary lakdi ya petrol jalne wali chemical fire se nahi banti."
+        },
+        "status": "Proven",
+        "sources": [
+          {
+            "title": "Nobel: fusion powers the Sun",
+            "url": "https://educationalgames.nobelprize.org/educational/physics/energy/fusion_2.html"
+          }
+        ]
+      }
+    },
+    {
+      "day": 103,
+      "category": "Everyday science",
+      "card": {
+        "title": "Pahaad par paani 100°C se pehle ubal sakta hai?",
+        "hook": "Aapne padha hoga paani 100°C par ubalta hai. Lekin har jagah?",
+        "cta": "Puri kahani padhein"
+      },
+      "detail": {
+        "real_life_scene": "Pressure cooker mein paani ka behaviour open pan se different hota hai.",
+        "central_question": "Water ka boiling point place ke hisaab se kyun badalta hai?",
+        "explanation": [
+          {
+            "heading": "100°C ka hidden condition",
+            "text": "Pure water normal atmospheric pressure par approximately 100°C par boil karta hai. Lekin hawa ka pressure badalne se boiling temperature bhi badalta hai."
+          },
+          {
+            "heading": "Pahaad par kya hota hai?",
+            "text": "High altitude par atmospheric pressure lower hota hai. Isliye water lower temperature par boil kar sakta hai. US Geological Survey ke mutabik Yellowstone ki elevation par pure water ka boiling temperature roughly 93°C ke around ho sakta hai."
+          },
+          {
+            "heading": "Cooking par effect",
+            "text": "Agar open pan mein water lower temperature par boil kare, toh kuch foods ko cook hone mein longer lag sakta hai. Pressure cooker ka pressure higher hota hai, jiski wajah se water higher temperature tak liquid reh sakta hai."
+          },
+          {
+            "heading": "Yeh sawaal important kyun hai?",
+            "text": "Boiling aur evaporation ek jaise nahi hain. Evaporation liquid surface se temperatures ki wide range par ho sakti hai. Boiling tab hoti hai jab liquid ka vapour pressure surrounding pressure ke comparable ho, allowing vapour bubbles to form and grow in the liquid. Surrounding pressure badlega toh boiling temperature bhi badlega."
+          },
+          {
+            "heading": "Kaise kaam karta hai?",
+            "text": "High altitude par atmosphere ka weight aur pressure generally kam hota hai, isliye pure water lower temperature par boil karta hai. Pan mein bubbles dikhne ka matlab hamesha water 100 degrees Celsius hai, yeh nahi. Lower boiling temperature ki wajah se food heat hone ka maximum temperature open boiling mein kam ho sakta hai, aur cooking slow ho sakti hai."
+          },
+          {
+            "heading": "Evidence aur limitations",
+            "text": "Pressure cooker steam ko contain karke pressure badhata hai. Higher pressure par boiling temperature higher hota hai, so food faster cook ho sakta hai. Actual temperature altitude, cooker design aur pressure par depend karega. Cooker ko manufacturer instructions ke according use karna zaroori hai; pressure release se pehle force se open na karein. Impurities bhi boiling point ko alter kar sakti hain."
+          }
+        ],
+        "real_world_connection": "High-altitude cooking instructions aksar sea-level instructions se different hoti hain.",
+        "reality_check": {
+          "established": "Water ka boiling point surrounding pressure par depend karta hai.",
+          "misconception": "100°C koi universal boiling temperature nahi hai jo har pressure par same rahe."
+        },
+        "status": "Proven",
+        "sources": [
+          {
+            "title": "USGS: boiling at Yellowstone altitude",
+            "url": "https://usgs.gov/index.php/observatories/yvo/news/many-types-fluids-flow-yellowstone"
+          }
+        ]
+      }
+    },
+    {
+      "day": 104,
+      "category": "Physics",
+      "card": {
+        "title": "Atom ke andar bhi chhote parts? Proton ke andar kya hai?",
+        "hook": "Scientists ne high-energy electrons bheje aur proton ke andar hidden structure ka evidence mila.",
+        "cta": "Puri kahani padhein"
+      },
+      "detail": {
+        "real_life_scene": "Band box mein kya hai, directly dekhe bina usse takraane wali cheezon ke behaviour se guess kar sakte hain.",
+        "central_question": "Kya proton ek indivisible solid ball hai?",
+        "explanation": [
+          {
+            "heading": "1968 ka experiment",
+            "text": "Stanford Linear Accelerator Center aur MIT ki team ne high-energy electrons ko protons par fire kiya. Jerome Friedman, Henry Kendall, Richard Taylor aur colleagues ne electrons ke scattering patterns measure kiye."
+          },
+          {
+            "heading": "Clues ka meaning",
+            "text": "Kuch electrons unexpectedly strong angles par deflect hue. Data ne suggest kiya ki proton ke andar point-like constituents hain. In findings ko baad mein quark model ke context mein samjha gaya."
+          },
+          {
+            "heading": "Proton ki picture",
+            "text": "Proton ko three main valence quarks aur unke interactions ke through describe kiya jaata hai. Uske andar quarks aur gluons ka behaviour complex hai; use bas teen static balls ka box nahi samajhna chahiye."
+          },
+          {
+            "heading": "Yeh sawaal important kyun hai?",
+            "text": "Atom ko kabhi matter ka smallest indivisible unit samjha gaya tha. Later experiments ne electron aur atomic nucleus reveal kiya; phir question bana ki proton khud fundamental hai ya uske andar structure hai. Is answer se matter ki basic building blocks aur unke interactions samajhne mein progress hui."
+          },
+          {
+            "heading": "Kaise kaam karta hai?",
+            "text": "High-energy electron scattering ek probe ki tarah kaam karta hai. Scattered electrons ke angles aur energies measure karke researchers proton ke internal structure ke baare mein inference nikaalte hain. Deep inelastic scattering data ne point-like constituents ka evidence diya, jo quark framework ke saath match karta hai. Measurement direct photograph nahi hoti."
+          },
+          {
+            "heading": "Evidence aur limitations",
+            "text": "Proton ke valence quarks do up aur ek down hain, aur gluons strong interaction carry karte hain. Quantum fields ke description mein transient quark-antiquark contributions aur motion bhi important hain. Free isolated quark observe karna ordinary conditions mein possible nahi because confinement; isliye proton ko three stationary marbles samajhna incomplete hai. Scattering results multiple later experiments se further investigated hue."
+          }
+        ],
+        "real_world_connection": "Particle accelerators se matter ki structure aur fundamental forces test ki jaati hain.",
+        "reality_check": {
+          "established": "Protons ke andar quark-related structure ka strong experimental evidence hai.",
+          "misconception": "Atom aur proton dono ko same indivisible particle samajhna correct nahi hai."
+        },
+        "status": "Proven",
+        "sources": [
+          {
+            "title": "Nobel: SLAC-MIT experiment",
+            "url": "https://www.nobelprize.org/prizes/physics/1990/illustrated-information/"
+          }
+        ]
+      }
+    },
+    {
+      "day": 105,
+      "category": "Physics",
+      "card": {
+        "title": "Higgs boson mila: kya isi se har cheez ka poora weight banta hai?",
+        "hook": "2012 ki discovery ko “mass ka raaz” kaha gaya. Lekin headline poori story nahi batati.",
+        "cta": "Puri kahani padhein"
+      },
+      "detail": {
+        "real_life_scene": "Kisi building ka total weight sirf uske doors se nahi, kai components se banta hai.",
+        "central_question": "Higgs field aur mass ka actual connection kya hai?",
+        "explanation": [
+          {
+            "heading": "Discovery",
+            "text": "4 July 2012 ko CERN ki ATLAS aur CMS teams ne ek new particle announce kiya, jiske properties Higgs boson se consistent the. Particle collisions ke baad bane products ko study karke researchers ne statistical signal identify kiya."
+          },
+          {
+            "heading": "Field aur particle",
+            "text": "Higgs field ek physical field hai jo universe mein present hai. Standard Model mein kuch elementary particles ki mass is field ke interaction se linked hai. Higgs boson us field se related particle hai."
+          },
+          {
+            "heading": "Important nuance",
+            "text": "Aapke body ki mass ka bada hissa protons aur neutrons se aata hai. In particles ki mass ka major part unke andar quarks aur gluons ki energy aur interactions se linked hai; isliye “har mass sirf Higgs se aati hai” oversimplification hai."
+          },
+          {
+            "heading": "Yeh sawaal important kyun hai?",
+            "text": "Particles ki properties describe karne wale Standard Model ko explain karna tha ki kuch elementary particles mass kaise acquire karte hain, bina theory ki mathematical consistency khoye. Higgs mechanism ne is problem ka solution propose kiya. Is field se related boson dhoondhna decades tak major experimental goal raha."
+          },
+          {
+            "heading": "Kaise kaam karta hai?",
+            "text": "Large Hadron Collider mein protons collide karte hain aur collision energy se short-lived particles produce ho sakte hain. Higgs boson very quickly other particles mein decay hota hai. ATLAS aur CMS teams ne decay products ke patterns aur background expectations compare kiye; independent signals ne discovery ko strong support diya."
+          },
+          {
+            "heading": "Evidence aur limitations",
+            "text": "Higgs field ka coupling elementary particles ki mass se related hai, lekin ordinary matter ki mass ka large share proton aur neutron ki internal strong-interaction energy se aata hai. Weight alag concept hai: gravity ka force mass aur gravitational field par depend karta hai. Higgs discovery ne Standard Model ko support kiya, but dark matter aur gravity jaise questions solve nahi hue."
+          }
+        ],
+        "real_world_connection": "Particle physics matter ki basic structure aur fundamental forces ki understanding banati hai.",
+        "reality_check": {
+          "established": "2012 ka particle Higgs boson ke properties se consistent hai aur extensively studied hua hai.",
+          "misconception": "Higgs boson ko literally har object ka total weight akela dene wala particle kehna misleading hai."
+        },
+        "status": "Proven",
+        "sources": [
+          {
+            "title": "CERN: Higgs discovery",
+            "url": "https://home.cern/science/physics/higgs-boson/how/"
+          },
+          {
+            "title": "CERN: ten years after discovery",
+            "url": "https://home.cern/the-higgs-boson-ten-years-after-its-discovery/"
+          }
+        ]
+      }
+    },
+    {
+      "day": 106,
+      "category": "Quantum technology",
+      "card": {
+        "title": "Quantum teleportation: kya insaan instant doosri jagah ja sakta hai?",
+        "hook": "Scientists ne quantum teleportation kiya hai. Lekin movies wali teleport machine abhi nahi bani.",
+        "cta": "Puri kahani padhein"
+      },
+      "detail": {
+        "real_life_scene": "Photo message ke saath bhejne par information doosri jagah pahunchti hai, original phone physically travel nahi karta.",
+        "central_question": "Quantum teleportation mein exactly kya transfer hota hai?",
+        "explanation": [
+          {
+            "heading": "1997 ka milestone",
+            "text": "Dik Bouwmeester, Anton Zeilinger aur colleagues ne 1997 mein experimental quantum teleportation report ki. Unke experiment ne photon ki quantum state transfer karne ka protocol demonstrate kiya."
+          },
+          {
+            "heading": "State transfer, object transfer nahi",
+            "text": "Protocol mein pehle shared entanglement, phir measurement aur ordinary communication use hoti hai. Receiver us information ki help se doosre particle par original state reconstruct kar sakta hai. Original unknown state ki independent perfect copy bachti nahi."
+          },
+          {
+            "heading": "Speed limit",
+            "text": "Ordinary communication step ke bina receiver final reconstruction nahi kar sakta. Isliye protocol usable information ko light se faster transmit nahi karta."
+          },
+          {
+            "heading": "Yeh sawaal important kyun hai?",
+            "text": "Quantum information mein unknown quantum state ko reliably transfer karna important hai, especially communication networks ki research mein. Ordinary file ki tarah unknown quantum state ko simply read karke perfect copy banana generally possible nahi. Teleportation protocol shared entanglement use karke state transfer ka alag route provide karta hai."
+          },
+          {
+            "heading": "Kaise kaam karta hai?",
+            "text": "Sender ke paas original system aur entangled pair ka ek member hota hai; receiver ke paas doosra member. Sender joint measurement karta hai aur outcome ordinary classical communication se bhejta hai. Receiver result ke hisaab se appropriate operation apply karta hai. Ideal protocol mein receiver ka system original state reproduce kar sakta hai, while original state independent copy ki tarah survive nahi karti."
+          },
+          {
+            "heading": "Evidence aur limitations",
+            "text": "Classical message light speed se faster nahi ja sakta, so useful instant signalling possible nahi. Experimental fidelity imperfect ho sakti hai aur equipment ko carefully controlled conditions chahiye. 1997 demonstration photons ki state se related thi; matter, object ya person ko Star Trek style transport karne ka evidence nahi. Future quantum networks potential application hain, guaranteed everyday technology nahi."
+          }
+        ],
+        "real_world_connection": "Quantum state transfer quantum communication aur future network research ka important topic hai.",
+        "reality_check": {
+          "established": "Quantum states ki teleportation controlled experiments mein demonstrate hui hai.",
+          "misconception": "Insaan ya physical object ko instant teleport karna is experiment ne demonstrate nahi kiya."
+        },
+        "status": "Proven",
+        "sources": [
+          {
+            "title": "NIST: quantum communication review and 1997 experiment",
+            "url": "https://tsapps.nist.gov/publication/get_pdf.cfm?pub_id=926344"
+          }
+        ]
+      }
+    },
+    {
+      "day": 107,
+      "category": "Indian science",
+      "card": {
+        "title": "Samundar ka rang dekhkar Raman ne kya socha?",
+        "hook": "Ek Indian scientist ki curiosity ne light ka ek naya effect dhoondhne mein help ki.",
+        "cta": "Puri kahani padhein"
+      },
+      "detail": {
+        "real_life_scene": "Sunlight glass, paani ya kisi transparent cheez se guzarti hai toh humein rang aur brightness mein changes dikh sakte hain.",
+        "central_question": "Kya kisi material se takraane ke baad roshni ka colour badal sakta hai?",
+        "explanation": [
+          {
+            "heading": "Kahani aur evidence",
+            "text": "C. V. Raman aur K. S. Krishnan ne Kolkata mein light scattering par research ki. 1928 mein unhone aisa effect report kiya jisme scattered light ka ek chhota part incoming light se different wavelength rakhta hai. Raman ko 1930 Physics Nobel mila."
+          },
+          {
+            "heading": "Aasaan shabdon mein",
+            "text": "Scattering ka matlab hai light ka kisi particle ya molecule se interact karke alag directions mein jaana. Raman effect mein light aur molecule energy exchange kar sakte hain, isliye scattered light ka colour ya wavelength thoda badal sakta hai."
+          },
+          {
+            "heading": "Yeh sawaal important kyun hai?",
+            "text": "Light jab material se takraati hai, scientists dekh sakte hain ki incoming beam ke saath kya hua. Raman aur colleagues ka question tha ki transparent substances mein scattered light ki properties kya reveal karti hain. Isse molecules ke internal behaviour study karne ka powerful non-destructive tool develop hua."
+          },
+          {
+            "heading": "Kaise kaam karta hai?",
+            "text": "Most scattered light incoming light jaisi frequency rakhti hai; ise elastic scattering kehte hain. Raman scattering ka small part molecule ke vibrational ya rotational energy levels ke saath energy exchange karta hai. Photon ki frequency thodi shift hoti hai. Shift ka pattern material ke molecular structure ke clues de sakta hai."
+          },
+          {
+            "heading": "Evidence aur limitations",
+            "text": "Raman spectroscopy mein laser beam sample par daalkar scattered light ka spectrum measure kiya jaata hai. Researchers chemicals identify karne, materials study karne aur kuch medical research mein technique use karte hain. Raman signal weak ho sakta hai aur fluorescence ya instrument conditions interpretation ko difficult bana sakte hain. Samundar ke colour par Raman ki curiosity background thi, lekin Raman effect sea ke blue colour ka complete explanation nahi."
+          }
+        ],
+        "real_world_connection": "Aaj Raman spectroscopy naam ki technique materials ko unke light signatures se identify karne mein use hoti hai.",
+        "reality_check": {
+          "established": "Raman effect experimentally established hai.",
+          "misconception": "Har scattered light ka colour badalna zaroori nahi; changed part comparatively small hota hai."
+        },
+        "status": "Proven",
+        "sources": [
+          {
+            "title": "Nobel: C. V. Raman biography",
+            "url": "https://www.nobelprize.org/prizes/physics/1930/raman/biographical/"
+          }
+        ]
+      }
+    },
+    {
+      "day": 108,
+      "category": "Space mystery",
+      "card": {
+        "title": "Pluto planet kyun nahi raha?",
+        "hook": "School ki purani books mein nine planets the. Phir ek meeting ne Pluto ka label badal diya.",
+        "cta": "Puri kahani padhein"
+      },
+      "detail": {
+        "real_life_scene": "Library mein books ki categories badal sakti hain, bina books badle.",
+        "central_question": "Kya Pluto ke saath space mein kuch hua tha?",
+        "explanation": [
+          {
+            "heading": "Kahani aur evidence",
+            "text": "1930 mein Clyde Tombaugh ne Pluto discover kiya. 2006 mein International Astronomical Union ne solar-system planets ki definition adopt ki; Pluto ko dwarf planet category mein rakha gaya. Kuch scientists is definition se disagree karte rahe."
+          },
+          {
+            "heading": "Aasaan shabdon mein",
+            "text": "IAU ke planet rules mein Sun ke around orbit, enough gravity se roughly round shape, aur apne orbital neighbourhood ko gravitationally dominate karna shamil hai. Pluto third criterion meet nahi karta."
+          },
+          {
+            "heading": "Yeh sawaal important kyun hai?",
+            "text": "Pluto ki discovery ke baad outer solar system mein aur bhi icy objects milne lage. Jab Pluto jaisi bodies ki population saamne aayi, astronomers ko decide karna pada ki planet category ki boundary kaise define karein. Classification language aur shared communication ke liye useful hai, although definition par scientific debate ho sakti hai."
+          },
+          {
+            "heading": "Kaise kaam karta hai?",
+            "text": "International Astronomical Union ki 2006 definition solar system ke planets ke liye teen conditions deti hai: Sun ki orbit, self-gravity se nearly round shape, aur orbital neighbourhood clear karna. Last phrase ka matlab orbit mein har chhota object physically hata dena nahi, balki body ka gravitational dominance establish hona hai."
+          },
+          {
+            "heading": "Evidence aur limitations",
+            "text": "Pluto roughly round hai aur Sun ke around orbit karta hai, lekin Kuiper Belt ke other objects ke saath orbital region share karta hai aur IAU criterion mein neighbourhood dominate nahi karta. Isliye use dwarf planet classify kiya gaya. Yeh label uski scientific value kam nahi karta: New Horizons ne uski complex surface aur atmosphere study ki. Alternative classification preferences exist, but IAU definition official context mein clear hai."
+          },
+          {
+            "heading": "Ek aur zaroori baat",
+            "text": "Orbit clear karne ki definition solar system context ke liye banayi gayi thi; distant exoplanets ke classification ke liye wahi observational test straightforward nahi hota."
+          }
+        ],
+        "real_world_connection": "Classification scientists ko objects compare karne aur terminology clear rakhne mein help karti hai.",
+        "reality_check": {
+          "established": "IAU classification mein Pluto dwarf planet hai.",
+          "misconception": "Pluto gayab nahi hua aur na hi physically chhota ho gaya; category badli."
+        },
+        "status": "Divided",
+        "sources": [
+          {
+            "title": "Nature: planetary classification debate",
+            "url": "https://www.nature.com/news/2007/070611/full/news070611-10.html"
+          }
+        ]
+      }
+    },
+    {
+      "day": 109,
+      "category": "Human body",
+      "card": {
+        "title": "Aapki body ko raat-din ka time kaise pata chalta hai?",
+        "hook": "Bina watch dekhe bhi roz ek hi time neend kyun aati hai?",
+        "cta": "Puri kahani padhein"
+      },
+      "detail": {
+        "real_life_scene": "Kabhi alarm bajne se thodi der pehle aankh khul jaati hai.",
+        "central_question": "Kya body ke andar koi biological clock hoti hai?",
+        "explanation": [
+          {
+            "heading": "Kahani aur evidence",
+            "text": "Jeffrey Hall, Michael Rosbash aur Michael Young ne fruit flies mein daily biological rhythms ki genetic machinery study ki. 1984 mein teams ne period gene isolate kiya; 2017 mein unhe Nobel Prize mila."
+          },
+          {
+            "heading": "Aasaan shabdon mein",
+            "text": "Circadian rhythm lagbhag 24-hour cycle hai jo sleep aur body ki kai processes ko influence karta hai. Brain aur cells ke clock systems light aur daily routine jaise signals se synchronize ho sakte hain."
+          },
+          {
+            "heading": "Yeh sawaal important kyun hai?",
+            "text": "Hum usually din mein alert aur raat ko sleepy feel karte hain. Body ke internal timing systems hormones, temperature aur metabolism jaise processes ko coordinate karne mein help karte hain. Agar external light aur daily schedule clock se mismatch ho, jaise long-distance travel ya night shift mein, sleep aur alertness disturb ho sakti hai."
+          },
+          {
+            "heading": "Kaise kaam karta hai?",
+            "text": "Fruit fly experiments mein researchers ne genes identify kiye jo roughly daily rhythms influence karte hain. Clock proteins ki production aur breakdown feedback loops banati hai: protein levels change hote hain aur apni production ko regulate karte hain. Human clocks bhi molecular feedback mechanisms use karte hain, although details species ke across identical nahi."
+          },
+          {
+            "heading": "Evidence aur limitations",
+            "text": "Brain ka suprachiasmatic nucleus light information receive karke body clocks ko synchronize karne mein central role nibhata hai. Other tissues ke apne clocks bhi hote hain. Natural light, consistent schedule aur behaviour timing influence karte hain, lekin sleep problems ke multiple causes ho sakte hain. Clock research se treatments study karne mein help milti hai; ek gene ya ek habit sab sleep problems explain nahi karti."
+          }
+        ],
+        "real_world_connection": "Travel ke baad jet lag aur night shifts mein sleep disruption samajhne ke liye body clock ka idea useful hai.",
+        "reality_check": {
+          "established": "Biological clocks aur unke molecular mechanisms experimentally supported hain.",
+          "misconception": "Body clock ek literal ghadi nahi, aur sab logon ka sleep schedule exactly same nahi hota."
+        },
+        "status": "Proven",
+        "sources": [
+          {
+            "title": "Nobel: circadian rhythm",
+            "url": "https://www.nobelprize.org/prizes/medicine/2017/press-release/"
+          }
+        ]
+      }
+    },
+    {
+      "day": 110,
+      "category": "Brain",
+      "card": {
+        "title": "Patient H.M. nayi memories kyun nahi bana pa raha tha?",
+        "hook": "Ek surgery ke baad memory ke baare mein scientists ko unexpected clue mila.",
+        "cta": "Puri kahani padhein"
+      },
+      "detail": {
+        "real_life_scene": "Kal kis se mile the, yeh yaad rakhna aur bicycle chalana seekhna alag types ki memory ho sakti hain.",
+        "central_question": "Kya brain ke ek region ko damage hone se new memories affect hoti hain?",
+        "explanation": [
+          {
+            "heading": "Kahani aur evidence",
+            "text": "1953 mein Henry Molaison, jinko research mein H.M. kaha gaya, ne severe epilepsy treat karne ke liye brain surgery undergo ki. William Scoville aur Brenda Milner ne 1957 mein unki memory difficulties report ki."
+          },
+          {
+            "heading": "Aasaan shabdon mein",
+            "text": "Surgery mein hippocampus ke parts aur nearby regions affect hue. H.M. ko naye everyday facts aur events ki lasting memories banane mein severe difficulty hui, lekin kuch skills seekhne ki capacity bani rahi."
+          },
+          {
+            "heading": "Yeh sawaal important kyun hai?",
+            "text": "H.M. ki case history ne researchers ko memory ke different forms separate karne ka chance diya. Pehle memory ko ek single storage box samajhna tempting tha. Agar ek ability damage ho aur doosri relatively preserved rahe, toh yeh suggest karta hai ki different brain systems aur processes involved hain."
+          },
+          {
+            "heading": "Kaise kaam karta hai?",
+            "text": "Surgery severe epilepsy reduce karne ke aim se hui thi, lekin uske baad Henry Molaison ko new facts aur events ki long-term memory banane mein serious difficulty hui. Unki working memory aur kuch older memories relative degree tak preserved thi. Mirror drawing jaise tasks mein practice se skill improve ho sakti thi, even when he could not reliably remember the practice episode."
+          },
+          {
+            "heading": "Evidence aur limitations",
+            "text": "Is distinction ne hippocampus aur nearby medial temporal structures ko new declarative memories ke formation se link karne mein help ki. Ek person ki case study alone har brain function prove nahi karti; later animal and human studies ne findings refine ki. Research ethics aur informed consent bhi important hain: H.M. ek person the, sirf experimental example nahi."
+          }
+        ],
+        "real_world_connection": "Is case ne memory ke different types aur brain regions ke roles study karne mein help ki.",
+        "reality_check": {
+          "established": "H.M. ki memory difficulties documented hain aur hippocampus memory formation ke liye important hai.",
+          "misconception": "Unki story ka matlab yeh nahi ki brain ki har memory ek hi jagah store hoti hai."
+        },
+        "status": "Proven",
+        "sources": [
+          {
+            "title": "Nobel: Eric Kandel on H.M.",
+            "url": "https://www.nobelprize.org/prizes/medicine/2000/kandel/biographical/"
+          }
+        ]
+      }
+    },
+    {
+      "day": 111,
+      "category": "Space history",
+      "card": {
+        "title": "Space mein bheja gaya Earth ka message: Golden Record",
+        "hook": "Agar koi spacecraft dhoondhe, toh use Earth ki awaazein aur 55 languages mil sakti hain.",
+        "cta": "Puri kahani padhein"
+      },
+      "detail": {
+        "real_life_scene": "Time capsule mein log apni life ki photos aur messages future ke liye rakhte hain.",
+        "central_question": "Kya insaan ne space mein apni civilisation ka message bheja hai?",
+        "explanation": [
+          {
+            "heading": "Kahani aur evidence",
+            "text": "1977 mein NASA ne Voyager 1 aur 2 par gold-plated records attach kiye. Carl Sagan ki chairmanship wali team ne images, music, natural sounds aur 55 languages mein greetings select ki."
+          },
+          {
+            "heading": "Aasaan shabdon mein",
+            "text": "Record ek physical disc hai, jise play karne ki symbolic instructions cover par di gayi hain. Yeh spacecraft ke saath travel karta hai; koi radio broadcast nahi hai jo automatically har jagah send ho raha ho."
+          },
+          {
+            "heading": "Yeh sawaal important kyun hai?",
+            "text": "Voyager spacecraft outer planets explore karne aur phir interstellar space ki taraf journey ke liye launch hue. Unpar Golden Record ek symbolic message hai: agar kabhi koi technologically capable finder spacecraft tak pahunche, toh disc Earth ke nature aur cultures ki selected snapshot de sakti hai. Aise encounter ki probability unknown aur extremely small ho sakti hai."
+          },
+          {
+            "heading": "Kaise kaam karta hai?",
+            "text": "Records mein encoded images, greetings, music aur sounds hain. Cover par diagrams playback aur location ko explain karne ki koshish karte hain; record ke saath stylus bhi diya gaya. Finder ko instructions, equipment aur encoding interpret karna hoga. Yeh message automatic broadcast ya proof of extraterrestrial life nahi hai."
+          },
+          {
+            "heading": "Evidence aur limitations",
+            "text": "Selection human choices reflect karta hai: Earth ki enormous cultural diversity ko ek disc par fully represent karna impossible hai. Scientific instruments aur record alag roles serve karte hain; instruments mission data collect karte hain, record symbolic communication ke liye hai. Voyager mission ki achievements aur record ki potential discovery ko mix nahi karna chahiye. Ab tak kisi alien recipient ka confirmed evidence nahi."
+          }
+        ],
+        "real_world_connection": "Yeh project science aur culture ko jodkar poochta hai ki Earth ki life ko kaise represent karein.",
+        "reality_check": {
+          "established": "Dono Voyager spacecraft par Golden Records hain.",
+          "misconception": "Kisi alien civilisation ne record receive ya play kiya hai, iska evidence nahi hai."
+        },
+        "status": "Proven",
+        "sources": [
+          {
+            "title": "NASA: Golden Record contents",
+            "url": "https://voyager.jpl.nasa.gov/golden-record/whats-on-the-record/"
+          }
+        ]
+      }
+    },
+    {
+      "day": 112,
+      "category": "Space survival",
+      "card": {
+        "title": "Apollo 13: square filter ko round hole mein kaise lagaya?",
+        "hook": "Moon mission ka oxygen tank phata. Phir crew ke saamne ek aur invisible danger tha.",
+        "cta": "Puri kahani padhein"
+      },
+      "detail": {
+        "real_life_scene": "Closed room mein fresh air aur waste gas ka balance important hota hai.",
+        "central_question": "Spacecraft damaged hone par astronauts ko safely Earth kaise laya gaya?",
+        "explanation": [
+          {
+            "heading": "Kahani aur evidence",
+            "text": "April 1970 mein Apollo 13 ke oxygen tank explosion ke baad Jim Lovell, Jack Swigert aur Fred Haise ko lunar module ko temporary lifeboat ki tarah use karna pada. Cabin mein carbon dioxide ka level dangerous badhne laga."
+          },
+          {
+            "heading": "Aasaan shabdon mein",
+            "text": "Command module ke square carbon-dioxide-removal canisters lunar module ke round openings se directly fit nahi hote the. Ground engineers ne available materials se adapter banane ka method develop kiya; crew ne instructions follow ki."
+          },
+          {
+            "heading": "Yeh sawaal important kyun hai?",
+            "text": "Spacecraft ke enclosed cabin mein crew breathing se carbon dioxide build hoti hai. Oxygen hona enough nahi: excess carbon dioxide ko remove karna bhi zaroori hai. Apollo 13 mein explosion ke baad normal mission plan badal gaya aur three astronauts ko lunar module mein expected se zyada time spend karna pada."
+          },
+          {
+            "heading": "Kaise kaam karta hai?",
+            "text": "Lithium hydroxide canisters carbon dioxide absorb karne ke system ka part the. Available command module canisters ka shape lunar module connection se compatible nahi tha. Ground team ne onboard materials ka inventory dekha aur makeshift adapter ka method test kiya; astronauts ne bags, tape aur other available items se procedure follow kiya."
+          },
+          {
+            "heading": "Evidence aur limitations",
+            "text": "Is fix ne carbon dioxide removal mein help ki, but safe return ek single trick se nahi hua. Power, water, navigation aur re-entry planning jaise multiple challenges bhi manage karne pade. Case engineering mein constraints, teamwork aur testing ki importance dikhata hai. Popular phrase square peg round hole actual adapter problem ki shorthand hai; yeh crew aur ground ki coordinated work ko simplify karta hai."
+          }
+        ],
+        "real_world_connection": "Emergency engineering mein available resources, teamwork aur clear communication critical hote hain.",
+        "reality_check": {
+          "established": "Crew safely Earth wapas aaya; square-to-round filter workaround documented hai.",
+          "misconception": "Problem sirf oxygen supply ki nahi thi: power, water aur carbon dioxide bhi concerns the."
+        },
+        "status": "Proven",
+        "sources": [
+          {
+            "title": "NASA: Apollo 13",
+            "url": "https://www.nasa.gov/missions/apollo/apollo-13-the-successful-failure/"
+          }
+        ]
+      }
+    },
+    {
+      "day": 113,
+      "category": "Space physics",
+      "card": {
+        "title": "Exploding star ka signal pehle paani ke tank mein mila!",
+        "hook": "Ek underground detector ne tiny particles pakde—aur scientists ko distant supernova ka clue mila.",
+        "cta": "Puri kahani padhein"
+      },
+      "detail": {
+        "real_life_scene": "Bijli ki chamak aur garaj same event se aati hain, lekin alag signals alag time par mil sakte hain.",
+        "central_question": "Ek star ke explosion ko light ke alawa kaise detect kar sakte hain?",
+        "explanation": [
+          {
+            "heading": "Kahani aur evidence",
+            "text": "23 February 1987 ko Japan ke Kamiokande detector aur doosre detectors ne supernova SN 1987A se associated neutrino burst record kiya. Masatoshi Koshiba ki team ne underground water detector ka use kiya."
+          },
+          {
+            "heading": "Aasaan shabdon mein",
+            "text": "Neutrinos bahut weakly interacting particles hain: bahut saare matter se bina interaction ke nikal jaate hain. Rare interaction water mein light flash create kar sakta hai, jise sensors detect karte hain."
+          },
+          {
+            "heading": "Yeh sawaal important kyun hai?",
+            "text": "Massive star ke core collapse ke models predict karte hain ki enormous energy neutrinos ke form mein release hoti hai. Agar detector mein such neutrinos mil sakein, toh scientists explosion ke deep interior ke baare mein information pa sakte hain, jahan se ordinary light directly escape nahi karti. SN 1987A ne yeh rare opportunity di."
+          },
+          {
+            "heading": "Kaise kaam karta hai?",
+            "text": "Water detector ke andar rare neutrino interaction charged particle produce kar sakta hai. Jab charged particle water mein light ki speed in that medium se faster move karta hai, Cherenkov light emit hoti hai; yeh vacuum mein light speed limit todna nahi hai. Sensitive sensors tiny flashes detect karte hain aur timing aur energy information record karte hain."
+          },
+          {
+            "heading": "Evidence aur limitations",
+            "text": "Kamiokande II aur IMB jaise independent detectors ne small number of events observe kiye jo supernova se associated the. Neutrinos ka arrival visible brightening se pehle tha because light ko star ke outer layers se emerge hone mein time lagta hai. Limited event count se detailed conclusions constrained the, but observation ne core-collapse picture ko important support diya. Neutrino aur photon speeds par simplistic claims avoid karne chahiye."
+          }
+        ],
+        "real_world_connection": "Neutrino astronomy scientists ko violent cosmic events ke andar ki processes ke clues deti hai.",
+        "reality_check": {
+          "established": "SN 1987A se associated neutrino detections historical milestone hain.",
+          "misconception": "Detector ne supernova ki photo paani mein nahi dekhi; usne rare particle interactions ke signals record kiye."
+        },
+        "status": "Proven",
+        "sources": [
+          {
+            "title": "Nobel: neutrinos from SN 1987A",
+            "url": "https://www.nobelprize.org/prizes/physics/2002/popular-information/"
+          }
+        ]
+      }
+    },
+    {
+      "day": 114,
+      "category": "Space mystery",
+      "card": {
+        "title": "Universe expand toh ho raha tha—par speed badh bhi rahi hai?",
+        "hook": "Scientists slowing expansion measure karna chahte the. Data ne surprising answer diya.",
+        "cta": "Puri kahani padhein"
+      },
+      "detail": {
+        "real_life_scene": "Moving car ki speed badhe toh woh har second aur zyada distance cover kar sakti hai.",
+        "central_question": "Kya universe ka expansion time ke saath accelerate hua hai?",
+        "explanation": [
+          {
+            "heading": "Kahani aur evidence",
+            "text": "1998 mein Saul Perlmutter ki team aur Brian Schmidt aur Adam Riess se associated team ne distant Type Ia supernovae study kiye. Observed brightness aur distance relation ne accelerating cosmic expansion ka evidence diya. Unhe 2011 Physics Nobel mila."
+          },
+          {
+            "heading": "Aasaan shabdon mein",
+            "text": "Type Ia supernovae kuch corrections ke baad distance estimate karne mein useful bright events hote hain. Observations ko cosmic expansion models se compare kiya jaata hai."
+          },
+          {
+            "heading": "Yeh sawaal important kyun hai?",
+            "text": "Astronomers ko sirf yeh nahi poochna tha ki galaxies door ja rahi hain, balki expansion time ke saath slow ho rahi hai ya fast. Gravity se ordinary matter expansion ko slow karne ki expectation thi. Distant supernovae ko compare karne se past expansion history test karna possible hua."
+          },
+          {
+            "heading": "Kaise kaam karta hai?",
+            "text": "Type Ia supernovae white dwarf explosions se related events hain. Unki observed brightness ko light-curve properties se standardize karke approximate distance nikali jaati hai; redshift se expansion ka information milta hai. Distant events expected se dimmer mile, jo suitable cosmological models mein accelerating expansion ke consistent hai."
+          },
+          {
+            "heading": "Evidence aur limitations",
+            "text": "Independent teams ke results aur later cosmic microwave background aur large-scale structure observations standard cosmology ko support karte hain. Acceleration ko model karne ke liye dark energy ya cosmological constant use hota hai, par underlying physical nature established nahi. Iska matlab har galaxy ya solar system locally expand ho raha hai, yeh nahi: gravitationally bound systems alag behave karte hain. Measurements mein calibration aur assumptions ki uncertainty bhi hoti hai."
+          },
+          {
+            "heading": "Ek aur zaroori baat",
+            "text": "Supernova data mein dust, brightness calibration aur sample selection ko carefully check karna padta hai; independent observations confidence improve karti hain."
+          }
+        ],
+        "real_world_connection": "Universe ka expansion history samajhne se cosmology ke models aur future predictions test hote hain.",
+        "reality_check": {
+          "established": "Accelerated expansion ke liye multiple observations support provide karte hain.",
+          "misconception": "Dark energy ka naam explanation ka label hai; uski ultimate physical nature established nahi hai."
+        },
+        "status": "Proven",
+        "sources": [
+          {
+            "title": "Nobel: accelerating expansion",
+            "url": "https://www.nobelprize.org/prizes/physics/2011/press-release/"
+          }
+        ]
+      }
+    },
+    {
+      "day": 115,
+      "category": "Invention",
+      "card": {
+        "title": "Blue LED banane mein itni difficulty kyun hui?",
+        "hook": "Red aur green LEDs pehle se the, lekin bright blue light ne lighting technology badal di.",
+        "cta": "Puri kahani padhein"
+      },
+      "detail": {
+        "real_life_scene": "Ghar ka white LED bulb chhota aur energy-efficient ho sakta hai.",
+        "central_question": "White LED lighting ke liye blue LED important kyun thi?",
+        "explanation": [
+          {
+            "heading": "Kahani aur evidence",
+            "text": "Isamu Akasaki aur Hiroshi Amano ne Nagoya University mein, aur Shuji Nakamura ne Nichia mein, efficient blue LEDs par major work kiya. 1990s mein bright blue devices achieve hue; teeno ko 2014 Physics Nobel mila."
+          },
+          {
+            "heading": "Aasaan shabdon mein",
+            "text": "LED ek electronic component hai jo electricity se light produce karta hai. Kuch common white LEDs blue LED ki light ka ek hissa phosphor material se doosre colours mein convert karke white light produce karti hain."
+          },
+          {
+            "heading": "Yeh sawaal important kyun hai?",
+            "text": "Energy-efficient white light banane ke liye blue light source ek missing piece tha. Red aur green LEDs pehle available the, lekin bright blue LED develop karna difficult raha because suitable semiconductor material aur high-quality device structures banana challenging tha. Successful devices ne compact lighting aur displays ke design ko transform kiya."
+          },
+          {
+            "heading": "Kaise kaam karta hai?",
+            "text": "LED mein electrons aur holes semiconductor junction par recombine karte hain aur energy photons ke roop mein nikal sakti hai. Semiconductor ke energy gap se photon energy aur colour related hota hai. Gallium nitride based materials blue light ke liye useful hain, but good crystals aur p-type material banane ke liye significant engineering advances chahiye the."
+          },
+          {
+            "heading": "Evidence aur limitations",
+            "text": "Many white LED lamps mein blue chip aur phosphor use hota hai: phosphor blue light ka kuch hissa absorb karke longer wavelengths emit karta hai. Mixed light white appear kar sakti hai. LEDs often efficient aur long-lived hoti hain, but quality, heat management aur power supply se actual lifetime vary karti hai. Bright blue invention ke baad bhi full lamp system design important hai."
+          },
+          {
+            "heading": "Ek aur zaroori baat",
+            "text": "Different phosphor mixtures aur device designs se white light ka shade aur colour rendering vary karte hain, isliye sab lamps same nahi hote."
+          }
+        ],
+        "real_world_connection": "Efficient LEDs homes, screens aur public lighting mein widely use hoti hain.",
+        "reality_check": {
+          "established": "Efficient blue LED development lighting technology ke liye major breakthrough tha.",
+          "misconception": "White LED light banane ka sirf ek possible method nahi hai."
+        },
+        "status": "Proven",
+        "sources": [
+          {
+            "title": "Nobel: blue LED invention",
+            "url": "https://www.nobelprize.org/prizes/physics/2014/press-release/"
+          }
+        ]
+      }
+    },
+    {
+      "day": 116,
+      "category": "Space history",
+      "card": {
+        "title": "Sun ki doori measure karne ke liye Venus ko kyun dekha?",
+        "hook": "1700s mein teams duniya bhar gayi taaki planet ko Sun ke saamne cross karte dekh sakein.",
+        "cta": "Puri kahani padhein"
+      },
+      "detail": {
+        "real_life_scene": "Aap apna angutha saamne rakhkar ek-ek aankh band karein toh uski position background ke against shift lagti hai.",
+        "central_question": "Sirf sky observations se Earth aur Sun ki doori kaise estimate hui?",
+        "explanation": [
+          {
+            "heading": "Kahani aur evidence",
+            "text": "Edmond Halley ne 1716 mein Venus transit observations se solar-system scale measure karne ka method describe kiya. 1761 aur 1769 transits ke liye scientists ne alag locations se observations gather ki."
+          },
+          {
+            "heading": "Aasaan shabdon mein",
+            "text": "Transit mein Venus Earth se dekha jaane par Sun ke disc ke saamne se guzarta dikhta hai. Distant observers ko uska path thoda different dikhta hai; is apparent difference ko parallax kehte hain. Geometry se distance estimate milti hai."
+          },
+          {
+            "heading": "Yeh sawaal important kyun hai?",
+            "text": "Distances jaane bina solar system ka scale samajhna difficult tha. Astronomers planets ke relative distances infer kar sakte the, lekin Earth se Sun ki absolute distance ka better estimate baaki distances ko physical units mein set karne mein help karta. Rare Venus transits ne geometry-based measurement ka opportunity diya."
+          },
+          {
+            "heading": "Kaise kaam karta hai?",
+            "text": "Earth ke alag locations se Venus Sun ke disc ke across slightly different path par dikhta hai. Is apparent displacement ko parallax kehte hain: jaise finger ko ek eye aur phir doosri eye se dekhne par background ke against position change hoti hai. Transit timing aur geometry combine karke solar parallax aur Earth-Sun distance estimate ki ja sakti hai."
+          },
+          {
+            "heading": "Evidence aur limitations",
+            "text": "1761 aur 1769 expeditions worldwide organize hui, lekin measurement easy nahi tha. Atmosphere, timing errors aur Venus ke edge ke paas black-drop effect ne precision limit ki. Multiple observations combine karke estimates improve hue. Modern radar aur spacecraft tracking se distances much more accurately milte hain. Transit ka value historical measurement method aur international collaboration samajhne mein bhi hai."
+          }
+        ],
+        "real_world_connection": "Yeh example dikhata hai ki measurements aur geometry milkar directly unreachable distances bata sakti hain.",
+        "reality_check": {
+          "established": "Historical Venus transit measurements se Earth–Sun distance ka early estimate mila.",
+          "misconception": "Sun ko directly ya unfiltered telescope se dekhna aankhon ke liye dangerous hai."
+        },
+        "status": "Proven",
+        "sources": [
+          {
+            "title": "NASA: Venus transit and distance",
+            "url": "https://asd.gsfc.nasa.gov/blueshift/index.php/2012/07/02/2012-venus-transit/"
+          }
+        ]
+      }
+    },
+    {
+      "day": 117,
+      "category": "Discovery",
+      "card": {
+        "title": "X-ray: haath ke andar ki haddiyan pehli baar kaise dikhi?",
+        "hook": "Ek invisible ray ne 1895 mein doctors aur scientists dono ko surprise kar diya.",
+        "cta": "Puri kahani padhein"
+      },
+      "detail": {
+        "real_life_scene": "Hospital mein X-ray image se bone fracture dekhne ki baat familiar hai.",
+        "central_question": "Body ke andar ki picture bina cut kiye kaise milti hai?",
+        "explanation": [
+          {
+            "heading": "Kahani aur evidence",
+            "text": "Wilhelm Conrad Röntgen ne 1895 mein X-rays discover ki. Unki early images mein human hand ki bones visible thi. Unhe 1901 mein first Physics Nobel diya gaya."
+          },
+          {
+            "heading": "Aasaan shabdon mein",
+            "text": "X-rays light family ki high-energy radiation hain. Body ke different materials unhe alag amounts mein absorb karte hain; detector par yeh differences image banate hain."
+          },
+          {
+            "heading": "Yeh sawaal important kyun hai?",
+            "text": "Doctors ko body ke andar fracture dekhne ke liye pehle external signs aur examination par depend karna padta tha. Röntgen ki discovery ne bina surgery ke internal structures image karne ka new route diya. Early experiments mein invisible rays ne fluorescent screen aur photographic plate par effects produce kiye."
+          },
+          {
+            "heading": "Kaise kaam karta hai?",
+            "text": "X-ray beam body se guzarti hai aur different tissues beam ko different amounts mein attenuate karte hain. Bones generally surrounding soft tissue se zyada X-rays absorb karti hain, isliye detector par contrast ban sakta hai. Image three-dimensional body ka two-dimensional projection hai; overlapping structures interpretation ko complex bana sakte hain."
+          },
+          {
+            "heading": "Evidence aur limitations",
+            "text": "X-rays medicine, dentistry aur materials inspection mein useful hain, but ionizing radiation cells ko damage kar sakti hai. Clinicians benefit aur risk weigh karte hain aur exposure ko appropriate minimum rakhne ki koshish karte hain. Imaging ka selection patient ki situation par depend karta hai; har pain ke liye X-ray automatically best test nahi. Modern techniques aur radiation safety early days se kaafi improve hui hain."
+          },
+          {
+            "heading": "Ek aur zaroori baat",
+            "text": "CT scanning bhi X-rays use karti hai, lekin multiple angles ke measurements se cross-sectional images reconstruct karti hai. Uski dose aur suitability ordinary X-ray se different ho sakti hai."
+          }
+        ],
+        "real_world_connection": "Medical X-rays doctors ko bones aur kuch other conditions examine karne mein help karti hain.",
+        "reality_check": {
+          "established": "X-rays aur medical imaging established technologies hain.",
+          "misconception": "Radiation exposure risk-free nahi; medical imaging ka benefit aur dose doctor evaluate karte hain."
+        },
+        "status": "Proven",
+        "sources": [
+          {
+            "title": "Nobel: first Nobel Prizes and X-rays",
+            "url": "https://www.nobelprize.org/prizes/themes/the-very-first-nobel-prizes/"
+          }
+        ]
+      }
+    },
+    {
+      "day": 118,
+      "category": "Space",
+      "card": {
+        "title": "Blink karte stars ne galaxies ki distance kaise batayi?",
+        "hook": "Ek astronomer ne stars ke bright-dim cycle aur actual brightness ka hidden relation dhoondha.",
+        "cta": "Puri kahani padhein"
+      },
+      "detail": {
+        "real_life_scene": "Agar do same bulbs mein ek dim dikhe, toh woh door ho sakta hai.",
+        "central_question": "Bahut door galaxy ki distance bina measuring tape ke kaise estimate hoti hai?",
+        "explanation": [
+          {
+            "heading": "Kahani aur evidence",
+            "text": "Henrietta Swan Leavitt ne 1912 mein Cepheid variable stars ki study se unke brightness cycle aur actual brightness ke beech relation identify kiya. Edwin Hubble ne baad mein Cepheids ko distant galaxies ki distance estimate karne mein use kiya."
+          },
+          {
+            "heading": "Aasaan shabdon mein",
+            "text": "Cepheid ki brightness regularly badalti hai. Cycle ki length se estimated actual brightness mil sakti hai; phir Earth se observed brightness compare karke distance estimate ki jaati hai."
+          },
+          {
+            "heading": "Yeh sawaal important kyun hai?",
+            "text": "Astronomers ko nearby stars ke beyond distances measure karne mein challenge tha: sky mein dim object intrinsically faint bhi ho sakta hai ya bahut door bhi. Agar kisi object ki actual luminosity ka independent estimate mile, toh observed brightness se distance calculate karna possible hota hai. Cepheids isi cosmic distance ladder ka important step bane."
+          },
+          {
+            "heading": "Kaise kaam karta hai?",
+            "text": "Leavitt ne Small Magellanic Cloud ke Cepheids study kiye. Ek hi galaxy mein hone ke kaaran unki distances approximately similar thi, so apparent brightness differences se relative luminosity compare karna easier hua. Unhone pulsation period aur luminosity ka relationship identify kiya: longer-period Cepheids generally more luminous hote hain."
+          },
+          {
+            "heading": "Evidence aur limitations",
+            "text": "Calibration ke baad astronomers period measure karke luminosity estimate karte hain, phir brightness aur corrections use karke distance calculate karte hain. Hubble ki Andromeda observations ne show karne mein help ki ki yeh Milky Way ke beyond ek galaxy hai. Dust, calibration aur star properties uncertainty introduce karte hain; multiple methods cross-check important hain. Cepheids literally blink on and off nahi, brightness periodically vary karti hai."
+          },
+          {
+            "heading": "Ek aur zaroori baat",
+            "text": "Nearby Cepheid distances ko independent methods se calibrate karna important hai, kyunki ek calibration error distance ladder ke later steps ko affect kar sakta hai."
+          }
+        ],
+        "real_world_connection": "Cosmic distance measurements universe ka size aur expansion samajhne ki foundation hain.",
+        "reality_check": {
+          "established": "Leavitt ka period–luminosity relationship astronomy ka important tool hai.",
+          "misconception": "Dim star hamesha door nahi hota; uski actual brightness aur dust bhi matter karte hain."
+        },
+        "status": "Proven",
+        "sources": [
+          {
+            "title": "Nobel: Henrietta Leavitt and cosmic distance",
+            "url": "https://www.nobelprize.org/prizes/physics/2011/popular-information/"
+          }
+        ]
+      }
+    },
+    {
+      "day": 119,
+      "category": "Science aur environment",
+      "card": {
+        "title": "Petrol mein lead: scientist ne pollution ka danger kaise dikhaya?",
+        "hook": "Earth ki age measure karte waqt ek scientist ko environment mein lead ka unexpected clue mila.",
+        "cta": "Puri kahani padhein"
+      },
+      "detail": {
+        "real_life_scene": "Gaadiyon ka exhaust hawa mein jaata hai. Lekin pollution ka kuch hissa hawa ke baad mitti aur dhool mein bhi reh sakta hai.",
+        "central_question": "Kya petrol mein lead milane ka asar generations tak reh sakta hai?",
+        "explanation": [
+          {
+            "heading": "Clair Patterson ki research",
+            "text": "Geochemist Clair Patterson ne 1950s mein Earth ki age estimate karne ke liye lead measurements par kaam kiya. Unhe experiments mein unwanted lead contamination se deal karna pada. Baad mein unhone old ice, deep ocean water aur human remains mein lead compare karke industrial pollution ko investigate kiya."
+          },
+          {
+            "heading": "Petrol se exposure tak",
+            "text": "Tetraethyl lead petrol mein engine knocking reduce karne ke liye use hota tha. Lead-containing exhaust environment ko contaminate kar sakta hai. 1980 ki scientific report mein Patterson ne gasoline emissions ko urgently curb karne ki baat rakhi aur accumulated lead residues par concern express kiya."
+          },
+          {
+            "heading": "Yeh sawaal important kyun hai?",
+            "text": "Earth ki age estimate karne ke liye ancient rocks mein lead isotopes measure karte waqt Patterson ko surprising contamination problems mile. Tiny external lead samples ko distort kar sakta tha, isliye clean laboratory methods important bane. Is difficulty ne environment mein lead ke widespread presence par further investigation motivate ki."
+          },
+          {
+            "heading": "Kaise kaam karta hai?",
+            "text": "Lead petrol mein tetraethyl lead engine knocking reduce karne ke liye add kiya gaya tha, lekin combustion ke baad lead compounds exhaust se environment mein enter kar sakte the. Lead toxic hai; especially children ke developing nervous systems par harmful effects ho sakte hain. Historical ice aur other samples ko modern samples se compare karna pollution ke trends investigate karne mein useful tha."
+          },
+          {
+            "heading": "Evidence aur limitations",
+            "text": "Lead exposure ke sources paint, dust aur water pipes bhi ho sakte hain; gasoline ek important source tha, but only source nahi. Leaded petrol phase-out public health ke liye major achievement hai, although contaminated sites aur other exposure pathways remain. Exposure ka risk location aur circumstances par depend karta hai; specific concern ho toh local health guidance aur appropriate testing follow karna chahiye."
+          }
+        ],
+        "real_world_connection": "Purane paint, contaminated dust aur industrial sites mein lead exposure public-health concern ho sakta hai, especially children ke liye.",
+        "reality_check": {
+          "established": "Industrial lead pollution aur uske health risks documented hain.",
+          "misconception": "Lead exposure sirf petrol se nahi hota; sources jagah aur context ke hisaab se vary karte hain."
+        },
+        "status": "Proven",
+        "sources": [
+          {
+            "title": "Science History Institute: The Legacy of Industrial Lead",
+            "url": "https://www.sciencehistory.org/collections/blog/the-legacy-of-industrial-lead/"
+          }
+        ]
+      }
+    },
+    {
+      "day": 120,
+      "category": "Science history",
+      "card": {
+        "title": "Bacteria dikhte nahi the—phir unhe dhoondha kaise gaya?",
+        "hook": "Ek lens maker ne paani ki boondon mein tiny moving life dekhi.",
+        "cta": "Puri kahani padhein"
+      },
+      "detail": {
+        "real_life_scene": "Still water ki ek chhoti boond aankh se plain lagti hai, lekin usmein bahut kuch ho sakta hai.",
+        "central_question": "Microscope se unseen world kaise saamne aaya?",
+        "explanation": [
+          {
+            "heading": "Kahani aur evidence",
+            "text": "Antonie van Leeuwenhoek ne 1670s mein powerful simple microscopes se microorganisms observe kiye aur Royal Society ko observations bheji. Unke descriptions microscopic life ke early documented records mein se hain."
+          },
+          {
+            "heading": "Aasaan shabdon mein",
+            "text": "Microscope small objects se aane wali light ko magnify karta hai, yaani unka enlarged view banata hai. Modern microscopes alag techniques se cells aur smaller structures study karte hain."
+          },
+          {
+            "heading": "Yeh sawaal important kyun hai?",
+            "text": "Human eye ki resolving power limited hoti hai: bahut chhoti cheezein separate details ke saath nahi dikhti. Leeuwenhoek ne carefully made small lenses aur preparation techniques se water aur other samples inspect kiye. Unki reports ne demonstrate kiya ki ordinary surroundings mein microscopic organisms ki diverse world exist karti hai."
+          },
+          {
+            "heading": "Kaise kaam karta hai?",
+            "text": "Simple microscope ka lens object se aane wali light ko bend karta hai aur enlarged image de sakta hai. Magnification ke saath resolution bhi important hai: image ko bada kar dena alone fine details reveal nahi karta. Modern light microscopes illumination, lenses aur contrast techniques improve karte hain; electron microscopes different physical method use karte hain."
+          },
+          {
+            "heading": "Evidence aur limitations",
+            "text": "Leeuwenhoek ke observations microbial life ki early evidence thi, lekin unhone single-handedly modern germ theory establish nahi ki. Later experiments ne specific microbes aur diseases ke relationships test kiye. Aaj microbiology medicine, food production aur environmental science mein central hai. Har microorganism harmful nahi: many helpful hote hain aur kai neutral; identification aur evidence ke bina disease cause assume nahi karna chahiye."
+          },
+          {
+            "heading": "Ek aur zaroori baat",
+            "text": "Microscope se sample dekhte waqt contamination aur preparation ka dhyan rakhna padta hai. Kisi cell ki shape alone se uski exact species confirm karna hamesha possible nahi hota."
+          }
+        ],
+        "real_world_connection": "Water quality, infection research aur biology labs mein microscopy useful hai.",
+        "reality_check": {
+          "established": "Microorganisms ko microscope se observe kiya ja sakta hai.",
+          "misconception": "Har microorganism harmful nahi hota; kai beneficial ya harmless bhi hote hain."
+        },
+        "status": "Proven",
+        "sources": [
+          {
+            "title": "Royal Society: Leeuwenhoek",
+            "url": "https://royalsociety.org/blog/2015/07/leeuwenhoek-and-his-microscopes/"
+          }
+        ]
+      }
+    }
+  ]
+}

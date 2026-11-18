@@ -108,36 +108,44 @@
         "cta": "Puri kahani padhein"
       },
       "detail": {
-        "real_life_scene": "School mein hum padhte hain ki Earth, Sun ke around ghoomti hai. Lekin ek samay yeh baat bahut controversial thi.",
-        "central_question": "Galileo ne kya kaha tha, aur unhe punishment kyun mili?",
+        "real_life_scene": "School mein hum padhte hain ki Earth, Sun ke around ghoomti hai. Lekin 400 saal pehle sky ko explain karne ke liye alag models the, aur unke beech choice science ke saath religious authority se bhi judi thi.",
+        "central_question": "Galileo ne kya dekha, usse kaunsa purana model challenge hua, aur phir unka trial kyun hua?",
         "explanation": [
           {
-            "heading": "Do alag tasveerein",
-            "text": "Us zamane mein bahut log maante the ki Earth universe ke centre mein hai. Copernicus ne ek doosra model diya tha jisme Earth aur doosre planets Sun ke around ghoomte hain."
+            "heading": "Problem: sky mein centre kaun?",
+            "text": "Purane Earth-centred model mein Earth ko centre maana jaata tha. Copernicus ne 1543 mein Sun-centred model present kiya: Earth aur doosre planets Sun ke around move karte hain. Dono models sky mein dikhne wali motions explain karne ki koshish karte the. Sawal tha ki observations kis model ke saath fit hoti hain."
           },
           {
-            "heading": "Telescope ne kya dikhaya?",
-            "text": "Galileo ne telescope se Venus planet ki badalti hui shapes, ya phases, dekhi. Yeh observations us simple model ke khilaaf thi jisme Venus hamesha Earth aur Sun ke beech ghoomta tha. Unhone Jupiter ke aas-paas moons bhi dekhe: har cheez Earth ke around hi nahi ghoom rahi thi."
+            "heading": "Telescope se naye clues",
+            "text": "1610 ke aas-paas Galileo ne Jupiter ke paas chaar objects ko uske around move karte dekha. Woh Jupiter ke moons the. Isse pata chala ki har visible object directly Earth ke around nahi ghoomta. Unhone Venus ke phases bhi dekhe: Moon ki tarah uska bright hissa badalta hai. Venus ki observed phases simple purane model se match nahi karti thi."
           },
           {
-            "heading": "Court tak baat kaise pahunchi?",
-            "text": "Catholic Church ne 1616 mein Galileo ko heliocentric idea defend na karne ki instruction di. Heliocentric ka simple matlab yahan Sun-centred model hai. Unki 1632 ki book ke baad Roman Inquisition ne 1633 mein unka trial kiya."
+            "heading": "Kya isse har debate khatam ho gayi?",
+            "text": "Nahi. Kuch alternative models mein Venus aur doosre planets Sun ke around ghoomte the, lekin Sun ko Earth ke around maana jaata tha. Woh bhi Venus ki phases explain kar sakte the. Isliye Galileo ke observations important evidence the, lekin ek observation se us waqt har alternative automatically rule out nahi hua."
           },
           {
-            "heading": "Saza ke baad",
-            "text": "Galileo ko apni position se publicly pichhe hatna pada aur house arrest mein rakha gaya. Woh 1642 mein apni death tak restrictions ke under rahe; is dauran bhi unhone scientific work kiya."
+            "heading": "Court aur punishment",
+            "text": "1616 mein Catholic Church authorities ne Copernican position par restrictions lagayi. Galileo ki 1632 ki book mein competing world systems discuss hue; Church authorities ne maana ki unhone apni earlier instructions violate ki. 1633 mein Roman Inquisition ne trial ke baad unhe apni position se formally peeche hatne ko kaha. Unki prison sentence house arrest mein badal di gayi."
+          },
+          {
+            "heading": "Yeh kahani important kyun hai?",
+            "text": "Galileo ne house arrest ke dauran bhi research aur writing ki. 1642 mein unki death hui. Is episode mein evidence, religious interpretation, personal relationships aur institutional authority sabki role thi; ise sirf ek scientist versus sabhi believers kehna oversimplification hoga."
           }
         ],
-        "real_world_connection": "Yeh story batati hai ki observation aur accepted belief takraayen toh evidence ko dhyan se dekhna kyun zaroori hai.",
+        "real_world_connection": "Aaj scientific models ko observations ke against test kiya jaata hai. Jab do models ek result explain karte hain, researchers aise naye tests dhoondhte hain jo unke predictions ko alag kar saken.",
         "reality_check": {
-          "established": "Galileo par trial hua aur woh house arrest mein rahe; Earth ka Sun ke around ghoomna baad ke evidence se established hai.",
-          "misconception": "Galileo ke har argument ko correct nahi maana jaata; trial ki history ko sirf ek sentence mein sametna bhi oversimplification hai."
+          "established": "Galileo ke observations ne purane sky models ko challenge kiya; 1633 ke trial ke baad woh house arrest mein rahe.",
+          "misconception": "Jupiter ke moons ya Venus ke phases ne us samay akele har Earth-centred alternative ko eliminate nahi kiya."
         },
-        "status": "Proven",
+        "status": "Proven: observations and trial",
         "sources": [
           {
-            "title": "Galileo affair: historical analysis",
-            "url": "https://heterodoxacademy.org/blog/how-simplistic-narratives-can-mislead-us-a-case-study-of-the-galileo-affair/"
+            "title": "American Institute of Physics: history of cosmology",
+            "url": "https://history.aip.org/exhibits/cosmology/ideas/start-of-scientific-cosmology.htm"
+          },
+          {
+            "title": "NASA: history of planetary motion",
+            "url": "https://earthobservatory.nasa.gov/features/OrbitsHistory/page1.php"
           }
         ]
       }
@@ -151,43 +159,47 @@
         "cta": "Puri kahani padhein"
       },
       "detail": {
-        "real_life_scene": "Chai mein doodh daalte hi safed lakeerein banti hain. Spoon ghumane par woh mudti hain, toot-ti hain aur dheere-dheere mix ho jaati hain.",
-        "central_question": "Kya fluid ke flow ko batane wali equations ka solution hamesha theek bana rahega?",
+        "real_life_scene": "Chai mein doodh girne par safed lakeerein mudti hain aur dheere-dheere mix hoti hain. Flow ka pattern everyday life mein dikh jaata hai, lekin uska exact mathematical behaviour samajhna challenging ho sakta hai.",
+        "central_question": "Paani aur hawa ke flow ki equations useful hain, phir mathematicians kis proof ko lekar debate karte hain?",
         "explanation": [
           {
-            "heading": "Equation kya hai?",
-            "text": "Equation numbers ya quantities ke beech relationship likhne ka tareeka hai. Navier–Stokes equations batati hain ki paani ya hawa jaise fluids ka flow time ke saath kaise badal sakta hai."
+            "heading": "Problem: flow important kyun hai?",
+            "text": "Hawa aircraft ke around chalti hai; paani pipes aur rivers mein behta hai. Agar engineers flow estimate kar saken, toh aircraft design, weather forecasting aur water systems plan karne mein help milti hai. Ek equation mathematical language mein quantities ke beech relationship batati hai. Navier–Stokes equations fluid, yaani liquid ya gas, ke flow ko describe karne ka ek model hain."
           },
           {
-            "heading": "Kaam karti hain, phir sawaal kya hai?",
-            "text": "Engineers in equations ke computer-based estimates ka use aircraft aur weather models jaise kaamon mein karte hain. Lekin kisi particular calculation ka useful hona, har possible starting condition ke liye poora mathematical proof hone se alag baat hai."
+            "heading": "Equation mein kya jaata hai?",
+            "text": "Model mein fluid ki speed, pressure aur thickness se judi resistance jaise factors consider kiye jaate hain. Starting condition batati hai ki shuru mein fluid ka flow kaisa tha. Bahar ki force bhi include ki ja sakti hai. Computer in equations ka approximate answer nikaal sakta hai, lekin approximation aur general mathematical proof alag cheezein hain."
           },
           {
-            "heading": "Asli mathematical challenge",
-            "text": "Imagine flow ki starting picture smooth hai, yaani usmein koi sudden mathematical breakdown nahi hai. Sawaal hai: kya suitable conditions mein yeh smooth solution hamesha rahega, ya kisi finite time par equation ka smooth description fail ho sakta hai?"
+            "heading": "Asli mathematical question",
+            "text": "Imagine ek starting flow jisme speed smoothly change hoti hai: koi sudden infinite spike nahi. Kuch specific three-dimensional cases mein mathematicians poochte hain ki kya smooth solution hamesha exist karega, ya finite time mein singularity aa sakti hai. Singularity ka matlab yahan mathematical description ka kisi point par uncontrolled tareeke se break hona hai."
           },
           {
-            "heading": "Naya claim aur uski limit",
-            "text": "2026 mein ek AI-produced proof ne bahar se lagne wali force ke saath ek breakdown example ka claim kiya. Claim ka evaluation zaroori hai. Force ke bina flow ke general case ka question us claim se decide nahi hota."
+            "heading": "Proof milne se kya badlega?",
+            "text": "General proof scientists ko equations ki limits zyada precisely samajhne mein help karega. Lekin iska matlab yeh nahi ki next day har weather forecast perfect ho jaayega. Real fluids, measurement errors aur computing limitations separate challenges hain. Practical models kaam kar sakte hain, even jab unse judi deep mathematical questions unresolved hon."
+          },
+          {
+            "heading": "2026 ka claim",
+            "text": "2026 mein ek AI-produced proof ne external force wale case mein breakdown ka claim kiya. Clay Mathematics Institute ne announcement par evaluation process ka zikr kiya. Claim ki validity aur exact scope ko independent mathematical review se judge karna zaroori hai. Is claim ko bina verification har unforced flow ka answer na samjhein."
           }
         ],
-        "real_world_connection": "Weather forecast aur aircraft ke aas-paas hawa ke models mein fluid equations ka practical use hota hai.",
+        "real_world_connection": "Weather apps aur aircraft design mein flow modelling use hoti hai. Model ka practical result useful hona aur uske har mathematical case ka proof hona ek hi baat nahi.",
         "reality_check": {
-          "established": "Fluid modelling useful hai; mathematical proof ke specific cases ko alag-alag judge karna hota hai.",
-          "misconception": "Is problem ka matlab yeh nahi ki scientists paani ka flow bilkul samajhte hi nahi."
+          "established": "Navier–Stokes equations fluid flow model karti hain; 2026 forced-case claim ko evaluation ke context mein dekhna chahiye.",
+          "misconception": "Is proof question ka matlab scientists paani ya hawa ka behaviour bilkul predict nahi kar sakte, yeh nahi hai."
         },
-        "status": "Claim under review",
+        "status": "Claim under review: forced-case proof",
         "sources": [
           {
-            "title": "Clay: official problem description",
+            "title": "Clay Mathematics Institute: official problem",
             "url": "https://www.claymath.org/wp-content/uploads/2022/06/navierstokes.pdf"
           },
           {
-            "title": "2026 proof announcement",
+            "title": "2026 proof claim and stated scope",
             "url": "https://openai.com/index/navier-stokes-solution/"
           },
           {
-            "title": "Clay: announcement and evaluation",
+            "title": "Clay: announcement",
             "url": "https://www.claymath.org/news/navier-stokes-announcement/"
           }
         ]
@@ -202,36 +214,44 @@
         "cta": "Puri kahani padhein"
       },
       "detail": {
-        "real_life_scene": "School mein aksar ek line padhai jaati hai: Wright brothers ne airplane banaya. Lekin inventions ke credit ki kahani kabhi-kabhi ek line se badi hoti hai.",
-        "central_question": "Jis machine ki flight fail hui, use baad mein early airplane credit kaise milne laga?",
+        "real_life_scene": "Agar school project mein ek student pehle idea banaye aur doosra working model dikhaye, toh credit kis ko milega? Early aircraft ki history mein bhi idea, failed machine aur successful flight ke beech farq important tha.",
+        "central_question": "Langley ki failed machine aur Wright brothers ki successful flight ke beech credit dispute kyun hua?",
         "explanation": [
           {
-            "heading": "1903 ki do alag koshishein",
-            "text": "Samuel Langley ka full-size Aerodrome A October aur December 1903 mein launch attempts ke dauran crash hua. December wale crash ke sirf 9 din baad Wright brothers ne Kitty Hawk mein successful powered flight ki."
+            "heading": "Problem: insaan udne wala aircraft kaise banaye?",
+            "text": "1900s ke shuru mein researchers motor se chalne wali machine ko pilot ke saath hawa mein udane ki koshish kar rahe the. Sirf hawa mein uthna enough nahi tha: machine ko control karna aur powered flight demonstrate karna bhi important tha. Isliye aircraft ki design aur real test results dono matter karte the."
           },
           {
-            "heading": "Machine badli, phir udi",
-            "text": "1914 mein Glenn Curtiss ne Langley ke aircraft ko kaafi modify kiya, yaani usmein significant changes kiye. Badli hui machine ne kuch brief, seedhi flights ki."
+            "heading": "1903 mein kya hua?",
+            "text": "Samuel Langley ke full-size Aerodrome A aircraft ki October aur December 1903 ki launch attempts fail hui; machine paani mein gir gayi. December ki attempt ke nau din baad, 17 December ko Wilbur aur Orville Wright ne Kitty Hawk mein apne Flyer ki powered, controlled flights ki. Langley ke earlier unpiloted models pehle fly kar chuke the, lekin full-size machine ki 1903 tests successful nahi thi."
           },
           {
-            "heading": "Museum ka label",
-            "text": "Smithsonian Institution ne baad mein machine ko uski purani 1903 configuration mein display kiya aur uske flight-capable hone ka claim kiya. Orville Wright ne is presentation ko misleading maana, kyunki successful hops modified machine ne ki thi."
+            "heading": "1914 mein machine dobara bani",
+            "text": "1914 mein Glenn Curtiss ne Smithsonian ke liye Aerodrome ko rebuild kiya aur usmein significant modifications kiye. Modified aircraft ne kuch brief, straight-line flights ki. Baad mein machine ko 1903 wali configuration jaisa restore karke museum mein display kiya gaya."
           },
           {
-            "heading": "Protest aur clarification",
-            "text": "Dispute ke dauran Orville ne original Wright Flyer ko London ke Science Museum ko lend kiya. Smithsonian ne 1942 mein Aerodrome ki history clarify ki; Flyer baad mein United States aaya."
+            "heading": "Credit par dispute kyun hua?",
+            "text": "Museum ne aircraft ko flight ke capable bataya. Orville Wright ne object kiya: successful 1914 flights us machine ne ki thi jisme major changes hue the, original 1903 version ne nahi. Unke liye yeh difference important tha, kyunki label se public ko pehli working aircraft ki history ke baare mein misleading impression mil sakta tha."
+          },
+          {
+            "heading": "Phir kya hua?",
+            "text": "Orville ne protest ke dauran Wright Flyer ko London ke Science Museum ko lend kiya. Smithsonian ne 1942 mein Aerodrome ki test history clarify ki. Original Flyer later United States aaya. Yeh case batata hai ki invention ka credit decide karte waqt kis version ne kya achieve kiya, dhyan se dekhna padta hai."
           }
         ],
-        "real_world_connection": "Aaj bhi kisi app ya invention mein pehla idea, pehla working version aur public credit alag logon ko mil sakte hain.",
+        "real_world_connection": "Apps, medicines aur machines mein early idea, prototype aur reliable working product ke contributors alag ho sakte hain. Credit dene ke liye test records aur changes identify karna useful hai.",
         "reality_check": {
-          "established": "Langley ka original full-size aircraft 1903 mein successful flight nahi kar paaya; modified machine ne 1914 mein brief flights ki.",
-          "misconception": "Langley ka contribution zero nahi tha: unke earlier unpiloted model aircraft ne successful flights ki thi."
+          "established": "Original full-size Aerodrome ki 1903 attempts fail hui; substantially modified version ne 1914 mein brief flights ki.",
+          "misconception": "Langley ka full-size test fail hone ka matlab unke earlier model-aircraft research ka koi contribution nahi tha, yeh nahi."
         },
-        "status": "Proven",
+        "status": "Proven: documented flight tests and dispute",
         "sources": [
           {
             "title": "Smithsonian: Langley Aerodrome A",
             "url": "https://airandspace.si.edu/collection-objects/langley-aerodrome/nasm_A19180001000"
+          },
+          {
+            "title": "Smithsonian: Wright Flyer history",
+            "url": "https://airandspace.si.edu/stories/editorial/what-happened-original-wright-flyer"
           }
         ]
       }
@@ -245,36 +265,40 @@
         "cta": "Puri kahani padhein"
       },
       "detail": {
-        "real_life_scene": "Aapne school mein circle ki measurement ke saath pi padha hoga: 3.14159... Iske aage digits chalte hi jaate hain.",
-        "central_question": "Kya kisi bhi phone number, date ya likhi hui kahani ko digits mein badalkar pi mein dhoondha ja sakta hai?",
+        "real_life_scene": "Circle ke chapter mein aapne pi, ya π, dekha hoga: 3.14159 aur uske baad aur digits. Kuch log kehte hain ki is number ke andar har phone number aur har story chhupi hai. Kya maths ne yeh prove kiya hai?",
+        "central_question": "Pi ke digits kabhi khatam nahi hote; kya isse har possible digit pattern ka milna prove hota hai?",
         "explanation": [
           {
-            "heading": "Infinite ka matlab sab kuch nahi",
-            "text": "Pi ke decimal digits kabhi khatam nahi hote aur hamesha ke liye repeating cycle mein nahi aate. Lekin sirf itna jaanna enough nahi ki har possible digit sequence usmein milega."
+            "heading": "Pi ki zaroorat kya hai?",
+            "text": "Kisi circle ki boundary ki length ko uske diameter, yaani centre se guzarne wali width, se divide karein. Ideal circle ke liye result pi hota hai. Isi wajah se pi circles, wheels aur engineering calculations mein useful hai. Iski decimal form 3.14159 se shuru hoti hai aur digits aage chalte rehte hain."
           },
           {
-            "heading": "Ek simple counterexample",
-            "text": "Imagine ek endless decimal jisme sirf 1 aur 2 aate hain. Woh bahut lamba ho sakta hai, lekin usmein 9 kabhi nahi milega. Isliye infinite length apne aap har digit combination guarantee nahi karti."
+            "heading": "Infinite digits ka matlab",
+            "text": "Pi irrational number hai: ise do whole numbers ki simple fraction ke form mein exactly nahi likh sakte. Iski decimal expansion khatam nahi hoti aur permanently repeating cycle mein nahi jaati. Lekin endless aur non-repeating hone se yeh automatically follow nahi hota ki har possible digit pattern usmein aayega."
           },
           {
-            "heading": "Pi ke baare mein guess",
-            "text": "Mathematicians investigate karte hain ki kya pi normal hai. Iska matlab, simple terms mein, har fixed-length digit pattern long run mein expected frequency se dikhe. Agar yeh prove hota, toh har finite digit sequence pi mein hota."
+            "heading": "Ek counterexample",
+            "text": "Sochiye aisa endless digit sequence jisme sirf 1 aur 2 aate hain aur arrangement kabhi fixed cycle mein repeat nahi hoti. Woh endless aur non-repeating ho sakti hai, phir bhi usmein 9 kabhi nahi aayega. Yeh example pi ka description nahi hai; yeh sirf dikhata hai ki length aur non-repetition akeli har pattern ki guarantee nahi deti."
           },
           {
-            "heading": "Kahani bhi mil sakti hai?",
-            "text": "Agar har finite sequence milta ho, toh kisi fixed coding system se text ko digits mein badalkar uska pattern bhi mil sakta hai. Lekin sirf pattern milne ka matlab yeh nahi ki pi ne woh kahani samajhi, likhi ya future predict kiya."
+            "heading": "Pi ke liye sawaal kya hai?",
+            "text": "Mathematicians poochte hain ki kya pi normal number hai. Decimal normality ka matlab har fixed-length digit pattern long run mein expected frequency se aana hai. Agar pi normal prove ho jaaye, toh har finite pattern usmein hoga. Lekin current mathematical knowledge mein pi ki normality proved nahi hai."
+          },
+          {
+            "heading": "Phone number milne se kya hoga?",
+            "text": "Computer pi ke already calculated digits mein particular pattern search kar sakta hai. Agar aapka number mil jaaye, woh ek matching sequence ka result hoga; isse yeh prove nahi hota ki pi aapko jaanta hai ya future predict karta hai. Aur ek particular pattern milna, har possible pattern ke liye proof nahi hai."
           }
         ],
-        "real_world_connection": "Phone numbers aur passwords bhi digits ke patterns hain. Short patterns search kiye ja sakte hain, par har possible pattern ke liye general claim alag baat hai.",
+        "real_world_connection": "Yeh distinction passwords aur large datasets samajhne mein useful hai: bahut saare examples dekhna pattern ka clue de sakta hai, lekin universal claim ke liye proof alag chahiye.",
         "reality_check": {
-          "established": "Pi ke digits infinite aur non-repeating hain; uski normality ka general proof nahi mila.",
-          "misconception": "Infinite digits hone se automatically har possible number hona prove nahi hota."
+          "established": "Pi ki decimal expansion infinite aur non-repeating hai; decimal normality abhi proved nahi hai.",
+          "misconception": "Infinite digits hone se automatically har phone number ya story usmein milna prove nahi hota."
         },
-        "status": "Still Unsolved",
+        "status": "Still unsolved: normality of pi",
         "sources": [
           {
-            "title": "Normal numbers and pi",
-            "url": "https://twopi.dev/2026/the-numbers-that-contain-everything/"
+            "title": "Wolfram MathWorld: pi digits and normality",
+            "url": "https://mathworld.wolfram.com/PiDigits.html"
           }
         ]
       }
@@ -288,35 +312,39 @@
         "cta": "Puri kahani padhein"
       },
       "detail": {
-        "real_life_scene": "Radio par station badalte waqt kabhi achanak clear signal aur kabhi sirf noise sunai deti hai. Astronomers bhi space se aane wale radio signals study karte hain.",
-        "central_question": "Ek baar mila strange signal kya intelligent life ka message tha?",
+        "real_life_scene": "Jab phone par kisi unknown number se message aaye, sirf message dekhkar sender kaun hai yeh hamesha nahi pata chalta. Space se aane wala unusual radio signal bhi bina repeat ya extra evidence ke identify karna difficult ho sakta hai.",
+        "central_question": "1977 ka Wow! Signal itna interesting kyun tha, aur kya woh aliens ka message tha?",
         "explanation": [
           {
-            "heading": "Signal kahan mila?",
-            "text": "15 August 1977 ko Ohio State University ke Big Ear radio telescope ne ek strong, unexpected radio signal record kiya. Radio telescope space se aane wali radio waves receive karne wala instrument hai."
+            "heading": "Scientists sun kyun rahe the?",
+            "text": "Radio waves light ki tarah energy carry karti hain, lekin unki wavelength alag hoti hai. Radio telescope in waves ko receive karke measure karta hai. Space mein stars, gas aur other objects radio waves bhej sakte hain. Kuch scientists possible extraterrestrial technology ke signals bhi search karte hain, kyunki radio communication long distances par detectable ho sakti hai."
           },
           {
-            "heading": "Naam kaise pada?",
-            "text": "Astronomer Jerry Ehman ne printed data examine karte hue unusual signal circle kiya aur uske paas “Wow!” likh diya. Tab se woh Wow! Signal ke naam se famous ho gaya."
+            "heading": "1977 mein kya record hua?",
+            "text": "15 August 1977 ko Ohio State University ke Big Ear radio telescope ne ek strong, unexpected radio signal detect kiya. Astronomer Jerry Ehman ne printed data mein unusual pattern ko circle karke “Wow!” likha. Isi handwritten note se signal ko naam mila. Signal ka unusual hona further investigation ka reason tha."
           },
           {
-            "heading": "Problem: dobara nahi mila",
-            "text": "Follow-up searches mein same signal reliably repeat nahi hua. Jab ek event sirf ek baar record ho, toh uske source ko identify karna difficult hota hai: data ko alag explanations se compare karne ke limited chances milte hain."
+            "heading": "Agar message hota toh kya badal sakta tha?",
+            "text": "Agar reliable evidence se kisi signal ka source Earth ke bahar ki technology prove ho jaata, toh yeh life aur intelligence ke baare mein extraordinary discovery hoti. Lekin exciting possibility proof nahi hoti. Investigators ko signal ke repeat hone, position, possible interference aur alternate explanations jaise evidence examine karna padta."
           },
           {
-            "heading": "Aliens ka proof?",
-            "text": "Signal ka unknown hona interesting hai, lekin unknown ka matlab alien nahi hota. Possible natural ya human-made explanations par researchers ne discussion ki hai; kisi ek source ki conclusive identification establish nahi hui."
+            "heading": "Problem: signal phir confirm nahi hua",
+            "text": "Follow-up searches mein original event ka same signal reliably repeat nahi hua. Ek single record se source ki location aur nature confirm karna mushkil ho jaata hai. Natural astrophysical processes ya human-made interference jaise possible explanations consider kiye gaye hain, lekin kisi ek source ki conclusive identification establish nahi hui."
+          },
+          {
+            "heading": "Unknown ka matlab kya?",
+            "text": "Unknown ek honest scientific answer hai: available data se cause decide nahi hua. Iska matlab yeh nahi ki koi bhi guess equally supported hai, aur na hi yeh alien message ka confirmation hai. Naye evidence ke bina certainty claim karna misleading hoga."
           }
         ],
-        "real_world_connection": "Jaise phone par ek baar aayi unknown call ka number aur details na milein, waise hi incomplete signal se sender identify karna mushkil ho sakta hai.",
+        "real_world_connection": "Unverified viral messages aur unusual screenshots ke saath bhi same principle useful hai: original source, repeatable evidence aur alternative explanations check karein.",
         "reality_check": {
-          "established": "1977 mein unusual signal record hua tha, aur uska source confirm nahi hai.",
-          "misconception": "“Source unknown” ka matlab “aliens confirmed” nahi hai."
+          "established": "Big Ear ne 1977 mein unusual radio signal record kiya; uska source conclusively identify nahi hua.",
+          "misconception": "Signal ka source unknown hona alien civilization ka proof nahi hai."
         },
-        "status": "Still Unsolved",
+        "status": "Still unsolved: signal origin",
         "sources": [
           {
-            "title": "NASA: Big Ear and the Wow! Signal",
+            "title": "NASA: Big Ear and Wow! Signal",
             "url": "https://apod.nasa.gov/apod/ap200502.html"
           }
         ]
@@ -331,36 +359,44 @@
         "cta": "Puri kahani padhein"
       },
       "detail": {
-        "real_life_scene": "Pahaadon ya khaali hall mein aapki awaaz kisi surface se takrakar der se wapas aa sakti hai. Use echo, yaani goonj, kehte hain.",
-        "central_question": "Kya roshni ke saath bhi kuch aisa ho sakta hai?",
+        "real_life_scene": "Pahaad ke paas awaaz lagane par echo thodi der baad sunai deti hai. Space mein roshni ke saath bhi delayed signal aa sakta hai, lekin mechanism aur distances alag hote hain.",
+        "central_question": "1572 mein dikhe star explosion ki roshni scientists ko centuries baad phir kaise mili?",
         "explanation": [
           {
-            "heading": "Pehli roshni",
-            "text": "1572 mein Tycho Brahe aur doosre observers ne aasman mein ek bright naya point dekha. Woh asal mein ek supernova tha: ek star se judi bahut powerful explosion."
+            "heading": "Pehli baar kya dikha?",
+            "text": "1572 mein Tycho Brahe aur doosre observers ne sky mein ek unusually bright point notice kiya. Aaj hum jaante hain ki woh supernova tha: ek star se judi extremely powerful explosion. Purane observers ne is event ki brightness aur position record ki, lekin unke paas modern instruments se light analyse karne ka mauka nahi tha."
           },
           {
-            "heading": "Ek doosra raasta",
-            "text": "Explosion ki kuch roshni Earth ki taraf seedhe aayi. Kuch doosri roshni space mein maujood dust, yaani bahut chhote particles, se takrakar direction badal gayi. Longer route se aane wali light Earth par baad mein pahunchi."
+            "heading": "Light echo ka route",
+            "text": "Explosion ki light har direction mein nikli. Kuch light comparatively direct route se Earth tak pahunchi, isliye observers ne event 1572 mein dekha. Kuch doosri light space mein dust, yaani tiny particles, se scatter hui: uski direction badli aur usne longer route liya. Longer path ki wajah se yeh light Earth tak later pahunch sakti hai. Isi delay ko light echo kehte hain."
           },
           {
-            "heading": "Purane event ka naya evidence",
-            "text": "Is delayed light ko light echo kehte hain. 2008 mein Oliver Krause aur colleagues ne Subaru Telescope se Tycho ke supernova ki echo light study ki."
+            "heading": "Purani roshni useful kyun hai?",
+            "text": "Agar astronomers ko explosion ki delayed light mile, toh woh modern instruments se us event ke light signature ka analysis kar sakte hain. Isse historical report aur physical evidence ko connect karne ka chance milta hai. Woh incident ko literally dobara nahi dekh rahe; original event ki scattered light ab pahunch rahi hai."
           },
           {
-            "heading": "Roshni se kya pata chala?",
-            "text": "Scientists ne light ko uske colours aur wavelengths mein baantkar uska spectrum dekha—ek tarah ka light signature. Us signature ne event ko Type Ia supernova identify karne mein help ki."
+            "heading": "2008 mein kya pata chala?",
+            "text": "Oliver Krause aur colleagues ne Tycho supernova ki echo light ka spectrum study kiya. Spectrum light ko alag wavelengths, yaani colours se related ranges, mein divide karke banaya gaya pattern hai. Yeh pattern Type Ia supernova ke saath match hua. Type Ia event ek white dwarf, yaani star ke dense leftover, ki explosion se connected hota hai."
+          },
+          {
+            "heading": "Kya har detail pata chal gayi?",
+            "text": "Nahi. Spectrum event ki broad type identify karne mein help karta hai; usse original system ki har detail automatically confirm nahi hoti. Dust scattering aur measurements bhi carefully interpret karni padti hain."
           }
         ],
-        "real_world_connection": "Jaise sound ka echo der se aata hai, waise hi scattered light longer route se der se pahunch sakti hai; dono processes ki physical details alag hain.",
+        "real_world_connection": "Light echoes astronomers ko past events study karne ka extra tool deti hain. Nature mein evidence kabhi direct photo nahi, balki light ka carefully analysed signal hota hai.",
         "reality_check": {
-          "established": "Tycho ke 1572 supernova ka delayed light echo observe aur analyse kiya gaya.",
-          "misconception": "Yeh kisi bhi past event ka clear video replay karne wali machine nahi hai."
+          "established": "Tycho supernova ki scattered light ka spectrum Type Ia classification ko support karta hai.",
+          "misconception": "Light echo ka matlab explosion ka dobara hona ya time machine se past mein jaana nahi hai."
         },
-        "status": "Proven",
+        "status": "Proven: delayed light echo and classification",
         "sources": [
           {
-            "title": "Nature: Echo from an ancient supernova",
+            "title": "Nature: echo from an ancient supernova",
             "url": "https://www.nature.com/articles/456587a"
+          },
+          {
+            "title": "NASA: Tycho supernova",
+            "url": "https://www.nasa.gov/image-article/tycho-supernova-death-of-star/"
           }
         ]
       }
@@ -374,40 +410,44 @@
         "cta": "Puri kahani padhein"
       },
       "detail": {
-        "real_life_scene": "Kabhi bread par fungus ka patch dekha hoga. Kuch fungi doosre microorganisms ki growth ko affect kar sakti hain.",
-        "central_question": "Ek accidentally contaminated plate se useful medicine ka idea kaise nikla?",
+        "real_life_scene": "Aaj bacterial infection ke liye doctor kabhi antibiotic prescribe kar sakte hain. Lekin effective antibiotics widely available hone se pehle kuch infections treat karna bahut difficult tha.",
+        "central_question": "Ek fungus ke aas-paas bacteria kyun nahi badhe, aur us observation se medicine tak ka safar kaise hua?",
         "explanation": [
           {
-            "heading": "1928 ki plate",
-            "text": "Alexander Fleming bacteria ko laboratory dishes mein study kar rahe the. Ek dish par mould, yaani fungus, grow hua aur uske aas-paas bacteria ki growth ruki hui thi."
+            "heading": "Problem kya thi?",
+            "text": "Bacteria microscopic living organisms hain. Kuch harmless ya useful hote hain, lekin kuch dangerous infections cause karte hain. 1900s ke early decades mein doctors ke paas bacterial infections ke liye aaj jaise antibiotics ke options nahi the. Aisi medicine ki zaroorat thi jo harmful bacteria ko roke aur patient ke liye usable ho."
           },
           {
-            "heading": "Naam mila, medicine abhi nahi",
-            "text": "Fleming ne mould se nikalne wale bacteria ko rokne wale substance ka naam penicillin rakha. Yeh observation important thi, lekin substance ko stable aur enough quantity mein banana bahut mushkil tha."
+            "heading": "1928 mein Fleming ne kya dekha?",
+            "text": "Alexander Fleming laboratory dishes mein bacteria study kar rahe the. Ek dish par accidentally mould, yaani fungus, aa gaya. Uske aas-paas bacteria ki growth nahi hui thi. Fleming ne is pattern ko notice karke investigate kiya aur mould se aane wale bacteria-inhibiting substance ka naam penicillin diya."
           },
           {
-            "heading": "Oxford team ka role",
-            "text": "1930s ke end mein Howard Florey, Ernst Chain aur unki Oxford team ne penicillin ko concentrate aur study karne par kaam kiya. Animal experiments aur further development ne dikhaya ki yeh infections ke treatment ke liye promising hai."
+            "heading": "Plate se patient tak ka gap",
+            "text": "Observation milna aur medicine banana alag kaam the. Penicillin ko purify karna, stable rakhna aur enough quantity mein banana difficult tha. Howard Florey, Ernst Chain aur Oxford ke colleagues ne 1930s ke end aur 1940s mein usko study aur develop kiya. Animal studies, further testing aur production efforts se treatment ka raasta bana."
           },
           {
-            "heading": "Credit ek naam se bada",
-            "text": "Fleming, Florey aur Chain ne 1945 Nobel Prize share kiya. Story mein accident important tha, lekin observation ko treatment tak pahunchane mein years of team research bhi equally important tha."
+            "heading": "Yeh discovery important kyun thi?",
+            "text": "Penicillin ne susceptible bacterial infections ke treatment mein major change laane mein help ki. Wounds aur other infections ke treatment mein iska use life-saving ho sakta tha. 1945 Medicine Nobel Fleming, Florey aur Chain ko jointly mila, lekin broader research aur production teams ka contribution bhi important tha."
+          },
+          {
+            "heading": "Aaj ki limit",
+            "text": "Penicillin har infection par kaam nahi karti. Viruses se hone wali illnesses par antibiotics work nahi karti, aur kuch bacteria resistant ho sakte hain, yani medicine un par effective nahi rehti. Allergies bhi serious ho sakti hain. Sahi medicine ka decision qualified clinician ko lena chahiye."
           }
         ],
-        "real_world_connection": "Antibiotics kuch bacterial infections treat karte hain. Lekin har infection bacterial nahi hota; antibiotics viruses par kaam nahi karte.",
+        "real_world_connection": "Antibiotics sirf prescription aur instructions ke according use karein. Kisi aur ki leftover medicine na lein; infection ka cause aur suitable treatment alag ho sakta hai.",
         "reality_check": {
-          "established": "Fleming ki observation aur Oxford team ka later development dono documented hain.",
-          "misconception": "Penicillin ki story ka matlab yeh nahi ki ghar ke mould ko medicine ki tarah use karna safe hai."
+          "established": "Fleming ne penicillin-producing mould observe kiya; Florey, Chain aur teams ne usse treatment tak develop karne mein important role nibhaya.",
+          "misconception": "Ek accidental observation akeli ready-to-use medicine nahi banati, aur antibiotic viruses ko treat nahi karti."
         },
-        "status": "Proven",
+        "status": "Proven: penicillin discovery and development",
         "sources": [
           {
-            "title": "Fleming: Nobel speech",
-            "url": "https://www.nobelprize.org/prizes/medicine/1945/fleming/speech/"
+            "title": "Nobel Prize: Ernst Chain and penicillin",
+            "url": "https://www.nobelprize.org/prizes/medicine/1945/chain/facts/"
           },
           {
-            "title": "Nobel: Howard Florey biography",
-            "url": "https://www.nobelprize.org/prizes/medicine/1945/florey/biographical/"
+            "title": "Nobel Prize: Fleming lecture",
+            "url": "https://www.nobelprize.org/prizes/medicine/1945/fleming/speech/"
           }
         ]
       }
@@ -421,35 +461,39 @@
         "cta": "Puri kahani padhein"
       },
       "detail": {
-        "real_life_scene": "Race mein finish time galat record ho jaaye, toh slow runner bhi winner dikh sakta hai. Science mein bhi clock aur connections ki accuracy important hoti hai.",
-        "central_question": "Kya scientists ne sach mein light se tez chalne wala particle dhoondh liya tha?",
+        "real_life_scene": "Race mein winner decide karne ke liye sirf finish line dekhna enough nahi: start aur finish clocks bhi accurate honi chahiye. Tiny timing error se calculated speed badal sakti hai.",
+        "central_question": "2011 mein neutrinos light se tez lag rahe the; 2012 mein scientists ne kya seekha?",
         "explanation": [
           {
-            "heading": "2011 ka result",
-            "text": "OPERA experiment ne CERN se Italy ke Gran Sasso laboratory tak bheje gaye neutrinos measure kiye. Neutrinos bahut chhote particles hain jo matter se rarely interact karte hain."
+            "heading": "Question itna important kyun tha?",
+            "text": "Einstein ki special relativity ke mutabik vacuum mein light ki speed ek fundamental speed limit hai. Agar kisi particle ke usse tez chalne ka reliable evidence milta, toh physicists ko existing theory ki foundations dobara examine karni padti. Isliye neutrino timing ka unusual result worldwide news bana."
           },
           {
-            "heading": "Hairaan karne wali timing",
-            "text": "Initial analysis mein neutrinos expected light-travel time se thoda pehle pahunchte hue dikhe. Agar yeh result correct hota, toh physics ke established rules ke liye serious challenge hota."
+            "heading": "Experiment ka setup",
+            "text": "Neutrinos electrically neutral particles hain jo ordinary matter se bahut weakly interact karte hain. CERN se unka beam Italy ki Gran Sasso laboratory ki taraf bheja gaya, lagbhag 730 kilometre door. OPERA experiment ne distance aur timing measurements use karke particles ke travel time ka estimate nikala."
           },
           {
-            "heading": "Scientific checking",
-            "text": "Researchers ne apna result scrutiny ke liye share kiya. Timing system ki investigation mein fibre-optic connection ka problem identify hua; yeh connection clocks ke signals se related tha."
+            "heading": "2011 ka surprising result",
+            "text": "Initial analysis mein neutrinos light ke expected travel time se thoda jaldi pahunchte hue lage. Researchers ne result scrutiny ke liye share kiya, taaki measurement aur analysis independently check ho sake. Ek surprising measurement ko final discovery maan lena jaldi hota, especially jab timing aur distance dono extremely precise hone chahiye."
           },
           {
-            "heading": "Dobara measurement",
-            "text": "2012 mein OPERA aur doosre Gran Sasso experiments ki measurements light-speed limit ke consistent aayi. Is tarah correction ne claim ko support karne ke bajay measurement problem reveal ki."
+            "heading": "Timing system ki problem",
+            "text": "Investigation mein timing system ke fibre-optic connection mein fault identify hua. Fibre-optic cable light signals ke through information carry karti hai; yahan timing information ke accurate transfer ka role tha. Timing error measured travel time ko distort kar sakta tha, jaise race mein clocks correctly synchronized na hon."
+          },
+          {
+            "heading": "Dobara check karne par",
+            "text": "2012 mein OPERA aur Gran Sasso ke other experiments ne neutrino travel times light speed ke consistent measure kiye. Iska matlab result ne faster-than-light claim support nahi kiya. Yeh nahi ki har future measurement unnecessary hai; itna ki yeh particular anomaly measurement issue se explain hui."
           }
         ],
-        "real_world_connection": "GPS, internet aur scientific instruments sab precise timing par depend karte hain. Ek chhoti timing error bhi conclusion badal sakti hai.",
+        "real_world_connection": "GPS, scientific instruments aur sports timing sab mein measurement systems ki calibration important hai. Jab result unexpected ho, scientists equipment, data aur independent checks sab examine karte hain.",
         "reality_check": {
-          "established": "Original OPERA anomaly ko timing-system fault se explain kiya gaya; later measurements light-speed limit ke consistent thi.",
-          "misconception": "Scientists ne is experiment se Einstein ki relativity ko disprove nahi kiya."
+          "established": "2012 ke cross-checks neutrinos ke travel time ko light-speed limit ke consistent paaye.",
+          "misconception": "2011 ka initial result Einstein ki relativity ko conclusively galat prove nahi karta tha."
         },
-        "status": "Disproven",
+        "status": "Disproven: OPERA faster-than-light claim",
         "sources": [
           {
-            "title": "CERN: OPERA timing anomaly and updates",
+            "title": "CERN: OPERA anomaly and 2012 updates",
             "url": "https://home.cern/opera-experiment-reports-anomaly-in-flight-time-of-neutrinos-from-cern-to-gran-sasso/"
           }
         ]
@@ -474,6 +518,18 @@
           {
             "heading": "Aage kya samajh aaya?",
             "text": "Unki detailed book De revolutionibus 1543 mein publish hui, jis saal unki death bhi hui. Ek popular story kehti hai ki printed copy unhe deathbed par mili, lekin iska confirmation nahi hai. Beech ke saalon mein unke student Rheticus ne 1540 mein unke model ka summary bhi publish kiya."
+          },
+          {
+            "heading": "Problem kya thi?",
+            "text": "Purane astronomy models ko planets ki sky mein badalti positions explain karni hoti thi. Kabhi planet baaki taaron ke comparison mein peeche jaata dikhta hai. Is movement ko retrograde motion kehte hain. Copernicus ne socha ki agar Earth bhi Sun ke around move kare, toh is apparent backward motion ko alag tarah samjha ja sakta hai."
+          },
+          {
+            "heading": "Idea aur book mein antar",
+            "text": "Ek early note mein basic idea share karna aur poori book mein calculations aur planetary models publish karna alag kaam hain. Copernicus ne handwritten Commentariolus mein early proposal diya. Rheticus ka 1540 account bhi printed main book se pehle available tha. Isliye “idea sirf 1543 mein aaya” kehna galat hoga."
+          },
+          {
+            "heading": "Important kyun tha?",
+            "text": "Sun-centred model ne astronomy ko Earth ki moving position consider karne ka naya framework diya. Lekin Copernicus ke model mein circular motions bhi the; woh aaj ka complete solar-system model nahi tha. Later observations aur Kepler ke mathematical work ne picture improve ki. Deathbed wali printed-copy story historically attractive hai, par uncertain detail ko confirmed fact nahi kehna chahiye."
           }
         ],
         "real_world_connection": "Jaise koi inventor idea saalon pehle notebook mein likh sakta hai, lekin product ya book bahut baad publish karta hai.",
@@ -509,6 +565,18 @@
           {
             "heading": "Aage kya samajh aaya?",
             "text": "Baad mein priority aur copying ke allegations par bitter dispute hua. Royal Society ki 1712 inquiry Newton ke favour mein gayi, lekin Newton us society ke president the aur report banane mein unka bada role tha. Aaj historians generally maante hain ki dono ne calculus independently develop kiya."
+          },
+          {
+            "heading": "Calculus ki zaroorat kyun?",
+            "text": "Car ki average speed poore safar ki distance ko time se divide karke mil sakti hai. Lekin speed kisi ek instant par kya thi? Ya kisi curved boundary ke andar total area kitna hai? Calculus aise changing quantities aur accumulation ko samajhne ki maths hai. Physics, engineering aur finance mein isi wajah se yeh important tool bana."
+          },
+          {
+            "heading": "Dono ne kya contribute kiya?",
+            "text": "Newton ne changing quantities ko time ke saath relate karke apne methods develop kiye. Leibniz ne independently differentiation aur integration ke ideas ke liye notation develop ki: symbols jaise d aur integral sign aaj bhi use hote hain. Earlier mathematicians ki discoveries bhi foundation thi; dono ne poori maths zero se create nahi ki."
+          },
+          {
+            "heading": "Credit ka dispute",
+            "text": "Newton ne methods pehle develop kiye lekin Leibniz ne unhe pehle publish kiya. Priority ka matlab pehle idea banana hai ya pehle public paper publish karna—yeh bhi argument ka part tha. Royal Society investigation ko independent judgement samajhna misleading hoga kyunki Newton ka direct involvement tha. Modern historical consensus independent development ko support karta hai."
           }
         ],
         "real_world_connection": "Speed, changing temperature aur growth ko describe karne mein calculus use hota hai.",
@@ -521,6 +589,10 @@
           {
             "title": "Historical account of dispute",
             "url": "https://dailyintegral.com/blog/newton-vs-leibniz"
+          },
+          {
+            "title": "MacTutor: Newton and Leibniz calculus dispute",
+            "url": "https://mathshistory.st-andrews.ac.uk/HistTopics/Calculus_priority/"
           }
         ]
       }
@@ -544,6 +616,18 @@
           {
             "heading": "Aage kya samajh aaya?",
             "text": "Hiroshima ke baad 1945 mein British detention house Farm Hall ki secretly recorded discussions ne scientists ki understanding aur assumptions par important evidence diya. Heisenberg ne 1941 mein Niels Bohr se Copenhagen mein bhi mulaqat ki; unki baatcheet ka exact meaning contested raha. Historians unke motives aur wartime knowledge ki interpretation par disagree karte hain."
+          },
+          {
+            "heading": "Context: war mein nuclear research",
+            "text": "1938 mein nuclear fission discover hui: kuch heavy atomic nuclei split hote hain aur energy release kar sakte hain. Wartime governments ko concern tha ki research se weapon ya reactor develop ho sakta hai. Germany ka research programme bhi is field mein involved tha. Scientific possibility aur us technology ka working weapon banana alag challenges hain."
+          },
+          {
+            "heading": "Evidence kya hai?",
+            "text": "1945 mein British authorities ne Heisenberg aur other German scientists ko Farm Hall mein detain karke unki discussions secretly record ki. Hiroshima ki news par unki reactions aur later calculations historians ke liye evidence hain. Lekin spoken conversation ko complete laboratory record ya private intentions ki direct window maan lena safe nahi."
+          },
+          {
+            "heading": "Debate kyun hai?",
+            "text": "1941 ki Copenhagen meeting mein Heisenberg aur Niels Bohr ke beech kya kaha gaya aur uska meaning kya tha, dono sides ki later accounts mein difference hai. Some historians technical mistakes, priorities aur limited resources par emphasis karte hain; motives par interpretations vary karti hain. Isliye “unhone jaanbujhkar bomb fail kiya” ya “unhe sab pata tha” ko certainty se kehna justified nahi."
           }
         ],
         "real_world_connection": "Complex failures aksar knowledge, funding, priorities aur resources ke combination se hote hain.",
@@ -579,6 +663,18 @@
           {
             "heading": "Aage kya samajh aaya?",
             "text": "1935 mein Royal Astronomical Society ki meeting mein Arthur Eddington ne conclusion ko challenge kiya. Later research ne Chandrasekhar limit ko stellar physics ka important part banaya. Chandrasekhar ko 1983 mein stars ki structure aur evolution par work ke liye Nobel Prize mila."
+          },
+          {
+            "heading": "Star ka end state kya hota hai?",
+            "text": "Kai stars apna usable fuel khatam karne ke baad white dwarf ban sakte hain. White dwarf ek bahut dense leftover hai: relatively chhoti jagah mein bahut matter hota hai. Gravity use aur squeeze karti hai. Uske andar electrons se judi quantum physics squeezing ke against support provide karti hai."
+          },
+          {
+            "heading": "Limit important kyun thi?",
+            "text": "Chandrasekhar ki calculations ke according ordinary white dwarf ko is support se stable rakhne ki mass limit hoti hai. Common approximate value Sun ke mass ka 1.4 times hai; detailed value composition aur assumptions se change ho sakti hai. Limit se above object white dwarf ki tarah stable nahi reh sakta. Aage kya hoga, uski conditions par depend karta hai."
+          },
+          {
+            "heading": "Disagreement aur later evidence",
+            "text": "1935 mein influential astronomer Eddington ne Chandrasekhar ke conclusion ka public criticism kiya. Senior scientist ki disagreement ka matlab proof automatically wrong nahi tha. Later theoretical aur observational research ne limit ko stellar evolution mein central bana diya. Aaj white dwarfs aur certain stellar explosions samajhne mein iska use hota hai, though every explosion ka pathway same nahi hota."
           }
         ],
         "real_world_connection": "Heavy stars ka future samajhne mein yeh limit useful hai, including kuch supernova models mein.",
@@ -614,6 +710,18 @@
           {
             "heading": "Aage kya samajh aaya?",
             "text": "Shechtman ke result ko scepticism mila; Nobel-winning scientist Linus Pauling bhi critics mein the. Further research ne ordered lekin non-repeating structures confirm kiye, jinhe quasicrystals kaha gaya. Shechtman ko 2011 Chemistry Nobel mila."
+          },
+          {
+            "heading": "Crystal ke baare mein purani expectation",
+            "text": "Ordinary crystal mein atoms ordered pattern mein arrange hote hain jo space mein regularly repeat hota hai, jaise ek tile pattern. Scientists diffraction naam ki technique se is arrangement ke clues lete hain: beam material se interact karke detector par spots banati hai. Un spots ki symmetry internal order ke baare mein information deti hai."
+          },
+          {
+            "heading": "Unexpected result kyun shocking tha?",
+            "text": "Shechtman ke sample ke diffraction pattern mein aisi symmetry thi jo ordinary repeating crystal ke rules se fit nahi hoti thi. Unhone material ko carefully examine kiya. Ordered pattern dikhna aur repeated unit ka hona ek hi baat nahi: order without ordinary repetition bhi possible hai. Isi type ke structures ko quasicrystals kaha gaya."
+          },
+          {
+            "heading": "Science aur applications",
+            "text": "Result par scepticism tha, isliye further experiments aur independent confirmation zaroori the. Eventually research community ne evidence accept kiya; 2011 mein Shechtman ko Nobel mila. Quasicrystal research material structures ki understanding badhati hai aur kuch coatings jaise applications investigate hui hain. Nobel story ka lesson yeh nahi ki har rejected idea correct hota hai: strong evidence matter karta hai."
           }
         ],
         "real_world_connection": "Ghar ke repeating tile pattern aur non-repeating ordered mosaic ki comparison se basic idea samajh sakte hain.",
@@ -649,6 +757,18 @@
           {
             "heading": "Aage kya samajh aaya?",
             "text": "Marshall ne self-experiment mein bacteria piye aur unhe gastritis, yaani stomach lining ki inflammation, hui; us experiment mein unhone ulcer develop karne ka claim nahi kiya. Further research ne Helicobacter pylori infection aur kai ulcers ka link establish kiya."
+          },
+          {
+            "heading": "Ulcer kya hai aur problem kyun thi?",
+            "text": "Stomach ya small intestine ki starting part ki protective lining damage ho kar sore bana sakti hai; ise peptic ulcer kehte hain. Pain aur bleeding possible hain. Pehle treatment often symptoms aur acid control par focus karta tha. Agar underlying cause identify kiya ja sake, treatment aur recurrence prevention better ho sakti hai."
+          },
+          {
+            "heading": "Bacteria ka clue",
+            "text": "Warren ne stomach lining samples mein curved bacteria observe kiye. Marshall ke saath unhone infection, inflammation aur ulcer patients ke findings investigate ki. Bacterium ka naam Helicobacter pylori hai. Bacteria stomach ki protective environment ko affect kar sakte hain; lekin infection wale har person ko ulcer nahi hota."
+          },
+          {
+            "heading": "Treatment aur reality check",
+            "text": "H. pylori-related ulcer mein clinician antibiotics aur acid-reducing medicines ka combination prescribe kar sakte hain. Kuch ulcers pain medicines jaise NSAIDs se bhi related hote hain. Marshall ke self-experiment mein gastritis hui, ulcer nahi: dono ko confuse na karein. Black stool, blood vomiting, severe pain ya faintness emergency signs ho sakte hain; urgent medical care lein. Apni medicines bina clinician se baat kiye khud band ya start na karein."
           }
         ],
         "real_world_connection": "Correct diagnosis se treatment badal sakta hai: kuch H. pylori infections mein doctor antibiotics prescribe karte hain.",
@@ -684,6 +804,18 @@
           {
             "heading": "Aage kya samajh aaya?",
             "text": "2018 mein Shawn Sorrells aur colleagues ne report kiya ki adult samples mein young neurons detect nahi hue ya bahut rare the. Usi saal Maura Boldrini aur colleagues ne young neuron-like cells ke evidence ko adulthood tak present bataya. Dono teams ne tissue samples aur cells ko identify karne ke methods alag tareeke se use kiye."
+          },
+          {
+            "heading": "Sawaal important kyun hai?",
+            "text": "Brain mein neurons signals receive aur send karte hain. Agar adults mein new neurons regularly bante hain, toh memory, ageing aur possible treatment research ko samajhne mein help mil sakti hai. Is process ko neurogenesis kehte hain. Lekin existing brain cells ke connections change hona aur brand-new neuron banna same cheez nahi hai."
+          },
+          {
+            "heading": "Researchers kaise check karte hain?",
+            "text": "Scientists brain tissue mein young cells se associated markers, yani identifiable molecular signs, dhoondhte hain. Tissue preserve hone ka tareeka, person ki age, sampling area aur marker select karna result affect kar sakta hai. Human brains ko living person mein repeatedly sample karna difficult aur ethically restricted hai."
+          },
+          {
+            "heading": "Kis baat par uncertainty hai?",
+            "text": "2018 ki studies adult hippocampus mein new neurons ki quantity aur evidence par disagree karti thi. Some later research bhi different methods se investigation karti rahi. Is discussion se yeh conclude nahi karna chahiye ki adult brains learn nahi kar sakte. Learning aur adaptation ke liye existing neural connections ka badalna bhi important mechanism hai; disagreement exact extent aur interpretation par hai."
           }
         ],
         "real_world_connection": "Memory aur learning ke mechanisms samajhne ke liye brain cells par research important hai.",
@@ -704,33 +836,53 @@
       "day": 18,
       "category": "Science aur technology",
       "card": {
-        "title": "Cold fusion: room mein unlimited energy mil gayi thi?",
-        "hook": "1989 mein do scientists ke claim ne energy revolution ki hope jagayi. Phir labs ne test shuru kiya.",
+        "title": "Cold fusion: kya normal temperature par bahut energy mil gayi thi?",
+        "hook": "1989 mein do scientists ne kaha ki unhone ek simple-looking experiment se extra heat paayi. Agar unka idea sahi hota, duniya ki energy research kyun badal sakti thi?",
         "cta": "Puri kahani padhein"
       },
       "detail": {
-        "real_life_scene": "Electricity aur fuel ki cost dekhkar cheap, clean energy ka idea bahut exciting lagta hai.",
-        "central_question": "Kya simple tabletop experiment mein powerful nuclear energy ban gayi thi?",
+        "real_life_scene": "Ghar ki lights, fans aur phones ko electricity chahiye. Scientists long term mein energy dene wale sources dhoondhte hain.",
+        "central_question": "Kya do atoms ke centres ko normal laboratory temperature ke aas-paas jodkar useful energy mil sakti hai?",
         "explanation": [
           {
-            "heading": "Kya hua tha?",
-            "text": "Martin Fleischmann aur Stanley Pons ne 1989 mein ek experiment mein unusual extra heat report ki. Unka claim tha ki heavy water aur palladium metal wale setup mein nuclear fusion ho sakta hai."
+            "heading": "Pehle samjhein: fusion kya hai?",
+            "text": "Har atom ke centre ko nucleus kehte hain. Fusion mein do halke nuclei judkar ek bhaari nucleus bana sakte hain. Kuch fusion reactions energy release karti hain. Suraj ki energy bhi fusion reactions se aati hai. Lekin nuclei ek-doosre ko door dhakelte hain. Isliye Earth par fusion research ki common approaches mein fuel ko bahut zyada garam karna aur suitable conditions mein rakhna padta hai."
           },
           {
-            "heading": "Aage kya samajh aaya?",
-            "text": "Fusion ka basic idea hai chhote atomic nuclei ka judna, jisse kuch conditions mein energy release hoti hai. Lekin other researchers original results reliably repeat nahi kar paaye, aur measurements ke interpretation par questions uthe."
+            "heading": "Isse revolution kyun aa sakta tha?",
+            "text": "Fusion fuels ke kuch forms se bahut energy milne ki possibility hai. Ek fuel, deuterium, water se extract kiya ja sakta hai. Lekin hot-fusion machines mein extreme temperatures aur complex equipment ki challenges hain. Agar room temperature par kam input se reliably useful energy milti, toh energy technology ka naya raasta khul sakta tha. Yeh possibility thi, proven benefit nahi."
+          },
+          {
+            "heading": "1989 mein experiment kya tha?",
+            "text": "Martin Fleischmann aur Stanley Pons ne heavy water mein palladium naam ki metal rakhi aur electricity pass ki. Heavy water mein deuterium hota hai: hydrogen ka ek form jiske nucleus mein extra neutron hota hai. Palladium deuterium ko apne andar absorb kar sakta hai. Dono scientists ne expected se zyada heat report ki aur suggest kiya ki deuterium nuclei fuse ho rahe hain."
+          },
+          {
+            "heading": "Claim ko test kaise kiya gaya?",
+            "text": "Doosri labs ne experiment repeat karke heat aur nuclear products check kiye. Certain nuclear reactions ke saath specific particles bhi expected hote. Ek 1989 Nature study mein tested conditions mein excess heat ya expected nuclear products ka evidence nahi mila. U.S. Department of Energy ki reviews ne available evidence ko deuterium fusion ke claim ke liye convincing nahi maana."
+          },
+          {
+            "heading": "Aaj kya samajhna chahiye?",
+            "text": "Heat ki report apne aap fusion prove nahi karti: input energy aur heat output ko carefully measure karna aur results independently reproduce karna zaroori hai. Kuch researchers related materials par research continue karte hain, lekin Fleischmann–Pons ka practical cold-fusion energy claim established nahi hai."
           }
         ],
-        "real_world_connection": "Energy ke bade claims ko independently repeat karna zaroori hai, khaaskar jab applications bahut attractive lagti hon.",
+        "real_world_connection": "Is story se samajh aata hai ki exciting energy idea aur working power plant mein bahut gap ho sakta hai. Fuel, safety, cost aur energy balance test karne padte hain.",
         "reality_check": {
-          "established": "Original 1989 claim ki reliable confirmation nahi hui.",
-          "misconception": "Iska matlab yeh nahi ki har fusion research fake hai; hot-fusion research ek alag established field hai."
+          "established": "1989 mein cold-fusion claim hua; us experiment se useful nuclear-fusion energy ka convincing evidence establish nahi hua.",
+          "misconception": "Cold fusion claim ka unsupported hona yeh nahi kehta ki Suraj mein fusion nahi hota ya saari fusion research fake hai."
         },
-        "status": "Not established",
+        "status": "Not established: Fleischmann–Pons cold-fusion claim",
         "sources": [
           {
-            "title": "Nature Materials: cold fusion history",
-            "url": "https://www.nature.com/articles/s41563-019-0530-1"
+            "title": "U.S. Department of Energy: review of 1989 and 2004 findings",
+            "url": "https://arpa-e.energy.gov/sites/default/files/migrated/2021LENR_workshop_Greco.pdf"
+          },
+          {
+            "title": "Nature: independent 1989 search",
+            "url": "https://www.nature.com/articles/340525a0"
+          },
+          {
+            "title": "IAEA: why fusion is difficult",
+            "url": "https://www.iaea.org/bulletin/what-is-fusion-and-why-is-it-so-difficult-to-achieve"
           }
         ]
       }
@@ -754,6 +906,18 @@
           {
             "heading": "Aage kya samajh aaya?",
             "text": "Scientists average lifetime roughly 15 minutes ke aas-paas measure karte hain. Ek method mein neutrons ko container jaisi trap mein rakhkar bache particles count kiye jaate hain; doosre mein neutron beam se nikalne wale decay products count kiye jaate hain. Historically in methods ke results mein around 8 seconds ka difference mila."
+          },
+          {
+            "heading": "Neutron kya karta hai?",
+            "text": "Atom ke centre mein protons aur neutrons hote hain. Free neutron, yaani nucleus ke bahar wala neutron, eventually proton aur other particles mein decay ho sakta hai. Har individual neutron exact same second par decay nahi hota. Lifetime average statistical quantity hai, kisi ek particle ka fixed countdown nahi."
+          },
+          {
+            "heading": "Do methods ka comparison",
+            "text": "Bottle method mein researchers stored neutrons ki number change measure karte hain. Beam method mein moving neutron beam ke decay se bane protons count kiye jaate hain. Dono techniques alag measurements aur corrections par depend karti hain. Historically averages mein roughly eight seconds ka gap scientific uncertainty ke comparison mein notable raha hai."
+          },
+          {
+            "heading": "Itna chhota gap important kyun?",
+            "text": "Neutron lifetime early universe mein hydrogen aur helium formation ki calculations, aur particle physics ke tests ke liye relevant hai. Difference measurement errors, hard-to-detect systematic effects ya kisi aur explanation ki taraf point kar sakta hai. Abhi is gap ko automatically new physics ya kisi ek team ki mistake nahi keh sakte. Better experiments aur independent cross-checks zaroori hain, taaki hidden measurement errors ko identify kiya ja sake."
           }
         ],
         "real_world_connection": "Early universe mein elements kaise bane, iski calculations mein neutron lifetime useful input hai.",
@@ -789,6 +953,18 @@
           {
             "heading": "Aage kya samajh aaya?",
             "text": "Searches ke baad bhi convincing evidence nahi mila. 1915 mein Albert Einstein ki general relativity ne gravity ko space aur time ki geometry se jodkar Mercury ke unexplained shift ko calculate kiya."
+          },
+          {
+            "heading": "Problem: Mercury ki orbit",
+            "text": "Planet Sun ke around ek perfect fixed ellipse mein forever nahi ghoomta. Other planets ki gravity ke kaaran orbit ki direction slowly rotate karti hai. Astronomers observed movement se known influences subtract karte the, par Mercury ke case mein ek small leftover shift unexplained tha. Chhota difference bhi theories ko test karne ka valuable clue ho sakta hai."
+          },
+          {
+            "heading": "Vulcan idea kyun reasonable laga?",
+            "text": "Earlier astronomers ne Uranus ki motion mein irregularities se Neptune ka existence predict kiya tha. Is history ke baad Le Verrier ne propose kiya ki Sun aur Mercury ke beech unseen planet Mercury ko disturb kar raha ho sakta hai. Sun ke glare ki wajah se nearby object dhoondhna difficult tha; searches mein reliable planet confirmation nahi mila."
+          },
+          {
+            "heading": "Einstein ka alternative",
+            "text": "General relativity gravity ko spacetime ki geometry se explain karti hai. 1915 mein Einstein ne Mercury ke unexplained orbit shift ka calculation is theory se match kiya, bina hypothetical planet ki zaroorat ke. Is success ne theory ko strong support diya. It does not prove no tiny object can exist anywhere near Sun; specific proposed planet explanation supported nahi hui."
           }
         ],
         "real_world_connection": "GPS aur astronomy jaisi technologies precise predictions par depend karti hain; chhote differences bhi important clues de sakte hain.",
@@ -824,6 +1000,18 @@
           {
             "heading": "Aage kya samajh aaya?",
             "text": "Lekin placebo group mein improvement ka har hissa expectation se nahi hota: illness naturally better ho sakti hai ya symptoms badal sakte hain. Isi liye researchers carefully designed comparisons use karte hain."
+          },
+          {
+            "heading": "Pain mein brain ka role",
+            "text": "Pain sirf injured tissue ka simple on-off alarm nahi; nervous system body signals, attention, expectation aur context ko process karta hai. Iska matlab pain imaginary nahi hai. Placebo treatment ek comparison ho sakta hai jisme specific active medicine nahi hoti, jaise inactive pill. Patient ko milne wali care aur expectation experience ko influence kar sakti hain."
+          },
+          {
+            "heading": "Research mein iska use",
+            "text": "Agar medicine lene ke baad kisi ka pain kam hota hai, toh improvement ki ek se zyada wajah ho sakti hai: natural recovery, symptom ka up-down hona, active medicine, ya treatment context. Controlled studies groups compare karti hain. Blinding ka matlab patient ya researcher ko na batana ki kis group mein kaunsa treatment mila, jab study design allow kare."
+          },
+          {
+            "heading": "Limit aur ethics",
+            "text": "Placebo group mein improvement ka har part “mind ne cure kiya” nahi hota. Kuch placebo responses pain perception affect kar sakte hain; yeh bacteria ko antibiotic ki tarah nahi maarte. Placebo research aur real clinical care mein informed consent aur honesty important hain. Serious disease ka effective treatment bina medical advice ke fake pill se replace nahi karna chahiye."
           }
         ],
         "real_world_connection": "New medicines ke trials mein comparison groups se samajhne ki koshish hoti hai ki actual medicine ka extra benefit kitna hai.",
@@ -859,6 +1047,18 @@
           {
             "heading": "Aage kya samajh aaya?",
             "text": "23 logon se 253 alag pairs ban sakte hain. Simple maths model mein 365 dates equally likely aur birthdays independent maane jaate hain; leap day ignore hota hai. Is model mein at least ek matching pair ka chance lagbhag 50.7 percent hai."
+          },
+          {
+            "heading": "Problem ko sahi samjhein",
+            "text": "Aapke birthday se match dhoondhna aur kisi bhi do logon ke matching birthdays dhoondhna alag questions hain. Agar class mein 23 students hain, har student doosre students se compare ho sakta hai. Total possible pairs 23 × 22 ÷ 2, yaani 253 hain. Pairs ke opportunities bahut jaldi badhte hain."
+          },
+          {
+            "heading": "Calculate kaise karte hain?",
+            "text": "Directly sab possible matches count karna awkward hai. Isliye pehle opposite event calculate karte hain: sabke birthdays different hon. Simplified model mein first person ka birthday koi bhi ho sakta hai. Second ka different hone ka chance 364/365 hai; third ka 363/365, aur aise hi aage. In chances ko multiply karke no-match chance milta hai."
+          },
+          {
+            "heading": "Result ka matlab",
+            "text": "No-match probability ko 1 se subtract karne par at least ek match ka chance approximately 50.7% aata hai. Iska matlab har 23-person room mein match guaranteed nahi. Model leap day ignore karta hai aur dates ko equally likely aur independent maanta hai; real birth patterns thode different ho sakte hain. Yeh question statistics aur data collisions samajhne mein helpful hai."
           }
         ],
         "real_world_connection": "Large group mein possible pairs rapidly badhte hain; matching passwords, names ya dates ki probability samajhne mein yeh thinking useful hai.",
@@ -894,6 +1094,18 @@
           {
             "heading": "Aage kya samajh aaya?",
             "text": "Slava Turyshev aur colleagues ne old spacecraft records aur heat output dobara study kiya. 2012 analysis ne dikhaya ki spacecraft se uneven directions mein nikalne wali heat tiny push produce karti hai, jo observed anomaly ko explain karti hai."
+          },
+          {
+            "heading": "Anomaly kya thi?",
+            "text": "Pioneer spacecraft Sun se door travel kar rahe the. Radio signals ki frequency aur timing se scientists unki motion track karte the. Data mein calculated motion aur observed motion ke beech tiny difference mila. Aise unexplained difference ko anomaly kehte hain. Yeh spacecraft ke achanak rukne jaisa large effect nahi tha."
+          },
+          {
+            "heading": "Heat se push kaise?",
+            "text": "Spacecraft ke power sources aur electronics heat produce karte hain. Heat infrared radiation ke form mein nikalti hai. Radiation momentum carry karti hai; agar energy opposite directions mein exactly equal na nikle, spacecraft par extremely tiny net push ho sakta hai. Yeh familiar rocket exhaust jaisa force hai, lekin mechanism aur magnitude different hain."
+          },
+          {
+            "heading": "Investigation kyun important thi?",
+            "text": "Slava Turyshev aur colleagues ne spacecraft design, telemetry aur thermal modelling dobara examine karke 2012 analysis publish ki. Unhe uneven heat radiation observed effect explain karne ke consistent mili. Naye gravity laws ki possibility discuss hui thi, lekin established spacecraft effect ko carefully test karna pehla step tha. Explanation ka matlab har future spacecraft anomaly automatically same cause se hogi, yeh nahi."
           }
         ],
         "real_world_connection": "Spacecraft navigation mein very small forces bhi long periods mein measurable changes bana sakti hain.",
@@ -929,6 +1141,18 @@
           {
             "heading": "Aage kya samajh aaya?",
             "text": "Lekin real universe ki observable history finite hai; har jagah se light ko hum tak pahunchne ke liye unlimited time nahi mila. Universe expand bhi hota hai, jisse travelling light ki wavelength stretch hoti hai aur uska energy level badalta hai."
+          },
+          {
+            "heading": "Puzzle ki assumptions",
+            "text": "Imagine ek universe jo infinitely large ho, hamesha se exist karta ho aur everywhere roughly same density se stars rakhta ho. Agar stars ke beech clear space ho, toh many directions mein sightline eventually kisi star par end honi chahiye. Itne sources ke combined light se sky bright hona expected lagta hai. Yeh idealised argument Olbers paradox kehlata hai."
+          },
+          {
+            "heading": "Actual universe alag hai",
+            "text": "Universe ki observable history finite hai: bahut door regions ki light ko Earth tak aane ke liye unlimited time nahi mila. Space expand bhi hoti hai. Travelling light stretch ho sakti hai, jise redshift kehte hain; visible light ki energy aur observed wavelength change hoti hai. Stars har time aur har place par same way shine bhi nahi karte."
+          },
+          {
+            "heading": "Darkness ka matlab empty universe nahi",
+            "text": "Sky perfectly dark bhi nahi: faint light, distant galaxies aur cosmic microwave background jaise signals sensitive instruments se detect hote hain. Ordinary human eyes limited light aur wavelength range detect karti hain. Dust kuch light absorb karti hai, lekin sirf dust ko complete answer maan lena insufficient hai, kyunki ideal steady universe mein dust bhi energy absorb karke radiate karegi."
           }
         ],
         "real_world_connection": "Dark night sky bhi universe ki age aur history samajhne ke liye ek clue hai.",
@@ -964,6 +1188,18 @@
           {
             "heading": "Aage kya samajh aaya?",
             "text": "Ozone ki layer Sun ki harmful ultraviolet radiation ka ek important hissa absorb karti hai. 1985 mein British Antarctic Survey ke Joseph Farman aur colleagues ne Antarctic ozone loss report kiya."
+          },
+          {
+            "heading": "Ozone important kyun hai?",
+            "text": "Atmosphere ki upper layer mein ozone gas Sun ki harmful ultraviolet radiation ka ek important portion absorb karti hai. Ultraviolet light DNA damage kar sakti hai aur excessive exposure se skin cancer aur eye problems ka risk badhta hai. Protective layer thin hone se environmental aur health concerns badh sakte hain."
+          },
+          {
+            "heading": "Fridge chemicals ka safar",
+            "text": "CFCs refrigerants aur other products mein use hote the. Yeh lower atmosphere mein relatively stable hote hain, isliye hawa ke circulation ke saath long distances travel karke upper atmosphere tak pahunch sakte hain. Wahan ultraviolet sunlight unhe todkar chlorine release kar sakti hai. Chlorine reactions ozone destroy kar sakti hain aur chlorine repeated reactions mein participate kar sakta hai."
+          },
+          {
+            "heading": "Antarctica aur response",
+            "text": "1985 mein British Antarctic Survey ne Antarctic spring mein severe ozone loss report kiya. Cold polar conditions aur special clouds chemical reactions ko promote karte hain; isliye “hole” ek physical tear nahi, ozone concentration ka strong seasonal decrease hai. Montreal Protocol ne ozone-depleting substances phase down karne ka global framework diya. Recovery gradual hai aur year-to-year weather variability bhi hoti hai."
           }
         ],
         "real_world_connection": "International action ke through ozone-depleting chemicals ko phase out karna environmental policy ka important example bana.",
@@ -999,6 +1235,18 @@
           {
             "heading": "Aage kya samajh aaya?",
             "text": "Rival scientist Felix Ehrenhaft smaller charges claim kar rahe the. Later historians ne Millikan ki notebooks study karke dekha ki kuch observations publication se excluded thi. Debate yeh rahi ki exclusions justified quality checks the ya publication mein unhe jis tarah describe kiya gaya woh misleading tha."
+          },
+          {
+            "heading": "Charge measure karna kyun important?",
+            "text": "Atoms aur electrical devices samajhne ke liye elementary charge, yani electric charge ki basic unit, important hai. Millikan ne tiny oil droplets observe kiye. Gravity droplets ko neeche kheenchti hai; electric field charged droplets par force laga sakta hai. Motion aur forces ka analysis karke charge estimate kiya gaya."
+          },
+          {
+            "heading": "Data selection ka problem",
+            "text": "Real experiments mein kuch observations unreliable ho sakti hain: droplet ka measurement disturb ho ya conditions clear na hon. Aise points exclude karna kabhi justified hota hai, par selection rules aur excluded data ke baare mein transparent reporting zaroori hai. Agar sirf favourable results dikhaye jaayen, readers uncertainty ka galat estimate laga sakte hain."
+          },
+          {
+            "heading": "Historians ka dispute",
+            "text": "Millikan ki lab notebooks aur published description compare karne par historians ne kuch excluded observations identify ki. Debate is par hai ki exclusions ki quality-based reasons kitni sound thi aur publication ki language kitni transparent thi. Aaj accepted elementary charge value alag evidence se established hai. Debate ko “poori discovery fake thi” ya “sab allegations conclusively settled hain” mein reduce nahi karna chahiye."
           }
         ],
         "real_world_connection": "Scientific results ke saath raw data aur exclusion rules clear hone se doosre researchers work evaluate kar sakte hain.",
@@ -1034,6 +1282,18 @@
           {
             "heading": "Aage kya samajh aaya?",
             "text": "Chien-Shiung Wu aur colleagues ne cold cobalt-60 atoms ke decay ka experiment kiya. Unhe particles ki direction mein aisa difference mila jo mirror symmetry ke old assumption se match nahi karta tha. 1957 Nobel Lee aur Yang ko mila; Wu ka omission credit debate ka subject bana."
+          },
+          {
+            "heading": "Mirror symmetry ka idea",
+            "text": "Mirror mein left aur right ulte dikhte hain. Physicists poochte the: agar kisi physical process ki mirror-image situation banayein, toh kya nature ka behaviour same rules follow karega? Is test ko parity symmetry se joda jaata hai. Yeh assumption fundamental forces ke liye universally sahi hai ya nahi, yeh experimental question tha."
+          },
+          {
+            "heading": "Wu ka experiment",
+            "text": "Cobalt-60 radioactive atoms specific conditions mein decay karte hain aur electrons emit karte hain. Chien-Shiung Wu aur colleagues ne atoms ko very cold conditions mein align karke electron emission directions measure ki. Result mirror-symmetric expectation se match nahi hua. Isne weak interaction, jo kuch radioactive decays control karti hai, mein parity violation dikhaya."
+          },
+          {
+            "heading": "Discovery kyun important thi?",
+            "text": "Experiment ne dikhaya ki nature ki weak processes left-right direction ko identical tareeke se treat karna zaroori nahi. Isse particle physics ke basic rules revise hue. 1957 Nobel Lee aur Yang ko theoretical proposal ke liye mila; Wu ki experimental contribution aur award omission par discussions hoti hain. Credit discussion aur evidence dono ko alag-alag accurately batana chahiye."
           }
         ],
         "real_world_connection": "Mirror symmetry ka example dikhata hai ki simple lagne wali assumptions ko experiment se test karna zaroori hai.",
@@ -1069,6 +1329,18 @@
           {
             "heading": "Aage kya samajh aaya?",
             "text": "1940s aur 1950s mein unhone propose kiya ki kuch genetic elements ek position se doosri position par move kar sakte hain aur nearby genes ki activity affect kar sakte hain. Baad ki research ne mobile genetic elements ko confirm kiya. McClintock ko 1983 Nobel mila."
+          },
+          {
+            "heading": "Makke ke daane clues kaise bane?",
+            "text": "Corn ke kuch kernels par alag colours aur spots dikh sakte hain. McClintock ne plant breeding aur microscope observations combine karke dekha ki colour patterns aur chromosome changes ka connection ho sakta hai. Chromosomes DNA ke organised packages hain; genes DNA ke parts hain jo biological functions mein role play karte hain."
+          },
+          {
+            "heading": "Moving DNA ka idea",
+            "text": "Unhone propose kiya ki kuch DNA elements chromosome mein location change kar sakte hain. Agar element kisi pigment-related gene ke paas ya andar move kare, toh gene ki activity change ho sakti hai. Development ke different stages par change hone se colour patches ka pattern ban sakta hai. Is tarah ek visible kernel pattern se invisible genetic process ka clue mila."
+          },
+          {
+            "heading": "Important kyun tha?",
+            "text": "Us waqt genes ko mostly fixed positions par sochna common tha. Mobile elements ne dikhaya ki genome ki organisation change ho sakti hai. Baad mein researchers ne bacteria, plants aur animals mein bhi mobile genetic elements identify kiye. Har DNA movement harmful nahi; effects context par depend karte hain. McClintock ko 1983 Nobel mila, decades after her original work."
           }
         ],
         "real_world_connection": "Genes ko on ya off karne wale mechanisms ko samajhna evolution aur biology research mein useful hai.",
@@ -1104,6 +1376,18 @@
           {
             "heading": "Aage kya samajh aaya?",
             "text": "NP mein proposed solution ko aise efficiently check kiya ja sakta hai. Stephen Cook ki 1971 research ne is field ko shape diya. P vs NP sawaal poochta hai: kya yeh dono groups same hain?"
+          },
+          {
+            "heading": "Checking aur solving mein farq",
+            "text": "Sudoku ka filled answer milne par rules check karna kabhi puzzle solve karne se easier lag sakta hai. Computer science is intuition ko precise mathematical terms mein examine karti hai. Decision problem woh question hai jiska answer yes ya no hota hai. Input size badhne par solution aur checking mein required steps ka growth compare kiya jaata hai."
+          },
+          {
+            "heading": "P aur NP simple language mein",
+            "text": "P un decision problems ka class hai jinke answers polynomial-time algorithm se solve kiye ja sakte hain. Polynomial time ka rough matlab input size badhne par steps ka growth n² ya n³ jaise rule se bound ho sakta hai. NP mein yes answer ke suitable certificate ko polynomial time mein check kiya ja sakta hai. NP ka matlab “not possible” nahi."
+          },
+          {
+            "heading": "Answer important kyun hai?",
+            "text": "Agar P = NP prove hota, toh many search problems ke efficient algorithms ke theoretical possibility par big consequences hote. Agar P ≠ NP prove hota, toh checking aur solving ke beech fundamental gap establish hota. Practical speed constants aur cryptography ke actual implications alag analysis maangte hain. Abhi general question unsolved hai; proof aur usable algorithm same cheez nahi."
           }
         ],
         "real_world_connection": "Scheduling, search aur security mein difficult problems samajhne ke liye computational complexity important hai.",
@@ -1139,6 +1423,18 @@
           {
             "heading": "Aage kya samajh aaya?",
             "text": "1971 mein Joseph Hafele aur Richard Keating ne atomic clocks ko commercial aircraft mein duniya ke around fly karaya aur ground reference clocks se compare kiya. Results relativity ke expected small differences ke consistent the, though actual experiment mein motion aur gravity dono effects the."
+          },
+          {
+            "heading": "Clocks compare kyun karein?",
+            "text": "Hum everyday life mein assume karte hain ki har clock same rate se chalti hai. Relativity ke according elapsed time motion aur gravity ke differences se affect ho sakta hai. Effect ordinary situations mein extremely small hota hai. Precision atomic clocks in tiny differences ko measure karne ke liye useful hain."
+          },
+          {
+            "heading": "1971 experiment",
+            "text": "Joseph Hafele aur Richard Keating commercial flights par atomic clocks lekar duniya ke around gaye. Baad mein unhone clocks ko ground reference se compare kiya. Plane ki motion aur higher altitude, jahan gravity slightly different hai, dono predicted difference mein contribute karte hain. Eastward aur westward routes ke expected effects bhi same nahi hote."
+          },
+          {
+            "heading": "Technology mein fayda",
+            "text": "GPS satellites par clocks aur Earth par receivers ko accurate timing chahiye, kyunki position signals ke travel time se calculate hoti hai. Relativity-related corrections include karna system design ka part hai. Plane trip par effect itna tiny hota hai ki traveller ko body mein noticeable age difference feel nahi hoga. Atomic clocks aur careful comparisons zaroori hain."
           }
         ],
         "real_world_connection": "GPS satellites ki timing ko practical calculations mein relativity ke effects account karne padte hain.",
@@ -1174,6 +1470,18 @@
           {
             "heading": "Aage kya samajh aaya?",
             "text": "Haber World War I mein Germany ke poison-gas programme se bhi involved the. Unhe ammonia synthesis ke liye 1918 Chemistry Nobel diya gaya. Unki legacy science, war aur responsibility par difficult questions uthati hai."
+          },
+          {
+            "heading": "Fertilizer ki need",
+            "text": "Plants ko nitrogen chahiye, lekin hawa ki nitrogen gas ko plants directly useful form mein easily use nahi kar sakte. Ammonia nitrogen-containing compound hai jisse fertilizer ban sakta hai. 1900s mein growing agriculture ke liye usable nitrogen ka industrial source develop karna important challenge tha."
+          },
+          {
+            "heading": "Haber–Bosch process",
+            "text": "Fritz Haber ne nitrogen aur hydrogen ko react karke ammonia banane ka method develop kiya. Carl Bosch aur colleagues ne demanding high-pressure process ko industrial scale par workable banaya. Synthetic fertilizers ne crop production badhane mein important role play kiya. Lekin excess fertilizer runoff water pollution aur other environmental problems bhi cause kar sakta hai."
+          },
+          {
+            "heading": "War aur responsibility",
+            "text": "Haber World War I mein Germany ke poison-gas programme se bhi involved the. Chemical weapons ne severe suffering cause ki. Same scientific knowledge different purposes ke liye use ho sakti hai, isliye scientists, institutions aur governments ki responsibilities par ethical debate hoti hai. Fertilizer benefit aur wartime harm dono ko acknowledge karna unki complicated legacy samajhne ke liye zaroori hai."
           }
         ],
         "real_world_connection": "Aaj bhi technology ke benefits ke saath uske misuse aur environmental effects par sochna zaroori hai.",

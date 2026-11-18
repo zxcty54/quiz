@@ -67,6 +67,7 @@ class ScienceStoryRealityCheck {
 class ScienceStory {
   const ScienceStory({
     required this.day,
+    required this.yearDay,
     required this.category,
     required this.title,
     required this.hook,
@@ -80,7 +81,13 @@ class ScienceStory {
     required this.sources,
   });
 
+  /// Day of the month (1-31), already shifted for the UI to show.
   final int day;
+
+  /// The collection's own numbering: 1-365 straight through the year, so month
+  /// 02 starts at 32 and month 12 at 335. Matching a calendar date uses this;
+  /// anything shown to the user uses [day].
+  final int yearDay;
   final String category;
   final String title;
   final String hook;
@@ -93,13 +100,20 @@ class ScienceStory {
   final String status;
   final List<ScienceStorySource> sources;
 
-  factory ScienceStory.fromJson(Map<String, dynamic> json) {
+  /// [dayOffset] turns the collection's 1-365 numbering into a day of the
+  /// month; the library works it out from each file's `coverage.start_day`.
+  factory ScienceStory.fromJson(
+    Map<String, dynamic> json, {
+    int dayOffset = 0,
+  }) {
     final card = _asMap(json['card']);
     final detail = _asMap(json['detail']);
     final check = _asMap(detail['reality_check']);
+    final int yearDay = _asInt(json['day']);
 
     return ScienceStory(
-      day: _asInt(json['day']),
+      day: yearDay - dayOffset,
+      yearDay: yearDay,
       category: (json['category'] ?? '').toString().trim(),
       title: (card['title'] ?? '').toString().trim(),
       hook: (card['hook'] ?? '').toString().trim(),
@@ -159,6 +173,10 @@ class ScienceStory {
     }
     return <Map<String, dynamic>>[];
   }
+
+  /// Reads a raw `day` value, used by the library to find where a month's
+  /// numbering starts before any story is built.
+  static int rawDay(Object? value) => _asInt(value);
 
   static int _asInt(Object? value) {
     if (value is int) return value;

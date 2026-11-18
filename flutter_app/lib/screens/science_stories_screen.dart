@@ -613,6 +613,24 @@ class ScienceStoryDetailScreen extends StatelessWidget {
               delegate: SliverChildListDelegate(<Widget>[
                 if (story.status.isNotEmpty)
                   _pill(status.label, status.color, isDark),
+                // Some verdicts say more than a short label can carry
+                // ("Strong evidence: unseen gravitating matter; particle
+                // identity unresolved"), so the full text is shown too rather
+                // than flattened to "Info".
+                if (_hasStatusDetail(story)) ...<Widget>[
+                  const SizedBox(height: 8),
+                  Text(
+                    story.status,
+                    style: TextStyle(
+                      fontSize: 11.5,
+                      fontWeight: FontWeight.w700,
+                      height: 1.45,
+                      color: isDark
+                          ? const Color(0xFF94A3B8)
+                          : const Color(0xFF64748B),
+                    ),
+                  ),
+                ],
                 if (story.hook.isNotEmpty) ...<Widget>[
                   const SizedBox(height: 12),
                   Text(
@@ -818,6 +836,13 @@ class ScienceStoryDetailScreen extends StatelessWidget {
         ],
       ),
     );
+  }
+
+  /// True when the raw `status` text adds detail beyond the short label.
+  bool _hasStatusDetail(ScienceStory story) {
+    if (story.status.isEmpty) return false;
+    if (story.statusKind == ScienceStoryStatus.other) return true;
+    return story.status.contains(':') || story.status.contains(';');
   }
 
   Widget _pill(String label, Color color, bool isDark) {

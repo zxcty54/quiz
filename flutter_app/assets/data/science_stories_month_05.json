@@ -1,0 +1,1546 @@
+{
+  "schema_version": "1.0",
+  "collection": "365 Din, 365 Science Stories",
+  "language": "Easy Hinglish",
+  "month": 5,
+  "coverage": {
+    "start_day": 121,
+    "end_day": 151,
+    "complete_month": true
+  },
+  "topics": [
+    {
+      "day": 121,
+      "category": "Space mission",
+      "card": {
+        "title": "Ek unit ki galti ne Mars spacecraft kho diya!",
+        "hook": "Ek team pounds mein data bhej rahi thi, doosri metric units maan rahi thi. Result? Mission loss.",
+        "cta": "Puri kahani padhein"
+      },
+      "detail": {
+        "real_life_scene": "Agar recipe mein 100 grams ko 100 ounces samajh liya jaaye, result dramatically badal jayega.",
+        "central_question": "NASA ka Mars Climate Orbiter 1999 mein kyun kho gaya?",
+        "explanation": [
+          {
+            "heading": "Asli kahani",
+            "text": "1998 mein launch hua Mars Climate Orbiter Mars ke around orbit se weather study karne wala tha. 23 September 1999 ko spacecraft se contact lost ho gaya. NASA ki investigation ne navigation software mein unit conversion failure ko root cause bataya. Ek software file mein thruster data English units mein tha, lekin use metric samajhkar calculations mein use kiya gaya."
+          },
+          {
+            "heading": "Aasaan bhasha mein concept",
+            "text": "Thrusters spacecraft ko chhote pushes dete hain. Un pushes ka accurate record path estimate karne ke liye zaroori hai. Units mismatch se estimated path aur real path mein difference jama hota gaya; spacecraft Mars ke atmosphere ke bahut close pahunch gaya. NASA report ne software verification aur communication problems jaise contributing factors bhi identify kiye."
+          },
+          {
+            "heading": "Yeh sawaal zaroori kyun tha?",
+            "text": "Spacecraft ko Mars ke paas sahi trajectory par lane ke liye navigation team ko calculate karna tha ki thruster firings ne speed kitni badli. Ek small push bhi months ke journey mein position ko significantly change kar sakta hai. Accurate units aur data exchange isliye mission success ke central parts the."
+          },
+          {
+            "heading": "Aasaan bhasha mein mechanism",
+            "text": "Investigation ke mutabik ek file mein impulse pound-force seconds mein provide hua jab receiving software ne newton-seconds expect kiya. Numerical values ko correct conversion ke bina interpret karne se calculated changes wrong hue. Trajectory estimates drift hote rahe aur Mars arrival par spacecraft planned altitude se much lower gaya."
+          },
+          {
+            "heading": "Evidence, use aur limitations",
+            "text": "Yeh sirf ek person ki arithmetic mistake ki story nahi thi. Interface specifications, verification, independent checks aur teams ke beech communication mein failures bhi report hue. Engineers ke liye lesson hai ki software aur physical measurements ke interface test karo, units explicitly label karo aur unexpected tracking data investigate karo. Exact final breakup directly observe nahi hua."
+          }
+        ],
+        "real_world_connection": "Engineering aur coding mein number ke saath unit aur data format confirm karna critical hai.",
+        "reality_check": {
+          "established": "NASA investigation ne unit-conversion failure ko root cause identify kiya.",
+          "misconception": "Yeh sirf ek employee ki ek typo ki story nahi thi; system checks aur communication mein bhi failures the."
+        },
+        "status": "Proven",
+        "sources": [
+          {
+            "title": "NASA: failure board report",
+            "url": "https://www.nasa.gov/home/hqnews/1999/99-134.txt"
+          }
+        ]
+      }
+    },
+    {
+      "day": 122,
+      "category": "Space mission",
+      "card": {
+        "title": "Hubble ki billion-dollar aankh blurry kyun thi?",
+        "hook": "Space telescope launch hua, phir images expected se blur nikli. Space mein chashma kaise lagaya gaya?",
+        "cta": "Puri kahani padhein"
+      },
+      "detail": {
+        "real_life_scene": "Glasses ka power galat ho toh door ki cheez clear nahi dikhti.",
+        "central_question": "Kya Hubble ko space mein repair kiya ja sakta tha?",
+        "explanation": [
+          {
+            "heading": "Asli kahani",
+            "text": "NASA ne Hubble Space Telescope 1990 mein launch kiya. Early images analyse karne par primary mirror ki shape mein tiny error mila, jise spherical aberration kehte hain. Mirror bahut smooth tha, lekin uski curvature exactly intended shape nahi thi."
+          },
+          {
+            "heading": "Aasaan bhasha mein concept",
+            "text": "Mirror light ko focus karta hai. Shape error ki wajah se light perfectly ek point par focus nahi ho rahi thi. 1993 mein astronauts ne servicing mission mein corrective optics aur ek naya camera install kiya. Camera ki apni correction thi; COSTAR naam ke optics ne other original instruments ke liye light path correct kiya."
+          },
+          {
+            "heading": "Yeh sawaal zaroori kyun tha?",
+            "text": "Earth ki atmosphere stars ki images blur kar sakti hai, isliye space telescope se sharper pictures ki hope thi. Launch ke baad faulty focus ne mission ki potential scientific performance ko threaten kiya. Problem identify karke repair karna important tha kyunki telescope already orbit mein tha aur uska primary mirror replace karna practical nahi tha."
+          },
+          {
+            "heading": "Aasaan bhasha mein mechanism",
+            "text": "Spherical aberration mein mirror ke different zones se reflected light ek hi focus par converge nahi karti. Manufacturing ke dauran testing equipment ki configuration error se mirror galat shape mein polished hua. Surface deviation tiny thi, lekin light ki wavelength ke scale par itni badi thi ki images significantly affected hui."
+          },
+          {
+            "heading": "Evidence, use aur limitations",
+            "text": "Astronauts ne December 1993 servicing mission mein Wide Field and Planetary Camera 2 aur COSTAR install kiya. Dono ka purpose optical error compensate karna tha, not primary mirror ko physically reshape karna. Subsequent observations dramatically improved hui. Hubble story verification aur independently testing measurement equipment ki importance dikhati hai; telescope baad mein many successful scientific discoveries ka source bana."
+          }
+        ],
+        "real_world_connection": "Hubble ki repaired instruments ne distant galaxies aur stars ki detailed observations possible banayi.",
+        "reality_check": {
+          "established": "Mirror flaw aur 1993 corrective servicing documented hain.",
+          "misconception": "Astronauts ne primary mirror ko space mein replace nahi kiya; corrective instruments lagaye."
+        },
+        "status": "Proven",
+        "sources": [
+          {
+            "title": "NASA: Hubble timeline",
+            "url": "https://science.nasa.gov/mission/hubble/overview/hubble-timeline/hubble-history-timeline-full-text/"
+          }
+        ]
+      }
+    },
+    {
+      "day": 123,
+      "category": "Biology",
+      "card": {
+        "title": "Ek chamakdar jellyfish ne cells dekhna kaise sikhaya?",
+        "hook": "Jellyfish ka green protein lab mein living cells ko label karne ka powerful tool ban gaya.",
+        "cta": "Puri kahani padhein"
+      },
+      "detail": {
+        "real_life_scene": "Andhere mein fluorescent sticker par light pade toh woh chamak sakta hai.",
+        "central_question": "Cell ke andar ka process microscope se track kaise karein?",
+        "explanation": [
+          {
+            "heading": "Asli kahani",
+            "text": "Osamu Shimomura ne jellyfish Aequorea victoria se green fluorescent protein, ya GFP, isolate kiya. Martin Chalfie ne use biological systems mein label ke roop mein demonstrate kiya; Roger Tsien ne fluorescent proteins ki understanding aur colours develop kiye. Teeno ko 2008 Chemistry Nobel mila."
+          },
+          {
+            "heading": "Aasaan bhasha mein concept",
+            "text": "Protein ek molecule hai jo cells mein many jobs karta hai. GFP suitable light absorb karke green fluorescence emit karta hai. Researchers genetic methods se GFP ko kisi selected protein ya cell se link kar sakte hain aur microscope se uski location observe karte hain."
+          },
+          {
+            "heading": "Yeh sawaal zaroori kyun tha?",
+            "text": "Cells ke andar proteins kab aur kahan move karte hain, yeh jaana biology aur disease research ke liye valuable hai. Ordinary microscope mein ek particular protein ko surrounding molecules se distinguish karna mushkil ho sakta hai. GFP ne living cells mein selected targets ko fluorescent label se track karne ka new option diya."
+          },
+          {
+            "heading": "Aasaan bhasha mein mechanism",
+            "text": "Gene engineering se GFP banane wali DNA sequence ko target protein ke gene se join kiya ja sakta hai. Cell resulting fusion protein banati hai; appropriate excitation light dene par fluorescent signal microscope mein dikhta hai. Researchers localisation aur time ke saath changes study kar sakte hain. GFP aur modified fluorescent proteins se different colours bhi possible hue."
+          },
+          {
+            "heading": "Evidence, use aur limitations",
+            "text": "Tag lagane se target protein ka behaviour kabhi alter ho sakta hai, aur light exposure ya signal strength experiment ko limit kar sakte hain. Isliye controls zaroori hain. Jellyfish ki natural glow aur experimental GFP label linked hain, par har glowing organism GFP use nahi karta. Aaj yeh technique cell division, development aur infection research mein widely useful hai."
+          }
+        ],
+        "real_world_connection": "Is tool se researchers nerve cells ke development aur doosre biological processes study kar sakte hain.",
+        "reality_check": {
+          "established": "GFP biological research ka established imaging tool hai.",
+          "misconception": "Fluorescence ka matlab yeh nahi ki GFP hamesha bina illumination ke apne aap light banata hai."
+        },
+        "status": "Proven",
+        "sources": [
+          {
+            "title": "Nobel: green fluorescent protein",
+            "url": "https://www.nobelprize.org/prizes/chemistry/2008/press-release/"
+          }
+        ]
+      }
+    },
+    {
+      "day": 124,
+      "category": "Everyday discovery",
+      "card": {
+        "title": "Malaria ki medicine dhoondh rahe the, purple colour mil gaya!",
+        "hook": "Ek failed experiment ne synthetic dyes ki industry ke liye naya raasta khola.",
+        "cta": "Puri kahani padhein"
+      },
+      "detail": {
+        "real_life_scene": "Kabhi recipe fail hone par bhi koi unexpected useful result mil jaata hai.",
+        "central_question": "Ek chemistry experiment se kapdon ka naya colour kaise bana?",
+        "explanation": [
+          {
+            "heading": "Asli kahani",
+            "text": "1856 mein young chemist William Henry Perkin synthetic quinine banane ki koshish kar rahe the. Quinine malaria treatment se associated substance tha. Experiment mein ek dark residue mila; investigation par usse purple dye nikla, jise mauveine ya Perkin mauve kaha gaya."
+          },
+          {
+            "heading": "Aasaan bhasha mein concept",
+            "text": "Dye aisa coloured substance hai jo material ke saath bind ya associate hokar use rang deta hai. Perkin ne accidental observation ko ignore nahi kiya: unhone us colour ke practical use aur production par kaam kiya."
+          },
+          {
+            "heading": "Yeh sawaal zaroori kyun tha?",
+            "text": "Nineteenth century mein purple dyes expensive natural sources se milte the. Affordable synthetic dye banne se clothing aur textile industry mein colour ka access badal sakta tha. Perkin ka original objective antimalarial quinine banana tha; unka product quinine nahi tha, lekin unexpected residue ne ek different opportunity di."
+          },
+          {
+            "heading": "Aasaan bhasha mein mechanism",
+            "text": "Perkin ne residue ki colour properties investigate ki aur dekha ki extracted material silk ko dye kar sakta hai. Unhone production aur commercial application develop karne par kaam kiya. Mauveine ek single perfectly pure molecule ki simple story nahi; historical dye related compounds ka mixture tha."
+          },
+          {
+            "heading": "Evidence, use aur limitations",
+            "text": "Discovery se synthetic dyes aur industrial chemistry ki growth ko impetus mila. Serendipity ka matlab random accident alone nahi: unusual result notice karna, test karna aur scale-up karna bhi necessary tha. Dye ko malaria medicine samajhna galat hoga. Success ke baad bhi industrial chemical production ke environmental aur worker safety impacts ko separately evaluate karna padta hai."
+          },
+          {
+            "heading": "Ek aur zaroori baat",
+            "text": "Perkin ke initial results ko reproducible industrial process mein badalna bhi challenging tha: laboratory discovery ke baad manufacturing, supply aur market development ki zaroorat thi."
+          }
+        ],
+        "real_world_connection": "Synthetic dyes ne textile industry aur industrial chemistry ke development ko influence kiya.",
+        "reality_check": {
+          "established": "Perkin ka 1856 mauve discovery documented hai.",
+          "misconception": "Unhone us attempt mein malaria ki successful medicine discover nahi ki thi; useful product dye tha."
+        },
+        "status": "Proven",
+        "sources": [
+          {
+            "title": "Science History Institute: Perkin",
+            "url": "https://sciencehistory.org/about/awards-program/sci-perkin-medal"
+          }
+        ]
+      }
+    },
+    {
+      "day": 125,
+      "category": "Space",
+      "card": {
+        "title": "Sun ke sabse paas planet par baraf?",
+        "hook": "Mercury bahut garam ho sakta hai. Phir uske poles par water ice kaise bachti hai?",
+        "cta": "Puri kahani padhein"
+      },
+      "detail": {
+        "real_life_scene": "Dhoop mein rakhe ghar ke kuch shaded corners comparatively cool reh sakte hain.",
+        "central_question": "Kya Sun ke sabse paas planet par ice possible hai?",
+        "explanation": [
+          {
+            "heading": "Asli kahani",
+            "text": "Earth-based radar observations ne Mercury ke polar regions mein bright areas dikhaye. NASA ke MESSENGER spacecraft ne 2012 mein neutron measurements, laser observations aur temperature modelling se water ice ke strong evidence report kiye."
+          },
+          {
+            "heading": "Aasaan bhasha mein concept",
+            "text": "Mercury ke kuch polar craters ke deep areas permanently shadowed reh sakte hain: wahan direct sunlight nahi pahunchti. In cold regions mein ice survive kar sakti hai, kabhi surface par aur kabhi protective material ke neeche."
+          },
+          {
+            "heading": "Yeh sawaal zaroori kyun tha?",
+            "text": "Mercury ka Sun ke paas hona sunte hi ice impossible lag sakti hai. Lekin planet ka average distance alone har surface location ka temperature decide nahi karta. Polar craters ke kuch floors ko topography aur small axial tilt ki wajah se direct sunlight extremely long periods tak nahi milti."
+          },
+          {
+            "heading": "Aasaan bhasha mein mechanism",
+            "text": "Earth-based radar se polar craters mein bright reflections detect hue jo ice ke consistent the, lekin interpretation ke liye additional observations important thi. MESSENGER ke neutron measurements hydrogen ke evidence dete hain; surface reflectance aur temperature models bhi cold-trap explanation support karte hain. Measurements milkar water ice ki case strengthen karte hain."
+          },
+          {
+            "heading": "Evidence, use aur limitations",
+            "text": "Kuch deposits dark insulating material ke neeche ho sakte hain, while exceptionally cold areas mein surface ice possible hai. Radar bright patch alone se precise local composition ya total water quantity perfectly established nahi ho jaati. Mercury ka ice study solar system mein volatile materials ki delivery aur preservation samajhne mein help karta hai. Equator ki extreme heat aur permanently shaded polar crater ek jaise environment nahi hain."
+          }
+        ],
+        "real_world_connection": "Planetary missions ek hi claim ko different instruments aur methods se cross-check karti hain.",
+        "reality_check": {
+          "established": "Mercury ke polar regions mein water ice ke liye strong observational evidence hai.",
+          "misconception": "Iska matlab Mercury ka poora surface thanda ya ice-covered hai, yeh nahi."
+        },
+        "status": "Proven",
+        "sources": [
+          {
+            "title": "NASA: identifying ice on Mercury",
+            "url": "https://www.nasa.gov/centers/goddard/news/features/2012/mercury-altimeter_prt.htm"
+          }
+        ]
+      }
+    },
+    {
+      "day": 126,
+      "category": "Brain",
+      "card": {
+        "title": "Aapke brain mein map kaise banta hai?",
+        "hook": "Ek rat ke brain ke kuch cells room ki specific jagah par active hue.",
+        "cta": "Puri kahani padhein"
+      },
+      "detail": {
+        "real_life_scene": "Aap ghar se school ka route bina har baar map dekhe yaad rakh sakte hain.",
+        "central_question": "Brain ko apni location ka idea kaise hota hai?",
+        "explanation": [
+          {
+            "heading": "Asli kahani",
+            "text": "1971 mein John O’Keefe aur John Dostrovsky ne moving rats ke hippocampus mein place-related cell activity report ki. 2005 mein May-Britt aur Edvard Moser aur colleagues ne nearby brain region mein grid cells describe kiye. O’Keefe aur Mosers ko 2014 Nobel mila."
+          },
+          {
+            "heading": "Aasaan bhasha mein concept",
+            "text": "Place cells kuch specific locations par active ho sakte hain. Grid cells multiple locations par regular grid-like pattern mein active hote hain. Dono brain ke navigation system ko samajhne ke useful clues hain."
+          },
+          {
+            "heading": "Yeh sawaal zaroori kyun tha?",
+            "text": "Jab aap familiar school se ghar jaate hain, brain ko current location aur direction ka estimate maintain karna hota hai. Spatial navigation ka mechanism samajhna memory research aur neurological disorders ke study ke liye important hai. Scientists ne animals ke brain activity ko movement ke saath record karke specialised firing patterns dekhe."
+          },
+          {
+            "heading": "Aasaan bhasha mein mechanism",
+            "text": "Rat jab environment ke certain area mein hota hai, hippocampus ki kuch place cells relatively strongly fire kar sakti hain. Nearby entorhinal cortex ki grid cells multiple positions par fire karti hain, jinka pattern roughly repeating grid jaisa hota hai. Different cells ke patterns milkar location-related representation mein contribute karte hain."
+          },
+          {
+            "heading": "Evidence, use aur limitations",
+            "text": "Yeh brain mein literal printed map ya single GPS chip nahi hai. Sensory landmarks, movement cues aur experience bhi navigation ko affect karte hain. Findings rats se start hui aur related signals other species mein investigate hue; experiments se in cells ki complete role par questions remain hain. Alzheimer research mein navigation difficulties relevant ho sakti hain, but ek symptom alone diagnosis nahi hai."
+          }
+        ],
+        "real_world_connection": "Memory aur navigation ke brain circuits samajhna neuroscience aur neurological disease research mein important hai.",
+        "reality_check": {
+          "established": "Place aur grid cells ki activity experiments mein observe hui hai.",
+          "misconception": "Brain mein Google Maps jaisi literal screen ya exact single GPS chip nahi hai."
+        },
+        "status": "Proven",
+        "sources": [
+          {
+            "title": "Nobel: brain positioning system",
+            "url": "https://www.nobelprize.org/prizes/medicine/2014/press-release/"
+          }
+        ]
+      }
+    },
+    {
+      "day": 127,
+      "category": "Physics",
+      "card": {
+        "title": "Invisible neutrino pehle predict hua, 26 saal baad mila!",
+        "hook": "Ek particle energy calculation bachane ke liye propose hua. Use detect karna bahut mushkil tha.",
+        "cta": "Puri kahani padhein"
+      },
+      "detail": {
+        "real_life_scene": "Agar bill ka total missing amount se match na kare, toh aap check karte hain ki koi item chhoot toh nahi gaya.",
+        "central_question": "Kya scientists bina dekhe ek particle ka idea de sakte hain?",
+        "explanation": [
+          {
+            "heading": "Asli kahani",
+            "text": "1930 mein Wolfgang Pauli ne beta decay ke energy puzzle ko explain karne ke liye ek neutral, weakly interacting particle propose kiya. 1956 mein Clyde Cowan aur Frederick Reines ki team ne Savannah River nuclear reactor ke paas experiment se electron antineutrinos detect kiye."
+          },
+          {
+            "heading": "Aasaan bhasha mein concept",
+            "text": "Beta decay mein nucleus change hota hai aur particles nikalte hain. Neutrinos matter se rarely interact karte hain, isliye unke liye large detector aur strong source zaroori hote hain."
+          },
+          {
+            "heading": "Yeh sawaal zaroori kyun tha?",
+            "text": "Beta decay ke experiments mein emitted electrons ki energies different milti thi. Agar sirf nucleus aur electron involved hote, toh simple energy accounting mein problem dikhti. Pauli ne suggest kiya ki ek unseen neutral particle bhi energy aur momentum carry karta hai. Is proposal ne conservation laws ko testable way mein preserve karne ki possibility di."
+          },
+          {
+            "heading": "Aasaan bhasha mein mechanism",
+            "text": "Cowan aur Reines ne reactor se aane wale electron antineutrinos ko target material ke saath interact karne diya. Rare inverse beta decay events se positron aur neutron related signals mil sakte the. Expected timing aur signal pattern, background comparison ke saath, detection ka evidence bana. Reactor ko intense source ki tarah use kiya gaya."
+          },
+          {
+            "heading": "Evidence, use aur limitations",
+            "text": "Neutrinos electric charge nahi rakhte aur matter se weakly interact karte hain; isliye bahut neutrinos detector se bina trace ke nikal jaate hain. Weak interaction ka matlab impossible detection nahi. Later research ne neutrino oscillations aur nonzero masses ka evidence diya. Neutrinos Sun, cosmic events aur reactors study karne ke tools hain, although measurements technically challenging rehti hain."
+          }
+        ],
+        "real_world_connection": "Reactor aur solar neutrino studies particle physics aur astrophysics dono mein kaam aati hain.",
+        "reality_check": {
+          "established": "Neutrinos aur antineutrinos experimentally established particles hain.",
+          "misconception": "Rare interaction ka matlab yeh nahi ki neutrinos kabhi matter se interact hi nahi karte."
+        },
+        "status": "Proven",
+        "sources": [
+          {
+            "title": "American Physical Society: neutrino discovery",
+            "url": "https://www.aps.org/funding-recognition/historic-sites/savannah"
+          }
+        ]
+      }
+    },
+    {
+      "day": 128,
+      "category": "Space history",
+      "card": {
+        "title": "Saturn ke rings pehle “do moons” kyun lage?",
+        "hook": "Galileo ko telescope mein ajeeb shape dikhi, lekin woh rings pehchaan nahi paaye.",
+        "cta": "Puri kahani padhein"
+      },
+      "detail": {
+        "real_life_scene": "Door ki blurry image mein ek object kai alag shapes jaisa lag sakta hai.",
+        "central_question": "Saturn ke rings ko correctly identify karne mein decades kyun lage?",
+        "explanation": [
+          {
+            "heading": "Asli kahani",
+            "text": "1610 mein Galileo ne telescope se Saturn ki unusual shape observe ki aur use triple-like appearance ki tarah interpret kiya. 1655 mein improved telescope ke saath Christiaan Huygens ne Saturn ke around ring structure explain ki aur Titan moon discover kiya."
+          },
+          {
+            "heading": "Aasaan bhasha mein concept",
+            "text": "Saturn ke rings ek solid single disk nahi hain. Unmein many individual ice aur rock particles Saturn ke around orbit karte hain. Telescope quality aur viewing angle early observations ko difficult banate the."
+          },
+          {
+            "heading": "Yeh sawaal zaroori kyun tha?",
+            "text": "Galileo ke early telescope ka resolution limited tha, aur Saturn ki apparent shape time ke saath change hoti dikhi. Us waqt rings ka concept obvious nahi tha. Better optical instruments aur repeat observations ne allow kiya ki astronomers different interpretations compare karein aur solar system ki structure ko revise karein."
+          },
+          {
+            "heading": "Aasaan bhasha mein mechanism",
+            "text": "Rings Earth se tilted angle par dikhti hain; jab view nearly edge-on hota hai toh thin rings difficult to see ho sakti hain. Huygens ne ring model propose kiya jo changing appearance explain karta tha. Aaj spacecraft aur telescopes se pata hai ki rings countless particles se composed hain, jinmein water ice important component hai."
+          },
+          {
+            "heading": "Evidence, use aur limitations",
+            "text": "Different ring regions mein particle sizes aur densities vary karti hain. Saturn ke moons aur gravity ring structures ko influence karte hain; gaps ki har detail ek hi explanation se nahi aati. Galileo ka initial interpretation uske available data ki limitation dikhata hai, careless observation nahi. New instruments purane observations ko new context de sakte hain."
+          }
+        ],
+        "real_world_connection": "Better instruments se purane observations ka interpretation change ho sakta hai.",
+        "reality_check": {
+          "established": "Saturn ke rings aur unke particle composition ka evidence spacecraft observations se mila hai.",
+          "misconception": "Rings ek permanent rigid plate nahi hain, aur Galileo ka initial guess final answer nahi tha."
+        },
+        "status": "Proven",
+        "sources": [
+          {
+            "title": "NASA: Saturn exploration history",
+            "url": "https://science.nasa.gov/saturn/exploration/"
+          }
+        ]
+      }
+    },
+    {
+      "day": 129,
+      "category": "Genetics",
+      "card": {
+        "title": "Cell kisi gene ka message “mute” kaise karti hai?",
+        "hook": "Ek chhote worm experiment ne genes ko silence karne ka powerful method dikhaya.",
+        "cta": "Puri kahani padhein"
+      },
+      "detail": {
+        "real_life_scene": "Phone silent mode par ho toh message aa sakta hai, lekin notification ka output badal jaata hai.",
+        "central_question": "DNA ke instruction ka effect cell kaise reduce kar sakti hai?",
+        "explanation": [
+          {
+            "heading": "Asli kahani",
+            "text": "Andrew Fire aur Craig Mello ne 1998 mein C. elegans naam ke tiny worms mein double-stranded RNA se specific gene activity suppress karne ka experiment publish kiya. Unhe 2006 Nobel Prize mila."
+          },
+          {
+            "heading": "Aasaan bhasha mein concept",
+            "text": "DNA se bana messenger RNA, ya mRNA, protein banane ki information carry karta hai. RNA interference mein molecular machinery matching mRNA ko target kar sakti hai, jisse us gene se protein production reduce hota hai."
+          },
+          {
+            "heading": "Yeh sawaal zaroori kyun tha?",
+            "text": "Cells mein har gene har waqt equal activity se use nahi hota. Scientists gene function samajhne ke liye poochte hain: agar ek selected message suppress kar dein, toh organism mein kya change hoga? RNA interference ne gene expression ko sequence-specific tareeke se study karne ka powerful tool diya."
+          },
+          {
+            "heading": "Aasaan bhasha mein mechanism",
+            "text": "Double-stranded RNA processing se short RNA pieces ban sakte hain. Ek strand protein complex ko complementary messenger RNA ki taraf guide karta hai; matching target message cut ya suppress ho sakta hai. Isse relevant protein ki amount kam ho sakti hai. Exact pathway organism aur RNA type ke according differ karta hai."
+          },
+          {
+            "heading": "Evidence, use aur limitations",
+            "text": "Gene silencing DNA sequence ko necessarily permanently edit nahi karti: message ki use ya stability change hoti hai. Researchers suitable controls se off-target effects check karte hain. Kuch RNA-based therapies approved medical use mein bhi hain, lekin delivery, side effects aur target selection important challenges hain. Worm experiment gene silencing ka landmark tha, universal cure ki discovery nahi."
+          },
+          {
+            "heading": "Ek aur zaroori baat",
+            "text": "Silencing ki intensity aur duration experimental design aur cell type par depend karti hai. Control experiments show karte hain ki effect intended target se related hai ya nahi."
+          }
+        ],
+        "real_world_connection": "RNA interference research mein gene function study karne aur kuch therapies develop karne ke liye useful hai.",
+        "reality_check": {
+          "established": "RNA interference ek established biological mechanism hai.",
+          "misconception": "Gene silence karna generally poore DNA ko delete karne ke barabar nahi hota."
+        },
+        "status": "Proven",
+        "sources": [
+          {
+            "title": "Nobel: RNA interference",
+            "url": "https://www.nobelprize.org/prizes/medicine/2006/advanced-information/"
+          }
+        ]
+      }
+    },
+    {
+      "day": 130,
+      "category": "Biology",
+      "card": {
+        "title": "Migrating birds Earth ka magnetic field kaise sense karti hain?",
+        "hook": "Hazaaron kilometres ki journey mein kya birds ke paas invisible compass hota hai?",
+        "cta": "Puri kahani padhein"
+      },
+      "detail": {
+        "real_life_scene": "Har saal kai birds breeding aur wintering areas ke beech bahut lambi journeys karti hain.",
+        "central_question": "Bina phone ya human compass ke birds direction kaise select karti hain?",
+        "explanation": [
+          {
+            "heading": "Yeh question kyun important hai?",
+            "text": "Migration ke dauran wrong direction energy waste kar sakti hai aur survival ko affect kar sakti hai. Researchers yeh samajhna chahte hain ki animals reliable navigation ke liye kaunsi environmental information use karte hain. Earth ka magnetic field ek potential cue hai jo clouds ke bawajood available rehta hai."
+          },
+          {
+            "heading": "Evidence kya dikhata hai?",
+            "text": "Controlled experiments mein kuch migratory birds ki orientation surrounding magnetic field ki direction badalne par change hoti hai. Isse support milta hai ki woh field se direction information le sakti hain. Experiment mein species, lighting aur field conditions important hote hain; har bird ko same navigation method use karte assume nahi karna chahiye."
+          },
+          {
+            "heading": "Compass ka mechanism",
+            "text": "Ek prominent hypothesis ke mutabik eyes ki light-sensitive cryptochrome proteins mein light-triggered chemical reactions magnetic field se influence ho sakti hain. In reactions mein electron spins se linked radical pairs ki role investigate ki ja rahi hai. Is molecular mechanism ka complete pathway living birds mein established nahi; other possible mechanisms bhi study hote hain."
+          },
+          {
+            "heading": "Compass aur map",
+            "text": "Compass direction batata hai, lekin destination tak pahunchne ke liye animal ko route ya position information bhi chahiye ho sakti hai. Birds species aur circumstances ke hisaab se stars, Sun, landmarks, smell aur learned experience jaise other cues bhi use kar sakti hain. Har cue ki relative importance alag ho sakti hai."
+          },
+          {
+            "heading": "Kya abhi unknown hai?",
+            "text": "Lab mein protein ki magnetic sensitivity milna useful evidence hai, par usse automatically yeh prove nahi hota ki wahi protein intact bird mein sensor ka role nibhata hai. Brain ko signal kaise milta hai aur animal ko subjectively kya experience hota hai, yeh questions open hain. Birds literally magnetic lines dekhte hain, yeh established fact nahi."
+          }
+        ],
+        "real_world_connection": "Migration routes aur environmental cues samajhna habitat conservation aur human activity ke effects investigate karne mein helpful hai.",
+        "reality_check": {
+          "established": "Kuch birds orientation ke liye magnetic field use karti hain.",
+          "misconception": "Exact molecular sensor aur brain pathway har species mein fully proven nahi hain."
+        },
+        "status": "Magnetic orientation supported; sensory mechanism under study",
+        "sources": [
+          {
+            "title": "Magnetoreception in migratory birds: retinal circuitry review",
+            "url": "https://doi.org/10.1515/nf-2021-0007"
+          },
+          {
+            "title": "Bird cryptochrome magnetic sensitivity",
+            "url": "https://doi.org/10.1038/s41586-021-03618-9"
+          }
+        ]
+      }
+    },
+    {
+      "day": 131,
+      "category": "Science history",
+      "card": {
+        "title": "Ek thandi subah, engineers ki warning aur Challenger disaster",
+        "hook": "Engineers ne rocket ke rubber seals par concern uthaya. Phir bhi launch hua—aur 73 seconds baad disaster ho gaya.",
+        "cta": "Puri kahani padhein"
+      },
+      "detail": {
+        "real_life_scene": "Thand mein rubber ki flexibility badal sakti hai. Door ya pipe ki seal properly fit na ho toh leakage ho sakti hai.",
+        "central_question": "1986 ke Challenger launch se pehle engineers kis baat ko lekar worried the?",
+        "explanation": [
+          {
+            "heading": "Asli kahani",
+            "text": "27 January 1986 ki pre-launch discussion mein engineer Roger Boisjoly aur Morton Thiokol ke colleagues ne low temperature par rocket booster ke O-rings ko lekar concern rakha. O-ring ek rubber seal hoti hai jo joint se gas escape hone se rokne ke liye hoti hai. Engineers ne available experience se lower temperature par launch na karne ki recommendation di. Agle din launch ke baad Challenger destroy ho gaya aur seven crew members ki death hui."
+          },
+          {
+            "heading": "Aasaan bhasha mein samjhein",
+            "text": "Investigation mein booster joint ki seal failure aur hot gases escape hone ko disaster se connect kiya gaya. Sirf material failure nahi, balki risk communication aur decision-making ka record bhi important tha. NASA ki Rogers Commission ki public testimony mein launch se pehle ki discussions milti hain."
+          },
+          {
+            "heading": "Yeh sawaal zaroori kyun tha?",
+            "text": "Cold temperature seal ki elasticity aur joint ke response ko affect kar sakti thi. Booster segments ke joints ko hot pressurised gases contain karni thi; agar seal time par effective contact maintain na kare, gas leak critical components ko damage kar sakti hai. Earlier flight evidence aur cold conditions ne engineers ki concern ko serious banaya."
+          },
+          {
+            "heading": "Aasaan bhasha mein mechanism",
+            "text": "Launch decision se pehle available data incomplete tha, lekin uncertainty ka matlab risk absent hona nahi. Rogers Commission ne joint design, certification process aur management communication examine ki. Disaster ke baad investigation ne technical aur organisational causes dono ko highlight kiya; complex safety decisions ko ek simplistic villain tak reduce karna incomplete hoga."
+          },
+          {
+            "heading": "Evidence, use aur limitations",
+            "text": "Seven astronauts ki death ne spaceflight safety aur public trust par deep impact dala. Safety-critical systems mein dissenting experts ki concerns document karna, data ko honestly present karna aur unresolved risk ke liye clear decision process important lessons hain. Historical details par primary commission testimony aur findings consult karna chahiye."
+          }
+        ],
+        "real_world_connection": "Safety-critical engineering mein uncomfortable evidence aur expert concerns ko decision tak clearly pahunchana essential hai.",
+        "reality_check": {
+          "established": "O-ring failure aur pre-launch concerns official historical record ka part hain.",
+          "misconception": "Disaster ko sirf “weather kharab tha” kehna technical aur organisational causes ko oversimplify karta hai."
+        },
+        "status": "Proven",
+        "sources": [
+          {
+            "title": "NASA: Rogers Commission testimony",
+            "url": "https://www.nasa.gov/history/rogersrep/v4part7.htm"
+          }
+        ]
+      }
+    },
+    {
+      "day": 132,
+      "category": "Science aur credit",
+      "card": {
+        "title": "Insulin discovery: Nobel ke baad bhi team mein credit dispute kyun hua?",
+        "hook": "Ek life-saving discovery ke liye Nobel mila, lekin winner khud award decision se upset the.",
+        "cta": "Puri kahani padhein"
+      },
+      "detail": {
+        "real_life_scene": "Kisi group project mein idea, experiments aur final product par different log kaam karte hain.",
+        "central_question": "Insulin discovery mein Banting, Best, Macleod aur Collip ka role kya tha?",
+        "explanation": [
+          {
+            "heading": "Asli kahani",
+            "text": "1921 mein University of Toronto mein Frederick Banting aur Charles Best ne pancreatic extracts par experiments kiye. John Macleod ne laboratory support aur scientific oversight diya; James Collip ne extract purification mein important work kiya. 1923 Nobel Banting aur Macleod ko diya gaya. Banting ne Best ke saath apna prize money share kiya; Macleod ne Collip ke saath share kiya."
+          },
+          {
+            "heading": "Aasaan bhasha mein samjhein",
+            "text": "Insulin ek hormone hai jo blood glucose ko regulate karne mein important role nibhata hai. Discovery ka medical impact bada tha, lekin scientific credit ko do Nobel names tak limit karna team ke doosre contributions miss kar sakta hai."
+          },
+          {
+            "heading": "Yeh sawaal zaroori kyun tha?",
+            "text": "Insulin discovery se pehle type 1 diabetes usually fatal thi kyunki body sufficient insulin produce nahi kar paati. Patients ko extreme dietary restrictions di jaati thi, lekin disease ka durable effective treatment available nahi tha. A pancreatic extract ka therapeutic potential isliye extraordinary medical breakthrough tha."
+          },
+          {
+            "heading": "Aasaan bhasha mein mechanism",
+            "text": "Pancreas ke cells normal conditions mein insulin release karte hain. Yeh hormone body ke kai cells ko blood se glucose use ya store karne ke signals dene mein help karta hai. Animal experiments, purification aur clinical work ne extract ko human treatment ke closer laaya; patient care aur scalable production mein additional teams ki bhi role thi."
+          },
+          {
+            "heading": "Evidence, use aur limitations",
+            "text": "Insulin treatment lifesaving hai, but dosing, monitoring aur access zaroori rehte hain; yeh diabetes ka universal cure nahi hai. 1923 prize credit par controversy collaboration ki complexity dikhati hai. Banting, Best, Macleod aur Collip ke contributions different the, aur science history ko sirf prize list se samajhna incomplete hoga."
+          }
+        ],
+        "real_world_connection": "Insulin treatment diabetes care ke liye essential hai, especially un logon ke liye jinke body mein insulin sufficient nahi banti.",
+        "reality_check": {
+          "established": "Team members ke contributions aur prize-money sharing documented hain.",
+          "misconception": "Har diabetes patient ka treatment same nahi hota; insulin ya medicine khud se start ya stop na karein."
+        },
+        "status": "Divided",
+        "sources": [
+          {
+            "title": "Nobel educational history: insulin discovery",
+            "url": "https://educationalgames.nobelprize.org/educational/medicine/insulin/discovery-insulin.html"
+          }
+        ]
+      }
+    },
+    {
+      "day": 133,
+      "category": "Space",
+      "card": {
+        "title": "Mercury par ek din uske do saal ke barabar?",
+        "hook": "Sun ke paas wale planet ka year short hai—lekin sunrise se sunrise tak wait bahut lamba.",
+        "cta": "Puri kahani padhein"
+      },
+      "detail": {
+        "real_life_scene": "Earth par aam taur par ek sunrise se next sunrise tak lagbhag 24 hours hote hain.",
+        "central_question": "Mercury ka din uske year se lamba kaise ho sakta hai?",
+        "explanation": [
+          {
+            "heading": "Asli kahani",
+            "text": "NASA ke Mercury observations ke mutabik planet Sun ka ek orbit approximately 88 Earth days mein complete karta hai. Mercury apni axis par ek rotation lagbhag 59 Earth days mein karta hai. Lekin Mercury ka solar day—ek noon se next noon—approximately 176 Earth days hota hai."
+          },
+          {
+            "heading": "Aasaan bhasha mein samjhein",
+            "text": "Rotation aur solar day same cheez nahi hain. Planet jab rotate bhi kar raha ho aur Sun ke around move bhi kar raha ho, toh Sun ko sky mein same position par wapas aane ka time dono motions se affected hota hai. Mercury ke rotation aur orbital periods ka special relationship hai."
+          },
+          {
+            "heading": "Yeh sawaal zaroori kyun tha?",
+            "text": "Everyday language mein day ka matlab sunrise-to-sunrise ya noon-to-noon ho sakta hai, lekin astronomy mein rotation relative to distant stars aur Sun ke apparent cycle ko separately define karna padta hai. Agar in terms ko mix karein toh Mercury ke apparently strange numbers contradictory lagte hain."
+          },
+          {
+            "heading": "Aasaan bhasha mein mechanism",
+            "text": "Mercury har do orbits mein apni axis par approximately three rotations karta hai: is relation ko three-to-two spin-orbit resonance kehte hain. Planet orbit bhi kar raha hota hai, isliye ek rotation ke baad Sun sky mein same direction par nahi pahunchta. Relative motion ko account karne par solar day roughly two Mercury years hota hai."
+          },
+          {
+            "heading": "Evidence, use aur limitations",
+            "text": "Mercury ka orbit perfectly circular nahi hai, isliye sky mein Sun ki apparent motion location aur time ke hisaab se unusual lag sakti hai. Approximate values ko round kiya gaya hai. Ek Mercury year 88 Earth days hai, not 88 Earth years; aur 176 Earth days wala solar day planet ki axis rotation period se alag hai."
+          }
+        ],
+        "real_world_connection": "Calendars kisi planet ke motion par depend karte hain; Earth wala “day” har planet ke liye same length nahi hota.",
+        "reality_check": {
+          "established": "Mercury ka solar day roughly 176 Earth days aur year roughly 88 Earth days hai.",
+          "misconception": "Mercury ki ek axis rotation ko 176 Earth days kehna wrong hoga; woh roughly 59 Earth days hai."
+        },
+        "status": "Proven",
+        "sources": [
+          {
+            "title": "NASA: Mercury solar day",
+            "url": "https://apod.nasa.gov/apod/ap111008.html"
+          }
+        ]
+      }
+    },
+    {
+      "day": 134,
+      "category": "Earth aur oceans",
+      "card": {
+        "title": "Paani ke neeche tsunami pehle chhoti kyun lag sakti hai?",
+        "hook": "Open ocean mein low wave height—coast ke paas wahi energy dangerous flooding kyun bana sakti hai?",
+        "cta": "Puri kahani padhein"
+      },
+      "detail": {
+        "real_life_scene": "Jab water ek narrow shallow area mein jaata hai, uski motion aur height badal sakti hai.",
+        "central_question": "Tsunami ka danger deep ocean aur coast par alag kyun dikhta hai?",
+        "explanation": [
+          {
+            "heading": "Asli kahani",
+            "text": "US Geological Survey ke mutabik deep ocean mein tsunami waves hundreds of kilometres per hour ki speed se travel kar sakti hain, jabki unki height surface par relatively small ho sakti hai. Shallow coastal water mein wave ki speed aur shape change hoti hai, aur flooding dangerous ho sakti hai."
+          },
+          {
+            "heading": "Aasaan bhasha mein samjhein",
+            "text": "Tsunami usually bahut lambi wavelength wali waves ka series hoti hai, often seabed displacement se triggered. Jaise-jaise water depth kam hoti hai, wave slow aur transform hoti hai; local coastline aur seabed shape height aur flooding ko affect karte hain."
+          },
+          {
+            "heading": "Yeh sawaal zaroori kyun tha?",
+            "text": "Earthquake se seabed suddenly displace ho toh upar ka water column bhi disturb ho sakta hai. Landslides aur volcanic events bhi tsunami trigger kar sakte hain. Wave energy open ocean mein large area aur long wavelength mein distributed hoti hai, isliye ship par surface height noticeable na bhi ho sakti hai."
+          },
+          {
+            "heading": "Aasaan bhasha mein mechanism",
+            "text": "Coast ke paas depth kam hone par tsunami slow hoti hai aur wave ka shape transform hota hai. Shoaling aur local coastal geometry water level increase aur inland flooding cause kar sakte hain. Tsunami ek single wave nahi, multiple waves ki series ho sakti hai; first wave hamesha largest nahi hoti."
+          },
+          {
+            "heading": "Evidence, use aur limitations",
+            "text": "Warning signs mein strong coastal earthquake ya unusual rapid sea withdrawal include ho sakte hain, but har tsunami se pehle sea visibly retreat nahi karta. Official warning ya natural signs par immediately high ground ya designated evacuation route follow karein; beach par dekhne na jaayein. Hazard all-clear authorities se milne tak remain kar sakta hai."
+          }
+        ],
+        "real_world_connection": "Coastal areas mein earthquake ke baad official tsunami warnings aur evacuation instructions follow karna important hai.",
+        "reality_check": {
+          "established": "Tsunami ki speed water depth se linked hai aur coastal impacts local geography par depend karte hain.",
+          "misconception": "Tsunami sirf ek wave ho, yeh zaroori nahi; first wave hamesha biggest bhi nahi hoti."
+        },
+        "status": "Proven",
+        "sources": [
+          {
+            "title": "USGS: tsunami propagation",
+            "url": "https://www.usgs.gov/media/images/terms-describe-measurement-tsunamis"
+          }
+        ]
+      }
+    },
+    {
+      "day": 135,
+      "category": "Biology",
+      "card": {
+        "title": "Aapka DNA roz damage hota hai—phir repair kaun karta hai?",
+        "hook": "Cells ke andar instructions ko read aur repair karne ki machinery continuously kaam karti hai.",
+        "cta": "Puri kahani padhein"
+      },
+      "detail": {
+        "real_life_scene": "Book mein typing errors milne par editor unhe correct karta hai.",
+        "central_question": "Kya DNA hamesha perfectly stable rehta hai?",
+        "explanation": [
+          {
+            "heading": "Asli kahani",
+            "text": "Tomas Lindahl ne dikhaya ki DNA molecules naturally damage ho sakte hain. Aziz Sancar ne UV damage repair ke mechanisms map kiye, aur Paul Modrich ne copying mistakes repair karne wale system ko study kiya. In discoveries ke liye unhe 2015 Chemistry Nobel mila."
+          },
+          {
+            "heading": "Aasaan bhasha mein samjhein",
+            "text": "DNA cells ki genetic information carry karta hai. Repair proteins kuch damage ko detect aur correct kar sakte hain, lekin har error fix ho jaana guaranteed nahi. Different kinds of damage ke liye different repair pathways hote hain."
+          },
+          {
+            "heading": "Yeh sawaal zaroori kyun tha?",
+            "text": "Cell ki DNA instructions ko reliable rakhna growth aur normal function ke liye important hai. Lekin UV radiation, reactive chemicals aur normal cellular processes DNA ke bases ko damage kar sakte hain; copying ke waqt mistakes bhi ho sakti hain. Agar errors persist karein toh mutations accumulate ho sakti hain."
+          },
+          {
+            "heading": "Aasaan bhasha mein mechanism",
+            "text": "Different repair pathways different problems handle karti hain. Base excision repair damaged base ko identify karke remove aur replace kar sakti hai. Nucleotide excision repair certain bulky DNA lesions, including UV-related damage, remove karti hai. Mismatch repair copying ke baad incorrectly paired bases correct karne mein help karti hai."
+          },
+          {
+            "heading": "Evidence, use aur limitations",
+            "text": "Repair systems complete perfection guarantee nahi karte, aur inherited defects kuch cancers ka risk increase kar sakte hain. Har DNA change harmful nahi, aur damage aur permanent mutation same thing nahi hain. Mechanisms ki understanding cancer biology aur treatments research mein useful hai; sunscreen aur other protective measures risk reduce kar sakte hain, but zero risk promise nahi."
+          },
+          {
+            "heading": "Ek aur zaroori baat",
+            "text": "Cells repair ke alawa severely damaged cells ko division se rok sakti hain ya controlled death pathways activate kar sakti hain. Yeh protections bhi perfect nahi hoti."
+          }
+        ],
+        "real_world_connection": "DNA repair research cancer biology aur treatments samajhne mein useful hai.",
+        "reality_check": {
+          "established": "Cells ke multiple DNA repair mechanisms experimentally established hain.",
+          "misconception": "Repair system hona unlimited UV exposure ko safe nahi banata."
+        },
+        "status": "Proven",
+        "sources": [
+          {
+            "title": "Nobel: DNA repair",
+            "url": "https://www.nobelprize.org/prizes/chemistry/2015/press-release/"
+          }
+        ]
+      }
+    },
+    {
+      "day": 136,
+      "category": "Space",
+      "card": {
+        "title": "Khaali sky ki photo mein thousands galaxies kaise mili?",
+        "hook": "Hubble telescope ne apparently blank sky ko 10 din dekha. Result ne picture badal di.",
+        "cta": "Puri kahani padhein"
+      },
+      "detail": {
+        "real_life_scene": "Dim room mein camera ka shutter longer time open rahe toh faint details capture ho sakti hain.",
+        "central_question": "Space ki seemingly empty jagah mein telescope ne kya dekha?",
+        "explanation": [
+          {
+            "heading": "Asli kahani",
+            "text": "1995 mein Hubble Space Telescope ne sky ke ek chhote, apparently empty patch ki multiple exposures li. Combined Hubble Deep Field image mein thousands of faint galaxies saamne aayi. NASA ke historical account mein total observation period lagbhag 10 days bataya gaya hai."
+          },
+          {
+            "heading": "Aasaan bhasha mein samjhein",
+            "text": "Long exposure se faint sources ki light collect karne ka chance badhta hai. Galaxies bahut door hain, isliye unki light ko Earth tak aane mein long time laga; image universe ki different earlier stages ka view deti hai."
+          },
+          {
+            "heading": "Yeh sawaal zaroori kyun tha?",
+            "text": "Agar telescope briefly sky dekhe, toh sirf relatively bright objects visible hote hain. Hubble Deep Field project ka question tha ki apparently empty small region ko bahut longer observe karne par kya faint objects milenge. Yeh early galaxy populations aur universe ki history samajhne ka opportunity tha."
+          },
+          {
+            "heading": "Aasaan bhasha mein mechanism",
+            "text": "Multiple exposures ko align aur combine karne se weak light signals accumulate hote hain aur image processing mein unwanted effects handle kiye ja sakte hain. Distant galaxy ki light humein us waqt ki information deti hai jab woh emit hui thi. Alag galaxies ki distances different hain, so ek image different lookback times sample kar sakti hai."
+          },
+          {
+            "heading": "Evidence, use aur limitations",
+            "text": "Deep Field full sky ka literal complete census nahi tha: field small thi aur brightness aur selection limits apply hoti hain. Later deep surveys aur other wavelengths ki observations ne picture expand ki. Faint appearance se alone exact distance ya age decide nahi hoti; colours aur spectroscopy jaise measurements required ho sakte hain."
+          }
+        ],
+        "real_world_connection": "Deep-field observations galaxy formation aur evolution ko study karne mein scientists ki help karti hain.",
+        "reality_check": {
+          "established": "Hubble Deep Field mein thousands of faint galaxies identify hui.",
+          "misconception": "Image mein har bright point galaxy nahi hota, aur image poore universe ka complete census nahi hai."
+        },
+        "status": "Proven",
+        "sources": [
+          {
+            "title": "NASA: Hubble Deep Field",
+            "url": "https://science.nasa.gov/image-detail/full-wfpc2-mosaic-full-resolution/"
+          }
+        ]
+      }
+    },
+    {
+      "day": 137,
+      "category": "Physics",
+      "card": {
+        "title": "Atom ka centre itna tiny kaise pata chala?",
+        "hook": "Gold foil par particles fire kiye. Kuch wapas mud gaye—and atomic model badal gaya.",
+        "cta": "Puri kahani padhein"
+      },
+      "detail": {
+        "real_life_scene": "Agar patli paper sheet par tiny balls phenko aur kuch unexpectedly bounce back karein, toh andar kuch dense hone ka clue milega.",
+        "central_question": "Kya atom ka positive charge poore atom mein evenly spread hota hai?",
+        "explanation": [
+          {
+            "heading": "Asli kahani",
+            "text": "Hans Geiger aur Ernest Marsden ne Ernest Rutherford ke research group mein thin gold foil se alpha-particle scattering experiments kiye. 1911 mein Rutherford ne results explain karne ke liye atom ke centre mein small positively charged nucleus propose kiya."
+          },
+          {
+            "heading": "Aasaan bhasha mein samjhein",
+            "text": "Most alpha particles foil se pass hue, lekin kuch large angles par deflect hue. Yeh result positive charge aur much of atom ki mass ke tiny central region mein concentrated hone se consistent tha."
+          },
+          {
+            "heading": "Yeh sawaal zaroori kyun tha?",
+            "text": "Rutherford se pehle widely discussed atomic model mein positive charge relatively spread out maana jaata tha. Gold foil experiment ne is model ki prediction ko test karne ka chance diya. Agar charge diffuse hota, most alpha particles ko only small deflections milne ki expectation thi."
+          },
+          {
+            "heading": "Aasaan bhasha mein mechanism",
+            "text": "Alpha particles positively charged hain. Thin foil ke atoms se guzarte hue most particles relatively straight nikle, while a small fraction strong angle se scatter hui. Rutherford ne conclude kiya ki positive charge aur atom ki much mass extremely small central region mein concentrated hai. Electrostatic repulsion deflection explain karne mein central hai."
+          },
+          {
+            "heading": "Evidence, use aur limitations",
+            "text": "Experiment nucleus ka direct microscope photograph nahi tha; scattering distribution se mathematical inference nikala gaya. Later experiments ne nuclear structure aur quantum atomic model refine kiya. Nucleus small hai compared with entire atom, lekin atom ka space truly meaningless empty vacuum samajhna misleading hai: electrons quantum states aur electromagnetic interactions mein described hote hain."
+          },
+          {
+            "heading": "Ek aur zaroori baat",
+            "text": "Gold ko foil ke liye choose karne ka practical advantage tha ki use extremely thin sheets mein banaya ja sakta tha."
+          }
+        ],
+        "real_world_connection": "Nuclear physics aur medical imaging technologies atomic structure ki understanding par build karti hain.",
+        "reality_check": {
+          "established": "Atomic nucleus ka existence aur compact structure established hai.",
+          "misconception": "Modern quantum model mein electrons ko tiny planets ki exact fixed orbits samajhna accurate nahi."
+        },
+        "status": "Proven",
+        "sources": [
+          {
+            "title": "Nobel: atomic structure history",
+            "url": "https://educationalgames.nobelprize.org/educational/physics/quantised_world/structure-1.html"
+          }
+        ]
+      }
+    },
+    {
+      "day": 138,
+      "category": "Physics aur invention",
+      "card": {
+        "title": "Light se bina touch kiye tiny objects pakadna possible hai?",
+        "hook": "Ek laser beam microscopic objects ko hold karne ka tool ban sakti hai.",
+        "cta": "Puri kahani padhein"
+      },
+      "detail": {
+        "real_life_scene": "Tweezers se hum small object pakadte hain, lekin bahut tiny cells ko kaise hold karein?",
+        "central_question": "Kya light matter par enough force laga sakti hai?",
+        "explanation": [
+          {
+            "heading": "Asli kahani",
+            "text": "Physicist Arthur Ashkin ne focused laser light se microscopic particles trap karne ki technique develop ki. 1986 ke around optical tweezers ke applications aur practical demonstrations ne field ko open kiya. Unhe 2018 Physics Nobel ka hissa mila."
+          },
+          {
+            "heading": "Aasaan bhasha mein samjhein",
+            "text": "Light momentum carry karti hai aur tiny force exert kar sakti hai. Focused laser beam suitable conditions mein microscopic particle ko specific region mein hold kar sakti hai. Isse researchers biological cells aur molecular motors study karte hain."
+          },
+          {
+            "heading": "Yeh sawaal zaroori kyun tha?",
+            "text": "Microscopic cells aur molecules ko ordinary metal tweezers se handle karna difficult hai: tool unke size ke comparison mein huge hai aur physical contact damage kar sakta hai. Researchers ko aisa controlled method chahiye tha jo tiny objects manipulate kare aur small forces measure kare."
+          },
+          {
+            "heading": "Aasaan bhasha mein mechanism",
+            "text": "Laser light photons momentum carry karte hain. Jab light transparent particle ke saath interact karti hai aur direction change karti hai, momentum exchange se particle par force lag sakta hai. Carefully focused beam appropriate conditions mein particle ko high-intensity region ke near trap kar sakti hai. Particle properties, medium aur beam shape result affect karte hain."
+          },
+          {
+            "heading": "Evidence, use aur limitations",
+            "text": "Scientists is technique se DNA stretch karne aur molecular motors ki tiny forces investigate karne jaise experiments karte hain. Trap strength limited hoti hai, aur laser heating ya photodamage sensitive biological samples ke liye concern ho sakta hai. Calibration aur controls zaroori hain. Optical trapping space mein large objects ko remotely lift karne jaisa science-fiction tractor beam nahi hai."
+          },
+          {
+            "heading": "Ek aur zaroori baat",
+            "text": "Precise laser control aur detector measurements se particle displacement analyse ki jaati hai, jis se known conditions mein force ka estimate nikala ja sakta hai."
+          }
+        ],
+        "real_world_connection": "Optical tweezers lab mein cells aur molecules ke mechanical behaviour measure karne ka valuable tool hain.",
+        "reality_check": {
+          "established": "Light-based optical trapping experimentally established hai.",
+          "misconception": "Yeh movie jaisa force field nahi hai jo kisi bhi size ki cheez effortlessly utha le."
+        },
+        "status": "Proven",
+        "sources": [
+          {
+            "title": "Nobel: optical tweezers",
+            "url": "https://www.nobelprize.org/prizes/physics/2018/popular-information/"
+          }
+        ]
+      }
+    },
+    {
+      "day": 139,
+      "category": "Space history",
+      "card": {
+        "title": "Venus par pehla successful flyby: 1962 mein kya mila?",
+        "hook": "Ek spacecraft ne doosre planet ka pehla successful close study kiya—aur Venus surprisingly hot nikla.",
+        "cta": "Puri kahani padhein"
+      },
+      "detail": {
+        "real_life_scene": "Door ki cheez ke baare mein photo se guess karna aur paas se instrument le jaakar measure karna alag baat hai.",
+        "central_question": "Pehli baar Venus ke paas se spacecraft guzra toh kya pata chala?",
+        "explanation": [
+          {
+            "heading": "Asli kahani",
+            "text": "NASA ka Mariner 2 14 December 1962 ko Venus ke paas se guzra, becoming the first successful spacecraft to study another planet closely. Usse pehle Mariner 1 launch failure ka shikaar hua tha."
+          },
+          {
+            "heading": "Aasaan bhasha mein samjhein",
+            "text": "Mariner 2 ke instruments ne Venus se infrared aur microwave signals measure kiye. Observations Venus ki extremely hot surface ke evidence ke saath consistent the; spacecraft ne solar wind bhi study ki. Flyby ka matlab nearby se pass hona hai, landing nahi."
+          },
+          {
+            "heading": "Yeh sawaal zaroori kyun tha?",
+            "text": "Venus thick clouds se covered hai, isliye visible light se surface conditions direct dekhna difficult tha. Early theories mein uski surface environment ko lekar uncertainty thi. A close flyby se instruments Earth-based observations ko complement kar sakte the aur planet ke temperature aur space environment ke baare mein evidence collect kar sakte the."
+          },
+          {
+            "heading": "Aasaan bhasha mein mechanism",
+            "text": "Mariner 2 ne infrared aur microwave measurements liye, jinki interpretation ne very hot Venus conditions ko support kiya. Instruments ne interplanetary magnetic fields aur solar wind bhi investigate kiye. Spacecraft Venus par land nahi hua aur usne modern camera jaisi surface photographs nahi bheji."
+          },
+          {
+            "heading": "Evidence, use aur limitations",
+            "text": "Later spacecraft missions ne thick carbon-dioxide-rich atmosphere, high pressure aur extreme surface temperature ki understanding improve ki. Venus ka example atmosphere aur greenhouse effect ke planetary roles study karne mein relevant hai; Earth aur Venus ki histories aur conditions identical nahi hain. Flyby measurements aur later lander observations ko same event samajhna misleading hoga."
+          },
+          {
+            "heading": "Ek aur zaroori baat",
+            "text": "Mission ke results ne instrument-based planetary exploration ki value show ki, lekin ek single spacecraft ke observations sab open questions resolve nahi karte."
+          }
+        ],
+        "real_world_connection": "Later missions ne Venus ke atmosphere aur climate ko deeper detail mein explore kiya.",
+        "reality_check": {
+          "established": "Mariner 2 successful Venus flyby December 1962 mein hua.",
+          "misconception": "Mariner 2 Venus par land nahi hua tha."
+        },
+        "status": "Proven",
+        "sources": [
+          {
+            "title": "NASA JPL: Mariner 2",
+            "url": "https://www.jpl.nasa.gov/missions/mariner-2/"
+          }
+        ]
+      }
+    },
+    {
+      "day": 140,
+      "category": "Invention",
+      "card": {
+        "title": "Radio waves pehle lab mein, phir messages oceans ke paar",
+        "hook": "Invisible waves detect karna aur unse long-distance message bhejna alag scientific steps the.",
+        "cta": "Puri kahani padhein"
+      },
+      "detail": {
+        "real_life_scene": "Phone aur radio bina visible wire ke signals receive karte hain.",
+        "central_question": "Wireless communication ka foundation kaise bana?",
+        "explanation": [
+          {
+            "heading": "Asli kahani",
+            "text": "Heinrich Hertz ne 1888 mein electromagnetic waves ke propagation ka experimental evidence diya. 1890s mein Guglielmo Marconi ne wireless signalling develop ki; Karl Ferdinand Braun ne important technical improvements kiye. Marconi aur Braun ko 1909 Physics Nobel mila."
+          },
+          {
+            "heading": "Aasaan bhasha mein samjhein",
+            "text": "Radio waves aur visible light dono electromagnetic waves hain, lekin unki wavelengths different hoti hain. Transmitter information ko radio signal par encode karta hai; receiver signal capture karke information recover karta hai."
+          },
+          {
+            "heading": "Yeh sawaal zaroori kyun tha?",
+            "text": "Maxwell ki electromagnetic theory ne waves ki possibility predict ki thi, par direct experimental demonstration needed thi. Hertz ne laboratory mein electromagnetic waves produce aur detect karke theory ko important support diya. Baad mein practical wireless communication ke liye reliable transmitters, receivers, tuning aur engineering develop karna zaroori tha."
+          },
+          {
+            "heading": "Aasaan bhasha mein mechanism",
+            "text": "Transmitter changing electric currents se electromagnetic waves produce karta hai. Information signal mein controlled changes ke through encode hoti hai; receiver antenna wave se small electrical response generate karke signal recover karta hai. Radio waves vacuum mein light speed se travel karti hain, although real environments mein propagation reflections aur interference se affected hoti hai."
+          },
+          {
+            "heading": "Evidence, use aur limitations",
+            "text": "Marconi aur many other inventors ne wireless systems ko practical banane mein contributions diye. Ocean crossings ne long-distance communication ka potential dikhaya, but radio ka history single inventor ka isolated achievement nahi tha. Broadcast, mobile networks aur satellite links different frequency bands aur technologies use karte hain. Hertz experiment discovery tha; later communication engineering alag development step thi."
+          },
+          {
+            "heading": "Ek aur zaroori baat",
+            "text": "Wireless signal receiver tak multiple paths se pahunch sakta hai; practical systems interference aur noise handle karne ke liye design kiye jaate hain."
+          }
+        ],
+        "real_world_connection": "Radio, mobile communication aur wireless technologies electromagnetic-wave principles use karti hain.",
+        "reality_check": {
+          "established": "Hertz ke experiments aur later wireless development documented milestones hain.",
+          "misconception": "Radio ka invention ek hi person ke isolated action se explain karna historical oversimplification hai."
+        },
+        "status": "Proven",
+        "sources": [
+          {
+            "title": "Nobel: 1909 award presentation",
+            "url": "https://www.nobelprize.org/prizes/physics/1909/ceremony-speech/"
+          }
+        ]
+      }
+    },
+    {
+      "day": 141,
+      "category": "Physics aur discovery",
+      "card": {
+        "title": "Crystal ke dots se atoms ka arrangement kaise pata chala?",
+        "hook": "X-ray ka pattern dekhkar scientists ne crystals ke andar ki structure ka raaz khola.",
+        "cta": "Puri kahani padhein"
+      },
+      "detail": {
+        "real_life_scene": "Jali se light guzre toh wall par pattern ban sakta hai; pattern se jali ke baare mein clue milta hai.",
+        "central_question": "Kya invisible atomic arrangement ko indirect measurement se samjha ja sakta hai?",
+        "explanation": [
+          {
+            "heading": "Asli kahani",
+            "text": "1912 mein Max von Laue ne propose kiya ki crystal X-rays ko diffract kar sakta hai; Walter Friedrich aur Paul Knipping ne experiment kiya. William Henry Bragg aur William Lawrence Bragg ne later X-ray patterns se crystal structures determine karne ke methods develop kiye."
+          },
+          {
+            "heading": "Aasaan bhasha mein samjhein",
+            "text": "Diffraction wave ka pattern hai jo regular structures se interact karne par mil sakta hai. Crystal mein atoms ka regular arrangement X-rays ke suitable scale par patterns create karta hai."
+          },
+          {
+            "heading": "Yeh sawaal zaroori kyun tha?",
+            "text": "A molecule ya crystal ke atoms directly visible-light microscope se resolve karna difficult hota hai kyunki atomic spacing bahut small hai. X-rays ki wavelength atomic spacing ke comparable ho sakti hai, so unke diffraction pattern se hidden arrangement infer karne ka route mila. Yeh chemistry, physics aur materials science ke liye powerful breakthrough tha."
+          },
+          {
+            "heading": "Aasaan bhasha mein mechanism",
+            "text": "Crystal ke regularly arranged atoms X-rays scatter karte hain. Scattered waves kuch directions mein reinforce aur others mein cancel karti hain, producing spots at detector. Bragg relation incident angle, wavelength aur crystal planes ke spacing ko link karti hai. Multiple reflections measure karke researchers candidate atomic arrangements model karte hain."
+          },
+          {
+            "heading": "Evidence, use aur limitations",
+            "text": "Diffraction image direct photograph nahi hai: structure calculation, assumptions aur data quality matter karte hain. Protein crystallography jaise applications mein crystals prepare karna aur phase information recover karna difficult ho sakta hai. Structures drugs aur materials research mein useful hain, par ek static structure alone molecule ki complete dynamic behaviour describe nahi karta."
+          },
+          {
+            "heading": "Ek aur zaroori baat",
+            "text": "Researchers different candidate structures ko observed diffraction data ke against compare karte hain, aur uncertainty aur resolution ko report karte hain."
+          }
+        ],
+        "real_world_connection": "X-ray crystallography molecules aur materials ki three-dimensional structure study karne mein useful hai.",
+        "reality_check": {
+          "established": "Crystals se X-ray diffraction aur structure analysis experimentally established hain.",
+          "misconception": "Detector par dikhne wale dots individual atoms ki direct normal-camera photos nahi hote."
+        },
+        "status": "Proven",
+        "sources": [
+          {
+            "title": "Nobel: Max von Laue",
+            "url": "https://www.nobelprize.org/prizes/physics/1914/laue/biographical/"
+          }
+        ]
+      }
+    },
+    {
+      "day": 142,
+      "category": "Medicine aur society",
+      "card": {
+        "title": "Factory workers ki illness ko scientific evidence se kisne joda?",
+        "hook": "Doctor ne workplaces aur workers ki health compare ki—aur industrial poisoning ko highlight kiya.",
+        "cta": "Puri kahani padhein"
+      },
+      "detail": {
+        "real_life_scene": "Kaam ki jagah par dhool ya chemicals ka exposure har roz ho, toh health risk accumulate ho sakta hai.",
+        "central_question": "Kya occupation aur illness ke beech connection investigate kiya ja sakta hai?",
+        "explanation": [
+          {
+            "heading": "Asli kahani",
+            "text": "Physician Alice Hamilton ne early 1900s mein industrial workers ki health study ki. 1911–1920 ke U.S. Bureau of Labor Statistics work mein unhone lead-related manufacturing hazards investigate kiye aur safer working conditions recommend ki. 1919 mein woh Harvard Medical School faculty par appointed pehli woman bani."
+          },
+          {
+            "heading": "Aasaan bhasha mein samjhein",
+            "text": "Occupational medicine workplace exposures aur health effects ke relationship ko study karti hai. Research mein workers ke symptoms, jobs aur exposure conditions compare kiye ja sakte hain."
+          },
+          {
+            "heading": "Yeh sawaal zaroori kyun tha?",
+            "text": "Industrial workers metals aur chemicals ke exposure se sick ho sakte the, lekin symptoms ko workplace conditions se systematically connect karna easy nahi tha. Alice Hamilton ne factories visit karke workers aur physicians se baat ki, production processes observe kiye aur occupational hazards document kiye. Is work ne preventable exposure ko public health issue banaya."
+          },
+          {
+            "heading": "Aasaan bhasha mein mechanism",
+            "text": "Lead poisoning exposure route, dose aur duration par depend karti hai. Workplaces mein contaminated dust ya fumes inhale ya ingest ho sakte hain; exposure nervous system aur other organs ko harm kar sakta hai. Job histories aur groups ke patterns evidence dete hain, although individual cases mein other possible causes bhi evaluate karne hote hain."
+          },
+          {
+            "heading": "Evidence, use aur limitations",
+            "text": "Safer ventilation, exposure control, worker training aur medical monitoring occupational safety ke tools hain. Hamilton ki work ne policy aur standards ko influence kiya, but workplace hazards aaj bhi globally exist karte hain. Research ko affected workers ki voices aur working conditions ke context ke saath samajhna zaroori hai; ek illness report se every factory ka exact risk automatically known nahi hota."
+          }
+        ],
+        "real_world_connection": "Protective equipment, ventilation aur workplace monitoring industrial health ke practical tools hain.",
+        "reality_check": {
+          "established": "Hamilton ka industrial-health research aur Harvard appointment documented hain.",
+          "misconception": "Ek symptom dekhkar kisi individual ka exposure ya diagnosis automatically confirm nahi hota."
+        },
+        "status": "Proven",
+        "sources": [
+          {
+            "title": "Science History Institute: Alice Hamilton",
+            "url": "https://www.sciencehistory.org/education/scientific-biographies/alice-hamilton/"
+          }
+        ]
+      }
+    },
+    {
+      "day": 143,
+      "category": "Science aur medicine",
+      "card": {
+        "title": "Ek paudhe se malaria ki medicine tak: Tu Youyou ki khoj",
+        "hook": "Ek purane medical text ne scientist ko clue diya. Lekin treatment banane ke liye experiments bhi zaroori the.",
+        "cta": "Puri kahani padhein"
+      },
+      "detail": {
+        "real_life_scene": "Kabhi kisi purani recipe ya note mein useful idea milta hai, lekin usse aaj use karne se pehle test karna padta hai.",
+        "central_question": "Kya ek historical plant remedy se scientifically tested malaria medicine develop hui?",
+        "explanation": [
+          {
+            "heading": "Problem kya thi?",
+            "text": "Malaria ek serious disease hai jo Plasmodium naam ke parasite se hoti hai. Yeh parasite infected female Anopheles mosquito ke bite se spread ho sakta hai. 1960s mein malaria ke treatments aur drug resistance ne effective new medicines ki zarurat badhai."
+          },
+          {
+            "heading": "Purane text se experiment tak",
+            "text": "Chinese researcher Tu Youyou aur colleagues ne Project 523 ke work ke dauran traditional medical sources aur plants study kiye. Sweet wormwood naam ke plant se milne wale extract par kaam ne promising results diye. Researchers ne extraction aur testing ko improve karke artemisinin naam ka active compound identify kiya."
+          },
+          {
+            "heading": "Discovery ki importance",
+            "text": "Artemisinin-based medicines malaria treatment mein important bani. Tu Youyou ko 2015 Medicine Nobel ka hissa mila. Yeh kahani dikhati hai ki old knowledge research question de sakti hai, par medicine ki safety aur effectiveness establish karne ke liye scientific testing zaroori hoti hai."
+          },
+          {
+            "heading": "Yeh sawaal zaroori kyun tha?",
+            "text": "Traditional texts ek starting clue de sakte hain, but raw plant ki composition dose, growing conditions aur preparation se vary kar sakti hai. Research team ne extraction conditions aur animal testing improve kiye, phir active compound isolate karne par kaam kiya. Low-temperature extraction ki historical account discovery ki important detail hai."
+          },
+          {
+            "heading": "Aasaan bhasha mein mechanism",
+            "text": "Artemisinin-based combination therapies mein artemisinin derivative ko partner drug ke saath diya jaata hai, taaki treatment effective ho aur resistance manage karne mein help mile. Appropriate drug choice local guidelines, parasite species aur patient condition par depend karti hai. Severe malaria medical emergency ho sakti hai."
+          },
+          {
+            "heading": "Evidence, use aur limitations",
+            "text": "Plant se derived hone ka matlab preparation automatically safe ya effective nahi hai. Self-treatment ke bajay qualified healthcare aur current public-health guidance follow karni chahiye. Artemisinin discovery ek team effort thi, aur resistance challenges ke liye ongoing surveillance aur new approaches zaroori hain."
+          }
+        ],
+        "real_world_connection": "Malaria ke symptoms ya treatment ke liye qualified doctor ki advice aur appropriate testing lena zaroori hai.",
+        "reality_check": {
+          "established": "Artemisinin-based treatments malaria care mein important hain.",
+          "misconception": "Ghar par wormwood ya koi herb use karna tested malaria treatment ka safe substitute nahi hai."
+        },
+        "status": "Proven",
+        "sources": [
+          {
+            "title": "Nobel: Tu Youyou",
+            "url": "https://www.nobelprize.org/prizes/medicine/2015/tu/facts/"
+          }
+        ]
+      }
+    },
+    {
+      "day": 144,
+      "category": "Space aur software",
+      "card": {
+        "title": "Moon par landing ke waqt computer ka alarm kyun baja?",
+        "hook": "Apollo 11 neeche utar raha tha, tab 1202 alarm dikha. Landing rokein ya continue karein?",
+        "cta": "Puri kahani padhein"
+      },
+      "detail": {
+        "real_life_scene": "Phone par ek saath bahut apps chalne par important kaam slow ho sakta hai. Spacecraft computer ke liye overload aur bhi serious tha.",
+        "central_question": "Jab Moon landing ke dauran computer overload hua, mission kaise continue hua?",
+        "explanation": [
+          {
+            "heading": "20 July 1969: final minutes",
+            "text": "Neil Armstrong aur Buzz Aldrin lunar module Eagle se Moon par descend kar rahe the. Landing ke dauran computer ne 1202 aur related program alarms diye. Astronauts aur Houston mission control ko quickly decide karna tha ki landing safe tareeke se continue ho sakti hai ya nahi."
+          },
+          {
+            "heading": "Computer ne kya kiya?",
+            "text": "Radar system se aa rahe extra requests computer par load daal rahe the. Apollo flight software important tasks ko priority dene aur overload se recover karne ke liye design kiya gaya tha. Margaret Hamilton ne us software ko develop karne wali team lead ki thi."
+          },
+          {
+            "heading": "Team decision",
+            "text": "Mission control mein guidance officer Steve Bales aur colleagues ne alarm ko evaluate kiya aur continuation ke liye “go” diya. Landing mein Armstrong ne hazardous-looking boulder field se bachne ke liye control bhi use kiya. Yeh software, ground team aur astronauts ke combined decisions ki story hai."
+          },
+          {
+            "heading": "Yeh sawaal zaroori kyun tha?",
+            "text": "Apollo guidance computer ki memory aur processing resources modern devices se bahut limited thi. Landing ke critical phase mein system ko guidance calculations perform karte rehna tha. Priority-based software lower-priority tasks ko discard karke essential tasks continue kar sakta tha; alarm ne overload ko visible banaya, ignore nahi kiya."
+          },
+          {
+            "heading": "Aasaan bhasha mein mechanism",
+            "text": "Mission control ke engineers ne training aur prior simulation experience ke basis par alarm evaluate kiya. Decision available information aur continuing spacecraft behaviour par based tha, not blind assumption ki computer always correct hai. Crew, guidance team aur software designers sab ne safe landing mein role play kiya."
+          },
+          {
+            "heading": "Evidence, use aur limitations",
+            "text": "Yeh story robust system design aur human teamwork ko highlight karti hai. Exact sequence aur specific software decisions historical records se verify hone chahiye. Computer ki capability ko aaj ke phone se simple comparison karna misleading ho sakta hai, kyunki task, reliability requirements aur architecture bahut different the."
+          }
+        ],
+        "real_world_connection": "Important tasks ko priority dena phones, aircraft aur other computers mein system design ka familiar principle hai.",
+        "reality_check": {
+          "established": "Apollo 11 landing ke dauran program alarms aaye aur mission safely continue hua.",
+          "misconception": "Kisi ek person ya ek line of code ne akela poori Moon landing save ki, aisa kehna teamwork ko oversimplify karta hai."
+        },
+        "status": "Proven",
+        "sources": [
+          {
+            "title": "NASA: Apollo 11 landing alarms",
+            "url": "https://www.nasa.gov/missions/apollo/apollo-11/wide-awake-on-the-sea-of-tranquillity/"
+          },
+          {
+            "title": "NASA: Margaret Hamilton",
+            "url": "https://www.nasa.gov/wp-content/uploads/static/history/alsj/a11/a11Hamilton.html"
+          }
+        ]
+      }
+    },
+    {
+      "day": 145,
+      "category": "Science aur society",
+      "card": {
+        "title": "Glow-in-the-dark watches ki workers beemar kyun hui?",
+        "hook": "Chamakdar paint fashionable tha. Use banane wali workers ne uski heavy price chukayi.",
+        "cta": "Puri kahani padhein"
+      },
+      "detail": {
+        "real_life_scene": "Kisi product ka attractive glow dekhkar uske health risks automatically samajh nahi aate.",
+        "central_question": "Watch dials paint karne wali workers ko radium se kya danger tha?",
+        "explanation": [
+          {
+            "heading": "1920s ki jobs",
+            "text": "United States mein kai women workers watch aur instrument dials par radium-containing glowing paint lagati thi. Fine lines paint karne ke liye kuch workers brush tip ko lips se shape karti thi. Is process mein radioactive material body ke andar ja sakta tha."
+          },
+          {
+            "heading": "Damage kaise hua?",
+            "text": "Radium ek radioactive element hai, yaani uske unstable atoms radiation emit karte hain. Body ke andar pahunchne wala radium bones mein collect ho sakta hai aur tissues ko damage kar sakta hai. Kuch workers mein jaw damage, blood disorders aur cancers develop hue; harmful effects kabhi years baad saamne aaye."
+          },
+          {
+            "heading": "Workers ki fight",
+            "text": "Affected workers ne workplace practices aur compensation ke liye legal action kiya. “Radium Girls” ki story occupational health history ka important part bani aur yeh question uthati hai ki employers ko known ya suspected risks ke baare mein workers ko kya batana chahiye."
+          },
+          {
+            "heading": "Yeh sawaal zaroori kyun tha?",
+            "text": "Glow paint commercially attractive thi, lekin workers ko radioactive dust aur paint exposure ke consequences ka complete protection nahi mila. Lip-pointing se material ingest ho sakta tha. Radium calcium jaisa chemical behaviour dikhata hai, so body mein bone tissue mein deposit ho sakta hai aur internal radiation exposure long-lasting ho sakta hai."
+          },
+          {
+            "heading": "Aasaan bhasha mein mechanism",
+            "text": "Symptoms aur disease exposure ke baad immediately saamne aana zaroori nahi. Individual workers ke diagnosis aur latency alag the. Physicians, researchers aur legal proceedings ne occupational exposure aur disease ke evidence ko investigate kiya; employer practices aur worker testimony history ke important parts hain."
+          },
+          {
+            "heading": "Evidence, use aur limitations",
+            "text": "Is case se informed risk communication, exposure control aur compensation ki importance saamne aati hai. Radioactive substances ke risks isotope, dose aur exposure route par depend karte hain; har glow-in-the-dark product radium nahi hota. Purane radium-dial items ko damage ya open karne se bachna aur local safety guidance lena sensible hai."
+          }
+        ],
+        "real_world_connection": "Aaj workplace safety mein exposure monitoring, protective procedures aur worker information important principles hain.",
+        "reality_check": {
+          "established": "Radium dial workers ke serious radiation-related health harms documented hain.",
+          "misconception": "Har worker mein disease same speed ya same form mein develop hui, aisa nahi tha."
+        },
+        "status": "Proven",
+        "sources": [
+          {
+            "title": "Science History Institute: radium and workers",
+            "url": "https://sciencehistory.org/distillations/magazine/the-secrets-of-life"
+          }
+        ]
+      }
+    },
+    {
+      "day": 146,
+      "category": "Mathematics aur astronomy",
+      "card": {
+        "title": "Do astronomers ki debate: kya Milky Way hi poora universe tha?",
+        "hook": "Ek side ne Andromeda ko hamari galaxy ke andar maana; doosri side ne use alag galaxy kaha.",
+        "cta": "Puri kahani padhein"
+      },
+      "detail": {
+        "real_life_scene": "Door ka ek bright patch chhota paas ka object bhi ho sakta hai, aur bahut bada door ka object bhi.",
+        "central_question": "1920 mein scientists ko universe ke size par disagreement kyun tha?",
+        "explanation": [
+          {
+            "heading": "The Great Debate",
+            "text": "26 April 1920 ko astronomers Harlow Shapley aur Heber Curtis ne universe ke scale par differing views present kiye. Discussion ke central questions mein spiral nebulae—aasman mein dikhne wale fuzzy spiral patches—ki distance aur nature shamil the."
+          },
+          {
+            "heading": "Alag predictions",
+            "text": "Curtis ka view tha ki kuch spiral nebulae Milky Way ke bahar alag “island universes”, yaani galaxies, ho sakti hain. Shapley ne Milky Way ke size aur Sun ki position par important insights diye, lekin us waqt spiral nebulae ko mostly hamari galaxy ke andar maana."
+          },
+          {
+            "heading": "Evidence ne kya bataya?",
+            "text": "1920s mein Edwin Hubble ne Andromeda mein Cepheid variable stars identify kiye. Henrietta Leavitt ke brightness-cycle relationship ki help se distance estimate hui, jo Andromeda ko Milky Way ke bahar place karti thi. Debate mein har detail par ek hi person right nahi tha."
+          },
+          {
+            "heading": "Yeh sawaal zaroori kyun tha?",
+            "text": "Us time telescopes spiral nebulae ko fuzzy shapes ki tarah dekhte the, lekin unki distances uncertain thi. Agar objects nearby hote toh Milky Way ke parts ho sakte the; agar bahut door hote toh separate galaxies. Distance measurement ne universe ke size ke question ko observational test banaya."
+          },
+          {
+            "heading": "Aasaan bhasha mein mechanism",
+            "text": "Shapley ne globular clusters ke distribution se Sun ko Milky Way ke centre se away place karne mein important role nibhaya. Curtis ne external galaxies ke case ko advocate kiya. Unke other assumptions aur numerical estimates mein bhi limitations thi, so debate ko simple hero-versus-loser story banana inaccurate hai."
+          },
+          {
+            "heading": "Evidence, use aur limitations",
+            "text": "Hubble ne Andromeda ke Cepheids ke periods aur Leavitt relation use karke distance estimate ki. Later calibration improved hui, lekin conclusion ki Andromeda Milky Way ke beyond hai strongly established hai. This illustrates how better measurements debate ko resolve kar sakti hain, while earlier participants different questions par partly correct ho sakte hain."
+          }
+        ],
+        "real_world_connection": "Proper distance measurement se astronomy mein object ka size aur place dono better samajh aate hain.",
+        "reality_check": {
+          "established": "Andromeda Milky Way se separate galaxy hai; 1920 debate historical record mein hai.",
+          "misconception": "“Ek scientist sab galat tha aur doosra sab sahi” kehna debate ki complexity miss karta hai."
+        },
+        "status": "Proven",
+        "sources": [
+          {
+            "title": "American Physical Society: Shapley–Curtis debate",
+            "url": "https://www.aps.org/publications/apsnews/200004/history.cfm"
+          }
+        ]
+      }
+    },
+    {
+      "day": 147,
+      "category": "Medicine aur DNA",
+      "card": {
+        "title": "Ek chhote DNA sample se laakhon copies kaise banti hain?",
+        "hook": "PCR test ka naam suna hai? Iske peeche ek clever repeating cycle hai.",
+        "cta": "Puri kahani padhein"
+      },
+      "detail": {
+        "real_life_scene": "Kisi important page ki photocopy chhoti quantity se many copies bana sakti hai—DNA ke saath bhi ek controlled copying method hai.",
+        "central_question": "Scientists tiny DNA sample ko analysis ke liye kaise badhate hain?",
+        "explanation": [
+          {
+            "heading": "Kary Mullis ka idea",
+            "text": "1980s mein Kary Mullis aur colleagues ne polymerase chain reaction, ya PCR, develop kiya. Mullis ko 1993 Chemistry Nobel ka share mila. Is method ne selected DNA segment ki bahut saari copies banana possible kiya."
+          },
+          {
+            "heading": "Simple steps",
+            "text": "DNA mein information chemical sequence ke roop mein hoti hai. PCR mein sample ko repeated temperature cycles se guzara jaata hai: strands separate hote hain, short starting pieces target section se attach hote hain aur DNA-copying enzyme copies banane mein help karta hai."
+          },
+          {
+            "heading": "Copies kyun important hain?",
+            "text": "Ideal conditions mein target copies har cycle mein approximately double ho sakti hain. Zyada copies hone se small sample ko detect ya analyse karna easier hota hai. Actual performance sample, design aur lab conditions par depend karti hai."
+          },
+          {
+            "heading": "Yeh sawaal zaroori kyun tha?",
+            "text": "PCR ke liye target DNA ke flanking sequences par bind karne wale primers design kiye jaate hain. Heat strands ko separate karti hai; cooling par primers bind karte hain; DNA polymerase building blocks use karke new strands banata hai. Heat-stable enzymes repeated cycles ko practical banane mein important rahe."
+          },
+          {
+            "heading": "Aasaan bhasha mein mechanism",
+            "text": "Multiple cycles ke baad target segment ki quantity bahut badh sakti hai, lekin actual efficiency sample quality aur reaction conditions se affect hoti hai. Ordinary PCR DNA amplify karta hai; RNA targets ke liye pehle reverse transcription se DNA banana padta hai, as in RT-PCR. Testing ka meaning protocol par depend karta hai."
+          },
+          {
+            "heading": "Evidence, use aur limitations",
+            "text": "PCR diagnostics, forensic work aur research mein use hota hai, lekin contamination false positives cause kar sakti hai aur poor sample ya timing false negatives de sakte hain. Positive result ka clinical meaning test aur context se interpret hota hai. Copying DNA se living organism create nahi hota aur PCR alone hamesha infectiousness measure nahi karta."
+          }
+        ],
+        "real_world_connection": "PCR research, some infection tests aur forensic analysis mein use hota hai; RNA targets ke liye pehle RNA ko DNA mein convert karne wala step lag sakta hai.",
+        "reality_check": {
+          "established": "PCR targeted DNA segments amplify karne ki established method hai.",
+          "misconception": "Positive test ka clinical meaning sample aur test context par depend karta hai; PCR khud treatment nahi hai."
+        },
+        "status": "Proven",
+        "sources": [
+          {
+            "title": "Nobel: PCR explained",
+            "url": "https://www.nobelprize.org/prizes/chemistry/1993/ceremony-speech/"
+          }
+        ]
+      }
+    },
+    {
+      "day": 148,
+      "category": "Physics aur internet",
+      "card": {
+        "title": "Internet ka data glass ke andar light ban kar kaise chalta hai?",
+        "hook": "Ek scientist ne calculate kiya ki bahut pure glass se light door tak bheji ja sakti hai.",
+        "cta": "Puri kahani padhein"
+      },
+      "detail": {
+        "real_life_scene": "Torch ki light seedhi dikhti hai. Toh light ko flexible cable ke andar guide kaise karte hain?",
+        "central_question": "Optical fibre duniya ke internet messages carry karne mein kaise help karta hai?",
+        "explanation": [
+          {
+            "heading": "1966 ka breakthrough",
+            "text": "Engineer Charles K. Kao ne glass fibres mein signal loss ko study kiya aur explain kiya ki impurities kam karne se light much longer distance travel kar sakti hai. 1970 mein other researchers ne very low-loss optical fibre fabricate ki; Kao ko 2009 Physics Nobel ka share mila."
+          },
+          {
+            "heading": "Cable ke andar",
+            "text": "Optical fibre glass ka bahut thin strand hota hai. Iske core aur surrounding layer ki properties light ko fibre ke along guide karne mein help karti hain. Information ko light pulses ke pattern mein encode karke send kiya ja sakta hai."
+          },
+          {
+            "heading": "Signal ka long journey",
+            "text": "Long distances par signal loss aur distortion ko manage karne ke liye network equipment aur amplification techniques use hoti hain. Internet ek single fibre nahi, balki cables, switches, data centres aur wireless connections ka large network hai."
+          },
+          {
+            "heading": "Yeh sawaal zaroori kyun tha?",
+            "text": "Internet par video aur messages ko enormous distances tak reliably send karna hota hai. Copper wires aur earlier glass fibres mein signal loss long-distance communication ko limit karta tha. Kao ne argue kiya ki glass impurities reduce karne se fibre loss significantly kam kiya ja sakta hai; later manufacturing advances ne practical fibres enable kiye."
+          },
+          {
+            "heading": "Aasaan bhasha mein mechanism",
+            "text": "Fibre ke core ka refractive index surrounding cladding se suitable relation mein hota hai, jisse light guided modes ke through travel karti hai. Sender electronic data ko modulated light mein convert karta hai aur receiver light ko electronic signals mein badalta hai. Multiple wavelengths ek fibre mein use ki ja sakti hain."
+          },
+          {
+            "heading": "Evidence, use aur limitations",
+            "text": "Long cables mein attenuation aur dispersion ko manage karne ke liye amplifiers, repeaters aur other equipment lagte hain. Light glass mein vacuum se slower travel karti hai, aur network routing bhi delay add karti hai. Fibre global infrastructure ka key part hai, but last connection Wi-Fi ya mobile network se bhi ho sakta hai."
+          }
+        ],
+        "real_world_connection": "Online videos aur messages ke safar ka ek hissa often optical fibre links se guzarta hai, including undersea cables.",
+        "reality_check": {
+          "established": "Optical fibres light signals ko communication ke liye guide karti hain.",
+          "misconception": "Har internet connection poore route mein sirf light se travel nahi karta; wireless aur electrical links bhi ho sakte hain."
+        },
+        "status": "Proven",
+        "sources": [
+          {
+            "title": "Nobel: Charles Kao and fibre optics",
+            "url": "https://www.nobelprize.org/prizes/physics/2009/press-release/"
+          }
+        ]
+      }
+    },
+    {
+      "day": 149,
+      "category": "Origin of life",
+      "card": {
+        "title": "Lab mein bijli chalayi aur life ke building blocks mil gaye?",
+        "hook": "1953 ke experiment ne chemicals se amino acids banaye—but kya usne life create ki?",
+        "cta": "Puri kahani padhein"
+      },
+      "detail": {
+        "real_life_scene": "Cooking ingredients ban jaana aur poori dish khud ban jaana do different steps hain.",
+        "central_question": "Kya simple chemicals se life-related molecules naturally ban sakte hain?",
+        "explanation": [
+          {
+            "heading": "Miller–Urey experiment",
+            "text": "1953 mein Stanley Miller ne Harold Urey ke guidance mein water aur gases wale apparatus mein electrical sparks use kiye. Experiment ne proposed early-Earth-like conditions ke ek model ko test kiya. Analysis mein amino acids aur doosre organic compounds mile."
+          },
+          {
+            "heading": "Amino acids kya hain?",
+            "text": "Amino acids proteins banane ke building blocks hain. Proteins living organisms mein important roles play karte hain. Experiment ka surprising result yeh tha ki kuch useful organic molecules non-living chemical conditions mein ban sakte hain."
+          },
+          {
+            "heading": "Bada unanswered question",
+            "text": "Experiment ne living cell create nahi ki. Early Earth ka exact atmosphere aur life tak pahunchne ke possible routes par research ongoing hai; original gas mixture ko Earth ka perfectly confirmed historical copy nahi maana jaata."
+          },
+          {
+            "heading": "Yeh sawaal zaroori kyun tha?",
+            "text": "Origin-of-life research ka basic question hai ki early Earth par organic molecules non-living processes se kaise ban sakte the aur further chemistry mein kaise participate kar sakte the. Miller-Urey experiment ne complete history prove karne ke bajay ek specific chemical pathway ki plausibility test ki."
+          },
+          {
+            "heading": "Aasaan bhasha mein mechanism",
+            "text": "Apparatus mein water heat hokar circulate hota tha aur gases par electric sparks apply hote the, lightning ki simplified analogy ke roop mein. Cooling se products collect hue; chemical analysis ne amino acids identify kiye. Experiment mein gas mixture aur conditions deliberately chosen model the, poori planet ki faithful recreation nahi."
+          },
+          {
+            "heading": "Evidence, use aur limitations",
+            "text": "Amino acids protein components hain, lekin life ke liye information storage, compartmentalisation aur sustained chemistry jaise additional problems bhi hain. Later experiments ne different atmospheres aur energy sources investigate kiye. Organic molecules ban jana aur self-replicating living cell ka origin explain kar dena alag achievements hain; exact historical pathway remains unknown."
+          }
+        ],
+        "real_world_connection": "Origin-of-life research chemistry, geology aur astronomy ko combine karke possible pathways test karti hai.",
+        "reality_check": {
+          "established": "Specified experimental setup mein amino acids produce hue.",
+          "misconception": "Miller–Urey experiment ne “life lab mein bana di” ya life ka exact origin solve kar diya, yeh galat hai."
+        },
+        "status": "Still Unsolved",
+        "sources": [
+          {
+            "title": "Nature: Miller–Urey experiment",
+            "url": "https://www.nature.com/articles/s41598-021-00235-4"
+          }
+        ]
+      }
+    },
+    {
+      "day": 150,
+      "category": "Space aur gravity",
+      "card": {
+        "title": "Black hole dekhe bina uska evidence kaise mila?",
+        "hook": "Ek invisible object ke aas-paas matter X-rays emit kar raha tha. Kya yahi black hole ka clue tha?",
+        "cta": "Puri kahani padhein"
+      },
+      "detail": {
+        "real_life_scene": "Hawa directly nahi dikhti, lekin ped ke patton ki movement se uska effect dikhta hai.",
+        "central_question": "Agar black hole se light escape nahi karti, toh uski presence kaise infer hoti hai?",
+        "explanation": [
+          {
+            "heading": "Cygnus X-1 ka puzzle",
+            "text": "1970s mein X-ray astronomy missions ne Cygnus X-1 naam ke source se unusual high-energy radiation aur rapid variations study ki. Nearby visible star ki motion aur other observations se compact unseen object ka evidence mila."
+          },
+          {
+            "heading": "Light kahan se aati hai?",
+            "text": "Black hole ke bahar orbit karta hua gas bahut hot ho sakta hai aur X-rays emit kar sakta hai. Scientists us radiation, orbital motion aur object ki estimated mass se decide karte hain ki kaunsi physical explanation best fit karti hai."
+          },
+          {
+            "heading": "Direct image se pehle",
+            "text": "Cygnus X-1 black-hole candidates ka famous example bana; decades baad 2019 mein Event Horizon Telescope ne ek different black hole, M87*, ke surrounding region ki image produce ki. Dono evidence types useful hain, lekin same observation nahi hain."
+          },
+          {
+            "heading": "Yeh sawaal zaroori kyun tha?",
+            "text": "Black hole se light directly escape nahi kar sakti if it crosses event horizon, so astronomers nearby matter aur companion star ke behaviour se evidence infer karte hain. Cygnus X-1 mein X-rays ka strong source aur massive star ki motion ek compact unseen companion ko investigate karne ka starting point bane."
+          },
+          {
+            "heading": "Aasaan bhasha mein mechanism",
+            "text": "Gas companion se compact object ki taraf flow karte hue heat aur radiation produce kar sakti hai. Visible star ke spectrum mein periodic Doppler shifts se orbital motion estimate hoti hai. Models aur independent constraints ke through unseen object ki mass aur size ke limits assess hote hain; compact object alternatives compare kiye jaate hain."
+          },
+          {
+            "heading": "Evidence, use aur limitations",
+            "text": "Inference ek single X-ray flash par depend nahi karta, balki combined evidence aur assumptions par build hota hai. M87* ki event-horizon-scale image separate object aur technique ka example hai. Cygnus X-1 ko common observational evidence se strong black-hole system maana jaata hai, lekin event horizon ko ordinary camera ki tarah directly photograph karna yahan original method nahi tha."
+          }
+        ],
+        "real_world_connection": "Invisible objects ko unke surroundings par effect se infer karna astronomy ka common method hai.",
+        "reality_check": {
+          "established": "Cygnus X-1 ko black hole system ke roop mein strong observational support mila hai.",
+          "misconception": "Black hole ke aas-paas ki light dekhna uske andar se light nikalte dekhna nahi hai."
+        },
+        "status": "Proven",
+        "sources": [
+          {
+            "title": "Nobel: black-hole observations and Cygnus X-1",
+            "url": "https://educationalgames.nobelprize.org/educational/physics/star_stories/overview/index.html"
+          }
+        ]
+      }
+    },
+    {
+      "day": 151,
+      "category": "Science aur evidence",
+      "card": {
+        "title": "Gravitational waves direct detection se pehle kisne clue diya?",
+        "hook": "Do stars ki orbit dheere-dheere badal rahi thi—aur Einstein ki prediction se match kar rahi thi.",
+        "cta": "Puri kahani padhein"
+      },
+      "detail": {
+        "real_life_scene": "Swing ki energy kam ho toh uska motion time ke saath badal sakta hai. Space mein bhi systems energy lose kar sakte hain.",
+        "central_question": "Agar gravitational wave directly detect na ho, toh uska indirect evidence kaise milega?",
+        "explanation": [
+          {
+            "heading": "1974 ki discovery",
+            "text": "Russell Hulse aur Joseph Taylor ne ek binary pulsar discover kiya: do compact stars ek-doosre ke around orbit karte hain, aur unmein se ek regular radio pulses bhejta hai. Pulse timing se orbit ke changes accurately study kiye ja sakte the."
+          },
+          {
+            "heading": "Prediction aur measurement",
+            "text": "Einstein ki relativity predict karti hai ki aisa system gravitational waves ke roop mein energy lose karega. Isse orbit ki timing gradually change honi chahiye. Observed orbital decay prediction se closely consistent mila, providing strong indirect evidence."
+          },
+          {
+            "heading": "Direct detection alag milestone",
+            "text": "Hulse aur Taylor ko 1993 Physics Nobel mila. 2015 mein LIGO ne gravitational waves ko directly detect kiya—yeh binary-pulsar timing se alag experiment tha, although dono gravity research se jude the."
+          },
+          {
+            "heading": "Yeh sawaal zaroori kyun tha?",
+            "text": "General relativity ke mutabik accelerating massive objects spacetime mein ripples produce kar sakte hain. Binary pulsar system ek natural laboratory tha: two compact stars ki orbit aur extraordinarily regular radio pulses ne tiny changes over many years track karne diye. Agar waves energy le jaati hain, orbit ka period gradually change hona chahiye."
+          },
+          {
+            "heading": "Aasaan bhasha mein mechanism",
+            "text": "Astronomers pulse arrival times ko model karke orbital period aur uski evolution estimate karte hain. Observed orbital decay relativity ki predictions ke compatible mila after relevant corrections. Alternative effects aur observational uncertainties ko account karna important hai. Agreement wave emission ka strong indirect evidence tha, wave ka detector mein passing signal nahi."
+          },
+          {
+            "heading": "Evidence, use aur limitations",
+            "text": "LIGO ne 2015 mein separate binary black-hole merger se passing gravitational waves directly measure ki, aur 2016 mein announce ki. Binary pulsar aur LIGO complementary tests hain: pehla orbital consequences dekhta hai, doosra detector strain measure karta hai. Scientific confidence independent methods se strong hota hai; dono milestones ko same discovery date kehna incorrect hoga."
+          }
+        ],
+        "real_world_connection": "Accurate timing, jaise atomic clocks aur radio pulses, tiny physical effects detect karne mein powerful ho sakti hai.",
+        "reality_check": {
+          "established": "Binary-pulsar orbital changes gravitational-wave predictions ke strong indirect evidence hain.",
+          "misconception": "1974 mein pulsar timing se gravitational wave ka direct LIGO-style detection nahi hua tha."
+        },
+        "status": "Proven",
+        "sources": [
+          {
+            "title": "Nobel: Russell Hulse",
+            "url": "https://www.nobelprize.org/prizes/physics/1993/hulse/facts/"
+          }
+        ]
+      }
+    }
+  ]
+}
