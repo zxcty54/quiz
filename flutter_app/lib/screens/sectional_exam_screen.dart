@@ -1,8 +1,6 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
 
-import '../services/premium_service.dart';
-import 'premium_paywall_screen.dart';
 
 /// sectional_data.json se bana ek section group (jaise "Reasoning Sets").
 /// Sets hamesha JSON ke count se auto-generate hote hain — kuch hardcoded nahi.
@@ -60,22 +58,17 @@ class _SectionalExamScreenState extends State<SectionalExamScreen> {
   String _filter = 'all'; // all | left | done
   Timer? _refreshTimer;
   bool _refreshPending = false;
-  bool _isPremium = false;
-  bool _isOwner = false;
-  DateTime? _premiumUntil;
 
   @override
   void initState() {
     super.initState();
     _reloadProgress();
-    _loadPremium();
     // Test khatm karke wapas aane par rows auto-refresh ho jayein
     _refreshTimer = Timer.periodic(const Duration(seconds: 2), (_) {
       if (!mounted) return;
       if (_refreshPending && (ModalRoute.of(context)?.isCurrent ?? false)) {
         _refreshPending = false;
         _reloadProgress();
-        _loadPremium();
       }
     });
   }
@@ -91,35 +84,7 @@ class _SectionalExamScreenState extends State<SectionalExamScreen> {
     if (mounted) setState(() => _progress = data);
   }
 
-  Future<void> _loadPremium() async {
-    final until = await PremiumService.fetchPremiumUntil();
-    final owner = await PremiumService.isOwnerMode();
-    if (!mounted) return;
-    setState(() {
-      _premiumUntil = until;
-      _isOwner = owner;
-      _isPremium =
-          owner || (until != null && until.isAfter(DateTime.now()));
-    });
-  }
-
-  bool _isSetLocked(int setNum) => setNum > 1 && !_isPremium;
-
-  Future<void> _openPaywall() async {
-    await Navigator.of(context).push(
-      MaterialPageRoute(
-        builder: (_) => PremiumPaywallScreen(isDarkMode: widget.isDarkMode),
-      ),
-    );
-    await _loadPremium();
-  }
-
   void _launch(SectionalExamGroup group, int setNum) {
-    // Set 01 free, baki Premium — seedha ghusne par bhi rok yahi lagegi
-    if (_isSetLocked(setNum)) {
-      _openPaywall();
-      return;
-    }
     _refreshPending = true;
     widget.onLaunchCbtMock(
       context,
@@ -188,7 +153,7 @@ class _SectionalExamScreenState extends State<SectionalExamScreen> {
               borderRadius: BorderRadius.circular(20),
               boxShadow: [
                 BoxShadow(
-                  color: widget.color.withOpacity(0.30),
+                  color: widget.color.withValues(alpha: 0.30),
                   blurRadius: 14,
                   offset: const Offset(0, 6),
                 ),
@@ -203,9 +168,9 @@ class _SectionalExamScreenState extends State<SectionalExamScreen> {
                       width: 46,
                       height: 46,
                       decoration: BoxDecoration(
-                        color: Colors.white.withOpacity(0.20),
+                        color: Colors.white.withValues(alpha: 0.20),
                         borderRadius: BorderRadius.circular(14),
-                        border: Border.all(color: Colors.white.withOpacity(0.35)),
+                        border: Border.all(color: Colors.white.withValues(alpha: 0.35)),
                       ),
                       child: Center(child: Text(widget.icon, style: const TextStyle(fontSize: 22))),
                     ),
@@ -221,7 +186,7 @@ class _SectionalExamScreenState extends State<SectionalExamScreen> {
                           const SizedBox(height: 3),
                           Text(
                             '${widget.badge} • Real CBT Pattern',
-                            style: TextStyle(color: Colors.white.withOpacity(0.88), fontSize: 11, fontWeight: FontWeight.w700),
+                            style: TextStyle(color: Colors.white.withValues(alpha: 0.88), fontSize: 11, fontWeight: FontWeight.w700),
                           ),
                         ],
                       ),
@@ -234,25 +199,22 @@ class _SectionalExamScreenState extends State<SectionalExamScreen> {
                   child: LinearProgressIndicator(
                     value: total == 0 ? 0 : done / total,
                     minHeight: 6,
-                    backgroundColor: Colors.white.withOpacity(0.25),
+                    backgroundColor: Colors.white.withValues(alpha: 0.25),
                     valueColor: const AlwaysStoppedAnimation<Color>(Colors.white),
                   ),
                 ),
                 const SizedBox(height: 7),
                 Text(
                   '$done / $total sets complete',
-                  style: TextStyle(color: Colors.white.withOpacity(0.9), fontSize: 10.5, fontWeight: FontWeight.w800),
+                  style: TextStyle(color: Colors.white.withValues(alpha: 0.9), fontSize: 10.5, fontWeight: FontWeight.w800),
                 ),
                 const SizedBox(height: 3),
-                GestureDetector(
-                  onTap: _openPaywall,
-                  child: Text(
-                    _isOwner
-                        ? '🛠 Owner Mode ON • Sab Set unlock (band karne ke liye dabao)'
-                        : (_isPremium
-                            ? '👑 Premium Active • ${_premiumUntil!.difference(DateTime.now()).inDays + 1} din baki — saare Set khule hai'
-                            : '🔓 Set 01 Free • Baki Set Premium (₹49/month)'),
-                    style: TextStyle(color: Colors.white.withOpacity(0.85), fontSize: 10.5, fontWeight: FontWeight.w700),
+                Text(
+                  '🎉 All sectional mock sets are free in this release.',
+                  style: TextStyle(
+                    color: Colors.white.withValues(alpha: 0.9),
+                    fontSize: 10.5,
+                    fontWeight: FontWeight.w700,
                   ),
                 ),
               ],
@@ -346,7 +308,7 @@ class _SectionalExamScreenState extends State<SectionalExamScreen> {
         color: isDark ? const Color(0xFF1E293B) : Colors.white,
         borderRadius: BorderRadius.circular(19),
         border: Border.all(color: isDark ? const Color(0xFF334155) : const Color(0xFFE8EDF7)),
-        boxShadow: isDark ? null : [BoxShadow(color: Colors.black.withOpacity(0.04), blurRadius: 8, offset: const Offset(0, 2))],
+        boxShadow: isDark ? null : [BoxShadow(color: Colors.black.withValues(alpha: 0.04), blurRadius: 8, offset: const Offset(0, 2))],
       ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -397,10 +359,6 @@ class _SectionalExamScreenState extends State<SectionalExamScreen> {
     bool isDone,
     bool isInProgress,
   ) {
-    // Premium lock (Set 01 hamesha free)
-    if (_isSetLocked(setNum)) {
-      return _premiumLockedRow(group, setNum, isDark, textColor);
-    }
     final data = _progress[group.launchTitle(setNum)];
     final String label = 'Set ${setNum.toString().padLeft(2, '0')}';
 
@@ -428,7 +386,7 @@ class _SectionalExamScreenState extends State<SectionalExamScreen> {
               width: 42,
               height: 38,
               decoration: BoxDecoration(
-                color: widget.color.withOpacity(isDark ? 0.25 : 0.10),
+                color: widget.color.withValues(alpha: isDark ? 0.25 : 0.10),
                 borderRadius: BorderRadius.circular(10),
               ),
               child: Center(
@@ -465,7 +423,7 @@ class _SectionalExamScreenState extends State<SectionalExamScreen> {
                 onPressed: () => _launch(group, setNum),
                 style: OutlinedButton.styleFrom(
                   foregroundColor: widget.color,
-                  side: BorderSide(color: widget.color.withOpacity(0.5)),
+                  side: BorderSide(color: widget.color.withValues(alpha: 0.5)),
                   padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 7),
                   minimumSize: Size.zero,
                   tapTargetSize: MaterialTapTargetSize.shrinkWrap,
@@ -493,70 +451,6 @@ class _SectionalExamScreenState extends State<SectionalExamScreen> {
     );
   }
 
-  Widget _premiumLockedRow(SectionalExamGroup group, int setNum, bool isDark, Color textColor) {
-    return Padding(
-      padding: const EdgeInsets.only(bottom: 7),
-      child: Container(
-        padding: const EdgeInsets.symmetric(horizontal: 11, vertical: 10),
-        decoration: BoxDecoration(
-          color: isDark ? const Color(0xFF0F172A) : const Color(0xFFFFFBEB),
-          borderRadius: BorderRadius.circular(14),
-          border: Border.all(color: const Color(0xFFF59E0B).withOpacity(isDark ? 0.45 : 0.55)),
-        ),
-        child: Row(
-          children: [
-            Container(
-              width: 42,
-              height: 38,
-              decoration: BoxDecoration(
-                color: const Color(0xFFF59E0B).withOpacity(0.16),
-                borderRadius: BorderRadius.circular(10),
-              ),
-              child: Center(
-                child: Text(
-                  'SET\n${setNum.toString().padLeft(2, '0')}',
-                  textAlign: TextAlign.center,
-                  style: const TextStyle(fontSize: 9.5, height: 1.15, fontWeight: FontWeight.w900, color: Color(0xFFB45309)),
-                ),
-              ),
-            ),
-            const SizedBox(width: 10),
-            Expanded(
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text(
-                    'Set ${setNum.toString().padLeft(2, '0')}',
-                    style: TextStyle(fontSize: 12.5, fontWeight: FontWeight.w800, color: textColor),
-                  ),
-                  const SizedBox(height: 2),
-                  const Text(
-                    '🔒 Premium • ₹49/month me saare Set khulenge',
-                    style: TextStyle(fontSize: 10, fontWeight: FontWeight.w700, color: Color(0xFFB45309)),
-                  ),
-                ],
-              ),
-            ),
-            const SizedBox(width: 8),
-            ElevatedButton(
-              onPressed: _openPaywall,
-              style: ElevatedButton.styleFrom(
-                backgroundColor: const Color(0xFFD97706),
-                foregroundColor: Colors.white,
-                elevation: 0,
-                padding: const EdgeInsets.symmetric(horizontal: 13, vertical: 8),
-                minimumSize: Size.zero,
-                tapTargetSize: MaterialTapTargetSize.shrinkWrap,
-                shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(99)),
-              ),
-              child: const Text('Unlock 👑', style: TextStyle(fontSize: 11, fontWeight: FontWeight.w900)),
-            ),
-          ],
-        ),
-      ),
-    );
-  }
-
   Widget _lockedRow(SectionalExamGroup group, int setNum, bool isDark, Color textColor) {
     return Padding(
       padding: const EdgeInsets.only(bottom: 7),
@@ -576,7 +470,7 @@ class _SectionalExamScreenState extends State<SectionalExamScreen> {
                 width: 42,
                 height: 38,
                 decoration: BoxDecoration(
-                  color: Colors.grey.withOpacity(0.15),
+                  color: Colors.grey.withValues(alpha: 0.15),
                   borderRadius: BorderRadius.circular(10),
                 ),
                 child: Center(
@@ -606,7 +500,7 @@ class _SectionalExamScreenState extends State<SectionalExamScreen> {
               ),
               Container(
                 padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 7),
-                decoration: BoxDecoration(color: Colors.grey.withOpacity(0.15), borderRadius: BorderRadius.circular(99)),
+                decoration: BoxDecoration(color: Colors.grey.withValues(alpha: 0.15), borderRadius: BorderRadius.circular(99)),
                 child: const Text('🔒 Soon', style: TextStyle(fontSize: 11, fontWeight: FontWeight.w900, color: Colors.grey)),
               ),
             ],
@@ -616,3 +510,4 @@ class _SectionalExamScreenState extends State<SectionalExamScreen> {
     );
   }
 }
+
