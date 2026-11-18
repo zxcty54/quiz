@@ -169,8 +169,11 @@ class ScienceStoryService {
   /// How far a month's numbering sits above the day of the month. Taken from
   /// `coverage.start_day` when that agrees with the actual day values, and from
   /// the lowest day otherwise, so a file with no coverage block still works.
+  /// [decoded] stays `Object?` because `jsonDecode` promotes only to
+  /// `Map<dynamic, dynamic>`, which is not assignable to a `Map<String, …>`
+  /// parameter.
   static int _dayOffset(
-    Map<String, dynamic> decoded,
+    Object? decoded,
     List<Map<String, dynamic>> items,
   ) {
     final rawDays = items
@@ -179,7 +182,7 @@ class ScienceStoryService {
         .toList();
     if (rawDays.isEmpty) return 0;
 
-    final coverage = decoded['coverage'];
+    final coverage = decoded is Map ? decoded['coverage'] : null;
     if (coverage is Map) {
       final start = coverage['start_day'];
       if (start is int && start > 1 && rawDays.every((day) => day >= start)) {
