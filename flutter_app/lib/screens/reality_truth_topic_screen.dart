@@ -542,7 +542,7 @@ class _RealityTruthTopicScreenState extends State<RealityTruthTopicScreen> {
                     fontSize: 9.5,
                     fontWeight: FontWeight.w900,
                     letterSpacing: 0.8,
-                    color: sub,
+                    color: accent,
                   ),
                 ),
               ),
