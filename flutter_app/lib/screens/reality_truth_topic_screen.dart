@@ -579,13 +579,13 @@ class _RealityTruthTopicScreenState extends State<RealityTruthTopicScreen> {
               children: <Widget>[
                 const Text('❌', style: TextStyle(fontSize: 12)),
                 const SizedBox(width: 6),
-                Text(
+                const Text(
                   'MYTH',
                   style: TextStyle(
                     fontSize: 9.5,
                     fontWeight: FontWeight.w900,
                     letterSpacing: 0.8,
-                    color: const Color(0xFFDC2626),
+                    color: Color(0xFFDC2626),
                   ),
                 ),
               ],
@@ -607,13 +607,13 @@ class _RealityTruthTopicScreenState extends State<RealityTruthTopicScreen> {
               children: <Widget>[
                 const Text('✅', style: TextStyle(fontSize: 12)),
                 const SizedBox(width: 6),
-                Text(
+                const Text(
                   'REALITY',
                   style: TextStyle(
                     fontSize: 9.5,
                     fontWeight: FontWeight.w900,
                     letterSpacing: 0.8,
-                    color: const Color(0xFF16A34A),
+                    color: Color(0xFF16A34A),
                   ),
                 ),
               ],

@@ -218,7 +218,7 @@ class _RealityTruthTeaserCardState extends State<RealityTruthTeaserCard> {
                           label: 'Poori jaanch padhein',
                           onTap: pillar == null
                               ? null
-                              : () => _openTopic(card, pillar!),
+                              : () => _openTopic(card, pillar),
                         ),
                       ),
                       const SizedBox(width: 8),
