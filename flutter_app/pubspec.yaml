@@ -63,3 +63,7 @@ flutter:
   assets:
     - assets/data/
     - assets/data/icon/
+    # Category artwork bundled from content_base so it renders offline and on a
+    # first launch, with the CDN kept only as a fallback (see ContentImage).
+    - assets/images/knowyourbihar/
+    - assets/images/reality_truth/
