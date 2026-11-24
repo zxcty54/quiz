@@ -16,6 +16,10 @@ import '../services/reality_truth_service.dart';
 /// Everything it needs to render is bundled, so it works on a first launch with
 /// no network. The pillar colour changes with the day's topic, so the card does
 /// not look identical every day.
+///
+/// It teases only the topic unlocked today. The collection is paced at one
+/// topic a day - see [RealityJourney] - so the card doubles as the progress
+/// readout for that walk.
 class RealityTruthTeaserCard extends StatefulWidget {
   final bool isDarkMode;
 
@@ -26,7 +30,7 @@ class RealityTruthTeaserCard extends StatefulWidget {
 }
 
 class _RealityTruthTeaserCardState extends State<RealityTruthTeaserCard> {
-  late Future<_TeaserLoad> _future;
+  late Future<RealityJourney> _future;
   bool _revealed = false;
 
   @override
@@ -35,11 +39,7 @@ class _RealityTruthTeaserCardState extends State<RealityTruthTeaserCard> {
     _future = _load();
   }
 
-  Future<_TeaserLoad> _load() async {
-    final library = await RealityTruthService.loadLibrary();
-    final card = await RealityTruthService.pickForDate(DateTime.now());
-    return _TeaserLoad(library, card);
-  }
+  Future<RealityJourney> _load() => RealityTruthService.journey();
 
   void _toggleReveal() {
     setState(() => _revealed = !_revealed);
@@ -67,26 +67,23 @@ class _RealityTruthTeaserCardState extends State<RealityTruthTeaserCard> {
 
   @override
   Widget build(BuildContext context) {
-    return FutureBuilder<_TeaserLoad>(
+    return FutureBuilder<RealityJourney>(
       future: _future,
       builder: (context, snapshot) {
         if (snapshot.connectionState != ConnectionState.done) {
           return const SizedBox.shrink();
         }
-        final load = snapshot.data;
-        final card = load?.card;
-        if (card == null) return const SizedBox.shrink();
+        final journey = snapshot.data;
+        final card = journey?.todaysCard;
+        if (journey == null || card == null) return const SizedBox.shrink();
 
-        final library = load?.library ?? RealityLibrary.empty;
+        final library = journey.library;
         final pillar = library.pillarFor(card.pillar);
         final base = Color(pillar?.colorValue ?? 0xFF0F766E);
         final deep = Color.alphaBlend(
           Colors.black.withValues(alpha: 0.45),
           base,
         );
-        final total = library.cards.isEmpty
-            ? library.totalTopics
-            : library.cards.length;
 
         return Container(
           width: double.infinity,
@@ -210,7 +207,8 @@ class _RealityTruthTeaserCardState extends State<RealityTruthTeaserCard> {
                           : _revealButton(base),
                     ),
                   ],
-                  const SizedBox(height: 12),
+                  _progressRow(journey),
+                  const SizedBox(height: 11),
                   Row(
                     children: <Widget>[
                       Expanded(
@@ -222,10 +220,7 @@ class _RealityTruthTeaserCardState extends State<RealityTruthTeaserCard> {
                         ),
                       ),
                       const SizedBox(width: 8),
-                      _ghostButton(
-                        label: total > 0 ? '$total topics' : 'Sab topics',
-                        onTap: _openHub,
-                      ),
+                      _ghostButton(label: 'Sab topics', onTap: _openHub),
                     ],
                   ),
                 ],
@@ -234,6 +229,63 @@ class _RealityTruthTeaserCardState extends State<RealityTruthTeaserCard> {
           ),
         );
       },
+    );
+  }
+
+  /// Day counter and how much of the collection is open, so the one-topic-a-day
+  /// pace is visible instead of merely felt.
+  Widget _progressRow(RealityJourney journey) {
+    final total = journey.totalDays;
+    final day = total > 0
+        ? 'DIN ${journey.dayNumber} / $total'
+        : 'DIN ${journey.dayNumber}';
+    return Padding(
+      padding: const EdgeInsets.only(top: 12),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: <Widget>[
+          Row(
+            children: <Widget>[
+              Text(
+                day,
+                style: TextStyle(
+                  fontSize: 9.5,
+                  fontWeight: FontWeight.w900,
+                  letterSpacing: 0.7,
+                  color: Colors.white.withValues(alpha: 0.95),
+                ),
+              ),
+              const Spacer(),
+              Flexible(
+                child: Text(
+                  journey.isComplete
+                      ? 'Sab topics khul chuke'
+                      : '${journey.unlockedCount} khule  •  roz 1 naya',
+                  maxLines: 1,
+                  overflow: TextOverflow.ellipsis,
+                  style: TextStyle(
+                    fontSize: 9.5,
+                    fontWeight: FontWeight.w700,
+                    color: Colors.white.withValues(alpha: 0.82),
+                  ),
+                ),
+              ),
+            ],
+          ),
+          const SizedBox(height: 5),
+          ClipRRect(
+            borderRadius: BorderRadius.circular(4),
+            child: LinearProgressIndicator(
+              value: journey.progress,
+              minHeight: 4,
+              backgroundColor: Colors.white.withValues(alpha: 0.22),
+              valueColor: AlwaysStoppedAnimation<Color>(
+                Colors.white.withValues(alpha: 0.95),
+              ),
+            ),
+          ),
+        ],
+      ),
     );
   }
 
@@ -409,13 +461,4 @@ class _RealityTruthTeaserCardState extends State<RealityTruthTeaserCard> {
       ),
     );
   }
-}
-
-/// Today's card together with the library it came from, so the card can name
-/// its pillar and colour itself without a second load.
-class _TeaserLoad {
-  const _TeaserLoad(this.library, this.card);
-
-  final RealityLibrary library;
-  final RealityCard? card;
 }

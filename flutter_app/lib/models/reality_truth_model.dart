@@ -282,6 +282,8 @@ class RealityLibrary {
     required this.sourceVersion,
     required this.pillars,
     required this.cards,
+    required this.schedule,
+    required this.scheduleIndex,
   });
 
   static const RealityLibrary empty = RealityLibrary(
@@ -292,9 +294,27 @@ class RealityLibrary {
     sourceVersion: 0,
     pillars: <RealityPillar>[],
     cards: <RealityCard>[],
+    schedule: <String>[],
+    scheduleIndex: <String, int>{},
   );
 
   factory RealityLibrary.fromJson(Map<String, dynamic> json) {
+    final cards = _asList(json['cards'])
+        .map(RealityCard.fromJson)
+        .where((card) => card.isUsable)
+        .toList();
+
+    // The schedule is the order topics unlock in, one per day. Ids that do not
+    // match a card are dropped, and `gatingValid` fails open below if that
+    // leaves the schedule short - a data bug must never lock the library shut.
+    final known = <String>{for (final card in cards) card.id};
+    final schedule = _asStrList(json['schedule']).where(known.contains).toList();
+    final scheduleIndex = <String, int>{};
+    for (var day = 0; day < schedule.length; day++) {
+      final id = schedule[day];
+      if (!scheduleIndex.containsKey(id)) scheduleIndex[id] = day;
+    }
+
     return RealityLibrary(
       projectTitle: _asStr(json['project_title']),
       tagline: _asStr(json['project_tagline']),
@@ -302,10 +322,9 @@ class RealityLibrary {
       totalTopics: _asInt(json['total_topics']),
       sourceVersion: _asInt(json['source_version']),
       pillars: _asList(json['pillars']).map(RealityPillar.fromJson).toList(),
-      cards: _asList(json['cards'])
-          .map(RealityCard.fromJson)
-          .where((card) => card.isUsable)
-          .toList(),
+      cards: cards,
+      schedule: schedule,
+      scheduleIndex: scheduleIndex,
     );
   }
 
@@ -317,7 +336,20 @@ class RealityLibrary {
   final List<RealityPillar> pillars;
   final List<RealityCard> cards;
 
+  /// Card ids in unlock order: index 0 is day one, index 1 is day two, and so
+  /// on. Round-robins the pillars and, inside a pillar, its zones.
+  final List<String> schedule;
+  final Map<String, int> scheduleIndex;
+
   bool get isEmpty => cards.isEmpty;
+
+  /// How many days the collection takes to hand out completely.
+  int get totalDays => schedule.isEmpty ? cards.length : schedule.length;
+
+  /// Day-gating is only enforced when the schedule covers every card exactly
+  /// once. Anything else fails open, so nobody loses access to paid-for
+  /// content because of a malformed index.
+  bool get gatingValid => cards.isNotEmpty && schedule.length == cards.length;
 
   int get pillarCount => pillars.length;
 
@@ -326,6 +358,24 @@ class RealityLibrary {
       if (pillar.matches(key)) return pillar;
     }
     return null;
+  }
+
+  /// 0-based position of a card in the unlock schedule, or -1 when absent.
+  int dayIndexOf(String cardId) => scheduleIndex[cardId] ?? -1;
+
+  RealityCard? cardById(String id) {
+    for (final card in cards) {
+      if (card.id == id) return card;
+    }
+    return null;
+  }
+
+  /// The topic a 1-based day number unlocks, cycling once the schedule ends.
+  RealityCard? cardAtDay(int dayNumber) {
+    if (schedule.isEmpty) return null;
+    var index = dayNumber - 1;
+    if (index < 0) index = 0;
+    return cardById(schedule[index % schedule.length]);
   }
 
   List<RealityCard> cardsForPillar(String key) =>
@@ -349,6 +399,62 @@ class RealityLibrary {
         .toList()
       ..sort((a, b) => b.count.compareTo(a.count));
     return zones;
+  }
+}
+
+/// Where one device has reached in its one-topic-a-day walk through the
+/// collection.
+///
+/// The point of the pace is that the library cannot be binge-read: a device
+/// that opens the app every day still needs 800 days to see everything, and a
+/// device that skips a week simply finds seven topics waiting, not seven days
+/// of content it can rush through in one sitting.
+class RealityJourney {
+  const RealityJourney({
+    required this.library,
+    required this.startDate,
+    required this.dayNumber,
+    required this.unlockedCount,
+  });
+
+  final RealityLibrary library;
+
+  /// Day one for this device, as a local calendar date.
+  final DateTime startDate;
+
+  /// 1-based: which day of the journey today is.
+  final int dayNumber;
+
+  /// How many topics are open right now. Never exceeds [totalDays].
+  final int unlockedCount;
+
+  int get totalDays => library.totalDays;
+
+  /// The topic unlocked today - the newest one, and the one the home widget
+  /// teases.
+  RealityCard? get todaysCard => library.cardAtDay(dayNumber);
+
+  bool get isComplete => unlockedCount >= totalDays;
+
+  /// How much of the collection is open, from 0.0 to 1.0.
+  double get progress {
+    if (totalDays <= 0) return 0;
+    final ratio = unlockedCount / totalDays;
+    if (ratio <= 0) return 0;
+    if (ratio >= 1) return 1;
+    return ratio;
+  }
+
+  bool isUnlocked(RealityCard card) {
+    if (!library.gatingValid) return true;
+    final index = library.dayIndexOf(card.id);
+    return index >= 0 && index < unlockedCount;
+  }
+
+  /// The 1-based day a card opens on. Returns 0 when it has no scheduled day.
+  int dayFor(RealityCard card) {
+    final index = library.dayIndexOf(card.id);
+    return index < 0 ? 0 : index + 1;
   }
 }
 

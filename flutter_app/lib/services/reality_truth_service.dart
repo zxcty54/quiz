@@ -36,9 +36,11 @@ class RealityTruthService {
   /// How long a downloaded pillar is trusted before it is fetched again.
   static const int cacheDays = 7;
 
-  /// Fixed epoch for the daily rotation, so the pick changes once a day and
-  /// walks through all 800 cards before repeating - over two years of content.
-  static final DateTime _rotationEpoch = DateTime(2020);
+  /// When this device first opened Reality Truth, as local-midnight millis.
+  /// Anchoring day one to the device rather than to a fixed calendar date is
+  /// what keeps the pace honest: whoever installs the app in two years still
+  /// starts at one topic, instead of finding 800 already unlocked.
+  static const String journeyStartKey = 'reality_truth_journey_start';
 
   static RealityLibrary? _library;
   static final Map<String, RealityTopic> _topicCache = <String, RealityTopic>{};
@@ -70,16 +72,55 @@ class RealityTruthService {
     }
   }
 
-  /// Today's card. Deterministic, so every device shows the same topic on the
-  /// same day and the widget never renders empty while content exists.
-  static Future<RealityCard?> pickForDate(DateTime date) async {
+  /// Where this device is in its one-topic-a-day walk, and what that unlocks.
+  ///
+  /// Never throws and never returns an empty journey: if the library could not
+  /// be read the caller still gets a journey whose `todaysCard` is null, and
+  /// the widget quietly renders nothing rather than an error.
+  static Future<RealityJourney> journey() async {
     final library = await loadLibrary();
-    if (library.cards.isEmpty) return null;
+    final start = await _journeyStart();
 
-    final cards = library.cards;
-    var days = date.difference(_rotationEpoch).inDays;
-    if (days < 0) days = 0;
-    return cards[days % cards.length];
+    final now = DateTime.now();
+    final today = DateTime(now.year, now.month, now.day);
+    var dayNumber = today.difference(start).inDays + 1;
+    if (dayNumber < 1) dayNumber = 1;
+
+    final total = library.totalDays;
+    final int unlocked;
+    if (!library.gatingValid || total == 0) {
+      unlocked = library.cards.length;
+    } else {
+      unlocked = dayNumber > total ? total : dayNumber;
+    }
+
+    return RealityJourney(
+      library: library,
+      startDate: start,
+      dayNumber: dayNumber,
+      unlockedCount: unlocked,
+    );
+  }
+
+  /// Reads day one from the device, recording it on the first run. A stored
+  /// date in the future means the clock was wound forward and back, so it is
+  /// discarded rather than handed out as free topics.
+  static Future<DateTime> _journeyStart() async {
+    final now = DateTime.now();
+    final today = DateTime(now.year, now.month, now.day);
+    try {
+      final prefs = await SharedPreferences.getInstance();
+      final stored = prefs.getInt(journeyStartKey);
+      if (stored != null && stored > 0) {
+        final stamp = DateTime.fromMillisecondsSinceEpoch(stored);
+        final start = DateTime(stamp.year, stamp.month, stamp.day);
+        if (!start.isAfter(today)) return start;
+      }
+      await prefs.setInt(journeyStartKey, today.millisecondsSinceEpoch);
+    } catch (error) {
+      debugPrint('Reality Truth: could not persist the journey start ($error)');
+    }
+    return today;
   }
 
   /// Mirrors tried in order, cheapest and most reliable first.
