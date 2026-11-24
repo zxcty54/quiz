@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../models/reality_truth_model.dart';
 import '../services/reality_truth_service.dart';
+import '../widgets/content_image.dart';
 import 'reality_truth_topic_screen.dart';
 
 /// The "Reality Truth" hub: 4 pillars, their zones and all 800 topics.
@@ -251,15 +252,23 @@ class _RealityTruthHubScreenState extends State<RealityTruthHubScreen> {
           child: Row(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
-              Container(
+              ContentImage(
+                assetPath: pillar.image,
                 width: 44,
                 height: 44,
-                alignment: Alignment.center,
-                decoration: BoxDecoration(
-                  color: accent.withValues(alpha: 0.16),
-                  borderRadius: BorderRadius.circular(14),
+                borderRadius: BorderRadius.circular(14),
+                // No picture anywhere down the mirror chain: fall back to the
+                // tinted emoji tile this card shipped with.
+                error: Container(
+                  width: 44,
+                  height: 44,
+                  alignment: Alignment.center,
+                  decoration: BoxDecoration(
+                    color: accent.withValues(alpha: 0.16),
+                    borderRadius: BorderRadius.circular(14),
+                  ),
+                  child: Text(pillar.icon, style: const TextStyle(fontSize: 21)),
                 ),
-                child: Text(pillar.icon, style: const TextStyle(fontSize: 21)),
               ),
               const SizedBox(width: 12),
               Expanded(
@@ -452,6 +461,7 @@ class RealityPillarScreen extends StatelessWidget {
   Widget _zoneHeader(_Row row, Color accent, Color text, Color sub) {
     final zone = row.zone;
     final name = zone == null ? '' : zone.name;
+    final image = zone == null ? '' : zone.image;
     return Padding(
       padding: const EdgeInsets.fromLTRB(2, 16, 2, 8),
       child: Row(
@@ -465,6 +475,15 @@ class RealityPillarScreen extends StatelessWidget {
             ),
           ),
           const SizedBox(width: 8),
+          if (image.isNotEmpty) ...<Widget>[
+            ContentImage(
+              assetPath: image,
+              width: 22,
+              height: 22,
+              borderRadius: BorderRadius.circular(7),
+            ),
+            const SizedBox(width: 7),
+          ],
           Expanded(
             child: Text(
               name,

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../models/reality_truth_model.dart';
+import 'content_image.dart';
 import '../screens/reality_truth_hub_screen.dart';
 import '../screens/reality_truth_topic_screen.dart';
 import '../services/reality_truth_service.dart';
@@ -79,6 +80,7 @@ class _RealityTruthTeaserCardState extends State<RealityTruthTeaserCard> {
 
         final library = journey.library;
         final pillar = library.pillarFor(card.pillar);
+        final heroImage = library.imageFor(card);
         final base = Color(pillar?.colorValue ?? 0xFF0F766E);
         final deep = Color.alphaBlend(
           Colors.black.withValues(alpha: 0.45),
@@ -110,6 +112,10 @@ class _RealityTruthTeaserCardState extends State<RealityTruthTeaserCard> {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: <Widget>[
+                  if (heroImage.isNotEmpty) ...<Widget>[
+                    _heroImage(heroImage, base, deep),
+                    const SizedBox(height: 12),
+                  ],
                   Row(
                     children: <Widget>[
                       Text(
@@ -285,6 +291,31 @@ class _RealityTruthTeaserCardState extends State<RealityTruthTeaserCard> {
             ),
           ),
         ],
+      ),
+    );
+  }
+
+  /// The day's picture, inset at the top of the card. When no mirror serves it
+  /// the slot falls back to the card's own gradient, so the header keeps its
+  /// shape instead of collapsing.
+  Widget _heroImage(String assetPath, Color base, Color deep) {
+    return ClipRRect(
+      borderRadius: BorderRadius.circular(15),
+      child: ContentImage(
+        assetPath: assetPath,
+        height: 104,
+        width: double.infinity,
+        fit: BoxFit.cover,
+        error: Container(
+          height: 104,
+          decoration: BoxDecoration(
+            gradient: LinearGradient(
+              begin: Alignment.topLeft,
+              end: Alignment.bottomRight,
+              colors: <Color>[base, deep],
+            ),
+          ),
+        ),
       ),
     );
   }

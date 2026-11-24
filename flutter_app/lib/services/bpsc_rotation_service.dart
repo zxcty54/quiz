@@ -162,7 +162,7 @@ class BpscRotationService {
     final selectedRaw = Map<String, dynamic>.from(items[activeIndex]);
 
     final card = BpscDailyCardModel.fromUniversalJson(selectedRaw, config.defaultWatermark);
-    return BpscDailyPayload(config: config, card: card);
+    return BpscDailyPayload(config: config, card: card, sourceFile: targetFile);
   }
 }
 
@@ -170,5 +170,22 @@ class BpscDailyPayload {
   final DayConfig config;
   final BpscDailyCardModel card;
 
-  BpscDailyPayload({required this.config, required this.card});
+  /// The `knowyourbihar/*.json` file today's card came from. It doubles as the
+  /// key into the collection's image manifest, whose assets are named after it.
+  final String sourceFile;
+
+  BpscDailyPayload({
+    required this.config,
+    required this.card,
+    this.sourceFile = '',
+  });
+
+  /// `rivers.json` -> `rivers`.
+  String get categoryKey => sourceFile.replaceAll('.json', '').trim();
+
+  /// Repository-relative path of this category's picture, or '' when the card
+  /// did not come from a named file.
+  String get imageAssetPath => categoryKey.isEmpty
+      ? ''
+      : 'assets/knowyourbihar/$categoryKey.webp';
 }

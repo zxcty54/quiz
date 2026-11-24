@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import '../models/reality_truth_model.dart';
 import '../services/community_safety_service.dart';
 import '../services/reality_truth_service.dart';
+import '../widgets/content_image.dart';
 
 /// The full judgement behind one Reality Truth topic.
 ///
@@ -89,6 +90,7 @@ class _RealityTruthTopicScreenState extends State<RealityTruthTopicScreen> {
           return ListView(
             padding: const EdgeInsets.fromLTRB(16, 4, 16, 30),
             children: <Widget>[
+              _heroImage(),
               _header(card, accent),
               if (loading) _loadingRow(accent),
               if (!loading && topic == null) _offlineNotice(accent, sub),
@@ -111,6 +113,27 @@ class _RealityTruthTopicScreenState extends State<RealityTruthTopicScreen> {
             ],
           );
         },
+      ),
+    );
+  }
+
+  /// The topic's picture: its zone's art when the zone has one, otherwise the
+  /// pillar's. When neither can be fetched the slot collapses to nothing and
+  /// the gradient header sits at the top, exactly as before images existed.
+  Widget _heroImage() {
+    final zoneImage = widget.pillar.zoneImage(widget.card.zone);
+    final path = zoneImage.isNotEmpty ? zoneImage : widget.pillar.image;
+    if (path.isEmpty) return const SizedBox.shrink();
+    return Padding(
+      padding: const EdgeInsets.only(bottom: 14),
+      child: ClipRRect(
+        borderRadius: BorderRadius.circular(18),
+        child: ContentImage(
+          assetPath: path,
+          height: 158,
+          width: double.infinity,
+          fit: BoxFit.cover,
+        ),
       ),
     );
   }

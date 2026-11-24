@@ -14,17 +14,21 @@ library;
 
 /// One zone inside a pillar, with how many topics it holds.
 class RealityZone {
-  const RealityZone({required this.name, required this.count});
+  const RealityZone({required this.name, required this.count, this.image = ''});
 
   factory RealityZone.fromJson(Map<String, dynamic> json) {
     return RealityZone(
       name: _asStr(json['name']),
       count: _asInt(json['count']),
+      image: _asStr(json['image']),
     );
   }
 
   final String name;
   final int count;
+
+  /// Repository-relative path of the zone's picture, empty when it has none.
+  final String image;
 }
 
 /// A pillar (🍳 Food & Kitchen Science, 🪙 Material & Market Scams, …).
@@ -46,6 +50,7 @@ class RealityPillar {
     required this.jsonFile,
     required this.topicCount,
     required this.zones,
+    this.image = '',
   });
 
   factory RealityPillar.fromJson(Map<String, dynamic> json) {
@@ -62,6 +67,7 @@ class RealityPillar {
       jsonFile: _asStr(json['jsonFile']),
       topicCount: _asInt(json['topicCount']),
       zones: zones,
+      image: _asStr(json['image']),
     );
   }
 
@@ -77,8 +83,21 @@ class RealityPillar {
   final int topicCount;
   final List<RealityZone> zones;
 
+  /// Repository-relative path of the pillar's picture, empty when it has none.
+  final String image;
+
   /// True when this pillar's topics can be fetched from the content repository.
   bool get isRemote => fileName.isNotEmpty;
+
+  /// The declared zone list carries the images, so a zone name is looked up
+  /// here even though the zones shown to the user are counted from the cards.
+  String zoneImage(String zoneName) {
+    if (zoneName.isEmpty) return '';
+    for (final zone in zones) {
+      if (zone.name == zoneName) return zone.image;
+    }
+    return '';
+  }
 
   /// Matches a card's short pillar key, tolerating either id spelling.
   bool matches(String key) {
@@ -343,6 +362,15 @@ class RealityLibrary {
 
   bool get isEmpty => cards.isEmpty;
 
+  /// The picture for a card: its zone's, falling back to the pillar's. Empty
+  /// when neither exists, which callers treat as "render no image".
+  String imageFor(RealityCard card) {
+    final pillar = pillarFor(card.pillar);
+    if (pillar == null) return '';
+    final zone = pillar.zoneImage(card.zone);
+    return zone.isNotEmpty ? zone : pillar.image;
+  }
+
   /// How many days the collection takes to hand out completely.
   int get totalDays => schedule.isEmpty ? cards.length : schedule.length;
 
@@ -394,8 +422,18 @@ class RealityLibrary {
       if (card.zone.isEmpty) continue;
       counts[card.zone] = (counts[card.zone] ?? 0) + 1;
     }
+    final images = <String, String>{
+      for (final zone in pillarFor(key)?.zones ?? const <RealityZone>[])
+        zone.name: zone.image,
+    };
     final zones = counts.entries
-        .map((entry) => RealityZone(name: entry.key, count: entry.value))
+        .map(
+          (entry) => RealityZone(
+            name: entry.key,
+            count: entry.value,
+            image: images[entry.key] ?? '',
+          ),
+        )
         .toList()
       ..sort((a, b) => b.count.compareTo(a.count));
     return zones;
