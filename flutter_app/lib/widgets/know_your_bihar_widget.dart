@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import '../services/bpsc_rotation_service.dart';
+import 'content_image.dart';
 
 class KnowYourBiharWidget extends StatefulWidget {
   final bool isDarkMode;
@@ -320,6 +321,26 @@ class _KnowYourBiharWidgetState extends State<KnowYourBiharWidget> {
     );
   }
 
+  /// Today's category picture from the collection's image manifest, which names
+  /// each asset after the JSON file it belongs to (`rivers.json` ->
+  /// `assets/knowyourbihar/rivers.webp`).
+  ///
+  /// Decoration only: when no mirror serves it the slot collapses to nothing
+  /// and the dossier card reads exactly as it did before images existed.
+  Widget _categoryImage(BpscDailyPayload payload) {
+    final path = payload.imageAssetPath;
+    if (path.isEmpty) return const SizedBox.shrink();
+    return ClipRRect(
+      borderRadius: BorderRadius.circular(16),
+      child: ContentImage(
+        assetPath: path,
+        height: 112,
+        width: double.infinity,
+        fit: BoxFit.cover,
+      ),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     if (_isLoading) {
@@ -536,6 +557,8 @@ class _KnowYourBiharWidgetState extends State<KnowYourBiharWidget> {
                               ),
                             ],
                           ),
+                          const SizedBox(height: 12),
+                          _categoryImage(payload),
                           const SizedBox(height: 12),
                           Builder(builder: (_) {
                             final dayNum = int.tryParse(
