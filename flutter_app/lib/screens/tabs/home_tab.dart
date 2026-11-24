@@ -10,6 +10,7 @@ import '../../widgets/know_your_bihar_widget.dart';
 import '../../widgets/district_top_leaderboard_widget.dart';
 import '../../widgets/challenge_card_widget.dart';
 import '../../widgets/due_revision_card.dart';
+import '../../widgets/reality_truth_teaser_card.dart';
 import '../../widgets/science_story_teaser_card.dart';
 import '../../widgets/home_greeting_header.dart';
 import '../../widgets/promo_banner_carousel.dart';
@@ -111,6 +112,11 @@ class _HomeTabState extends State<HomeTab> {
 
             // 2B. AAJ KI SCIENCE STORY (bundled "365 Din" collection)
             ScienceStoryTeaserCard(isDarkMode: widget.isDarkMode),
+            const SizedBox(height: 18),
+
+            // 2C. AAJ KA REALITY CHECK ("Reality Truth" - 800 topics ka index
+            // bundled hai, poori jaanch content_base se aati hai)
+            RealityTruthTeaserCard(isDarkMode: widget.isDarkMode),
             const SizedBox(height: 18),
 
             // 3. MY COACHING / DISCOVER COACHING

@@ -1,0 +1,392 @@
+/// Models for the "Reality Truth" collection: everyday applied science and
+/// consumer awareness, 800 topics across 4 pillars.
+///
+/// The content lives in the public `zxcty54/content_base` repository under
+/// `reality_truth/`. Two shapes are modelled here:
+///
+/// * [RealityCard] - the compact, bundled card index that ships inside the app
+///   (`assets/data/reality_truth_cards.json`). It carries only the curiosity
+///   fields (title, hook, the common belief and one myth/reality pair), so the
+///   home widget works offline and the app does not grow by 3 MB.
+/// * [RealityTopic] - the full topic, fetched from the repository when the user
+///   actually opens one.
+library;
+
+/// One zone inside a pillar, with how many topics it holds.
+class RealityZone {
+  const RealityZone({required this.name, required this.count});
+
+  factory RealityZone.fromJson(Map<String, dynamic> json) {
+    return RealityZone(
+      name: _asStr(json['name']),
+      count: _asInt(json['count']),
+    );
+  }
+
+  final String name;
+  final int count;
+}
+
+/// A pillar (🍳 Food & Kitchen Science, 🪙 Material & Market Scams, …).
+///
+/// `id` is the pillar id written inside the pillar's own JSON file, which is
+/// the one used for matching. `declaredId` is what `subjects.json` calls it;
+/// the two disagree for the pharma pillar, so both are kept and matching never
+/// relies on the declared value alone.
+class RealityPillar {
+  const RealityPillar({
+    required this.id,
+    required this.declaredId,
+    required this.short,
+    required this.title,
+    required this.subtitle,
+    required this.icon,
+    required this.colorValue,
+    required this.fileName,
+    required this.jsonFile,
+    required this.topicCount,
+    required this.zones,
+  });
+
+  factory RealityPillar.fromJson(Map<String, dynamic> json) {
+    final zones = _asList(json['zones']).map(RealityZone.fromJson).toList();
+    return RealityPillar(
+      id: _asStr(json['id']),
+      declaredId: _asStr(json['declaredId']),
+      short: _asStr(json['short']),
+      title: _asStr(json['title']),
+      subtitle: _asStr(json['subtitle']),
+      icon: _asStr(json['icon']).isEmpty ? '🔍' : _asStr(json['icon']),
+      colorValue: _asColor(json['color'], 0xFF0F766E),
+      fileName: _asStr(json['fileName']),
+      jsonFile: _asStr(json['jsonFile']),
+      topicCount: _asInt(json['topicCount']),
+      zones: zones,
+    );
+  }
+
+  final String id;
+  final String declaredId;
+  final String short;
+  final String title;
+  final String subtitle;
+  final String icon;
+  final int colorValue;
+  final String fileName;
+  final String jsonFile;
+  final int topicCount;
+  final List<RealityZone> zones;
+
+  /// True when this pillar's topics can be fetched from the content repository.
+  bool get isRemote => fileName.isNotEmpty;
+
+  /// Matches a card's short pillar key, tolerating either id spelling.
+  bool matches(String key) {
+    if (key.isEmpty) return false;
+    return key == short || key == id || key == declaredId;
+  }
+}
+
+/// One topic as the bundled card index knows it: enough for a curiosity card,
+/// not enough for the full reader.
+class RealityCard {
+  const RealityCard({
+    required this.id,
+    required this.pillar,
+    required this.zone,
+    required this.title,
+    required this.hook,
+    required this.illusion,
+    required this.myth,
+    required this.reality,
+  });
+
+  factory RealityCard.fromJson(Map<String, dynamic> json) {
+    return RealityCard(
+      id: _asStr(json['id']),
+      pillar: _asStr(json['pillar']),
+      zone: _asStr(json['zone']),
+      title: _asStr(json['title']),
+      hook: _asStr(json['hook']),
+      illusion: _asStr(json['illusion']),
+      myth: _asStr(json['myth']),
+      reality: _asStr(json['reality']),
+    );
+  }
+
+  final String id;
+  final String pillar;
+  final String zone;
+  final String title;
+  final String hook;
+  final String illusion;
+  final String myth;
+  final String reality;
+
+  /// A card without a title cannot be shown as a teaser.
+  bool get isUsable => title.isNotEmpty;
+
+  /// The reveal half of the card: only offered when there is something to say.
+  bool get hasReveal => reality.isNotEmpty || myth.isNotEmpty;
+}
+
+/// A technical term plus its plain-language meaning.
+class RealityDecoded {
+  const RealityDecoded({required this.term, required this.plain});
+
+  factory RealityDecoded.fromJson(Map<String, dynamic> json) {
+    return RealityDecoded(
+      term: _asStr(json['term']),
+      plain: _asStr(json['aam_bhasha_mein']),
+    );
+  }
+
+  final String term;
+  final String plain;
+
+  bool get isEmpty => term.isEmpty && plain.isEmpty;
+}
+
+/// A myth and the reality that replaces it.
+class RealityMyth {
+  const RealityMyth({required this.myth, required this.reality});
+
+  factory RealityMyth.fromJson(Map<String, dynamic> json) {
+    return RealityMyth(
+      myth: _asStr(json['myth']),
+      reality: _asStr(json['reality']),
+    );
+  }
+
+  final String myth;
+  final String reality;
+
+  bool get isEmpty => myth.isEmpty && reality.isEmpty;
+}
+
+/// Regulator, safe limit and risk category for the topic.
+class RealityStandards {
+  const RealityStandards({
+    required this.regulator,
+    required this.safeLimit,
+    required this.riskCategory,
+  });
+
+  factory RealityStandards.fromJson(Map<String, dynamic> json) {
+    return RealityStandards(
+      regulator: _asStr(json['regulator']),
+      safeLimit: _asStr(json['safe_limit']),
+      riskCategory: _asStr(json['risk_category']),
+    );
+  }
+
+  final String regulator;
+  final String safeLimit;
+  final String riskCategory;
+
+  bool get isEmpty =>
+      regulator.isEmpty && safeLimit.isEmpty && riskCategory.isEmpty;
+}
+
+/// Immediate versus long-term effect, on the body or the pocket.
+class RealityImpact {
+  const RealityImpact({required this.instant, required this.longTerm});
+
+  factory RealityImpact.fromJson(Map<String, dynamic> json) {
+    return RealityImpact(
+      instant: _asStr(json['turant_asar']),
+      longTerm: _asStr(json['lambe_samay_ka_asar']),
+    );
+  }
+
+  final String instant;
+  final String longTerm;
+
+  bool get isEmpty => instant.isEmpty && longTerm.isEmpty;
+}
+
+/// The full topic, exactly as the content repository stores it.
+class RealityTopic {
+  const RealityTopic({
+    required this.id,
+    required this.zone,
+    required this.title,
+    required this.hook,
+    required this.illusion,
+    required this.decoded,
+    required this.deepExplanation,
+    required this.examples,
+    required this.standards,
+    required this.impact,
+    required this.homeChecks,
+    required this.myths,
+    required this.sources,
+  });
+
+  factory RealityTopic.fromJson(Map<String, dynamic> json) {
+    return RealityTopic(
+      id: _asStr(json['id']),
+      zone: _asStr(json['zone']),
+      title: _asStr(json['title']),
+      hook: _asStr(json['short_hook']),
+      illusion: _asStr(json['the_illusion']),
+      decoded: _asList(json['chemical_or_term_decoded'])
+          .map(RealityDecoded.fromJson)
+          .where((item) => !item.isEmpty)
+          .toList(),
+      deepExplanation: _asStr(json['deep_explanation']),
+      examples: _asStrList(json['real_life_examples']),
+      standards: RealityStandards.fromJson(_asMap(json['standards_and_limits'])),
+      impact: RealityImpact.fromJson(_asMap(json['impact_on_body_or_pocket'])),
+      homeChecks: _asStrList(json['ghar_pe_kaise_check_karein']),
+      myths: _asList(json['common_myths'])
+          .map(RealityMyth.fromJson)
+          .where((item) => !item.isEmpty)
+          .toList(),
+      // Sources are plain titles in this collection, not links.
+      sources: _asStrList(json['sources']),
+    );
+  }
+
+  final String id;
+  final String zone;
+  final String title;
+  final String hook;
+  final String illusion;
+  final List<RealityDecoded> decoded;
+  final String deepExplanation;
+  final List<String> examples;
+  final RealityStandards standards;
+  final RealityImpact impact;
+  final List<String> homeChecks;
+  final List<RealityMyth> myths;
+  final List<String> sources;
+
+  bool get isEmpty => title.isEmpty && deepExplanation.isEmpty;
+
+  /// `deep_explanation` is written as paragraphs separated by blank lines.
+  List<String> get paragraphs => deepExplanation
+      .split(RegExp(r'\n\s*\n'))
+      .map((part) => part.trim())
+      .where((part) => part.isNotEmpty)
+      .toList();
+}
+
+/// The bundled card index: project metadata, pillars and every card.
+class RealityLibrary {
+  const RealityLibrary({
+    required this.projectTitle,
+    required this.tagline,
+    required this.languageStyle,
+    required this.totalTopics,
+    required this.sourceVersion,
+    required this.pillars,
+    required this.cards,
+  });
+
+  static const RealityLibrary empty = RealityLibrary(
+    projectTitle: '',
+    tagline: '',
+    languageStyle: '',
+    totalTopics: 0,
+    sourceVersion: 0,
+    pillars: <RealityPillar>[],
+    cards: <RealityCard>[],
+  );
+
+  factory RealityLibrary.fromJson(Map<String, dynamic> json) {
+    return RealityLibrary(
+      projectTitle: _asStr(json['project_title']),
+      tagline: _asStr(json['project_tagline']),
+      languageStyle: _asStr(json['language_style']),
+      totalTopics: _asInt(json['total_topics']),
+      sourceVersion: _asInt(json['source_version']),
+      pillars: _asList(json['pillars']).map(RealityPillar.fromJson).toList(),
+      cards: _asList(json['cards'])
+          .map(RealityCard.fromJson)
+          .where((card) => card.isUsable)
+          .toList(),
+    );
+  }
+
+  final String projectTitle;
+  final String tagline;
+  final String languageStyle;
+  final int totalTopics;
+  final int sourceVersion;
+  final List<RealityPillar> pillars;
+  final List<RealityCard> cards;
+
+  bool get isEmpty => cards.isEmpty;
+
+  int get pillarCount => pillars.length;
+
+  RealityPillar? pillarFor(String key) {
+    for (final pillar in pillars) {
+      if (pillar.matches(key)) return pillar;
+    }
+    return null;
+  }
+
+  List<RealityCard> cardsForPillar(String key) =>
+      cards.where((card) => card.pillar == key).toList();
+
+  List<RealityCard> cardsForZone(String pillarKey, String zone) => cards
+      .where((card) => card.pillar == pillarKey && card.zone == zone)
+      .toList();
+
+  /// Zone names actually used by the cards, with their counts. Used instead of
+  /// the declared list because the pharma pillar declares overlapping zone
+  /// names from two merged batches.
+  List<RealityZone> zonesForPillar(String key) {
+    final counts = <String, int>{};
+    for (final card in cardsForPillar(key)) {
+      if (card.zone.isEmpty) continue;
+      counts[card.zone] = (counts[card.zone] ?? 0) + 1;
+    }
+    final zones = counts.entries
+        .map((entry) => RealityZone(name: entry.key, count: entry.value))
+        .toList()
+      ..sort((a, b) => b.count.compareTo(a.count));
+    return zones;
+  }
+}
+
+String _asStr(Object? value) => value?.toString().trim() ?? '';
+
+int _asInt(Object? value) {
+  if (value is int) return value;
+  if (value is num) return value.toInt();
+  return int.tryParse(value.toString().trim()) ?? 0;
+}
+
+/// Reads a colour written the way Flutter spells it ("0xFF059669") or as hex.
+int _asColor(Object? value, int fallback) {
+  var text = _asStr(value).toLowerCase().replaceFirst('#', '');
+  if (text.isEmpty) return fallback;
+  text = text.replaceFirst('0x', '');
+  if (text.length == 6) text = 'ff$text';
+  final parsed = int.tryParse(text, radix: 16);
+  return parsed == null ? fallback : parsed;
+}
+
+Map<String, dynamic> _asMap(Object? value) {
+  if (value is Map) {
+    return value.map((key, item) => MapEntry(key.toString(), item));
+  }
+  return <String, dynamic>{};
+}
+
+List<Map<String, dynamic>> _asList(Object? value) {
+  if (value is List) return value.whereType<Map>().map(_asMap).toList();
+  return <Map<String, dynamic>>[];
+}
+
+/// A list that may hold plain strings (examples, checks, sources).
+List<String> _asStrList(Object? value) {
+  if (value is! List) return <String>[];
+  return value
+      .map((item) => item?.toString().trim() ?? '')
+      .where((item) => item.isNotEmpty)
+      .toList();
+}
