@@ -258,47 +258,59 @@
     },
     {
       "day": 96,
-      "category": "Weather aur technology",
+      "category": "Brain aur history",
       "card": {
-        "title": "Weather balloon aasman mein kya measure karta hai?",
-        "hook": "Forecast sirf ground ki hawa dekhkar nahi banta. Ek balloon upar jaate-jaate weather ki kaunsi information bhejta hai?",
+        "title": "Tesla: har thought padha ja sakega — rasta galat, direction sahi",
+        "hook": "1933 mein unhone kaha thoughts retina pe image banate hain aur photograph ho sakte hain. Mechanism galat nikla, par aaj machines brain activity padhti hain.",
         "cta": "Puri kahani padhein"
       },
       "detail": {
-        "real_life_scene": "Subah phone par rain forecast check karte waqt hum usually ground ke weather ke baare mein sochte hain. Lekin baadal aur hawa atmosphere ki alag-alag heights par badalte hain.",
-        "central_question": "Ek weather balloon hawa ki upar wali layers ko kaise measure karta hai?",
+        "real_life_scene": "Aaj ek paralyzed insaan sirf likhne ka soch kar screen pe shabd likh deta hai, aur scanner mein baithe aadmi ki suni gayi kahani text ban jaati hai. 1933 mein Tesla ne isi ka claim kiya tha — par bilkul alag mechanism se.",
+        "central_question": "Kya thoughts physical hote hain aur padhe ja sakte hain, jaisa Tesla ne kaha tha?",
         "explanation": [
           {
-            "heading": "Balloon ke neeche chhota instrument",
-            "text": "Weather balloon ek instrument package lekar upar jaata hai. Is package ko radiosonde kehte hain. Isme temperature, hawa ka pressure aur humidity measure karne wale sensors hote hain. Humidity ka matlab hawa mein water vapour, yaani paani ki gas, kitni hai. Pressure batata hai ki aas-paas ki hawa kitna force laga rahi hai."
+            "heading": "Tesla ne exactly kya kaha",
+            "text": "Kansas City Journal-Post, 10 September 1933: 78 saal ke Tesla ne kaha — I expect to photograph thoughts. Mechanism bhi bataya: 1893 se convinced the ki thought ki image reflex action se retina pe corresponding image banati hai, jise suitable apparatus padh sake. Conclusion: har thought padha ja sakega — our minds would then be like open books. Wo khud premise ko if it be true keh kar hedge kar rahe the."
           },
           {
-            "heading": "Measurements neeche kaise aati hain?",
-            "text": "Balloon upar uthte waqt sensors alag heights par readings lete hain. Package ka radio transmitter, yaani signal bhejne wala device, data ground station tak bhejta hai. GPS se package ki position track ki ja sakti hai. Position waqt ke saath kaise badli, usse hawa ki speed aur direction ka estimate milta hai."
+            "heading": "Idea hawa mein nahi tha: optogram",
+            "text": "Tesla ke zamane mein optogram mashhoor tha. 1870s mein Boll ne rhodopsin discover kiya, jo light pe bleach hota hai; Kuhne ne use fix karke rabbit ki aankh se ek barred window ki halki outline nikali. Par 1880 mein phaansi paaye ek aadmi ki aankh pe bleaching hui, image nahi. Wajah: human fovea sirf ~1.5 mm hai aur rhodopsin tezi se regenerate aur degrade hota hai. Aaj researchers ise zyadatar pareidolia maante hain."
           },
           {
-            "heading": "Forecast mein fayda",
-            "text": "Ground station ko sirf ek number nahi milta, balki height ke saath atmosphere ki condition ka record milta hai. Meteorologists, yaani weather scientists, ise satellites, radar aur doosri measurements ke saath use karte hain. Computer models in observations aur physics ke rules se possible future weather calculate karte hain. Achhi shuruaati information forecast improve kar sakti hai."
+            "heading": "Mechanism galat kyun hai",
+            "text": "Optogram ki chemistry andar aane wale photons se chalti hai. Thought aankh mein koi photon nahi bhejta, isliye bleach karne ko kuch nahi. Retina input transducer hai — photoreceptors se ganglion cells, phir optic nerve — projector ya screen nahi. Koi reflex action imagined content ko retina pe dobara image nahi karta. Tesla ne blueprint, prototype ya demonstration kabhi banaya nahi, isliye test karne ko kuch tha nahi."
           },
           {
-            "heading": "Kya balloon exact baarish bata dega?",
-            "text": "Nahi. Ek balloon har jagah aur har waqt measurement nahi karta. Weather rapidly badal sakta hai aur measurements mein uncertainty hoti hai. Isliye scientists observations combine karte hain aur forecast update karte rehte hain. Balloon bhi aam taur par upar jaakar expand hota hai aur phat sakta hai; uska instrument neeche girta hai."
+            "heading": "Aaj machines kya kar paati hain",
+            "text": "Yahan kahani palat jaati hai. Kamitani aur Tong (2005) ne fMRI se bataya ki subject kaunsi orientation ki grating dekh raha hai. Nishimoto (2011) ne movies dekhte waqt visual experience reconstruct kiya. Willett (2021) ne intracortical BCI se paralyzed participant ke attempted handwriting se 90 characters per minute nikale. Tang, LeBel, Jain aur Huth (2023) ne non-invasive semantic decoder dikhaya jo fMRI se continuous language nikaalta hai — suni aur imagine ki gayi speech, hattaki silent videos."
+          },
+          {
+            "heading": "Limits jo saath chalti hain",
+            "text": "In sab ke liye scanner ya implanted electrodes chahiye. Tang 2023 ko per-subject ~16 ghante ka training data laga (7 sessions ke baad plateau), aur ye verbatim shabd nahi, gist deta hai. Non-invasive decoding perceptual tasks pe sabse achha hai; imagine kiye content pe accuracy kaafi girti hai. Ek 2024 paper ne dikhaya ki diffusion-based reconstructions kai averaged data pe tiki hain. Door se, bina machine ke, dimaag padhne wali koi cheez aaj nahi hai."
+          },
+          {
+            "heading": "Open books ab ek kanoon ka sawaal hai",
+            "text": "Tesla ka open books wala jumla aaj legal category hai. Chile ne October 2021 mein constitution amend karke brain activity aur usse nikli information ko protect kiya; August 2023 mein wahan ki Supreme Court ne duniya ka pehla neuroprivacy faisla diya — Emotiv ke EEG headset ke against — aur neural data delete karne ka order diya. Colorado neural data ko sensitive data maanne wala pehla US state bana, aur UNESCO ne November 2025 mein pehla global neurotechnology ethics standard adopt kiya."
           }
         ],
-        "real_world_connection": "Cyclone ya heavy rain ke aas-paas upper-air data weather teams ke liye important ho sakta hai. Apne area ke warnings ke liye local official weather service follow karein; ek forecast probability ko guarantee na samjhein.",
+        "real_world_connection": "Brain signals padhne wale headsets aur implants aaj market mein hain, isliye kuch desh neural data ko organ jaisa protect kar rahe hain. Koi app ya device aapki brain data maange to consent aur storage ki shartein padhna zaroori hai — India mein abhi iske liye alag se kanoon nahi hai.",
         "reality_check": {
-          "established": "Weather balloons ke radiosonde sensors height ke saath atmospheric conditions measure karke radio se bhejte hain.",
-          "misconception": "Ek balloon akela har location par exact rain aur time predict nahi karta."
+          "established": "Thoughts brain ki physical activity hain aur decode ho sakte hain — par scanner ya implant se, aur subject ke cooperation ke saath.",
+          "misconception": "Retina pe thought ki image banti hai jo photograph ho sake — retina input sensor hai, screen nahi."
         },
-        "status": "Proven: weather-balloon observations",
+        "status": "Not established: retinal thought-photography; brain decoding now works",
         "sources": [
           {
-            "title": "NOAA: weather balloons aur upper-air observations",
-            "url": "https://www.aoml.noaa.gov/upper-air-observations/"
+            "title": "Kansas City Journal-Post, 10 September 1933 (Carol Bird interview): Tremendous New Power Soon to be Unleashed",
+            "url": "https://teslaresearch.jimdofree.com/articles-interviews/tremendous-new-power-soon-to-be-unleashed-kansas-city-journal-post-september-10-1933/"
           },
           {
-            "title": "NOAA: forecasting tools",
-            "url": "https://www.noaa.gov/stories/6-tools-our-meteorologists-use-to-forecast-weather"
+            "title": "Tang, LeBel, Jain & Huth (2023), Nature Neuroscience: Semantic reconstruction of continuous language from non-invasive brain recordings",
+            "url": "https://www.nature.com/articles/s41593-023-01304-9"
+          },
+          {
+            "title": "Future of Privacy Forum: Privacy and the Rise of Neurorights in Latin America",
+            "url": "https://fpf.org/blog/privacy-and-the-rise-of-neurorights-in-latin-america/"
           }
         ]
       }
