@@ -940,11 +940,11 @@
       },
       "detail": {
         "real_life_scene": "Phone aur radio bina visible wire ke signals receive karte hain.",
-        "central_question": "Wireless communication ka foundation kaise bana?",
+        "central_question": "Wireless communication ka foundation kaise bana, aur credit ka sawaal court tak kyun pahuncha?",
         "explanation": [
           {
             "heading": "Asli kahani",
-            "text": "Heinrich Hertz ne 1888 mein electromagnetic waves ke propagation ka experimental evidence diya. 1890s mein Guglielmo Marconi ne wireless signalling develop ki; Karl Ferdinand Braun ne important technical improvements kiye. Marconi aur Braun ko 1909 Physics Nobel mila."
+            "text": "Heinrich Hertz ne 1888 mein electromagnetic waves ka experimental evidence diya. Aage ka kaam kai logon ne badhaya: Nikola Tesla ne 1893 mein wireless transmission par public lecture di aur unki 1897 application (US 645,576, granted 1900) mein chaar tuned circuits ka arrangement tha. Oliver Lodge ne variable inductance se tuning adjust ki (US 609,154, 1898); John Stone Stone ka patent 1900 mein aaya. 1890s mein Guglielmo Marconi ne wireless signalling ko practical long-distance system banaya; Karl Ferdinand Braun ne technical improvements kiye. Marconi aur Braun ko 1909 Physics Nobel mila."
           },
           {
             "heading": "Aasaan bhasha mein samjhein",
@@ -960,23 +960,31 @@
           },
           {
             "heading": "Evidence, use aur limitations",
-            "text": "Marconi aur many other inventors ne wireless systems ko practical banane mein contributions diye. Ocean crossings ne long-distance communication ka potential dikhaya, but radio ka history single inventor ka isolated achievement nahi tha. Broadcast, mobile networks aur satellite links different frequency bands aur technologies use karte hain. Hertz experiment discovery tha; later communication engineering alag development step thi."
+            "text": "Marconi aur many other inventors ne wireless systems ko practical banane mein contributions diye. Ocean crossings ne long-distance communication ka potential dikhaya, but radio ka history single inventor ka isolated achievement nahi tha. Broadcast, mobile networks aur satellite links different frequency bands aur technologies use karte hain. Hertz experiment discovery tha; later communication engineering alag development step thi. Credit ka sawaal 1943 mein US Supreme Court tak bhi pahuncha."
           },
           {
-            "heading": "Ek aur zaroori baat",
-            "text": "Wireless signal receiver tak multiple paths se pahunch sakta hai; practical systems interference aur noise handle karne ke liye design kiye jaate hain."
+            "heading": "1943 ka faisla actually kya kehta hai",
+            "text": "Marconi Wireless Telegraph Co. v. United States (320 U.S. 1) ka faisla 21 June 1943 ko aaya — Tesla ki maut ke paanch mahine baad. Court ne Marconi ke tuning patent (US 763,772) ke broad claims invalid thehraye kyunki wo anticipated the, aur ye faisla John Stone Stone ki priority par tikaya. Opinion ne saaf kaha ki Stone ke patent mein invention thi ya nahi, ye yahan decide nahi kiya gaya. Marconi ka original wireless patent case mein tha hi nahi. Tesla aur Lodge wale alternative ground par Court ne decide karne se mana kar diya, aur faisla unanimous nahi tha: Frankfurter aur Rutledge ne dissent kiya."
           }
         ],
         "real_world_connection": "Radio, mobile communication aur wireless technologies electromagnetic-wave principles use karti hain.",
         "reality_check": {
-          "established": "Hertz ke experiments aur later wireless development documented milestones hain.",
-          "misconception": "Radio ka invention ek hi person ke isolated action se explain karna historical oversimplification hai."
+          "established": "Hertz ke 1888 experiments, Tesla ki 1897 application, Lodge aur Stone ke patents aur Marconi ki long-distance signalling documented hain.",
+          "misconception": "1943 mein Supreme Court ne radio ka invention Tesla ko de diya — ye galat hai; faisla Stone ki priority par tika tha."
         },
-        "status": "Proven",
+        "status": "Proven: wireless milestones documented; the 1943 ruling is widely misread",
         "sources": [
           {
             "title": "Nobel: 1909 award presentation",
             "url": "https://www.nobelprize.org/prizes/physics/1909/ceremony-speech/"
+          },
+          {
+            "title": "U.S. Supreme Court: Marconi Wireless Tel. Co. v. United States, 320 U.S. 1 (1943)",
+            "url": "https://supreme.justia.com/cases/federal/us/320/1/"
+          },
+          {
+            "title": "The Tesla Record: what the 1943 opinion actually says",
+            "url": "https://teslainfo.org/marconi-v-united-states-1943/"
           }
         ]
       }

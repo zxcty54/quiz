@@ -214,32 +214,40 @@
             "text": "Electric power ko simplified form mein voltage aur current ke product se relate kar sakte hain. Same power transfer karne ke liye higher voltage par lower current use kiya ja sakta hai, suitable conditions mein. Wires mein current flow hone se resistance ki wajah se heat loss hoti hai; yeh loss current badhne par strongly badhti hai."
           },
           {
+            "heading": "AC Tesla se pehle bhi tha",
+            "text": "AC Tesla se pehle bhi tha: Gaulard aur Gibbs ne 1884 mein transformers dikhaye, William Stanley Jr. ka working transformer 1886 mein tha, aur Galileo Ferraris ne Turin mein 1885 se rotating magnetic field par kaam karke use March 1888 mein present kiya — bina patent karaye. Tesla ne wahi idea independently develop kiya; unke basic US patents (381,968, 382,280) 1 May 1888 ko grant hue aur Westinghouse ne July 1888 mein unke polyphase patents license kar liye. 1893 mein Westinghouse ne Chicago fair ko AC se roshan kiya aur Niagara contract jeeta; November 1896 tak wahan se lagbhag 20 mile door Buffalo tak power pahunchne lagi."
+          },
+          {
             "heading": "Aasaan shabdon mein",
             "text": "Power station ke paas transformer alternating current ki voltage step up kar sakta hai. Higher transmission voltage se required current reduce hota hai, jisse long-distance wire losses kam karna possible hota hai. Destination ke paas substations aur distribution transformers voltage step down karte hain taaki consumers ko appropriate supply mil sake."
           },
           {
             "heading": "Evidence aur uski limits",
-            "text": "Transformer energy create nahi karta: voltage change ke saath current bhi change hota hai, aur real transformers mein losses hoti hain. High-voltage equipment dangerous hai aur insulation, clearances aur professional maintenance important hain. Grid mein power flow aur losses actual conditions ke hisaab se more complex hote hain."
+            "text": "Transformer energy create nahi karta: voltage change ke saath current bhi change hota hai, aur real transformers mein losses hoti hain. Grid mein power flow aur losses actual conditions ke hisaab se more complex hote hain. High voltage ke saath insulation, clearances aur safety challenges badhte hain. Long-distance transmission ke kuch systems high-voltage direct current bhi use karte hain, jinke converters alag technology use karte hain. Power lines aur electrical equipment se safe distance maintain karein; repairs trained professionals karte hain."
           },
           {
             "heading": "Kyun aur kaise?",
             "text": "Wire loss approximately current squared times resistance hoti hai, so same power higher voltage aur lower current par transmit karne se resistive losses kam ho sakti hain. Transformers AC systems mein voltage convert karte hain; practical grid mein current, power factor aur network design bhi matter karte hain."
           },
           {
-            "heading": "Evidence aur zaroori limitations",
-            "text": "High voltage ke saath insulation, clearances aur safety challenges badhte hain. Long-distance transmission ke kuch systems high-voltage direct current bhi use karte hain, jinke converters alag technology use karte hain. Power lines aur electrical equipment se safe distance maintain karein; repairs trained professionals karte hain."
+            "heading": "Priority ka sawaal aaj bhi divided hai",
+            "text": "Ferraris ne pehle kaam kiya aur pehle publish kiya; Tesla ne pehle patent file kiya, isliye historians priority par divided hain. IEEE Industry Applications Magazine ke 2025 comparison ne rotating magnetic field ka credit Ferraris ko aur pehle industrial induction motor ka Tesla ko diya — dono baatein saath sach ho sakti hain. War of the Currents sirf technical bhi nahi thi: Edison ki taraf se AC ko khatarnaak dikhane ki campaign chali, aur 1892 mein Edison General Electric aur Thomson-Houston mil kar General Electric bane."
           }
         ],
         "real_world_connection": "Efficient transmission electricity infrastructure ka important part hai. Downed wires ya damaged transformers se door rahein aur local electricity utility ya emergency services ko report karein.",
         "reality_check": {
           "established": "Higher transmission voltage same power transfer ke liye current aur resistive losses reduce karne mein help kar sakti hai.",
-          "misconception": "Transformer voltage badhakar free energy create nahi karta."
+          "misconception": "Transformer free energy nahi banata; aur AC sirf Tesla ki den nahi tha — transformers 1880s mein kai engineers bana rahe the."
         },
-        "status": "Proven",
+        "status": "Proven: grid physics documented; AC's credit is shared",
         "sources": [
           {
             "title": "US Department of Energy: electricity distribution",
             "url": "https://afdc.energy.gov/fuels/electricity-production"
+          },
+          {
+            "title": "IEEE Industry Applications Magazine (2025): Galileo Ferraris Versus Nikola Tesla: Discovering the Rotating Magnetic Field",
+            "url": "https://iris.polito.it/handle/11583/3011809"
           }
         ]
       }
