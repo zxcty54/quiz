@@ -1239,45 +1239,53 @@
       "day": 331,
       "category": "Ocean aur climate",
       "card": {
-        "title": "Ocean ka deep water move kaise hota hai?",
-        "hook": "Sirf hawa hi ocean currents nahi banati. Temperature aur salt ke differences deep water movement mein kya role play karte hain?",
+        "title": "Agar deep ocean ki energy ka hisaab nahi milta, to wo chalta kaise hai?",
+        "hook": "Deep ocean chalane ke liye 2.1 TW chahiye; tides sirf ~0.9 dete hain. Agar ye gap sach hai, to ocean ko chala raha kya hai — aur wo current khud ruk sakti hai?",
         "cta": "Puri kahani padhein"
       },
       "detail": {
-        "real_life_scene": "Paani ki different layers ki properties alag ho sakti hain. Ocean mein temperature aur dissolved salt ke changes water density ko influence karte hain.",
-        "central_question": "Deep ocean circulation mein temperature aur salinity ka role kya hai?",
+        "real_life_scene": "Bina deep mixing ke ocean kuch hazaar saal mein thande, namkeen paani ka stagnant pool ban jaata — Munk aur Wunsch ne 1998 mein yehi likha. Us mixing ke liye chahiye 2.1 TW, jabki tides deep ocean ko sirf ~0.9 de paate hain.",
+        "central_question": "Deep ocean ko chalane wali energy kahan se aati hai, aur wo current kitni jaldi ruk sakti hai?",
         "explanation": [
           {
-            "heading": "Asli kahani",
-            "text": "Density ka simple matlab hai: kisi given volume mein kitna mass hai. Seawater ki density temperature aur salinity, yaani dissolved salt content, se affect hoti hai. Generally colder ya saltier water relatively denser ho sakta hai, though actual conditions aur pressure bhi matter karte hain."
+            "heading": "Pehla puzzle: energy ka hisaab nahi baithta",
+            "text": "1966 mein Walter Munk ne deep ocean ke density profiles ka hisaab lagaya — 'Abyssal Recipes'. Bina mixing ke abyss kuch hazaar saal mein thande namkeen paani ka stagnant pool ban jaata. 1998 mein Munk aur Wunsch ne budget banaya: 30 sverdrup deep-water formation ke against 2.1 terawatt chahiye. Tides ~3.7 TW kharch karte hain, par zyada tar shallow seas mein — deep ocean ko sirf ~0.9 TW milta hai. Factor of two ka gap."
           },
           {
-            "heading": "Aasaan shabdon mein",
-            "text": "Kuch cold regions mein surface water cool aur sufficiently dense hokar neeche sink hota hai. Deep water move karta hai aur ocean ke other regions mein mixing aur upwelling ke through surface ke paas aa sakta hai. Winds surface currents aur ocean mixing mein bhi important role play karti hain. Yeh interconnected movement heat, oxygen aur nutrients redistribute karti hai."
+            "heading": "Mixing kahan milti hai — aur do paradox kyun khule hain",
+            "text": "Jawab rough topography mein mila: ubad-khabad seafloor par mixing kayi guna zyada hoti hai — barotropic tide internal tide mein convert hoti hai, waves toot-ti hain, hotspots bante hain. Par 2024 ka ek analysis kehta hai ki is field mein do paradoxes abhi bhi khule hain: diffusivities ka dichotomy, aur interior downwelling ka conundrum. Uska inference: bottom-water formation ka mass budget close karne ke liye globally averaged O(1) cm2/s diffusivity dhoondhna ab zaroori bhi nahi ho sakta."
           },
           {
-            "heading": "Evidence aur uski limits",
-            "text": "Thermohaline circulation term temperature aur salinity se related density differences par focus karti hai. “Global conveyor belt” ek simplified picture hai; real ocean circulation branches, mixing aur changing pathways ka complex system hai. Har salty water parcel directly ocean floor tak nahi jaata, aur circulation changes region-specific hote hain."
+            "heading": "Dusra puzzle: ye current khud ko rok sakti hai",
+            "text": "North Atlantic mein paani thanda aur namkeen hone se dense ban kar doobta hai, aur doobte waqt garam paani upar bhejta hai — yehi AMOC hai. Stommel (1961) ne dikhaya isme self-amplifying loop hai: meltwater se surface paani fresh aur halka hota hai, doobna kam hota hai, salt transport kam hota hai, freshening aur badhti hai. Ek threshold ke paar ye vicious circle hai. Heinrich aur Dansgaard-Oeschger events kehte hain ye pehle bhi ho chuka hai."
           },
           {
-            "heading": "Kyun aur kaise?",
-            "text": "Ocean water density temperature, salinity aur pressure se influence hoti hai. Dense surface water certain regions mein sink karke deeper circulation contribute kar sakta hai; winds aur mixing bhi large-scale transport drive karte hain. Heat, oxygen aur nutrients ke movement ke liye yeh important hai."
+            "heading": "Controversy: collapse kab, ya kabhi nahi?",
+            "text": "Ditlevsen aur Ditlevsen (2023) ne early-warning signals — variance badhna aur autocorrelation — se estimate lagaya: current emissions scenario mein collapse mid-century ke aas-paas. Is paper pe August 2025 mein ek author correction bhi chhapa, yaani numbers khud revise hue. Criticism: bina physical link ke SST-only inference kamzor maana gaya. IPCC AR6: 21st century mein collapse 'very unlikely' — sirf medium confidence ke saath. Direction pe sab agree karte hain, distance pe koi nahi."
           },
           {
-            "heading": "Evidence aur zaroori limitations",
-            "text": "Conveyor-belt diagram pathways simplify karta hai: real circulation multiple branches aur time scales par operate karti hai. Circulation change ka effect regional aur system-dependent hota hai. Ek current weakening ki observation se poore global ocean circulation ke instant shutdown ka conclusion nikalna justified nahi."
+            "heading": "Hum kitna kam jaante hain",
+            "text": "AMOC ko directly measure karna 2004 mein shuru hua — RAPID array ke saath. Matlab ~20 saal ka record, us current ke liye jiska ek water parcel poora loop karne mein ~1000 saal leta hai. Climate models observed 'cold blob' reproduce nahi kar paate; weakening ka range 4–46% (low emission) se 17–55% (high emission) tak jaata hai. Argo floats se pata chala Gulf Stream is sadi mein ~10 km shore ki taraf khisak gayi hai."
+          },
+          {
+            "heading": "India ke liye kyun matter karta hai",
+            "text": "IPCC ke mutabik collapse se tropical rain belt selatan khisak sakti hai, jisse African aur Asian monsoons kamzor ho sakte hain — Bihar ki baarish ka pattern bhi isi current se juda hai. Northwest Europe mein cooling aur storminess badhegi, US Atlantic coast par sea level zyada chadhega, deep ocean tak oxygen kam pahunchega. November 2025 mein Iceland ne potential AMOC collapse ko national security risk declare kiya."
           }
         ],
-        "real_world_connection": "Ocean observations aur climate models se scientists heat transport aur circulation changes study karte hain. Long-term trends samajhne ke liye many measurements aur careful analysis chahiye; ek cold day se circulation ka status decide nahi hota.",
+        "real_world_connection": "Isi circulation par Europe ki narmi, Atlantic ka sea level aur monsoon systems ka balance tikka hai. RAPID array, Argo floats aur satellite altimetry ise naapte hain, par direct record sirf 2004 se hai — models aapas mein 4–46% tak disagree karte hain.",
         "reality_check": {
-          "established": "Temperature aur salinity ke differences ocean density aur deep circulation ko influence karte hain.",
-          "misconception": "Ocean circulation sirf ek single rigid underwater conveyor belt nahi hai."
+          "established": "Density differences deep circulation chalate hain, aur AMOC pichhli sadi mein kamzor hui hai — direction pe multiple lines agree karti hain.",
+          "misconception": "Ek rigid 'conveyor belt' hai jiske collapse ki date pata hai — timing pe scientists divided hain, aur energy budget bhi poora nahi."
         },
-        "status": "Proven",
+        "status": "Divided: mixing budget partly open; collapse timing disputed",
         "sources": [
           {
-            "title": "NOAA Ocean Exploration: ocean currents",
-            "url": "https://oceanexplorer.noaa.gov/ocean-fact/currents/"
+            "title": "Han 2024, arXiv:2407.11864 — Navigating Munk's Abyssal Recipes",
+            "url": "https://arxiv.org/abs/2407.11864"
+          },
+          {
+            "title": "Ditlevsen & Ditlevsen 2023, Nature Communications — AMOC collapse warning",
+            "url": "https://doi.org/10.1038/s41467-023-39810-w"
           }
         ]
       }
