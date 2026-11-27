@@ -891,32 +891,65 @@ class ScienceStoryDetailScreen extends StatelessWidget {
   }
 
   /// Same promise as the Reality Truth disclaimer: awareness, not advice.
+  ///
+  /// Kept visually quiet on purpose. The teal accent is lightened in dark mode
+  /// so the note stays legible on the slate card without turning into a
+  /// warning banner that readers learn to skip.
   Widget _healthDisclaimer(Color sub) {
-    const Color accent = Color(0xFF0F766E);
+    final bool isDark = isDarkMode;
+    final Color accent =
+        isDark ? const Color(0xFF2DD4BF) : const Color(0xFF0F766E);
     return Container(
       width: double.infinity,
-      padding: const EdgeInsets.all(12),
+      padding: const EdgeInsets.fromLTRB(13, 12, 13, 13),
       decoration: BoxDecoration(
-        color: accent.withValues(alpha: 0.09),
-        borderRadius: BorderRadius.circular(14),
-        border: Border.all(color: accent.withValues(alpha: 0.22)),
+        color: accent.withValues(alpha: isDark ? 0.10 : 0.07),
+        borderRadius: BorderRadius.circular(16),
+        border: Border.all(
+          color: accent.withValues(alpha: isDark ? 0.32 : 0.24),
+        ),
       ),
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
-          const Icon(Icons.info_outline, size: 14, color: accent),
-          const SizedBox(width: 9),
+          Container(
+            width: 26,
+            height: 26,
+            alignment: Alignment.center,
+            decoration: BoxDecoration(
+              color: accent.withValues(alpha: 0.16),
+              borderRadius: BorderRadius.circular(9),
+              border: Border.all(color: accent.withValues(alpha: 0.30)),
+            ),
+            child: Icon(Icons.info_outline, size: 14, color: accent),
+          ),
+          const SizedBox(width: 10),
           Expanded(
-            child: Text(
-              'Ye general awareness ke liye hai, medical advice nahi. Kisi bhi '
-              'bimari, dawai, dose ya jaanch ke baare mein faisla lene se pehle '
-              'doctor ya qualified expert se salah lein.',
-              style: TextStyle(
-                fontSize: 10,
-                fontWeight: FontWeight.w700,
-                height: 1.5,
-                color: sub,
-              ),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: <Widget>[
+                Text(
+                  'Zaroori note',
+                  style: TextStyle(
+                    fontSize: 10.5,
+                    fontWeight: FontWeight.w900,
+                    letterSpacing: 0.2,
+                    color: accent,
+                  ),
+                ),
+                const SizedBox(height: 3),
+                Text(
+                  'Ye general awareness ke liye hai, medical advice nahi. Kisi '
+                  'bhi bimari, dawai, dose ya jaanch ke baare mein faisla lene '
+                  'se pehle doctor ya qualified expert se salah lein.',
+                  style: TextStyle(
+                    fontSize: 10.5,
+                    fontWeight: FontWeight.w600,
+                    height: 1.55,
+                    color: sub,
+                  ),
+                ),
+              ],
             ),
           ),
         ],
