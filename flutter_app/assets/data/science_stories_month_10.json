@@ -1282,42 +1282,50 @@
       "day": 301,
       "category": "Human body",
       "card": {
-        "title": "Ghoomna band kiya, phir bhi chakkar kyun lagte hain?",
-        "hook": "Aap ruk chuke hote hain, lekin inner ear ka fluid kuch der move karta reh sakta hai. Brain ko kya signal milta hai?",
+        "title": "20 second baad inner ear bolta hai: turn ruk gaya, jabki turn chal raha hai",
+        "hook": "Ek constant turn 20 second se zyada chala toh inner ear ka fluid diwar ke saath move karne lagta hai, aur brain ko lagta hai turn khatam ho gaya.",
         "cta": "Puri kahani padhein"
       },
       "detail": {
-        "real_life_scene": "Gol-gol ghoomkar rukne ke baad room moving jaisa lagta hai. 19th century ke experiments se pata chala ki inner ear ke canals head movement aur balance ke signals dete hain; balance sirf aankhon par depend nahi karta.",
-        "central_question": "Inner ear body ki movement aur balance kaise sense karta hai?",
+        "real_life_scene": "Ghoomte jhoolay par jab aap rukte hain tab bhi duniya ghoomti lagti hai. Flight training is century mein bhi wahi rule sikhati hai: body sensation par nahi, instruments par bharosa karo.",
+        "central_question": "Inner ear motion kaise naapta hai, aur pilot ko galat kyun batata hai?",
         "explanation": [
           {
-            "heading": "Inner ear ka vestibular system",
-            "text": "Inner ear mein vestibular system hota hai: tiny canals aur pouches ka group jo head movement aur gravity se related information detect karta hai. Three semicircular canals different directions mein rotation sense karne mein help karti hain. In canals ke andar fluid aur sensory hair cells hote hain. 19th century ke experiments ne inner ear ke canals ko balance aur head movement se joda."
+            "heading": "Inner ear: 3 gyro aur 2 level",
+            "text": "Inner ear ka vestibular system kareeb ek pencil eraser jitna hai. Ismein do structures hain: semicircular canals, jo angular acceleration detect karte hain, aur otolith organs, yaani utricle aur saccule, jo linear acceleration aur gravity detect karte hain. Teen canals ek doosre ke perpendicular planes mein hote hain, jaise teen gyroscopes: har plane aircraft ke roll, pitch ya yaw se match karta hai. Har canal endolymph naam ke fluid se bhara hota hai aur usmein hair cells hote hain jinke ends cupula naam ke gelatinous structure mein dabe hote hain."
           },
           {
-            "heading": "Fluid hair cells ke projections bend karta",
-            "text": "Jab head rotate karta hai, fluid ki movement hair cells ke tiny projections bend kar sakti hai. Cells nerve signals brain ko bhejti hain. Brain in signals ko eyes aur muscles se aayi information ke saath combine karke balance aur gaze control karta hai. Pouches head ki straight-line movement aur tilt detect karne mein help karti hain."
+            "heading": "20 second: fluid catch up kar leta hai",
+            "text": "Jab head ya aircraft turn karta hai, canal move karta hai par fluid inertia se peeche reh jaata hai; fluid hairs ko opposite bend karta hai aur brain ko signal jaata hai ki turn shuru hua. Problem constant rate wale turn mein aati hai. Agar turn 20 second se zyada chalta hai toh friction ki wajah se fluid canal ki deewaron ke saath move karne lagta hai. Tab hairs seedhe khade ho jaate hain aur brain ko galat signal jaata hai ki turn ruk gaya, jabki turn chal raha hota hai."
           },
           {
-            "heading": "Rukne ke baad fluid chalta rehta hai",
-            "text": "Rapid spinning ke baad suddenly rukne par fluid kuch time tak move karta reh sakta hai. Isse movement ka signal aur actual visual information temporarily mismatch ho sakte hain, jisse dizziness feel ho sakti hai. Lekin dizziness ke many other causes bhi hote hain; spinning analogy sab medical cases explain nahi karti."
+            "heading": "Leans: sabse common illusion",
+            "text": "FAA ke mutabik flight mein sabse common illusion Leans hai. Yeh tab hota hai jab ek gradual, prolonged turn bina notice ke chala jaata hai aur phir aircraft achanak level flight mein laut jaata hai. Pilot ko gradual turn ka pata isliye nahi chalta ki 2 degree per second ya usse kam rotational acceleration semicircular canals ki detection threshold ke neeche hota hai. Wings level karne par ulta illusion banta hai ki aircraft opposite direction mein bank kar raha hai, aur pilot isi ko correct karne ke liye original turn ki taraf jhuk jaata hai."
           },
           {
-            "heading": "Otolith organs tilt aur acceleration",
-            "text": "Semicircular canals rotation detect karti hain, while otolith organs acceleration aur head tilt information provide karte hain. Spinning ke baad fluid movement briefly continue kar sakti hai aur brain ko visual information se mismatch milta hai."
+            "heading": "Graveyard spiral aur Coriolis illusion",
+            "text": "Graveyard spiral, graveyard spin se zyada common hai. Prolonged left bank turn ke baad wings level karne par use lagta hai aircraft right turn kar raha hai; illusion itna compelling hota hai ki pilot wapas left turn mein chala jaata hai, jabki aircraft left mein hi ghoom raha hai aur altitude kho raha hai. Coriolis illusion do canals ko ek saath stimulate karta hai: turn ke dauraan head aage, peeche ya side mein tilt ho, jaise chart dekhne ke liye, toh aircraft ek saath roll, pitch aur yaw karta lagta hai."
           },
           {
-            "heading": "Sudden dizziness ke red flags",
-            "text": "Spinning-related short-lived dizziness aur illness-related vertigo identical nahi hain. Sudden dizziness ke saath weakness, speech difficulty, severe headache ya chest pain ho toh emergency care seek karein. Persistent ya recurrent dizziness ke multiple causes ho sakte hain, so professional assessment important hai."
+            "heading": "Otolith gravity aur acceleration alag nahi kar sakta",
+            "text": "Utricle horizontal plane mein linear acceleration detect karta hai aur saccule vertical plane mein gravity. Par linear acceleration ki inertial forces aur gravity ki force mein farq nahi kiya ja sakta, isliye gravity bhi inhe stimulate karti hai. Otoconia naam ke chhote calcium stones cupula ko kheenchte hain. Isi ambiguity se somatogravic illusions bante hain: steep ascent ke baad level off par inversion illusion, aur level flight mein sudden acceleration par head-up illusion. FAA ka rule: illusion feel ho to instruments par bharosa karo aur sensory perceptions ko disregard karo."
           }
         ],
-        "real_world_connection": "Sudden severe dizziness, weakness, speech trouble ya other concerning symptoms par urgent medical care lein. Persistent balance problems ki assessment clinician se karwaayein, especially falls ka risk ho.",
+        "real_world_connection": "FAA ke mutabik general aviation accidents ka 5 se 10 % spatial disorientation se juda hai aur unmein se 90 % fatal hote hain. FAA ka standard instruction yahi hai: vestibular illusion feel ho to instruments par bharosa karo aur apni body sensation ko disregard karo.",
         "reality_check": {
-          "established": "Inner-ear vestibular organs head movement aur balance signals mein important role play karte hain.",
-          "misconception": "Har dizziness inner-ear fluid ki same problem se nahi hoti."
+          "established": "Semicircular canals angular acceleration detect karte hain, aur constant turn mein signal galat ho jaata hai.",
+          "misconception": "Chakkar hamesha inner ear ki problem nahi hoti, aur illusion ka matlab yeh nahi ki organ kharab hai."
         },
-        "status": "Proven: vestibular organs balance signals dete; har dizziness isi se nahi",
+        "status": "Proven: vestibular illusion measurable hai; 5-10 % GA accidents",
         "sources": [
+          {
+            "title": "FAA Safety: Spatial Disorientation (pilot safety brochure)",
+            "url": "https://www.faa.gov/pilots/safety/pilotsafetybrochures/media/spatiald.pdf"
+          },
+          {
+            "title": "FAA Safety Team: vestibular illusions FlySafe notice",
+            "url": "https://www.faasafety.gov/SPANS/noticeView.aspx?nid=14132"
+          },
           {
             "title": "NIH NIDCD: hearing and balance research",
             "url": "https://www.nidcd.nih.gov/about/strategic-plan/2017-2021-nidcd-strategic-plan"

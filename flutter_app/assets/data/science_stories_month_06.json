@@ -601,42 +601,50 @@
       "day": 164,
       "category": "Everyday technology",
       "card": {
-        "title": "Phone ki battery har saal kamzor kyun hoti jaati hai?",
-        "hook": "Cycles ke saath battery ki capacity ghatti hai, aur kabhi wo swell ya fail bhi hoti hai. Chemistry kaam karti hai — par exact degradation predict karna open hai.",
+        "title": "Battery ki zindagi ka test saalon leta tha; model ne 16 din mein chun liya",
+        "hook": "Ek charging protocol ki cycle life jaanne mein mahine lagte the. 2020 mein ek closed-loop system ne 224 protocols mein se behtareen wale 16 din mein chun liye.",
         "cta": "Puri kahani padhein"
       },
       "detail": {
-        "real_life_scene": "2019 mein M. Stanley Whittingham, John Goodenough aur Akira Yoshino ko lithium-ion battery ke kaam par Chemistry Nobel mila — 1970s aur 1980s ke un contributions ke liye jo aaj har phone mein hain.",
-        "central_question": "Lithium-ion battery baar-baar recharge kaise ho paati hai?",
+        "real_life_scene": "Fast charging ka promise hai ki gaadi 10 minute mein kaafi charge ho jaaye. Par 2019 tak har protocol ko end tak test karna mahine ka kaam tha, aur current-voltage combinations hazaaron bante hain.",
+        "central_question": "Battery kitni der chalegi, yeh pehle se predict karna possible kaise hua?",
         "explanation": [
           {
-            "heading": "Whittingham, Goodenough aur Yoshino ka kaam",
-            "text": "Battery development mein M. Stanley Whittingham, John Goodenough aur Akira Yoshino ke contributions ko 2019 Chemistry Nobel se recognize kiya gaya. Unka kaam 1970s se 1980s tak different stages mein hua. Modern batteries par aur bhi researchers aur engineers ne kaam kiya."
+            "heading": "Zindagi ka test mahine se saal tak",
+            "text": "Battery ki lifetime maximize karna ek common goal hai, par ek hi experiment mein lifetime evaluate karne mein mahine se saal tak lag jaate hain. Iski wajah sirf time nahi: parameter space bada hai aur cell-to-cell sampling variability bhi zyada hai, isliye experiments ki badi sankhya chahiye hoti hai. Asli challenge yeh hai ki experiments ki sankhya aur unki duration dono ko kam kiya jaaye. Charging protocol isi problem ka hissa hai, kyunki current aur voltage ka profile aging ko directly affect karta hai."
           },
           {
-            "heading": "Electrodes aur electrolyte ka setup",
-            "text": "Battery ke andar do electrodes—yaani materials ke do working ends—aur unke beech electrolyte hota hai. Lithium ions, matlab electric charge wale lithium particles, battery ke andar electrodes ke beech move karte hain. Saath hi electrons bahari circuit se flow karte hain aur device ko power dete hain. Charge karte waqt charger energy dekar process ko reverse direction mein chalata hai."
+            "heading": "124 cells, 150 se 2,300 cycles",
+            "text": "Severson aur unke colleagues ne 2019 mein ek comprehensive dataset banaya: 124 commercial lithium iron phosphate aur graphite cells ko fast-charging conditions par cycle kiya gaya. Inki cycle lives widely varying thin, 150 se 2,300 cycles tak. Matlab ek hi type ke commercial cells bhi same protocol par itna alag behave kar sakte hain ki best case worst case se kareeb 15 guna lamba chalta hai. Data publicly available rakha gaya, aur processing code bhi release kiya gaya. Yahi variability prediction ko mushkil aur zaroori dono banati hai."
           },
           {
-            "heading": "Cobalt oxide aur carbon electrode",
-            "text": "Goodenough ke lithium-cobalt oxide material aur Yoshino ke carbon-based electrode ne useful rechargeable designs ki development mein madad ki. Real batteries mein chemistry ke multiple variants hote hain; sabhi phones aur vehicles ek identical formula use nahi karte. Battery age, heat aur use se performance bhi badalti hai."
+            "heading": "Pehle 100 cycles se prediction",
+            "text": "Model ke features discharge capacity se nahi, discharge voltage curves se banaye gaye, jo abhi capacity degradation dikhane wale cycles se pehle ke hote hain. Best models ne first 100 cycles se cycle life quantitatively predict karne mein 9.1 % test error diya; in 100 cycles mein capacity initial se median 0.2 % hi badhi thi, yaani degradation visibly shuru nahi hui thi. Classification ke liye sirf first 5 cycles se 4.9 % test error mila. Yani cell ka lambe samay ka behaviour shuruaati voltage signature mein already likha hota hai."
           },
           {
-            "heading": "Discharge mein ions ka safar",
-            "text": "Battery discharge mein electrode reactions energy release karti hain. Ions electrolyte mein move karte hain, jabki electrons external circuit se nikal kar device chalate hain; electrons electrolyte ke through simply same route se flow nahi karte. Charging mein external energy reactions ko reverse direction mein drive karti hai."
+            "heading": "224 protocols, 16 din ka closed loop",
+            "text": "Attia aur colleagues ne 2020 mein isi early-prediction model ko Bayesian optimization se joda, jo exploration aur exploitation ko balance karta hai. System six-step, ten-minute fast-charging protocols ke parameter space ko explore karta tha aur 224 candidates mein se high-cycle-life protocols 16 din mein identify kar leta. Wahi kaam exhaustive search se, bina early prediction ke, 500 din se zyada leta. Loop automatically past experiments ka feedback future decisions mein daalta hai, isliye har round mehnga nahi hota."
           },
           {
-            "heading": "Capacity gradually kyun ghatti hai",
-            "text": "Repeated charging, temperature aur chemical changes battery capacity gradually reduce kar sakte hain. Damaged ya swollen battery safety risk ho sakti hai; manufacturer guidance follow karein aur approved recycling channel use karein. Lithium-ion ek broad battery family hai, ek single exact chemistry nahi."
+            "heading": "Limits: ek chemistry, ek test bed",
+            "text": "Yeh result strong hai par narrow: cells commercial lithium iron phosphate aur graphite the, aur protocols fast-charging type ke six-step, ten-minute patterns the. Early prediction ka 9.1 % error average hai; har individual cell ke liye guarantee nahi. 16 din ka number exhaustive baseline se compare karke nikla hai, yaani speed ka claim setup par depend karta hai. Dusri chemistries, temperatures aur real driving profiles par transfer alag se test karna padega. Broader point: jahan ek experiment mahine leta hai, wahan early signal plus smart search experiment count ko gira sakta hai."
           }
         ],
-        "real_world_connection": "Isi basic rechargeable technology ki family phones, laptops aur electric vehicles mein use hoti hai. Manufacturer ki charging aur safety instructions follow karna useful hai.",
+        "real_world_connection": "Severson ke 2019 dataset mein 124 commercial cells ki cycle life 150 se 2,300 tak phaili thi. Attia ke 2020 closed-loop run ne early prediction ko Bayesian optimization se jodkar 224 six-step, ten-minute protocols mein se high-life wale 16 din mein chun liye; exhaustive search ko 500 din se zyada lagte.",
         "reality_check": {
-          "established": "Lithium-ion cells rechargeable energy storage ke liye lithium ions ki movement use karti hain.",
-          "misconception": "Battery electricity ko simply ek bottle mein bhar kar nahi rakhti; energy chemical processes ke through store aur release hoti hai."
+          "established": "Commercial lithium-ion cells ki cycle life pehle cycles ke discharge voltage curves se predict ki ja sakti hai.",
+          "misconception": "Cell zindagi bhar ek hi predictable curve par ghistta nahi; batches aur conditions se result badalta hai."
         },
-        "status": "Unsolved: Li-ion kaam karta hai; degradation aur safety prediction open",
+        "status": "Proven: pehle 100 cycles se cycle life predict hoti hai",
         "sources": [
+          {
+            "title": "Attia et al. 2020, Nature 578: Closed-loop optimization of fast-charging protocols",
+            "url": "https://www.nature.com/articles/s41586-020-1994-5"
+          },
+          {
+            "title": "Severson et al. 2019, Nature Energy 4:383: data-driven cycle-life prediction",
+            "url": "https://www.nature.com/articles/s41560-019-0356-8"
+          },
           {
             "title": "Nobel Prize: lithium-ion battery",
             "url": "https://www.nobelprize.org/prizes/chemistry/2019/popular-information/"
