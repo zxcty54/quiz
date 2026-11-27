@@ -201,44 +201,48 @@
       "day": 248,
       "category": "Earth aur water",
       "card": {
-        "title": "Hand pump ka paani zameen ke neeche kahan rehta hai?",
-        "hook": "Groundwater aksar ek giant underground lake ki tarah imagine hota hai. Reality mein woh kis jagah store hota hai?",
+        "title": "Ganga basin duniya ka sabse zyada pumped aquifer — phir bhi “low stress”?",
+        "hook": "2015 ki GRACE study ne 37 sabse bade aquifers dekhe: 21 deplete ho rahe the. Ganges mein use sabse zyada tha, phir bhi category low stress aayi.",
         "cta": "Puri kahani padhein"
       },
       "detail": {
-        "real_life_scene": "Hand pump ya borewell se paani nikalta hai, par surface par river ya pond dikhna zaroori nahi. 20th century mein bade paimane par pumping badhne se kai aquifers mein water levels gire hain.",
-        "central_question": "Aquifer kya hai aur groundwater level kyun gir sakta hai?",
+        "real_life_scene": "Hand pump ya borewell se paani nikalta hai, par neeche koi underground lake nahi hoti. 2015 mein GRACE satellite data par based study ne duniya ke 37 sabse bade aquifer systems ka hisaab lagaya, jismein Ganges bhi tha.",
+        "central_question": "Groundwater kahan store hota hai, aur satellites use aur recharge ka hisaab kaise lagate hain?",
         "explanation": [
           {
             "heading": "Paani pores aur fractures mein rehta hai",
-            "text": "Groundwater soil aur rocks ke pores aur fractures mein mil sakta hai. Aquifer aisi underground geological layer hai jo useful quantity mein water store aur transmit kar sakti hai. Sand, gravel aur fractured rocks kuch examples hain. 20th century mein bade paimane par pumping badhne se kai aquifers mein water levels gire hain, aur USGS isi decline aur depletion ko track karta hai."
+            "text": "Groundwater soil aur rocks ke pores aur fractures mein milta hai. Aquifer aisi underground geological layer hai jo useful quantity mein paani store aur transmit kar sakti hai; yeh koi khokhli underground lake ya badi nahi hoti. Richey aur unke colleagues ke 2015 ke paper ke mutabik groundwater lagbhag 200 crore logon ka primary freshwater source hai, aur bade aquifer systems ko monitor karna mehnga aur complex hone ki wajah se surface water ke muqable kam samajh gaya hai."
           },
           {
-            "heading": "Rain infiltrate hokar recharge karta hai",
-            "text": "Rain ka kuch water soil se neeche infiltrate hota hai aur suitable conditions mein groundwater recharge kar sakta hai. Well se pumping karke stored water surface tak laaya jaata hai. Agar long time tak extraction recharge se zyada ho, groundwater level decline ho sakta hai aur wells ko water paana difficult ho sakta hai."
+            "heading": "GRACE ne gravity se storage naapa",
+            "text": "NASA ke GRACE twin satellites Earth ke gravity field ke chhote changes measure karte hain, aur paani ka mass badalne par woh signal badalta hai. Is study ka period January 2003 se December 2013 tha aur ismein duniya ke 37 sabse bade aquifer systems liye gaye. Use ka andaza do tarah se lagaya gaya: ek national withdrawal statistics se, doosra GRACE-derived storage trends se. Availability ka matlab mean annual recharge tha, aur stress ko use aur availability ke ratio se define kiya gaya."
           },
           {
-            "heading": "Recharge rate geology par depend karta",
-            "text": "Recharge rate rainfall, soil, land use aur local geology par depend karta hai. Groundwater everywhere ek open underground river nahi hota. Over-pumping se nearby streams, land subsidence ya coastal areas mein salty water intrusion jaise issues bhi ho sakte hain, depending on location. Water quality bhi local testing ka subject hai."
+            "heading": "21 aquifers deplete ho rahe the",
+            "text": "GRACE-derived trends ke mutabik 37 mein se 16 aquifers mein subsurface storage badh rahi thi aur 21 mein ghat rahi thi. Paper ke mutabik GRACE-based ratio se 8 aquifers Overstressed the, jabki withdrawal statistics se 11. Sabse zyada overstressed Arabian aur Murzuk-Djado systems the, jahan depletion rates sabse high thi aur recharge available nahi tha. Arabian system ki depletion −9.13 ± 0.9 mm per year thi, jabki uska 67 % hissa rangeland tha. 11 aquifers mein recharge negative nikla."
           },
           {
-            "heading": "Aquifer hollow lake nahi hota",
-            "text": "Aquifer ek porous ya fractured material hota hai, necessarily huge empty underground lake nahi. Water table ki depth seasonal rainfall, pumping aur local geology se change ho sakti hai. Well ke aas-paas extraction se nearby groundwater levels temporarily ya long-term decline kar sakte hain."
+            "heading": "Ganges: sabse zyada use, phir bhi low stress",
+            "text": "Ganges mein use ki rate dono methods par sabse zyada thi: withdrawal statistics se −63.1 mm per year, aur GRACE ke estimate se −19.6 ± 1.2 mm per year. Paper ke mutabik Ganges ka mean annual recharge 214 mm per year hai, jo use ki highest rates ko balance karta hai, isliye GRACE-based variable-stress category mein use low stress rakha gaya. Lekin paper khud kehta hai ki use ka magnitude is aquifer ko statistics par low stress ya GRACE par high stress bana sakta hai. Yeh demand population aur irrigation se driven thi."
           },
           {
-            "heading": "Over-pumping se subsidence ka risk",
-            "text": "Over-pumping land subsidence aur wells dry hone ka risk create kar sakti hai. Recharge aur withdrawal ka local balance assess karna zaroori hai. Clear-looking groundwater safe hone ki guarantee nahi: arsenic, salts aur microbes ke liye suitable testing aur treatment local risks ke hisaab se zaroori hain."
+            "heading": "Canning ka case aur method ki limits",
+            "text": "Australia ka Canning Basin ek extreme example hai: residential area 1 % se kam, par GRACE-derived depletion −9.40 ± 1.34 mm per year, jo teesri sabse zyada thi, jabki statistics-based rate −0.002 mm per year dikha. Wahan mining ka asar statistics mein dikha hi nahi. Canning ka stress ratio −1.6 tha, yaani naturally available paani se kareeb 150 % zyada depletion. Paper ke mutabik overstressed systems land subsidence, habitat destruction aur aquifer compaction trigger kar sakte hain. GRACE 1° resolution par regional trend deta hai, kisi ek well ka level nahi."
           }
         ],
-        "real_world_connection": "Farming, drinking-water supply aur city planning mein groundwater monitoring important hai. Water conservation aur recharge measures ka design local conditions aur scientific assessment se guide hona chahiye.",
+        "real_world_connection": "Ganga basin ke liye sawaal sirf “kitna paani hai” nahi, “kitna recharge ho raha hai” bhi hai: monsoon recharge high hai, par pumping bhi duniya mein sabse zyada. GRACE regional trend deta hai, kisi ek well ka level nahi, isliye local monitoring aur subsidence jaise asar alag se dekhne padte hain.",
         "reality_check": {
-          "established": "Aquifers groundwater store aur transmit kar sakte hain; excessive pumping se levels decline ho sakte hain.",
-          "misconception": "Har borewell kisi giant hollow underground lake tak nahi pahunchta."
+          "established": "Groundwater aquifer ke pores aur fractures mein store hota hai; GRACE gravity data se regional storage trends ka andaza lag sakta hai.",
+          "misconception": "Neeche giant hollow lake nahi hoti, aur ek aquifer ka deplete hona yeh nahi batata ki usmein kitna paani bacha hai."
         },
-        "status": "Proven: aquifer pores mein paani store karta; giant underground lake nahi",
+        "status": "Proven: 37 mein se 21 deplete ho rahe; Ganges ka stress method par depend",
         "sources": [
           {
-            "title": "USGS: groundwater depletion",
+            "title": "Richey et al. 2015, Water Resources Research 51:5217–5238 — Quantifying renewable groundwater stress with GRACE",
+            "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4744761/"
+          },
+          {
+            "title": "USGS: Groundwater decline and depletion",
             "url": "https://www.usgs.gov/water-science-school/science/groundwater-decline-and-depletion"
           }
         ]
