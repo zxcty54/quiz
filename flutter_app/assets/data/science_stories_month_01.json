@@ -13,8 +13,8 @@
       "day": 1,
       "category": "Space aur samay",
       "card": {
-        "title": "Aap Suraj ka past dekh rahe hain!",
-        "hook": "Suraj ki roshni aap tak pahunchne mein lagbhag 8 minute leti hai. Toh abhi dikh raha Suraj kitna purana hai?",
+        "title": "Agar Suraj abhi bujh jaaye, to humein kab pata chalega?",
+        "hook": "Roshni ko Suraj se yahan tak ~8 minute lagte hain. Agar Suraj abhi bujh jaaye, to humein 8 minute tak pata nahi chalega — aasmaan bright hi rahega.",
         "cta": "Puri kahani padhein"
       },
       "detail": {
@@ -60,8 +60,8 @@
       "day": 2,
       "category": "Ajeeb mathematics",
       "card": {
-        "title": "Teen doors, ek car: choice badalna faydemand kyun?",
-        "hook": "Host ek galat door khol deta hai. Do doors bachne par kya dono ka chance sach mein barabar ho jaata hai?",
+        "title": "Teen darwaze, ek car: choice badalne par chance dugna kyun?",
+        "hook": "Host ek khaali darwaza khol deta hai. Choice badalni chahiye ya nahi? Intuition kehti hai 50-50, par sahi jawab 2/3 hai — mathematicians bhi isme uljhte hain.",
         "cta": "Puri kahani padhein"
       },
       "detail": {
@@ -103,8 +103,8 @@
       "day": 3,
       "category": "Science ki kahani",
       "card": {
-        "title": "Galileo ko ghar mein kaid kyun kiya gaya?",
-        "hook": "Unhone aasman dekha, ek purane vichaar ko challenge kiya aur Church ki court tak pahunch gaye.",
+        "title": "Do models ek hi aasmaan explain karte the — farq kaise pata chalega?",
+        "hook": "Ptolemy ka model sadiyon se sky explain karta tha. Telescope se Venus ke phases dikhe jo usse match nahi karte the. Par debate nahi khatm hui — 1633 mein trial hua.",
         "cta": "Puri kahani padhein"
       },
       "detail": {
@@ -113,7 +113,7 @@
         "explanation": [
           {
             "heading": "Problem: sky mein centre kaun?",
-            "text": "Purane Earth-centred model mein Earth ko centre maana jaata tha. Copernicus ne 1543 mein Sun-centred model present kiya: Earth aur doosre planets Sun ke around move karte hain. Dono models sky mein dikhne wali motions explain karne ki koshish karte the. Sawal tha ki observations kis model ke saath fit hoti hain."
+            "text": "Ptolemy ke Earth-centred model mein Earth ko centre maana jaata tha, aur ye model sadiyon se sky explain karne ke liye accept tha. Copernicus ne 1543 mein Sun-centred model present kiya: Earth aur doosre planets Sun ke around move karte hain. Dono models sky mein dikhne wali motions explain karne ki koshish karte the. Sawal tha ki observations kis model ke saath fit hoti hain."
           },
           {
             "heading": "Telescope se naye clues",
@@ -137,7 +137,7 @@
           "established": "Galileo ke observations ne purane sky models ko challenge kiya; 1633 ke trial ke baad woh house arrest mein rahe.",
           "misconception": "Jupiter ke moons ya Venus ke phases ne us samay akele har Earth-centred alternative ko eliminate nahi kiya."
         },
-        "status": "Proven: observations and trial",
+        "status": "Proven: heliocentrism settled later; the 1610 evidence was not decisive",
         "sources": [
           {
             "title": "American Institute of Physics: history of cosmology",
@@ -154,8 +154,8 @@
       "day": 4,
       "category": "Maths aur nature",
       "card": {
-        "title": "Chai ka swirl: kya maths iska future bata sakti hai?",
-        "hook": "Chai mein doodh milana easy hai. Lekin uske har swirl ka mathematical future prove karna itna easy nahi.",
+        "title": "Chai ka swirl: kya maths kabhi iska future prove kar payegi?",
+        "hook": "Hawa, paani, khoon — har flow inhi equations se chalta hai. Par do sadi se koi prove nahi kar paaya ki solution kabhi tootega nahi. Isi pe $1M ka prize atka hai.",
         "cta": "Puri kahani padhein"
       },
       "detail": {
@@ -164,7 +164,7 @@
         "explanation": [
           {
             "heading": "Problem: flow important kyun hai?",
-            "text": "Hawa aircraft ke around chalti hai; paani pipes aur rivers mein behta hai. Agar engineers flow estimate kar saken, toh aircraft design, weather forecasting aur water systems plan karne mein help milti hai. Ek equation mathematical language mein quantities ke beech relationship batati hai. Navier–Stokes equations fluid, yaani liquid ya gas, ke flow ko describe karne ka ek model hain."
+            "text": "Hawa aircraft ke around chalti hai; paani pipes aur rivers mein behta hai. Agar engineers flow estimate kar saken, toh aircraft design, weather forecasting aur water systems plan karne mein help milti hai. Ek equation mathematical language mein quantities ke beech relationship batati hai. Navier–Stokes equations fluid, yaani liquid ya gas, ke flow ko describe karne ka ek model hain. Inhe Navier ne 1822 mein aur Stokes ne 1845 mein develop kiya."
           },
           {
             "heading": "Equation mein kya jaata hai?",
@@ -209,8 +209,8 @@
       "day": 5,
       "category": "Invention ki jung",
       "card": {
-        "title": "Crash hua plane, phir bhi first flight ka jhagda?",
-        "hook": "Wright brothers ki flight ke baad ek museum aur Orville Wright ke beech credit ko lekar lambi ladai hui.",
+        "title": "Plane crash hua, phir bhi first flight ka jhagda kyun chala?",
+        "hook": "Agar Wright pehle ude the, to baar-baar proof kyun manga gaya? Ek museum aur Orville ki credit-ladai itni lambi chali ki Wright Flyer ko America chhodna pada.",
         "cta": "Puri kahani padhein"
       },
       "detail": {
@@ -260,8 +260,8 @@
       "day": 6,
       "category": "Numbers ki duniya",
       "card": {
-        "title": "Kya aapka phone number pi mein chhupa hai?",
-        "hook": "Pi ke digits kabhi khatam nahi hote. Lekin kya unmein har possible number zaroor milega?",
+        "title": "Kya aapka phone number pi ke andar kahin likha hai?",
+        "hook": "Pi ke digits kabhi khatam nahi hote. Agar wo truly normal hai, to aapka phone number aur birth date usme kahin zaroor milni chahiye. Par ye koi prove nahi kar paaya.",
         "cta": "Puri kahani padhein"
       },
       "detail": {
@@ -307,8 +307,8 @@
       "day": 7,
       "category": "Space ki kahani",
       "card": {
-        "title": "1977 ka Wow! Signal: space se message tha?",
-        "hook": "Ek radio telescope ne unusual signal pakda. Scientist ne paper par sirf ek word likha: Wow!",
+        "title": "Agar wo message tha, to jawab aaj tak kyun nahi mila?",
+        "hook": "1977 mein ek radio telescope ne 72 second tak aisa signal suna jo natural source jaisa nahi tha. Scientist ne printout pe sirf 'Wow!' likha. Wo dobara nahi aaya.",
         "cta": "Puri kahani padhein"
       },
       "detail": {
@@ -321,7 +321,7 @@
           },
           {
             "heading": "1977 mein kya record hua?",
-            "text": "15 August 1977 ko Ohio State University ke Big Ear radio telescope ne ek strong, unexpected radio signal detect kiya. Astronomer Jerry Ehman ne printed data mein unusual pattern ko circle karke “Wow!” likha. Isi handwritten note se signal ko naam mila. Signal ka unusual hona further investigation ka reason tha."
+            "text": "15 August 1977 ko Ohio State University ke Big Ear radio telescope ne ek strong, unexpected radio signal detect kiya, jo ~72 second tak chala. Astronomer Jerry Ehman ne printed data mein unusual pattern ko circle karke “Wow!” likha. Isi handwritten note se signal ko naam mila. Signal ka unusual hona further investigation ka reason tha."
           },
           {
             "heading": "Agar message hota toh kya badal sakta tha?",
@@ -354,8 +354,8 @@
       "day": 8,
       "category": "Space aur discovery",
       "card": {
-        "title": "Aasmaan mein ek taara phata—phir uski roshni dobara mili!",
-        "hook": "1572 ka ek explosion centuries baad phir study kiya gaya. Kya space mein koi natural mirror hai?",
+        "title": "1572 mein ek taara phata tha — uski roshni aaj bhi kyun aa rahi hai?",
+        "hook": "1572 mein phate taare ki roshni khatm ho jaani chahiye thi. Par Tycho ke supernova ki roshni ab bhi gas se takra kar laut rahi hai — jaise natural mirror ho.",
         "cta": "Puri kahani padhein"
       },
       "detail": {
@@ -405,8 +405,8 @@
       "day": 9,
       "category": "Discovery aur credit",
       "card": {
-        "title": "Penicillin: gandi plate se duniya badalne wali medicine tak",
-        "hook": "Ek scientist ne mould dekha. Lekin discovery ko treatment banana ek doosri badi kahani thi.",
+        "title": "1928 se 1945 tak: gandi plate se dawai ban-ne mein 17 saal kyun lage?",
+        "hook": "Agar ek accident duniya ki sabse badi dawai de sakta hai, to hospital tak 17 saal kyun lage? Fleming ne mould dekh liya tha; dawai doosri teams ne banayi.",
         "cta": "Puri kahani padhein"
       },
       "detail": {
@@ -456,8 +456,8 @@
       "day": 10,
       "category": "Scientific mistakes",
       "card": {
-        "title": "Einstein galat the? Ek cable ne duniya ko kyun chonka diya",
-        "hook": "Scientists ko laga ek particle light se tez pahunch gaya. Phir experiment ki timing dobara check ki gayi.",
+        "title": "Agar koi particle light se tez nikla, to relativity dobara likhni padti",
+        "hook": "2011 mein ek experiment ne kaha neutrinos light se 60 nanosecond aage nikal gaye. Sach hota to Einstein ka framework dobara likhna padta. Phir ek loose cable mila.",
         "cta": "Puri kahani padhein"
       },
       "detail": {
@@ -474,7 +474,7 @@
           },
           {
             "heading": "2011 ka surprising result",
-            "text": "Initial analysis mein neutrinos light ke expected travel time se thoda jaldi pahunchte hue lage. Researchers ne result scrutiny ke liye share kiya, taaki measurement aur analysis independently check ho sake. Ek surprising measurement ko final discovery maan lena jaldi hota, especially jab timing aur distance dono extremely precise hone chahiye."
+            "text": "Initial analysis mein neutrinos light ke expected travel time se ~60 nanosecond jaldi pahunchte hue lage. Researchers ne result scrutiny ke liye share kiya, taaki measurement aur analysis independently check ho sake. Ek surprising measurement ko final discovery maan lena jaldi hota, especially jab timing aur distance dono extremely precise hone chahiye."
           },
           {
             "heading": "Timing system ki problem",
@@ -503,45 +503,49 @@
       "day": 11,
       "category": "Scientists ki kahani",
       "card": {
-        "title": "Copernicus ki kitaab maut se pehle hi likhi ja chuki thi?",
-        "hook": "Ek famous kahani kehti hai ki scientist ko apni book maut ke waqt mili. Lekin unka idea kitna purana tha?",
+        "title": "Agar aapki kitaab ke pehle panne pe koi aur likh de 'ye sach nahi'?",
+        "hook": "Kitaab Copernicus ki maut ke baad chhapi, par pehla panna unka nahi tha. Kisi ne likh diya: ye sirf calculation hai, sach nahi. Author ka pata decades tak na chala.",
         "cta": "Puri kahani padhein"
       },
       "detail": {
-        "real_life_scene": "School mein padhte hain ki Earth Suraj ke chakkar lagati hai. Kabhi socha, yeh idea logon tak kaise pahucha?",
-        "central_question": "Kya Copernicus ne yeh idea apne last dinon mein likha tha?",
+        "real_life_scene": "24 May 1543: De revolutionibus chhapkar aayi, aur kaha jaata hai ki copy Copernicus ko maut se kuch ghante pehle mili. Par pehla panna unka nahi tha — kisi aur ne preface likh diya tha.",
+        "central_question": "Kisi ne bina bataye kitaab mein aisa preface kyun daala, jo uska matlab hi badal de?",
         "explanation": [
           {
-            "heading": "Kya hua tha?",
-            "text": "Lagbhag 1514 tak Nicolaus Copernicus ek chhota handwritten note, Commentariolus, kuch scholars ko de chuke the. Usmein unhone Sun-centred model ka basic idea bataya tha."
+            "heading": "Idea naya nahi tha",
+            "text": "Lagbhag 1514 tak Copernicus ne Commentariolus — ek chhota handwritten note — kuch scholars ko de diya tha, jisme Sun-centred model ka basic idea tha. Unke student Rheticus ne 1540 mein Narratio Prima chhapkar us model ka summary public kar diya. Yaani 1543 tak idea decades se circulate kar raha tha; jo naya tha wo poora mathematical work tha."
           },
           {
-            "heading": "Aage kya samajh aaya?",
-            "text": "Unki detailed book De revolutionibus 1543 mein publish hui, jis saal unki death bhi hui. Ek popular story kehti hai ki printed copy unhe deathbed par mili, lekin iska confirmation nahi hai. Beech ke saalon mein unke student Rheticus ne 1540 mein unke model ka summary bhi publish kiya."
+            "heading": "Publication saalon se ruki thi",
+            "text": "De revolutionibus ka main kaam 1530s mein lagbhag poora ho chuka tha. Par Copernicus print karwane se rok kar baithe the; unhe darr tha ki arguments ka mazak udega aur opposition aayegi. 1540s mein Georg Joachim Rheticus, ek young German professor, unke paas aaye aur unhe publish karwane pe raazi kiya."
           },
           {
-            "heading": "Problem kya thi?",
-            "text": "Purane astronomy models ko planets ki sky mein badalti positions explain karni hoti thi. Kabhi planet baaki taaron ke comparison mein peeche jaata dikhta hai. Is movement ko retrograde motion kehte hain. Copernicus ne socha ki agar Earth bhi Sun ke around move kare, toh is apparent backward motion ko alag tarah samjha ja sakta hai."
+            "heading": "Rheticus gaya, control kisi aur ke haath aa gaya",
+            "text": "Printing Nuremberg mein Johannes Petreius ke press se ho rahi thi. Rheticus khud supervise kar rahe the, par unhe beech mein sheher chhodna pada. Kaam Andreas Osiander ke haath aaya — ek Lutheran theologian, jo Copernicus ko jaante tak nahi the."
           },
           {
-            "heading": "Idea aur book mein antar",
-            "text": "Ek early note mein basic idea share karna aur poori book mein calculations aur planetary models publish karna alag kaam hain. Copernicus ne handwritten Commentariolus mein early proposal diya. Rheticus ka 1540 account bhi printed main book se pehle available tha. Isliye “idea sirf 1543 mein aaya” kehna galat hoga."
+            "heading": "Osiander ne anonymous preface joda",
+            "text": "Osiander ne 'Ad lectorem' — reader ke naam — ek bina signature wala preface jod diya. Uska core argument: astronomy ke hypotheses ko sach hona zaroori nahi, sirf calculation ke liye useful hona kaafi hai. Ye bilkul wahi position thi jise poori kitaab contradict karti thi — Copernicus ka claim physical tha, mathematical trick nahi."
           },
           {
-            "heading": "Important kyun tha?",
-            "text": "Sun-centred model ne astronomy ko Earth ki moving position consider karne ka naya framework diya. Lekin Copernicus ke model mein circular motions bhi the; woh aaj ka complete solar-system model nahi tha. Later observations aur Kepler ke mathematical work ne picture improve ki. Deathbed wali printed-copy story historically attractive hai, par uncertain detail ko confirmed fact nahi kehna chahiye."
+            "heading": "Apne log gusse mein the, par naam nahi tha",
+            "text": "Copernicus ke dost Tiedemann Giese aur Rheticus ko jab pata chala to wo bhadak gaye; reports ke mutabik Rheticus ne apni copies mein preface ko kaat ya kaala kar diya. Par kitaab chhap chuki thi aur preface bina author ke naam ke tha — isliye decades tak log ise Copernicus ka apna shabd maante rahe."
+          },
+          {
+            "heading": "Author ka pata Kepler ne lagaya",
+            "text": "Preface ka asli author 17th century ki shuruaat tak identify nahi hua. Johannes Kepler ne purani copies pe likhe notes aur Nuremberg ke records se Osiander ka naam pakda. Tab tak ye preface do taraf se use ho chuka tha: iske basis pe kaha jaata tha ki heliocentrism sirf ek calculation device hai. 1616 mein De revolutionibus ko 'correct karne tak' suspend kiya gaya, aur 1633 mein Galileo ka trial isi tension ka nateeja tha."
           }
         ],
-        "real_world_connection": "Jaise koi inventor idea saalon pehle notebook mein likh sakta hai, lekin product ya book bahut baad publish karta hai.",
+        "real_world_connection": "Ye ek permanent sabak hai: kisi text ke aage laga hua framing-note uska matlab badal sakta hai, chahe author ne use likha hi na ho. Aaj bhi research papers ke abstracts aur press releases isi wajah se dispute bante hain.",
         "reality_check": {
-          "established": "Idea 1543 se decades pehle circulate ho raha tha.",
-          "misconception": "Deathbed copy milne ki kahani ko confirmed fact nahi samajhna chahiye."
+          "established": "De revolutionibus 1543 mein chhapi, aur uska anonymous preface Osiander ka tha — Kepler ne identify kiya.",
+          "misconception": "Wo preface Copernicus ne khud likha tha — decades tak log yahi maante rahe."
         },
-        "status": "Proven",
+        "status": "Proven: the unauthorised preface is documented",
         "sources": [
           {
-            "title": "ESA: Copernicus and publication",
-            "url": "https://www.esa.int/Science_Exploration/Space_Science/24_May"
+            "title": "Stanford Encyclopedia of Philosophy: Nicolaus Copernicus",
+            "url": "https://plato.stanford.edu/entries/copernicus/"
           }
         ]
       }
@@ -550,16 +554,16 @@
       "day": 12,
       "category": "Mathematics ki jung",
       "card": {
-        "title": "Calculus kisne banaya: Newton ya Leibniz?",
-        "hook": "Ek ne pehle ideas banaye, doosre ne pehle publish kiya. Phir inquiry ka judge kaun bana?",
+        "title": "Do log, ek hi invention: credit kis ko — aur judge khud party tha?",
+        "hook": "Newton ne ideas pehle banaye, Leibniz ne pehle publish kiya. 1712 ki Royal Society report Newton ke favour mein gayi — par wo Newton ne khud, anonymously likhi thi.",
         "cta": "Puri kahani padhein"
       },
       "detail": {
-        "real_life_scene": "Moving car ki speed har second badalti hai. Badlaav ko samajhne ke liye maths ka ek tool kaam aata hai: calculus.",
+        "real_life_scene": "1684 mein Leibniz ne apna notation chhapa; Newton ka Principia 1687 mein aaya. 1712 mein Royal Society ki report ne Newton ko priority di — wo report Newton ne khud, anonymously likhi thi.",
         "central_question": "Kya calculus sirf ek scientist ne banaya tha?",
         "explanation": [
           {
-            "heading": "Kya hua tha?",
+            "heading": "Problem: changing quantities ko likhein kaise?",
             "text": "Isaac Newton ne 1660s mein changing quantities ko study karne ke methods develop kiye. Gottfried Wilhelm Leibniz ne alag tareeke se similar ideas develop kiye aur 1684 mein publish kiya."
           },
           {
@@ -584,7 +588,7 @@
           "established": "Newton ne pehle ideas develop kiye aur Leibniz ne pehle publish kiya; independent development historical consensus hai.",
           "misconception": "Leibniz ne calculus chori kiya tha, yeh established fact nahi hai."
         },
-        "status": "Proven",
+        "status": "Proven: independent invention; Newton wrote the 1712 report himself",
         "sources": [
           {
             "title": "Historical account of dispute",
@@ -601,16 +605,16 @@
       "day": 13,
       "category": "Science aur war",
       "card": {
-        "title": "Heisenberg: nuclear bomb ki galti jaanbujhkar thi?",
-        "hook": "Ek famous physicist Nazi Germany ke project mein tha. Kya usne bomb rokne ke liye calculation bigaadi?",
+        "title": "Agar Heisenberg ne galti jaanbujhkar ki hoti, to Hitler ke paas bomb nahi hota?",
+        "hook": "Germany ka bomb programme fail hua. Sawaal: kya uske lead physicist ne ise jaanbujhkar fail kiya? 1945 mein chhupkar record ki gayi baatcheet aaj bhi maujood hai.",
         "cta": "Puri kahani padhein"
       },
       "detail": {
-        "real_life_scene": "Ek complicated project fail ho toh log poochte hain: team se galti hui ya kisi ne jaanbujhkar delay kiya?",
+        "real_life_scene": "6 August 1945 ki raat, Farm Hall: British intelligence ne detained German scientists ki baatcheet chhupkar record ki. Hiroshima ki khabar sunte hi reactions record hue — aur historians aaj bhi unke matlab pe disagree karte hain.",
         "central_question": "Kya Heisenberg ne Germany ka bomb project secretly sabotage kiya?",
         "explanation": [
           {
-            "heading": "Kya hua tha?",
+            "heading": "Problem: bomb ke liye kitna material chahiye?",
             "text": "Werner Heisenberg World War II ke dauran German nuclear research se jude the. Bomb ke liye zaroori material ki minimum amount ko critical mass kaha jaata hai."
           },
           {
@@ -635,7 +639,7 @@
           "established": "German bomb programme successful nahi hua aur historical recordings available hain.",
           "misconception": "Ek galat number ne akela Germany ko bomb banane se roka, ya sabotage proven hai: dono claims oversimplified hain."
         },
-        "status": "Divided",
+        "status": "Divided: whether his failure was error or deliberate",
         "sources": [
           {
             "title": "Historical analysis of Bohr letters",
@@ -648,16 +652,16 @@
       "day": 14,
       "category": "Scientists ki kahani",
       "card": {
-        "title": "Indian scientist ki star theory ko senior ne reject kar diya",
-        "hook": "Ek young scientist ne dead stars ki limit nikali. Ek powerful astronomer ne usse publicly challenge kiya.",
+        "title": "Agar mare hue taare ka wazan limit paar kar le, to wo kabhi na rukega?",
+        "hook": "Ek 19-saal ke student ne nikala ki white dwarf ek limit se bhaari nahi ho sakta. Tab ke sabse bade astronomer ne sabke saamne ise 'stellar buffoonery' kah diya.",
         "cta": "Puri kahani padhein"
       },
       "detail": {
-        "real_life_scene": "Aapne kabhi balloon mein bahut zyada hawa bhari ho, toh pata hoga ki har structure ki limits hoti hain.",
+        "real_life_scene": "11 January 1935, Royal Astronomical Society, London: 24-saal Subrahmanyan Chandrasekhar ne apna result present kiya. Eddington — jinhone unhe encourage kiya tha — ne sabke saamne ise 'stellar buffoonery' kaha.",
         "central_question": "Kya kisi dead star ke liye bhi weight ki limit hoti hai?",
         "explanation": [
           {
-            "heading": "Kya hua tha?",
+            "heading": "Problem: white dwarf kitna bhaari ho sakta hai?",
             "text": "Subrahmanyan Chandrasekhar ne white dwarf naam ke very dense star remnants ko study kiya. Unki maths ne dikhaya ki ordinary white dwarf ke liye mass ki ek upper limit hoti hai; typical value roughly Sun ke mass ki 1.4 times hai."
           },
           {
@@ -682,7 +686,7 @@
           "established": "Ordinary white dwarfs ke liye mass limit established physics hai.",
           "misconception": "Har star jo Sun se 1.4 times heavy hai seedha black hole banega, yeh sahi nahi: relevant mass aur star ki situation matter karti hai."
         },
-        "status": "Proven",
+        "status": "Proven: the limit is established; Eddington's objection was wrong",
         "sources": [
           {
             "title": "Chandrasekhar 1931 original paper",
@@ -695,16 +699,16 @@
       "day": 15,
       "category": "Physics ki kahani",
       "card": {
-        "title": "Impossible crystal dekha—aur baad mein Nobel mila",
-        "hook": "Scientist ko microscope mein aisa pattern mila jo purani textbook expectations se match nahi karta tha.",
+        "title": "Agar ek pattern crystal mein namumkin ho, par microscope mein dikhe?",
+        "hook": "1982 mein Shechtman ko microscope mein aisa pattern mila jo crystal ki definition todta tha. Unhe apni hi lab se nikaal diya gaya — 29 saal baad Nobel mila.",
         "cta": "Puri kahani padhein"
       },
       "detail": {
-        "real_life_scene": "Floor tiles mein ek design baar-baar repeat hota hai. Lekin orderly patterns hamesha repeat ho, zaroori nahi.",
+        "real_life_scene": "8 April 1982, Maryland: Dan Shechtman electron microscope mein Al-Mn alloy ka diffraction pattern dekh rahe the — 10-fold symmetry, jo crystal mein namumkin maani jaati thi. Unki lab notebook mein wahi hairat likhi mili.",
         "central_question": "Kya atoms orderly ho sakte hain bina regular repeating pattern ke?",
         "explanation": [
           {
-            "heading": "Kya hua tha?",
+            "heading": "Problem: crystal ka matlab hi kya hai?",
             "text": "1982 mein Dan Shechtman ne aluminium aur manganese ke material par electron beam se test kiya. Beam se bana pattern unusual symmetry dikha raha tha. Us samay scientists generally crystalline structures ko repeating patterns ke roop mein samajhte the."
           },
           {
@@ -729,7 +733,7 @@
           "established": "Quasicrystals exist karte hain aur unki atomic arrangement ordered lekin non-periodic ho sakti hai.",
           "misconception": "Unusual result ko turant sach maan lena science nahi: independent evidence bhi zaroori hai."
         },
-        "status": "Proven",
+        "status": "Proven: quasicrystals are real; the 2011 Nobel is documented",
         "sources": [
           {
             "title": "Nobel: quasicrystals explained",
@@ -742,45 +746,49 @@
       "day": 16,
       "category": "Biology aur medicine",
       "card": {
-        "title": "Ulcer ka cause stress hi nahi—bacteria bhi ho sakte hain",
-        "hook": "Ek doctor ne apne hi experiment mein bacteria pi liya. Par kya unhe ulcer hua tha?",
+        "title": "Agar ulcer stress se hota hai, to antibiotics se theek kyun ho jaata hai?",
+        "hook": "Ulcer ka ilaaj tha: acid kam karo, zindagi bhar. Phir do doctors ne kaha cause ek bacterium hai. Par acid mein koi zinda kaise? Ek ne lab ka bacteria khud pee liya.",
         "cta": "Puri kahani padhein"
       },
       "detail": {
-        "real_life_scene": "Pet mein dard ya jalan ho toh log kabhi-kabhi kehte hain: tension kam lo. Lekin har problem ka reason stress nahi hota.",
-        "central_question": "Kya pet ke ulcers mein bacteria ka role ho sakta hai?",
+        "real_life_scene": "Perth, Australia: pathologist Robin Warren ko stomach biopsies mein chhote curved bacteria dikhe — lagbhag 50% patients mein. Unka crucial observation: inflammation hamesha bacteria ke bilkul paas ki mucosa mein tha.",
+        "central_question": "Ulcer ka asli cause stress aur spicy khana hai, ya ek infection?",
         "explanation": [
           {
-            "heading": "Kya hua tha?",
-            "text": "1980s mein Robin Warren aur Barry Marshall ne pet mein bacteria aur inflammation ke connection ko investigate kiya. Unhone 1984 mein gastritis aur peptic ulcers wale patients ki findings publish ki."
+            "heading": "Dogma: acid mein koi zinda nahi reh sakta",
+            "text": "Us waqt ka consensus tha ki stomach ka acid itna tez hai ki wahan koi organism survive nahi kar sakta. Isliye peptic ulcer ko chronic aur lifestyle-driven maana jaata tha, aur treatment ka matlab tha acid suppress karna — dawaiyan roz, saalon tak. Ek infectious theory ka matlab tha poora model badalna."
           },
           {
-            "heading": "Aage kya samajh aaya?",
-            "text": "Marshall ne self-experiment mein bacteria piye aur unhe gastritis, yaani stomach lining ki inflammation, hui; us experiment mein unhone ulcer develop karne ka claim nahi kiya. Further research ne Helicobacter pylori infection aur kai ulcers ka link establish kiya."
+            "heading": "Marshall ne culture karke sabit kiya",
+            "text": "Young clinical fellow Barry Marshall, Warren ke findings mein interested hue. Dono ne 100 patients ki biopsies ka study shuru kiya. Kai attempts ke baad Marshall ek unknown species culture karne mein kaamyaab hue — baad mein Helicobacter pylori. Wo organism lagbhag har gastritis, duodenal ulcer aur gastric ulcer patient mein mila."
           },
           {
-            "heading": "Ulcer kya hai aur problem kyun thi?",
-            "text": "Stomach ya small intestine ki starting part ki protective lining damage ho kar sore bana sakti hai; ise peptic ulcer kehte hain. Pain aur bleeding possible hain. Pehle treatment often symptoms aur acid control par focus karta tha. Agar underlying cause identify kiya ja sake, treatment aur recurrence prevention better ho sakti hai."
+            "heading": "Marshall ne khud pe experiment kiya",
+            "text": "1984 mein Marshall ne lab mein ugaya H. pylori khud pee liya. Unhe gastritis hui — nausea aur vomiting ke saath — aur phir antibiotics se theek hue. Ye human volunteer study Koch ke postulates ke liye zaroori thi. Dhyan rahe: unhe gastritis hui, ulcer nahi — ye distinction important hai."
           },
           {
-            "heading": "Bacteria ka clue",
-            "text": "Warren ne stomach lining samples mein curved bacteria observe kiye. Marshall ke saath unhone infection, inflammation aur ulcer patients ke findings investigate ki. Bacterium ka naam Helicobacter pylori hai. Bacteria stomach ki protective environment ko affect kar sakte hain; lekin infection wale har person ko ulcer nahi hota."
+            "heading": "Aur phir model badal gaya",
+            "text": "Ulcer acid suppress karne se heal toh ho jaate the, par baar-baar laut aate the — kyunki bacteria aur chronic inflammation bane rehte the. Treatment studies ne dikhaya ki patients tabhi theek hue jab bacteria eradicated hua. 1994 mein NIH consensus conference ne peptic ulcer ke liye antibiotics endorse kiye."
           },
           {
-            "heading": "Treatment aur reality check",
-            "text": "H. pylori-related ulcer mein clinician antibiotics aur acid-reducing medicines ka combination prescribe kar sakte hain. Kuch ulcers pain medicines jaise NSAIDs se bhi related hote hain. Marshall ke self-experiment mein gastritis hui, ulcer nahi: dono ko confuse na karein. Black stool, blood vomiting, severe pain ya faintness emergency signs ho sakte hain; urgent medical care lein. Apni medicines bina clinician se baat kiye khud band ya start na karein."
+            "heading": "Aaj kitna established hai",
+            "text": "Nobel Assembly ke mutabik ab firmly established hai ki H. pylori 90% se zyada duodenal ulcers aur 80% tak gastric ulcers cause karta hai. Ye link human volunteer studies, antibiotic trials aur epidemiology — teeno se bana. Ulcer ab chronic, disabling condition nahi, balki antibiotics aur acid inhibitors ke short course se curable disease hai."
+          },
+          {
+            "heading": "Jo abhi bhi khula hai",
+            "text": "Duniya ki aadhi se zyada population mein H. pylori hai, par zyada tar logon ko ulcer ya cancer nahi hota. Kaun se strain dangerous hain aur host genetics ka kitna role hai — ye poori tarah settled nahi. Antibiotics pe resistance badh rahi hai, jisse eradication failure rates kai jagah upar ja rahe hain. 2005 mein Warren aur Marshall ko Nobel mila."
           }
         ],
-        "real_world_connection": "Correct diagnosis se treatment badal sakta hai: kuch H. pylori infections mein doctor antibiotics prescribe karte hain.",
+        "real_world_connection": "Aaj H. pylori ka test ek simple breath ya stool test hai, aur eradication therapy 10-14 din ki hoti hai. Par resistance ki wajah se treatment fail hone par doosri line chahiye — isliye confirmatory test ab routine ban raha hai.",
         "reality_check": {
-          "established": "H. pylori kai peptic ulcers ka major cause hai.",
-          "misconception": "Sabhi ulcers isi bacteria se nahi hote, aur self-experiment karna dangerous hai."
+          "established": "H. pylori 90%+ duodenal aur ~80% gastric ulcers ka cause hai; antibiotics se cure hota hai — 2005 Nobel.",
+          "misconception": "Ulcer stress ya spicy khane se hota hai aur life-long antacid chahiye — 1982 ka ye model galat nikla."
         },
-        "status": "Proven",
+        "status": "Proven: infectious cause established; why only some fall ill is open",
         "sources": [
           {
-            "title": "Nature: Marshall and Warren",
-            "url": "https://www.nature.com/articles/437801a"
+            "title": "Nobel Prize in Physiology or Medicine 2005 — press release",
+            "url": "https://www.nobelprize.org/prizes/medicine/2005/press-release/"
           }
         ]
       }
@@ -789,16 +797,16 @@
       "day": 17,
       "category": "Body aur brain",
       "card": {
-        "title": "Kya bada hone ke baad brain naye cells banata hai?",
-        "hook": "Do research teams ne human brain study kiya—aur unke answers ek jaise nahi the.",
+        "title": "Agar bada hone ke baad bhi brain naye cells banata rahe, to kya badlega?",
+        "hook": "Jawab se memory aur depression ka ilaaj badal sakta hai. Par 2018 mein do papers ek saath aaye aur ek doosre ko kaat diya: naye neurons bante hain, ya nahi?",
         "cta": "Puri kahani padhein"
       },
       "detail": {
-        "real_life_scene": "Exercise se muscles change hote hain aur practice se skills improve hoti hain. Brain ke andar kya naye nerve cells bhi ban sakte hain?",
+        "real_life_scene": "2018 mein do papers lagbhag ek saath aaye aur ulta nateeja diya: ek kehta hai adult human hippocampus mein naye neurons bante rehte hain, doosra kehta hai bachpan ke baad ye lagbhag ruk jaata hai.",
         "central_question": "Adults ke brain ke memory-related area mein naye neurons kitne bante hain?",
         "explanation": [
           {
-            "heading": "Kya hua tha?",
+            "heading": "Problem: brain ke cells fix hain ya badalte rehte hain?",
             "text": "Neurons brain ke cells hain jo information pass karne mein help karte hain. Hippocampus brain ka ek area hai jo memory mein important role nibhata hai."
           },
           {
@@ -823,7 +831,7 @@
           "established": "Adult human hippocampus mein naye neurons ki extent par evidence aur interpretations differ karte hain.",
           "misconception": "Brain learning karta hai, iska matlab zaroori nahi ki har learning event naye neurons se hi hota hai."
         },
-        "status": "Divided",
+        "status": "Divided: 2018 ke do papers ne ulta nateeja diya",
         "sources": [
           {
             "title": "Researchers compare the evidence",
@@ -836,12 +844,12 @@
       "day": 18,
       "category": "Science aur technology",
       "card": {
-        "title": "Cold fusion: kya normal temperature par bahut energy mil gayi thi?",
-        "hook": "1989 mein do scientists ne kaha ki unhone ek simple-looking experiment se extra heat paayi. Agar unka idea sahi hota, duniya ki energy research kyun badal sakti thi?",
+        "title": "Agar room temperature pe fusion mil jaaye, to energy ki duniya badal jaaye?",
+        "hook": "1989 mein do scientists ne yahi dawa kiya: palladium, heavy water aur bijli. Announcement peer review se pehle TV pe chali. DOE ise aaj bhi convincing nahi maanta.",
         "cta": "Puri kahani padhein"
       },
       "detail": {
-        "real_life_scene": "Ghar ki lights, fans aur phones ko electricity chahiye. Scientists long term mein energy dene wale sources dhoondhte hain.",
+        "real_life_scene": "23 March 1989, Salt Lake City: University of Utah mein ek press conference hui — peer-reviewed paper se pehle. TV pe announcement chali, aur doosri labs turant wahi experiment repeat karne lagi.",
         "central_question": "Kya do atoms ke centres ko normal laboratory temperature ke aas-paas jodkar useful energy mil sakti hai?",
         "explanation": [
           {
@@ -891,16 +899,16 @@
       "day": 19,
       "category": "Physics ka raaz",
       "card": {
-        "title": "Ek neutron kitni der zinda rehta hai? Do methods, alag jawab",
-        "hook": "Ek particle ki average life measure karne par experiments ke answers mein seconds ka difference kyun hai?",
+        "title": "Ek hi particle ki umar, do methods, 8 second ka fark — kisko galat kahen?",
+        "hook": "Neutron ki umar decide karti hai ki early universe mein kitna helium bana. Do teams alag tarike se naapti hain — jawab ~8 second alag aate hain. Kisko galat kahen?",
         "cta": "Puri kahani padhein"
       },
       "detail": {
-        "real_life_scene": "Agar do clocks ek hi race ka time alag dikhayen, toh pehle clocks aur measurement methods check karte hain.",
+        "real_life_scene": "Do methods hain: 'bottle' mein neutrons rok kar ginti karo, ya 'beam' mein decay products gino. Dono saalon se chal rahe hain, dono careful hain — aur dono ke jawab ~8 second alag aate hain.",
         "central_question": "Free neutron ki lifetime alag methods se alag kyun milti hai?",
         "explanation": [
           {
-            "heading": "Kya hua tha?",
+            "heading": "Problem: ek particle ki umar naapein kaise?",
             "text": "Neutron atoms ke centre mein milne wala ek particle hai. Atom se bahar free neutron stable nahi rehta: woh doosre particles mein badal sakta hai."
           },
           {
@@ -925,7 +933,7 @@
           "established": "Measurement methods ke beech discrepancy documented hai.",
           "misconception": "Difference se automatically new particle ya new physics prove nahi hoti."
         },
-        "status": "Still Unsolved",
+        "status": "Still unsolved: bottle aur beam methods ~8 second apart",
         "sources": [
           {
             "title": "NIST: neutron lifetime discrepancy",
@@ -938,16 +946,16 @@
       "day": 20,
       "category": "Space ka puzzle",
       "card": {
-        "title": "Mercury ke paas invisible planet? Scientists ne Vulcan kyun dhoondha",
-        "hook": "Planet ke orbit mein ek chhoti problem thi. Kuch astronomers ne socha, shayad ek aur planet chhupa hai.",
+        "title": "Agar extra ghumaav kisi planet se hai, to wo planet dikhta kyun nahi?",
+        "hook": "1859 se astronomers ek aisa planet dhoondh rahe the jo kabhi nahi mila. Vulcan 56 saal textbooks mein raha — phir Einstein ne wahi number bina planet nikal diya.",
         "cta": "Puri kahani padhein"
       },
       "detail": {
-        "real_life_scene": "Agar kisi moving object ka route prediction se alag nikle, toh hum dekhte hain ki koi extra force ya obstacle toh nahi.",
+        "real_life_scene": "1859 mein Le Verrier ne kaha Mercury ki orbit ka extra precession kisi unseen planet se hai. November 1915 mein Einstein ne wahi number general relativity se nikala — bina koi planet maange.",
         "central_question": "Kya Mercury ke orbit ko explain karne ke liye ek unseen planet zaroori tha?",
         "explanation": [
           {
-            "heading": "Kya hua tha?",
+            "heading": "Problem: Mercury ki orbit ka extra ghumaav",
             "text": "19th century mein Mercury ke orbit ki direction dheere-dheere badalne ka ek chhota hissa calculations se match nahi kar raha tha. Urbain Le Verrier ne suggest kiya ki Sun aur Mercury ke beech ek planet ho sakta hai; use Vulcan naam diya gaya."
           },
           {
@@ -972,7 +980,7 @@
           "established": "Einstein ki theory Mercury ke anomalous orbital shift ko explain karti hai.",
           "misconception": "Vulcan ek real confirmed solar-system planet nahi hai."
         },
-        "status": "Disproven",
+        "status": "Disproven: no planet; the missing precession came from curved spacetime",
         "sources": [
           {
             "title": "NASA: Mercury and hypothetical Vulcan",
@@ -985,45 +993,53 @@
       "day": 21,
       "category": "Brain aur perception",
       "card": {
-        "title": "Impossible medicine? Fake pill se pain kam kaise ho sakta hai",
-        "hook": "Kabhi treatment par bharosa feel hone se symptoms mein badlaav aa sakta hai. Lekin ismein recovery aur expectations ko kaise alag karein?",
+        "title": "Agar nakli operation asli jitna kaam kare, to ilaaj kya hai?",
+        "hook": "2002 mein 180 patients ki knee surgery hui — kuch ko sirf teen 1 cm ke skin cuts mile, andar kuch nahi. Do saal baad teeno groups ka dard barabar tha.",
         "cta": "Puri kahani padhein"
       },
       "detail": {
-        "real_life_scene": "Doctor ki reassurance milne ke baad kabhi aap thoda better feel karte hain, chahe medicine ne abhi kaam shuru na kiya ho.",
-        "central_question": "Kya treatment ki expectation bhi body ke experience ko affect kar sakti hai?",
+        "real_life_scene": "2002, Houston VA: 180 patients ko knee surgery ke liye randomise kiya gaya — kuch ko sirf 1 cm ke teen skin cuts mile, andar kuch nahi kiya. Do saal baad teeno groups ka dard barabar tha.",
+        "central_question": "Placebo asli biology hai, ya sirf report karne ka tareeka?",
         "explanation": [
           {
-            "heading": "Kya hua tha?",
-            "text": "Placebo ek inactive treatment ho sakta hai, jaise bina active medicine ki pill, jo research comparison mein di jaati hai. Kuch situations mein expectations aur care ka context pain jaise experiences ko affect karte hain."
+            "heading": "35% wala number kahan se aaya",
+            "text": "1955 mein Henry Beecher ne 'The Powerful Placebo' paper likha aur conclude kiya ki 35.2% cases mein placebo se real improvement hua. Ye number decades tak citation banta raha. Problem: Beecher ne placebo group ko treatment se pehle wali halat se compare kiya tha — isme bimari ka natural course, regression to the mean aur baaki factors alag nahi ho paate."
           },
           {
-            "heading": "Aage kya samajh aaya?",
-            "text": "Lekin placebo group mein improvement ka har hissa expectation se nahi hota: illness naturally better ho sakti hai ya symptoms badal sakte hain. Isi liye researchers carefully designed comparisons use karte hain."
+            "heading": "2001 ka review ulta bola",
+            "text": "Hróbjartsson aur Gøtzsche ne NEJM mein 130 trials identify kiye, 114 analyse kiye — wo trials jisme placebo ki tulna 'kuch na dena' se hui thi. Binary outcomes (32 trials, 3,795 patients) pe koi significant effect nahi, chahe outcome subjective ho ya objective. Continuous outcomes (82 trials, 4,730 patients) pe benefit mila, par wo sample size badhne par chhota hota gaya — small-study bias ka signature."
           },
           {
-            "heading": "Pain mein brain ka role",
-            "text": "Pain sirf injured tissue ka simple on-off alarm nahi; nervous system body signals, attention, expectation aur context ko process karta hai. Iska matlab pain imaginary nahi hai. Placebo treatment ek comparison ho sakta hai jisme specific active medicine nahi hoti, jaise inactive pill. Patient ko milne wali care aur expectation experience ko influence kar sakti hain."
+            "heading": "Sirf dard pe asar dikha",
+            "text": "27 pain trials mein placebo ka beneficial effect significant tha: 100 mm visual-analogue scale pe dard ~6.5 mm kam. Paper ka conclusion seedha tha — placebos ke powerful clinical effects ka 'little evidence' hai, aur clinical trials ke setting ke bahar placebo use karne ka koi justification nahi."
           },
           {
-            "heading": "Research mein iska use",
-            "text": "Agar medicine lene ke baad kisi ka pain kam hota hai, toh improvement ki ek se zyada wajah ho sakti hai: natural recovery, symptom ka up-down hona, active medicine, ya treatment context. Controlled studies groups compare karti hain. Blinding ka matlab patient ya researcher ko na batana ki kis group mein kaunsa treatment mila, jab study design allow kare."
+            "heading": "Sham surgery ne sabse bada jhatka diya",
+            "text": "Moseley aur team ne Houston VA mein 180 knee-osteoarthritis patients ko teen groups mein baanta: arthroscopic debridement, lavage, aur placebo surgery. Placebo group mein sirf 1 cm ke teen skin incisions lage; surgeon ne instruments maange aur knee ko aise manipulate kiya jaise arthroscopy ho rahi ho, aur saline chhidka taaki lavage ki awaaz aaye. Andar koi instrument gaya hi nahi."
           },
           {
-            "heading": "Limit aur ethics",
-            "text": "Placebo group mein improvement ka har part “mind ne cure kiya” nahi hota. Kuch placebo responses pain perception affect kar sakte hain; yeh bacteria ko antibiotic ki tarah nahi maarte. Placebo research aur real clinical care mein informed consent aur honesty important hain. Serious disease ka effective treatment bina medical advice ke fake pill se replace nahi karna chahiye."
+            "heading": "Blinding itni tight thi ki patients raat bhar hospital rahe",
+            "text": "Patients aur outcome assessors dono blinded the. Placebo group ke patients procedure ke baad raat bhar hospital rahe, un nurses ke saath jinhe group assignment nahi pata tha. 165 ne trial poora kiya, 24 mahine follow-up hua. Nateeja: kisi bhi point pe asli surgery wale groups ne placebo group se kam dard ya better function report nahi kiya. Us waqt aisi ~650,000 procedures saalana hoti thin, ~$5,000 each."
+          },
+          {
+            "heading": "Mechanism asli hai — isliye divide hai",
+            "text": "Placebo analgesia sirf 'sochne' ka asar nahi: naloxone — jo opioid receptors block karta hai — placebo se mili raahat ko kam kar sakta hai, matlab body apne endogenous opioids release karti hai. 2010 mein Kaptchuk ki team ne 80 IBS patients ko saaf bataya ki pills placebo hain, aur open-label group ne zyada relief report kiya. Ulta effect nocebo bhi measurable hai: bataye gaye side effects bina active substance ke aa sakte hain."
           }
         ],
-        "real_world_connection": "New medicines ke trials mein comparison groups se samajhne ki koshish hoti hai ki actual medicine ka extra benefit kitna hai.",
+        "real_world_connection": "Practical asar bada hai: clinical trials mein placebo response badh rahi hai, jisse nayi pain aur antidepressant dawaiyon ko approve karwana mushkil ho gaya hai. Aur 'placebo' Latin se aaya hai — 'main khush karunga'.",
         "reality_check": {
-          "established": "Kuch placebo responses measurable hain, especially pain-related research mein.",
-          "misconception": "Fake pill serious disease ka proven replacement nahi hai; prescribed medicine khud se band na karein."
+          "established": "Placebo dard ko measurable tarike se kam kar sakta hai — 100 mm scale pe ~6.5 mm — aur naloxone se block ho jaata hai.",
+          "misconception": "Placebo har bimari theek kar sakta hai — 2001 review ko objective aur binary outcomes pe koi significant effect nahi mila."
         },
-        "status": "Proven",
+        "status": "Divided: pain relief is measurable; clinical power is contested",
         "sources": [
           {
-            "title": "Nature Reviews Neuroscience: placebo effects",
-            "url": "https://www.nature.com/articles/nrn3404"
+            "title": "Hróbjartsson & Gøtzsche 2001, NEJM — Is the placebo powerless?",
+            "url": "https://doi.org/10.1056/NEJM200105243442106"
+          },
+          {
+            "title": "Moseley et al. 2002, NEJM — sham arthroscopic knee surgery",
+            "url": "https://doi.org/10.1056/NEJMoa013259"
           }
         ]
       }
@@ -1032,45 +1048,49 @@
       "day": 22,
       "category": "Probability",
       "card": {
-        "title": "23 log aur same birthday: chance 50 percent se upar?",
-        "hook": "Ek classroom mein do logon ka same birthday hona aapko coincidence lagta hai? Probability kuch aur kehti hai.",
+        "title": "Sirf 23 log, aur do ka birthday same hone ka chance 50% se zyada?",
+        "hook": "Sunne mein galat lagta hai. Isi gap se 2009 mein Bulgarian lottery ke do draws mein wahi cheh numbers nikle aur sarkar ne fraud probe bithaya. Fraud nahi mila.",
         "cta": "Puri kahani padhein"
       },
       "detail": {
-        "real_life_scene": "Class ya office mein jab do log same date par birthday celebrate karte hain, sabko surprise hota hai.",
-        "central_question": "Sirf 23 logon mein shared birthday itna likely kyun hai?",
+        "real_life_scene": "6 aur 10 September 2009: Bulgaria ki national lottery ne live TV pe do baar wahi cheh numbers nikale — 4, 15, 23, 24, 35, 42, sirf alag order mein. Sports Minister ne probe bithaya.",
+        "central_question": "Itne kam logon mein coincidence ka chance itna zyada kyun hota hai?",
         "explanation": [
           {
-            "heading": "Kya hua tha?",
-            "text": "Sawaal yeh nahi hai ki koi aapke birthday se match karega ya nahi. Sawaal hai ki group ke kisi bhi do logon ka birthday same hoga ya nahi."
+            "heading": "Intuition galat sawaal poochti hai",
+            "text": "Hum sochte hain: 'kisi ka birthday MERE birthday se match kare' — uske liye 50% chance tak pahunchne mein ~253 log chahiye. Par asli sawaal hai: 'group mein KOI do log match karein'. 23 logon mein pairs bante hain 253 — isliye chance 50% ke paar chala jaata hai. Wahi 253 number dono jagah aata hai, yehi confusion ki jad hai."
           },
           {
-            "heading": "Aage kya samajh aaya?",
-            "text": "23 logon se 253 alag pairs ban sakte hain. Simple maths model mein 365 dates equally likely aur birthdays independent maane jaate hain; leap day ignore hota hai. Is model mein at least ek matching pair ka chance lagbhag 50.7 percent hai."
+            "heading": "Exact numbers",
+            "text": "23 logon mein kam se kam ek shared birthday ka chance ~50.7% hai. 30 logon mein ~70%, 57 logon mein ~99%, aur 70 logon mein 99.9% se upar. Ye calculation exact hai, koi approximation nahi — sirf ye maanta hai ki birthdays lagbhag uniformly distributed hain (asliyat mein halka sa seasonal skew hota hai, jo chance ko aur badhata hai)."
           },
           {
-            "heading": "Problem ko sahi samjhein",
-            "text": "Aapke birthday se match dhoondhna aur kisi bhi do logon ke matching birthdays dhoondhna alag questions hain. Agar class mein 23 students hain, har student doosre students se compare ho sakta hai. Total possible pairs 23 × 22 ÷ 2, yaani 253 hain. Pairs ke opportunities bahut jaldi badhte hain."
+            "heading": "Bulgarian lottery ka kya hua",
+            "text": "Investigators ne 17 September 2009 ko bataya: koi wrongdoing nahi mila. Commission ne kaha fraud ya manipulation ka koi evidence nahi hai, aur lottery officials ne kaha machine ko tamper karna namumkin hai. Mathematicians ne odds ~1 in 4 million bataye. Yaani 'namumkin' lagne wali cheez statistically expected thi — bas bahut rare."
           },
           {
-            "heading": "Calculate kaise karte hain?",
-            "text": "Directly sab possible matches count karna awkward hai. Isliye pehle opposite event calculate karte hain: sabke birthdays different hon. Simplified model mein first person ka birthday koi bhi ho sakta hai. Second ka different hone ka chance 364/365 hai; third ka 363/365, aur aise hi aage. In chances ko multiply karke no-match chance milta hai."
+            "heading": "Sabse ajeeb hissa: 18 winners",
+            "text": "6 September wale draw mein koi nahi jeeta. Par 10 September ko 18 log jeete, har ek ko 10,164 leva (~$7,585). Wajah: bahut log pichhle hafte ke winning numbers dobara khelte hain, is umeed mein ki wo phir aayenge. Ek coincidence ne prize pool ko isliye tod diya, kyunki human behaviour predictable tha."
           },
           {
-            "heading": "Result ka matlab",
-            "text": "No-match probability ko 1 se subtract karne par at least ek match ka chance approximately 50.7% aata hai. Iska matlab har 23-person room mein match guaranteed nahi. Model leap day ignore karta hai aur dates ko equally likely aur independent maanta hai; real birth patterns thode different ho sakte hain. Yeh question statistics aur data collisions samajhne mein helpful hai."
+            "heading": "Ye sirf party trick nahi hai",
+            "text": "Isi maths pe 'birthday attack' chalta hai: cryptography mein hash function todne ke liye attacker ko kisi ek specific input se nahi, KISI bhi do colliding inputs se kaam chalta hai. Isliye secure hash ka size double kiya jaata hai. Digital signatures isi wajah se todi gayi hain."
+          },
+          {
+            "heading": "Aam zindagi mein kyun zaroori hai",
+            "text": "DNA database matching, duplicate detection aur 'koi do log ek hi din paida hue' jaise claims — sab mein pairs ka maths chalta hai. Ek rare event ka probability kam hota hai, par agar opportunities lakhon hain to uska hona lagbhag guaranteed hai. Isi wajah se 'impossible' coincidences roz hote hain."
           }
         ],
-        "real_world_connection": "Large group mein possible pairs rapidly badhte hain; matching passwords, names ya dates ki probability samajhne mein yeh thinking useful hai.",
+        "real_world_connection": "Bihar ke ek classroom mein 30 bachche hain to unme se do ka birthday match hone ka chance ~70% hai. Ye baat sunne mein jhooth lagti hai, par calculation exact hai — aur isi intuition-gap ka faida lottery aur fraud stories mein uthaya jaata hai.",
         "reality_check": {
-          "established": "Stated assumptions ke under answer roughly 50.7 percent hai.",
-          "misconception": "Yeh guarantee nahi ki har 23-person class mein shared birthday zaroor hoga."
+          "established": "23 logon mein ~50.7% chance hai — ye exact mathematics hai, aur 2009 Bulgarian probe ne fraud nahi paya.",
+          "misconception": "Itne kam logon mein match hona 'cheating' ka saboot hai — rare events bade number of opportunities mein expected hote hain."
         },
-        "status": "Proven",
+        "status": "Proven: the maths is exact; the 2009 lottery probe found no fraud",
         "sources": [
           {
-            "title": "MathWorld: Birthday Problem",
-            "url": "https://mathworld.wolfram.com/BirthdayProblem.html"
+            "title": "AP via San Diego Union-Tribune: Bulgaria probe says lottery repeat a fluke",
+            "url": "https://www.sandiegouniontribune.com/2009/09/17/bulgaria-probe-says-lottery-repeat-a-fluke/"
           }
         ]
       }
@@ -1079,16 +1099,16 @@
       "day": 23,
       "category": "Space aur technology",
       "card": {
-        "title": "NASA spacecraft ko kis force ne dheere kiya?",
-        "hook": "Pioneer spacecraft ka movement prediction se alag dikha. Kya gravity ke rules galat the?",
+        "title": "Agar spacecraft bina wajah dheere ho rahe hon, to gravity adhoori hai?",
+        "hook": "Pioneer 10 aur 11 prediction se thoda off chal rahe the — Sun ki taraf ek chhota unexplained push. Kuch ne kaha naya physics. Jawab 2012 mein purani tapes se nikla.",
         "cta": "Puri kahani padhein"
       },
       "detail": {
-        "real_life_scene": "Car mein headlights ke photons car ko technically opposite direction mein tiny push dete hain, lekin effect almost impossible to notice hota hai.",
+        "real_life_scene": "Pioneer 10 aur 11 ka trajectory data saalon se thoda off tha — Sun ki taraf ek chhota unexpected slowing effect. Purani data tapes dobara dhoondhni padi; 2012 tak analysis chala.",
         "central_question": "Door space mein spacecraft ke unexpected movement ka reason kya tha?",
         "explanation": [
           {
-            "heading": "Kya hua tha?",
+            "heading": "Problem: bina wajah ka push kahan se?",
             "text": "NASA ke Pioneer 10 aur 11 ke tracking data mein researchers ko bahut chhota unexpected slowing effect dikha. 1998 tak scientists ne possibility discuss ki ki kahin gravity ya koi unknown physics toh responsible nahi."
           },
           {
@@ -1113,7 +1133,7 @@
           "established": "Thermal radiation ka uneven push Pioneer anomaly ka strong explanation hai.",
           "misconception": "Unusual result ka matlab automatically existing physics wrong hona nahi hai."
         },
-        "status": "Proven",
+        "status": "Proven: thermal recoil explained it; new physics was not needed",
         "sources": [
           {
             "title": "NASA JPL: Pioneer anomaly",
@@ -1126,16 +1146,16 @@
       "day": 24,
       "category": "Astronomy",
       "card": {
-        "title": "Agar itne saare taare hain toh raat ka aasmaan kaala kyun?",
-        "hook": "Har direction mein dekhne par kya kisi na kisi star ki roshni nahi milni chahiye?",
+        "title": "Agar universe infinite aur hamesha se hai, to raat ka aasmaan kaala kyun?",
+        "hook": "Har direction mein dekhein to line of sight kisi taare pe khatm honi chahiye — poora aasmaan Suraj jitna bright. Wo dark hai. Matlab humari assumption galat hai.",
         "cta": "Puri kahani padhein"
       },
       "detail": {
-        "real_life_scene": "Raat ko kuch stars chamakte hain, lekin unke beech ka sky dark dikhta hai.",
+        "real_life_scene": "1823 mein Heinrich Olbers ne is puzzle ko popular kiya, aur paradox unke naam pe jud gaya. Jawab 20th century tak nahi aaya: universe ki observable history finite hai aur space expand hoti hai.",
         "central_question": "Stars hone ke bawajood poora sky bright kyun nahi hai?",
         "explanation": [
           {
-            "heading": "Kya hua tha?",
+            "heading": "Problem: raat ka aasmaan dark kyun?",
             "text": "19th century mein Heinrich Olbers se associated puzzle ne yeh question popular kiya. Ek imaginary universe lo jo hamesha se same ho, infinitely bada ho aur stars se uniformly bhara ho: us model mein har direction mein eventually star milna chahiye."
           },
           {
@@ -1160,7 +1180,7 @@
           "established": "Simple infinitely old static universe wali assumptions real observations se match nahi karti.",
           "misconception": "Stars ke beech space mein sirf dust hona poora aur sufficient explanation nahi hai."
         },
-        "status": "Proven",
+        "status": "Proven: finite age aur expansion se paradox resolve hota hai",
         "sources": [
           {
             "title": "Nature: historical analysis of Olbers paradox",
@@ -1173,45 +1193,53 @@
       "day": 25,
       "category": "Scientists aur environment",
       "card": {
-        "title": "Fridge ke chemicals Antarctica tak kaise pahunch gaye?",
-        "hook": "Scientists ne warning di ki everyday chemicals sky ki protective layer ko damage kar sakte hain.",
+        "title": "Satellite ke paas 6 saal ka data tha — ozone hole 1985 tak kyun nahi mila?",
+        "hook": "Nimbus 7 roz ~140,000 readings leta tha. Antarctica ki values itni kam aayi ki code ne unhe unreliable bolkar fill values se badal diya. Asli numbers dikhe nahi.",
         "cta": "Puri kahani padhein"
       },
       "detail": {
-        "real_life_scene": "Refrigerators aur older aerosol products mein use hone wale kuch chemicals bahut stable hote the.",
-        "central_question": "Kya ghar ke aas-paas use hua chemical door atmosphere tak effect kar sakta hai?",
+        "real_life_scene": "1982, Halley Bay: Joe Farman ka purana Dobson spectrophotometer 'haywire' ho gaya — aadha ozone gayab. Unhe laga machine kharab hai, isliye 1984 mein nayi lagayi. Nayi ne aur gehra hole dikhaya.",
+        "central_question": "Satellite ke paas 6 saal ka data tha, phir ozone hole 1985 tak kyun nahi mila?",
         "explanation": [
           {
-            "heading": "Kya hua tha?",
-            "text": "1974 mein Mario Molina aur Sherwood Rowland ne propose kiya ki CFC naam ke chemicals upper atmosphere tak pahunch sakte hain. Wahan sunlight unhe tod sakti hai aur chlorine-containing reactions ozone ko destroy kar sakti hain."
+            "heading": "1974 mein warning aa chuki thi",
+            "text": "Molina aur Rowland ne 1974 mein bataya ki CFCs stratosphere mein ozone tod sakte hain. CFCs fridge, AC aur aerosol cans mein the, aur chemically inert hone ki wajah se sabne unhe safe maana. US ne 1978 tak aerosol propellant par ban laga diya. Par kisi ne expect nahi kiya ki damage poore globe pe nahi, ek jagah aur ek season mein concentrated hoga."
           },
           {
-            "heading": "Aage kya samajh aaya?",
-            "text": "Ozone ki layer Sun ki harmful ultraviolet radiation ka ek important hissa absorb karti hai. 1985 mein British Antarctic Survey ke Joseph Farman aur colleagues ne Antarctic ozone loss report kiya."
+            "heading": "Code ne values ko unreliable bola",
+            "text": "Nimbus 7 ka TOMS instrument 1979 se roz ~140,000 readings le raha tha. Antarctic spring mein values itni low aayi ki processing code ne unhe unreliable flag kiya aur 'fill values' se badal diya. Data delete nahi hua — par scientists ko jo numbers dikhe wo asli nahi the, aur shak karne ki koi wajah nahi bachi."
           },
           {
-            "heading": "Ozone important kyun hai?",
-            "text": "Atmosphere ki upper layer mein ozone gas Sun ki harmful ultraviolet radiation ka ek important portion absorb karti hai. Ultraviolet light DNA damage kar sakti hai aur excessive exposure se skin cancer aur eye problems ka risk badhta hai. Protective layer thin hone se environmental aur health concerns badh sakte hain."
+            "heading": "Farman ne zameen se pakda",
+            "text": "British Antarctic Survey ke Farman, Gardiner aur Shanklin 1957 se ground-based Dobson instrument se naap rahe the. 16 May 1985, Nature: mid-October ozone 1975 se 1984 tak ~40% gir gaya. Shanklin ye data CFC ka dar galat saabit karne ke liye dekh rahe the — badle mein systematic decline mila. NASA ne raw data dobara khola aur wahi drop 1983 se dikha."
           },
           {
-            "heading": "Fridge chemicals ka safar",
-            "text": "CFCs refrigerants aur other products mein use hote the. Yeh lower atmosphere mein relatively stable hote hain, isliye hawa ke circulation ke saath long distances travel karke upper atmosphere tak pahunch sakte hain. Wahan ultraviolet sunlight unhe todkar chlorine release kar sakti hai. Chlorine reactions ozone destroy kar sakti hain aur chlorine repeated reactions mein participate kar sakta hai."
+            "heading": "Ab ye version khud disputed hai",
+            "text": "'NASA ne data phenk diya' — ye popular version contested hai. Bhartia (jisne data process kiya) kehte hain software ne delete nahi, flag aur substitute kiya. NASA ke McPeters ne 1990 mein likha ki team ne Farman se pehle hi low values ko real maan liya tha. Farman ka jawab: jo actually kaam mein tha, usse maine ye dawa kabhi nahi suna. Doosri galti: NASA ne pehle ise Antarctic spring ki normal variability samjha."
           },
           {
-            "heading": "Antarctica aur response",
-            "text": "1985 mein British Antarctic Survey ne Antarctic spring mein severe ozone loss report kiya. Cold polar conditions aur special clouds chemical reactions ko promote karte hain; isliye “hole” ek physical tear nahi, ozone concentration ka strong seasonal decrease hai. Montreal Protocol ne ozone-depleting substances phase down karne ka global framework diya. Recovery gradual hai aur year-to-year weather variability bhi hoti hai."
+            "heading": "Antarctica hi kyun",
+            "text": "Jawab polar stratospheric clouds mein mila. Antarctica ki stratosphere itni thandi hoti hai ki barf ke clouds bante hain, aur unki surface par CFCs se nikla chlorine activate hota hai. 1985 mein ek research plane hole ke andar udi aur wahi reactions pakde. Sun wapas aane par chlorine ozone ko tezi se todta hai — isliye hole har spring banta hai, baaki duniya mein nahi."
+          },
+          {
+            "heading": "Duniya ka sabse successful treaty",
+            "text": "Montreal Protocol 1987 mein bana aur aaj tak ye UN ka akela universally ratified treaty hai. CFCs phase out hue aur ozone layer recover ho rahi hai — UN ke assessment ke mutabik Antarctica ke upar 1980 wale levels tak lautne mein isi sadi ke madhya tak ka waqt lag sakta hai. Ye sabse bada proof hai ki coordinated global action kaam karta hai."
           }
         ],
-        "real_world_connection": "International action ke through ozone-depleting chemicals ko phase out karna environmental policy ka important example bana.",
+        "real_world_connection": "Refrigerant aur AC ke chemicals aaj bhi badal rahe hain — CFCs ke baad HCFCs aur HFCs aaye, aur HFCs khud greenhouse gases nikle. Isliye 2016 ka Kigali Amendment unhe bhi phase down karta hai.",
         "reality_check": {
-          "established": "CFC-related chemistry ozone depletion ka major established cause hai.",
-          "misconception": "Ozone hole aur global warming same problem nahi hain, although atmospheric processes connected ho sakte hain."
+          "established": "CFCs ne Antarctica ke upar seasonal, bahut bada ozone depletion kiya — 1985 se documented, aur layer ab recover ho rahi hai.",
+          "misconception": "NASA ne data delete kar diya — code ne flag karke fill values daale; aur NASA ka 'pehle pata tha' dawa disputed hai."
         },
-        "status": "Proven",
+        "status": "Divided: depletion documented; the NASA outlier story is disputed",
         "sources": [
           {
-            "title": "Science History Institute: Molina interview",
-            "url": "https://digital.sciencehistory.org/works/8pmnk1q"
+            "title": "Farman, Gardiner & Shanklin 1985, Nature",
+            "url": "https://www.nature.com/articles/315207a0"
+          },
+          {
+            "title": "New Scientist: Who really discovered the ozone hole?",
+            "url": "https://www.newscientist.com/article/1896808-who-really-discovered-the-ozone-hole/"
           }
         ]
       }
@@ -1220,16 +1248,16 @@
       "day": 26,
       "category": "Invention aur experiment",
       "card": {
-        "title": "Electron ka charge sahi nikla, par kya scientist ne data chhupaya?",
-        "hook": "Ek famous experiment par saalon baad notebooks dekhkar data selection ka sawaal utha.",
+        "title": "Agar data ka ek hissa chhupa dein aur result sahi nikle, to wo science hai?",
+        "hook": "Millikan ka oil-drop experiment sabse famous measurement hai. Par notebooks khuli to pata chala 1913 ke paper mein unhone observations ka ek hissa hi chhapa tha.",
         "cta": "Puri kahani padhein"
       },
       "detail": {
-        "real_life_scene": "Photo choose karte waqt hum blurry shots hata dete hain. Research mein data reject karne ka reason aur reporting much more important hota hai.",
+        "real_life_scene": "1913 ke paper mein Millikan ne apne observations ka ek hissa hi publish kiya. Baad mein notebooks ka study hua to pata chala chhoda gaya data 'galat' nahi tha — sirf result se utni achhi tarah match nahi karta tha.",
         "central_question": "Kya Millikan ne experiment ke sirf favourable results publish kiye?",
         "explanation": [
           {
-            "heading": "Kya hua tha?",
+            "heading": "Problem: charge ki basic unit naapein kaise?",
             "text": "Robert Millikan ne tiny oil droplets ko electric field mein observe karke electric charge ki basic unit measure ki. 1913 ke paper se unka result famous hua."
           },
           {
@@ -1254,7 +1282,7 @@
           "established": "Elementary charge established hai aur Millikan ki data selection par documented debate hai.",
           "misconception": "Correct result hone se reporting ka har decision automatically correct prove nahi hota."
         },
-        "status": "Divided",
+        "status": "Divided: the value was right; the data selection is contested",
         "sources": [
           {
             "title": "American Physical Society: Millikan oil drops",
@@ -1267,45 +1295,49 @@
       "day": 27,
       "category": "Physics",
       "card": {
-        "title": "Ek hi universe mein mirror image alag behave kar sakti hai?",
-        "hook": "Scientists ko lagta tha nature ke rules mirror mein same rahenge. Ek experiment ne surprise diya.",
+        "title": "Agar mirror mein physics same chale, to universe left-right farq nahi karega?",
+        "hook": "1956 tak ye sirf assumption thi — kabhi test nahi hui. Pauli ne shart lagayi ki symmetry nahi tootegi. Wu ke experiment ne jawab diya: Pauli galat nikle.",
         "cta": "Puri kahani padhein"
       },
       "detail": {
-        "real_life_scene": "Aaine mein right hand left-hand jaisa dikhta hai. Kya nature bhi mirror image mein bilkul same behave karti hai?",
-        "central_question": "Kya har physical process apni mirror image ki tarah equally possible hota hai?",
+        "real_life_scene": "1956 mein do particles — theta aur tau — bilkul same lagte the: mass, charge, lifetime barabar. Par ek 2 pions mein decay karta tha, doosra 3 mein. Mirror symmetry ho to ye alag particles hone chahiye the.",
+        "central_question": "Kya physics ke rules mirror mein bhi waise hi chalte hain?",
         "explanation": [
           {
-            "heading": "Kya hua tha?",
-            "text": "1956 mein physicists Tsung-Dao Lee aur Chen-Ning Yang ne poocha ki mirror symmetry weak interaction mein sach hai ya nahi. Weak interaction nature ki ek fundamental force hai jo kuch radioactive changes mein role nibhati hai."
+            "heading": "Sawal pehle kisi ne poocha hi nahi tha",
+            "text": "T.D. Lee aur C.N. Yang ne evidence dobara padha aur ek hairat-angez baat pakdi: parity conservation strong aur electromagnetic interactions mein test hui thi, par WEAK interactions mein kabhi test hi nahi hui thi. Wo ek assumption thi, ek result nahi. Unhone Phys. Rev. 104, 254 (1956) mein propose kiya ki weak interactions mein parity toot sakti hai."
           },
           {
-            "heading": "Aage kya samajh aaya?",
-            "text": "Chien-Shiung Wu aur colleagues ne cold cobalt-60 atoms ke decay ka experiment kiya. Unhe particles ki direction mein aisa difference mila jo mirror symmetry ke old assumption se match nahi karta tha. 1957 Nobel Lee aur Yang ko mila; Wu ka omission credit debate ka subject bana."
+            "heading": "Pauli ko yakeen nahi tha",
+            "text": "Wolfgang Pauli confident the ki symmetry tootegi nahi. Unhone January 1957 ke ek letter mein likha ki unhe nahi lagta 'Bhagwan ek kamzor left-hander hai', aur wo badi rakam ki shart lagane ko tayyar hain ki experiment symmetric result dega. Ye line physics ke sabse famous galat daav mein se ek ban gayi."
           },
           {
-            "heading": "Mirror symmetry ka idea",
-            "text": "Mirror mein left aur right ulte dikhte hain. Physicists poochte the: agar kisi physical process ki mirror-image situation banayein, toh kya nature ka behaviour same rules follow karega? Is test ko parity symmetry se joda jaata hai. Yeh assumption fundamental forces ke liye universally sahi hai ya nahi, yeh experimental question tha."
+            "heading": "Wu ne experiment kiya",
+            "text": "Chien-Shiung Wu (Columbia) ne National Bureau of Standards ke Ambler, Hayward, Hoppes aur Hudson ke saath cobalt-60 nuclei ko cryogenic temperature pe magnetic field se align kiya aur beta decay ke electrons ki direction gini. Paper 15 January 1957 ko mila, 15 February ko chhapa — Phys. Rev. 105, 1413. Electrons spin ke opposite direction mein zyada nikle: parity violated."
           },
           {
-            "heading": "Wu ka experiment",
-            "text": "Cobalt-60 radioactive atoms specific conditions mein decay karte hain aur electrons emit karte hain. Chien-Shiung Wu aur colleagues ne atoms ko very cold conditions mein align karke electron emission directions measure ki. Result mirror-symmetric expectation se match nahi hua. Isne weak interaction, jo kuch radioactive decays control karti hai, mein parity violation dikhaya."
+            "heading": "Doosri team ne dinon mein confirm kiya",
+            "text": "Garwin, Lederman aur Weinrich ne muon decay wale experiment se kuch hi dinon mein wahi result confirm kiya. Theta aur tau ek hi particle nikle — aaj hum unhe kaon kehte hain. Ek 30 saal purana 'puzzle' isliye tha kyunki humne ek rule ko test kiye bina maan liya tha."
           },
           {
-            "heading": "Discovery kyun important thi?",
-            "text": "Experiment ne dikhaya ki nature ki weak processes left-right direction ko identical tareeke se treat karna zaroori nahi. Isse particle physics ke basic rules revise hue. 1957 Nobel Lee aur Yang ko theoretical proposal ke liye mila; Wu ki experimental contribution aur award omission par discussions hoti hain. Credit discussion aur evidence dono ko alag-alag accurately batana chahiye."
+            "heading": "Nobel gaya, par kis ko",
+            "text": "1957 ka Nobel Prize Physics mein Lee aur Yang ko mila — proposal se sirf ~13 mahine baad, jo fastest mein se ek hai. Experiment karne wali Chien-Shiung Wu ko nahi mila. Wo 1978 mein inaugural Wolf Prize jeeti aur 'First Lady of Physics' kehlayi. Ye exclusion physics ke sabse discussed credit controversies mein se ek hai."
+          },
+          {
+            "heading": "Iska matlab kya hai",
+            "text": "Weak interaction mirror-symmetric nahi hai — yaani universe ke fundamental rules left aur right mein farq karte hain. Ye sirf ek curiosity nahi: isi asymmetry se matter-antimatter imbalance (CP violation) ka raasta khula, aur standard model ka structure isi pe tikka hai."
           }
         ],
-        "real_world_connection": "Mirror symmetry ka example dikhata hai ki simple lagne wali assumptions ko experiment se test karna zaroori hai.",
+        "real_world_connection": "Aaj ka poora particle physics ka standard model chiral hai — weak force sirf left-handed particles pe lagti hai. Iska matlab: 'mirror universe' wali science-fiction idea physically alag rules wali universe hogi, sirf ulti nahi.",
         "reality_check": {
-          "established": "Weak interactions mirror symmetry, ya parity, violate kar sakti hain.",
-          "misconception": "Iska matlab yeh nahi ki har physical process mirror symmetry todta hai."
+          "established": "Weak interactions parity violate karti hain — Wu et al. 1957 ne measure kiya, aur doosri teams ne confirm kiya.",
+          "misconception": "Ye sirf ek theory tha jo baad mein sahi nikla — experiment ne hi decide kiya, aur use Nobel nahi mila."
         },
-        "status": "Proven",
+        "status": "Proven: weak interactions break mirror symmetry; Wu missed the Nobel",
         "sources": [
           {
-            "title": "American Physical Society: Wu and parity",
-            "url": "https://www.aps.org/apsnews/2022/09/lee-yang-parity"
+            "title": "Wu, Ambler, Hayward, Hoppes & Hudson 1957, Phys. Rev. 105, 1413",
+            "url": "https://doi.org/10.1103/PhysRev.105.1413"
           }
         ]
       }
@@ -1314,45 +1346,49 @@
       "day": 28,
       "category": "Biology",
       "card": {
-        "title": "Makke ke rangon ne genes ke baare mein kya bataya?",
-        "hook": "Ek scientist ne corn ke spots dekhe aur propose kiya ki genetic material ke pieces move kar sakte hain.",
+        "title": "Agar genes apni jagah badal sakte hain, to genome stable kaise rahega?",
+        "hook": "1951 mein McClintock ne yahi kaha, makke ke daano ke rang se sabit karke. Hall mein na sawaal aaya na applause. 32 saal baad unhe akela Nobel mila, 81 ki umar mein.",
         "cta": "Puri kahani padhein"
       },
       "detail": {
-        "real_life_scene": "Corn ke kuch daano par alag-alag colours ya spots dikhte hain. Ek biologist ke liye yeh pattern useful evidence ban sakta hai.",
-        "central_question": "Kya genetic instructions ek fixed position par hi rehti hain?",
+        "real_life_scene": "Summer 1951, Cold Spring Harbor: McClintock ne maize ke results ka symposium diya. Hall mein koi sawaal nahi, koi applause nahi. Unhone baad mein likha ki unhe surprise hua — log samajh hi nahi paaye.",
+        "central_question": "Kya genes chromosome pe fixed hote hain, ya apni jagah badal sakte hain?",
         "explanation": [
           {
-            "heading": "Kya hua tha?",
-            "text": "Barbara McClintock ne corn plants ki generations aur unke chromosome changes ko carefully study kiya. Chromosomes cells ke andar DNA ko organise karne wali structures hain."
+            "heading": "Saboot makke ke daano mein tha",
+            "text": "Maize (Zea mays) ke kernels ek jaise rang ke hone chahiye the, par McClintock ko aise daane mile jinpe alag-alag size aur colour ke intense patches the. Saath hi un cells mein chromosome breaks aur abnormalities bhi dikhi. Unhone microscopy aur breeding dono ka data ek saath rakha — cytology aur genetics ko jodne wali approach us waqt uncommon thi."
           },
           {
-            "heading": "Aage kya samajh aaya?",
-            "text": "1940s aur 1950s mein unhone propose kiya ki kuch genetic elements ek position se doosri position par move kar sakte hain aur nearby genes ki activity affect kar sakte hain. Baad ki research ne mobile genetic elements ko confirm kiya. McClintock ko 1983 Nobel mila."
+            "heading": "Pehle ka explanation galat tha",
+            "text": "Us variegation ko tab tak chromosome ke kuch regions ki 'zyada fragility' maana jaata tha — yaani pigment wale genes aasani se mutate ho jaate hain, aur daughter cells mein alag rang ke patches ban jaate hain. McClintock ne dikhaya ki baat mutation ki nahi, transposition ki hai: structural elements chromosome ke andar ya ek chromosome se doosre pe move kar rahe hain."
           },
           {
-            "heading": "Makke ke daane clues kaise bane?",
-            "text": "Corn ke kuch kernels par alag colours aur spots dikh sakte hain. McClintock ne plant breeding aur microscope observations combine karke dekha ki colour patterns aur chromosome changes ka connection ho sakta hai. Chromosomes DNA ke organised packages hain; genes DNA ke parts hain jo biological functions mein role play karte hain."
+            "heading": "'Controlling elements'",
+            "text": "Transposition se neighbouring genes inactivate ho jaate hain, isliye McClintock ne in mobile structures ko 'controlling elements' kaha. Transposition ka ek aur asar tha: jahan ye elements integrate hote the, wahan chromosome toot jaata tha. Isi system se kernel ka colour on-off hota rehta hai — ek daane pe alag-alag patches."
           },
           {
-            "heading": "Moving DNA ka idea",
-            "text": "Unhone propose kiya ki kuch DNA elements chromosome mein location change kar sakte hain. Agar element kisi pigment-related gene ke paas ya andar move kare, toh gene ki activity change ho sakti hai. Development ke different stages par change hone se colour patches ka pattern ban sakta hai. Is tarah ek visible kernel pattern se invisible genetic process ka clue mila."
+            "heading": "Community ne kyun reject kiya",
+            "text": "Nobel press release khud note karta hai ki ye discovery us waqt hui jab genetic code aur DNA double helix ka structure bhi pata nahi the. Us waqt gene ek fixed unit maana jaata tha — chromosome pe ek bead ki tarah. Idea ki wo khud chal phir sakte hain, genome ko unstable bana deta tha. Aur unka evidence cytological tha, jo molecular biology ki taraf ja rahi community ke liye unfamiliar tha."
           },
           {
-            "heading": "Important kyun tha?",
-            "text": "Us waqt genes ko mostly fixed positions par sochna common tha. Mobile elements ne dikhaya ki genome ki organisation change ho sakti hai. Baad mein researchers ne bacteria, plants aur animals mein bhi mobile genetic elements identify kiye. Har DNA movement harmful nahi; effects context par depend karte hain. McClintock ko 1983 Nobel mila, decades after her original work."
+            "heading": "Proof bacteria se aaya",
+            "text": "Mid-1960s mein mobile genetic elements bacteria mein demonstrate hue, aur pata chala ki wo ek bacterium se doosre mein antibiotic resistance transfer karne mein role play karte hain. Aage chalkar trypanosomes ka surface badalna (immune system se bachne ke liye) aur lymphoid cells ka seemingly infinite antibodies banana — dono isi DNA recombination pe tikke mile."
+          },
+          {
+            "heading": "1983: akeli mahila ko unshared Nobel",
+            "text": "Karolinska Institute ki Nobel Assembly ne 1983 ka Physiology or Medicine Prize Barbara McClintock ko akela diya — 'discovery of mobile genetic elements' ke liye. Press release ke mutabik ye discovery '30 saal se zyada' pehle hui thi. Wo 81 saal ki thin. Aaj pata hai ki ye elements microorganisms, insects, animals aur insaan sab mein hain, aur normal cells ko tumour cells mein badalne mein bhi transposition involved hai."
           }
         ],
-        "real_world_connection": "Genes ko on ya off karne wale mechanisms ko samajhna evolution aur biology research mein useful hai.",
+        "real_world_connection": "Transposons aaj research tools hain: gene therapy vectors, insertional mutagenesis screens, aur genome editing ke kayi methods isi 'move hone wale DNA' ki biology pe khade hain. Human genome ka ek bahut bada hissa bhi inhi se bana hai.",
         "reality_check": {
-          "established": "Mobile genetic elements, jinhe transposable elements bhi kehte hain, exist karte hain.",
-          "misconception": "Genes ka move hona yeh nahi dikhata ki har gene har waqt randomly jump kar raha hai."
+          "established": "Genes chromosome pe move kar sakte hain — McClintock ka finding confirm hua aur unhe 1983 mein unshared Nobel mila.",
+          "misconception": "Unka idea reject hua kyunki galat tha — wo reject hua kyunki tools aur framework uske liye tayyar nahi the."
         },
-        "status": "Proven",
+        "status": "Proven: transposition documented; the Nobel came 32 years late",
         "sources": [
           {
-            "title": "Nobel: McClintock and maize",
-            "url": "https://www.nobelprize.org/prizes/medicine/1983/ceremony-speech/"
+            "title": "Nobel Prize in Physiology or Medicine 1983 — press release",
+            "url": "https://www.nobelprize.org/prizes/medicine/1983/press-release/"
           }
         ]
       }
@@ -1361,16 +1397,16 @@
       "day": 29,
       "category": "Mathematics",
       "card": {
-        "title": "Kya easy-to-check answer hamesha easy-to-find bhi hota hai?",
-        "hook": "Ek puzzle ka solution check karna seconds ka kaam ho sakta hai. Use dhoondhna itna difficult kyun?",
+        "title": "Agar check karna aasan hai, to dhoondhna bhi aasan hona chahiye?",
+        "hook": "Agar ye sach nikla, to aaj ki zyada-tar encryption jis assumption pe tikki hai wahi hil jaati. 1971 se koi prove nahi kar paaya; Clay Institute ne $1M rakha hai.",
         "cta": "Puri kahani padhein"
       },
       "detail": {
-        "real_life_scene": "Sudoku mein koi filled grid de de, toh rules check karna aksar puzzle khud solve karne se easy lagta hai.",
+        "real_life_scene": "1971 mein Stephen Cook ne ise formal kiya, 1973 mein Leonid Levin ne USSR mein — alag-alag, ek doosre ko jaane bina. 2000 mein Clay Institute ne ise $1M ke Millennium Problems mein rakha. Jawab aaj bhi nahi.",
         "central_question": "Kya efficiently check hone wali har problem efficiently solve bhi ki ja sakti hai?",
         "explanation": [
           {
-            "heading": "Kya hua tha?",
+            "heading": "Problem: check karna aasan, dhoondhna mushkil — kyun?",
             "text": "Computer science mein P aur NP problems ke groups hain. Roughly, P mein kuch decision questions ko aise solve kiya ja sakta hai jinka time input size ke saath polynomial tareeke se badhta hai."
           },
           {
@@ -1395,7 +1431,7 @@
           "established": "P vs NP ek precisely defined open mathematical question hai.",
           "misconception": "Agar P = NP prove ho bhi jaaye, usse automatically har practical password instantly toot jayega, yeh conclude nahi hota."
         },
-        "status": "Still Unsolved",
+        "status": "Still unsolved: P vs NP, ek $1M Millennium Problem",
         "sources": [
           {
             "title": "Clay Mathematics Institute: P versus NP",
@@ -1408,16 +1444,16 @@
       "day": 30,
       "category": "Space aur time",
       "card": {
-        "title": "Plane mein clock le jaane par time alag chal sakta hai?",
-        "hook": "Do clocks ek saath start karein aur ek world tour kare—toh kya wapas aakar dono match karengi?",
+        "title": "Agar clock lekar duniya ka chakkar lagayein, to wo zameen se match karegi?",
+        "hook": "Einstein ke mutabik nahi: chalti clock dheere chalti hai, unchai pe tez. Dono effect ulte hain. 1971 mein ye commercial flights pe test hua, aur numbers match hue.",
         "cta": "Puri kahani padhein"
       },
       "detail": {
-        "real_life_scene": "Mobile aur watch ke clocks mein difference aaye toh aksar battery ya settings ka issue sochte hain. Physics mein movement aur gravity bhi tiny effect daal sakte hain.",
+        "real_life_scene": "October 1971: J.C. Hafele aur Richard Keating chaar caesium atomic clocks le kar Pan Am ki commercial flights pe eastward aur westward duniya ka chakkar lagaye. Predicted aur measured shifts match hue.",
         "central_question": "Kya safar ki speed aur height se clock ke guzre time mein farq padta hai?",
         "explanation": [
           {
-            "heading": "Kya hua tha?",
+            "heading": "Problem: chalti hui clock ka time badalta hai?",
             "text": "Einstein ki relativity ke mutabik clocks ki paths aur surroundings matter kar sakte hain. Moving clock ka elapsed time aur alag gravity level par clock ka elapsed time different ho sakta hai."
           },
           {
@@ -1442,7 +1478,7 @@
           "established": "Relativistic clock differences ko experiments mein measure kiya gaya hai.",
           "misconception": "Plane mein travel karne se insaan movie jaisa dramatically young nahi ho jaata; normal flights mein difference extremely tiny hota hai."
         },
-        "status": "Proven",
+        "status": "Proven: predicted aur measured shift match hue",
         "sources": [
           {
             "title": "Hafele and Keating: atomic clock experiment",
@@ -1455,45 +1491,53 @@
       "day": 31,
       "category": "Invention aur ethics",
       "card": {
-        "title": "Ek scientist ki discovery se fertilizer bhi bana aur war mein gas bhi",
-        "hook": "Ek hi scientific career ne food production aur warfare dono ki history ko affect kiya.",
+        "title": "Agar hawa se roti ban sakti hai, to usi se hathiyar kyun bana?",
+        "hook": "Haber ne 1909 mein hawa se ammonia banaya; aaj aadhi humanity ka nitrogen isi se aata hai. 1915 mein wahi aadmi Ypres pe chlorine attack direct kar raha tha.",
         "cta": "Puri kahani padhein"
       },
       "detail": {
-        "real_life_scene": "Khet mein fertilizer crops ko nutrients dene ke liye use hota hai. Iske peeche chemistry aur industrial engineering ki long history hai.",
-        "central_question": "Kya ek scientific breakthrough ke positive aur harmful uses dono ho sakte hain?",
+        "real_life_scene": "1 May 1915 ki raat, Berlin-Dahlem: Haber ki captain promotion aur Ypres 'success' ki party thi. Usi raat unki wife Clara ne garden mein khud ko army pistol se goli maar li. Agli subah Haber front ke liye nikal gaye.",
+        "central_question": "Kya ek discovery ko uske use se alag karke judge kiya ja sakta hai?",
         "explanation": [
           {
-            "heading": "Kya hua tha?",
-            "text": "Fritz Haber ne nitrogen aur hydrogen se ammonia banane ka method develop kiya; Carl Bosch ne process ko industrial scale par le jaane mein major role nibhaya. Isse synthetic fertilizers ki production possible hui, jo agriculture mein important bane."
+            "heading": "'Hawa se roti'",
+            "text": "Haber ne 1909 mein nitrogen aur hydrogen se ammonia banane ka catalytic tareeka dikhaya — high pressure pe, catalyst ke saath. Carl Bosch ne BASF mein ise industrial scale pe banaya. Isse pehle fertilizer ka nitrogen Chile ke nitrate deposits aur guano pe depend karta tha. 1918 ka Nobel Chemistry mein Haber ko mila."
           },
           {
-            "heading": "Aage kya samajh aaya?",
-            "text": "Haber World War I mein Germany ke poison-gas programme se bhi involved the. Unhe ammonia synthesis ke liye 1918 Chemistry Nobel diya gaya. Unki legacy science, war aur responsibility par difficult questions uthati hai."
+            "heading": "Aadhi humanity isi pe tikki hai",
+            "text": "Haber-Bosch process ne fertilizer ki supply ko geology se azad kar diya. Estimates ke mutabik aaj duniya ki lagbhag aadhi population ka dietary nitrogen isi process se aata hai — yaani aapke body ka nitrogen ek bade hisse mein ek 1909 ke reactor se aaya hai. Bina iske 20th century ki population growth mumkin nahi thi."
           },
           {
-            "heading": "Fertilizer ki need",
-            "text": "Plants ko nitrogen chahiye, lekin hawa ki nitrogen gas ko plants directly useful form mein easily use nahi kar sakte. Ammonia nitrogen-containing compound hai jisse fertilizer ban sakta hai. 1900s mein growing agriculture ke liye usable nitrogen ka industrial source develop karna important challenge tha."
+            "heading": "Aur wahi cheez weapon ban gayi",
+            "text": "Ammonia se explosives bhi bante hain. Jab war shuru hui to nitrogen supply ka matlab tha munitions supply. 22 April 1915 ko Ypres pe ~168 tonnes chlorine gas cylinders se chhodi gayi — attack Haber ki direction mein hua. Wo Berlin wapas hero ki tarah laute, aur captain bana diye gaye."
           },
           {
-            "heading": "Haber–Bosch process",
-            "text": "Fritz Haber ne nitrogen aur hydrogen ko react karke ammonia banane ka method develop kiya. Carl Bosch aur colleagues ne demanding high-pressure process ko industrial scale par workable banaya. Synthetic fertilizers ne crop production badhane mein important role play kiya. Lekin excess fertilizer runoff water pollution aur other environmental problems bhi cause kar sakta hai."
+            "heading": "Clara ka apna career khatm ho chuka tha",
+            "text": "Clara Immerwahr 1900 mein University of Breslau se doctorate paane wali pehli mahila bani. 1901 mein Haber se shaadi hui. Female scientists ke liye koi employment nahi thi, isliye wo women ki continuing education mein freelance instructing karti rahin — zyadatar housewives ko padhati thin. 23 April 1909 ko unhone apne PhD adviser Richard Abegg ko likha: 'Jo Fritz ne pichhle aath saalon mein paaya hai, maine wo khoya hai, aur jo mujhme bacha hai wo mujhe gehri asantushti se bharta hai.'"
           },
           {
-            "heading": "War aur responsibility",
-            "text": "Haber World War I mein Germany ke poison-gas programme se bhi involved the. Chemical weapons ne severe suffering cause ki. Same scientific knowledge different purposes ke liye use ho sakti hai, isliye scientists, institutions aur governments ki responsibilities par ethical debate hoti hai. Fertilizer benefit aur wartime harm dono ko acknowledge karna unki complicated legacy samajhne ke liye zaroori hai."
+            "heading": "Motivation pe asli jhagda",
+            "text": "Popular version kehti hai Clara ne gas warfare ko 'science ke ideals ka perversion' kaha aur protest mein jaan di. Par Friedrich aur Hoffmann ke 2016 scholarly review ko iske liye 'little evidence' mila; unke mutabik ye pacifist-martyr framing 1990s mein popular hui — 'the myth of Clara Immerwahr'. Jo documented hai: maut us raat hui, umar 45 thi, pistol Haber ki thi, aur Haber agle din front chale gaye."
+          },
+          {
+            "heading": "Haber ka apna ant bhi isi kahani ka hissa hai",
+            "text": "Haber Jewish family mein paida hue the aur Christianity mein convert hue the. 1933 mein Nazi rules ke under unhe apne Jewish colleagues ko nikaalna pada; unhone protest mein resignation diya aur Germany chhod diya. January 1934 mein Basel mein exile ke dauraan unki maut hui — us desh se door jiske liye unhone gas warfare direct kiya tha."
           }
         ],
-        "real_world_connection": "Aaj bhi technology ke benefits ke saath uske misuse aur environmental effects par sochna zaroori hai.",
+        "real_world_connection": "Haber ka naam toxicology mein aaj bhi zinda hai: 'Haber's rule' kehti hai ki effect = concentration × time. Aur ek hi discovery ka dohra use — khana aur hathiyar — aaj bhi AI, nuclear aur gene editing ke ethics debates ka central example hai.",
         "reality_check": {
-          "established": "Haber ka ammonia research aur wartime chemical weapons programme, dono mein role documented hai.",
-          "misconception": "Ek useful discovery kisi person ke harmful decisions ko automatically justify nahi karti."
+          "established": "Haber-Bosch process documented hai aur duniya ki food supply ka base hai; Ypres attack mein Haber ki bhumika bhi documented hai.",
+          "misconception": "Clara ne gas warfare ke protest mein suicide kiya — 2016 scholarly review ke mutabik is motive ka little evidence hai."
         },
-        "status": "Proven",
+        "status": "Divided: the chemistry is settled; Clara's motive is disputed",
         "sources": [
           {
-            "title": "Science History Institute: Fritz Haber",
-            "url": "https://www.sciencehistory.org/education/scientific-biographies/fritz-haber/"
+            "title": "Friedrich & Hoffmann 2016, Z. anorg. allg. Chem. — Clara Haber, née Immerwahr",
+            "url": "https://doi.org/10.1002/zaac.201600035"
+          },
+          {
+            "title": "Nobel Prize in Chemistry 1918 — press release",
+            "url": "https://www.nobelprize.org/prizes/chemistry/1918/press-release/"
           }
         ]
       }
