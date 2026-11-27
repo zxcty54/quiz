@@ -5,6 +5,28 @@ import '../models/science_story_model.dart';
 import '../services/community_safety_service.dart';
 import '../services/science_story_service.dart';
 
+/// Medical vocabulary that decides whether a story needs the health
+/// disclaimer. Science stories have no pillar to key off, unlike Reality Truth,
+/// so each story's own text decides. Word boundaries matter here: substring
+/// matching would flag `regolith` for `goli` and `papillomavirus` for `pill`,
+/// and a Moon story telling readers to consult a doctor is worse than no
+/// disclaimer at all.
+const List<String> _healthTerms = <String>[
+  'doctor', 'dawai', 'medicine', 'medication', 'dosage', 'dose',
+  'ilaj', 'treatment', 'therapy', 'surgery', 'hospital', 'nuskha',
+  'prescription', 'bimari', 'beemari', 'patient', 'mareez', 'vaccine',
+  'teeka', 'antibiotic', 'cancer', 'diabetes', 'cholesterol', 'diagnosis',
+  'clinical trial', 'drug', 'pill', 'tablet', 'injection', 'penicillin',
+  'insulin', 'blood pressure', 'hypertension', 'anaemia', 'anemia', 'vitamin',
+  'nutrition', 'heart attack', 'stroke', 'pregnancy', 'pregnant',
+  'respiratory', 'virus',
+];
+
+final RegExp _healthPattern = RegExp(
+  _healthTerms.map((String term) => '\\b${RegExp.escape(term)}\\b').join('|'),
+  caseSensitive: false,
+);
+
 /// Label and colour for a story's `status`, shared by the home teaser and the
 /// reader. Showing it is deliberate: an unsolved, disputed or disproven claim
 /// must never look like an established fact.
@@ -815,6 +837,10 @@ class ScienceStoryDetailScreen extends StatelessWidget {
                       ),
                     ),
                 ],
+                if (_isHealthRelated) ...<Widget>[
+                  const SizedBox(height: 16),
+                  _healthDisclaimer(sub),
+                ],
                 const SizedBox(height: 14),
                 Center(
                   child: TextButton.icon(
@@ -831,6 +857,99 @@ class ScienceStoryDetailScreen extends StatelessWidget {
                   ),
                 ),
               ]),
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+
+  /// True when a story talks about bodies, medicines or medical care closely
+  /// enough that a reader could mistake it for advice.
+  bool get _isHealthRelated {
+    final StringBuffer buffer = StringBuffer();
+    void add(String value) {
+      if (value.isNotEmpty) {
+        buffer.write(' ');
+        buffer.write(value);
+      }
+    }
+
+    add(story.realLifeScene);
+    add(story.centralQuestion);
+    add(story.realWorldConnection);
+    for (final ScienceStorySection section in story.explanation) {
+      add(section.heading);
+      add(section.text);
+    }
+    final ScienceStoryRealityCheck? check = story.realityCheck;
+    if (check != null) {
+      add(check.established);
+      add(check.misconception);
+    }
+    return _healthPattern.hasMatch(buffer.toString());
+  }
+
+  /// Same promise as the Reality Truth disclaimer: awareness, not advice.
+  ///
+  /// Kept visually quiet on purpose. The teal accent is lightened in dark mode
+  /// so the note stays legible on the slate card without turning into a
+  /// warning banner that readers learn to skip.
+  Widget _healthDisclaimer(Color sub) {
+    final bool isDark = isDarkMode;
+    final Color accent =
+        isDark ? const Color(0xFF2DD4BF) : const Color(0xFF0F766E);
+    return Container(
+      width: double.infinity,
+      padding: const EdgeInsets.fromLTRB(13, 12, 13, 13),
+      decoration: BoxDecoration(
+        color: accent.withValues(alpha: isDark ? 0.10 : 0.07),
+        borderRadius: BorderRadius.circular(16),
+        border: Border.all(
+          color: accent.withValues(alpha: isDark ? 0.32 : 0.24),
+        ),
+      ),
+      child: Row(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: <Widget>[
+          Container(
+            width: 26,
+            height: 26,
+            alignment: Alignment.center,
+            decoration: BoxDecoration(
+              color: accent.withValues(alpha: 0.16),
+              borderRadius: BorderRadius.circular(9),
+              border: Border.all(color: accent.withValues(alpha: 0.30)),
+            ),
+            child: Icon(Icons.info_outline, size: 14, color: accent),
+          ),
+          const SizedBox(width: 10),
+          Expanded(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: <Widget>[
+                Text(
+                  'Zaroori note',
+                  style: TextStyle(
+                    fontSize: 10.5,
+                    fontWeight: FontWeight.w900,
+                    letterSpacing: 0.2,
+                    color: accent,
+                  ),
+                ),
+                const SizedBox(height: 3),
+                Text(
+                  'Ye general awareness ke liye hai, medical advice nahi. Kisi '
+                  'bhi bimari, dawai, dose ya jaanch ke baare mein faisla lene '
+                  'se pehle doctor ya qualified expert se salah lein.',
+                  style: TextStyle(
+                    fontSize: 10.5,
+                    fontWeight: FontWeight.w600,
+                    height: 1.55,
+                    color: sub,
+                  ),
+                ),
+              ],
             ),
           ),
         ],
