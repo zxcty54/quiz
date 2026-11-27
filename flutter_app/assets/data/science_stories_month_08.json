@@ -1008,42 +1008,50 @@
       "day": 234,
       "category": "Weather aur safety",
       "card": {
-        "title": "Cyclone ka eye shaant kyun ho sakta hai?",
-        "hook": "Storm ke centre mein hawa temporarily calm lag sakti hai, lekin uske just bahar sabse dangerous winds ho sakti hain.",
+        "title": "Equator par cyclone nahi banta tha; 2001 mein Vamei ne 1.5 degree par bana diya",
+        "hook": "300 km ka equatorial belt tropical cyclone-free maana jaata tha. 27 December 2001 ko Singapore ke paas ek cyclone bana, jiska centre 1.5 degree north tha.",
         "cta": "Puri kahani padhein"
       },
       "detail": {
-        "real_life_scene": "Fan ke blades tez ghoomte hain par centre ka motion alag lagta hai. 2013 ke Cyclone Phailin se pehle India ke east coast par bade paimane par evacuation hua; eye pass hone par shelter chhodna dangerous hota hai.",
-        "central_question": "Tropical cyclone mein eye aur eyewall kya hote hain?",
+        "real_life_scene": "Equator ke paas rehne walon ko cyclone ka warning system barely cover karta hai, kyunki wahan cyclone banna hi nahi maana jaata tha. December 2001 mein Singapore aur Malaysia ke coast par ek chhota par intense cyclone aa gaya.",
+        "central_question": "Equator ke paas cyclone kyun nahi bante, aur Vamei ne yeh rule kaise toda?",
         "explanation": [
           {
-            "heading": "NOAA: warm ocean se energy lene wale storms",
-            "text": "NOAA tropical cyclones ko organised rotating storms describe karta hai jo warm tropical ya subtropical oceans se energy lete hain. Atlantic aur eastern Pacific mein strong tropical cyclones ko hurricanes kaha jaata hai; other regions mein naming different ho sakti hai."
+            "heading": "Equator ke 300 km: no-go zone",
+            "text": "Tropical cyclone research aur forecasting mein yeh maana jaata tha ki equator ke dono taraf 300 km ka belt tropical cyclone formation se free hai. Reason Coriolis force hai: equator ke paas yeh itni kamzor hoti hai ki horizontal convergence se relative vorticity generate nahi ho paati, jo spin ke liye zaroori hai. Isi wajah se tropical cyclones generally 5 degree latitude se equator ki taraf bante nahi dekhe gaye. North Atlantic mein 1886 se aur western North Pacific mein 1945 se records hain, aur us data mein yeh pattern consistent raha."
           },
           {
-            "heading": "Moist air rise, condensation se heat release",
-            "text": "Warm ocean se moisture atmosphere mein jaati hai. Moist air rise karke cool hoti hai, aur water vapour condense hone par heat release hoti hai. Suitable conditions mein rising air aur winds storm ko organise kar sakti hain. Earth ki rotation se related Coriolis effect large-scale circulation ko turn karne mein role play karta hai."
+            "heading": "27 December 2001: Singapore ke paas",
+            "text": "27 December 2001 ko 0600 UTC ke aas-paas Singapore ke paas ek tropical cyclone bana. Chang, Liu aur Kuo ke 2003 ke paper ke mutabik yeh pehla recorded tropical cyclone formation tha jo equator ke 1.5 degree ke andar hua: centre 1.5 degree north par tha aur convective clouds ka radius kareeb 200 km. Circulation equator ke dono taraf phaili hui thi. Isse pehle ka record 1956 ke Typhoon Sarah ke naam tha, jo 3.3 degree north par bana tha. Vamei chhota tha, par structure poora tropical cyclone jaisa."
           },
           {
-            "heading": "Eye calm, eyewall mein intense winds",
-            "text": "Strong cyclone ke centre mein relatively calm eye ban sakti hai. Uske around eyewall mein intense thunderstorms aur strong winds hoti hain. Eye pass hone ke baad dangerous winds doosri direction se return kar sakti hain. Har tropical cyclone mein clear eye ho, yeh zaroori nahi."
+            "heading": "Borneo vortex aur cold surge",
+            "text": "Mechanism do hisson ka tha. Pehla: ek weak Borneo vortex, yaani Borneo ke west coast ke paas banne wali low-level circulation, drift karke South China Sea ke southern tip mein chala gaya aur wahan chaar din tak bana raha. Doosra: ek strong aur persistent cold surge, jo winter mein South China Sea ke upar chalti hai. Dono ke combination ne equator par hi background cyclonic vorticity bada diya. Yani spin Coriolis se nahi, pre-existing vortex aur bade scale ke flow se aaya, isliye equator par bhi cyclone ban saka."
           },
           {
-            "heading": "Centre mein descending air eye banata hai",
-            "text": "Eyewall ke around rising air aur intense rain bands hote hain, while mature storm ke centre mein descending air eye ko relatively calmer aur clearer bana sakti hai. Storm structure continuously change hoti rehti hai aur eye ka appearance har cyclone mein clear nahi hota."
+            "heading": "Coriolis ka role kya hai",
+            "text": "Coriolis effect Earth ke rotation se aata hai aur latitude ke saath badhta hai; equator par practically zero hota hai. Bina uske convergence se aane wali hawa seedha low pressure ke centre mein chali jaati hai, ghoomti nahi. Isliye equatorial belt ko formation ke liye unfavourable maana gaya. Vamei ne dikhaya ki yeh ek statistical regularity hai, absolute rule nahi: agar spin kisi aur source se mil jaaye, toh kamzor Coriolis ke bawajood system organize ho sakta hai. Warming ke saath is boundary ka kya hoga, yeh ek open question hai."
           },
           {
-            "heading": "Eye par shelter chhodna dangerous hai",
-            "text": "Eye aane par storm khatam samajhkar shelter se bahar nikalna dangerous hai: opposite eyewall ke winds aur rain phir aa sakte hain. Storm surge, flooding aur strong winds alag risks hote hain. 2013 ke Cyclone Phailin se pehle India ke east coast par bade paimane par evacuation kiya gaya tha; warnings aur shelter rules isi wajah se zaroori hote hain."
+            "heading": "39 m/s wind, 100-400 saal ka repeat",
+            "text": "Vamei chhote size ke bawajood intense tha: naval ships ne maximum sustained wind 39 m/s aur gusts 54 m/s report kiye. Paper ke mutabik isse USS Carl Vinson aur ek accompanying ship ko damage hua. Data mein NOGAPS ke 1 degree 850 hPa fields, QuikSCAT ke 25 km winds aur 51 winters ka NCEP reanalysis use kiya gaya. Inhi se authors ne estimate kiya ki equator ke itne paas aisa formation 100 se 400 saal mein ek baar ho sakta hai. Practical limit: equator ke kareeb ke regions standard cyclone warning zones mein nahi aate, isliye aisa event bina formal warning ke aa sakta hai."
           }
         ],
-        "real_world_connection": "Cyclones damaging winds ke saath coastal storm surge aur heavy rain se inland flooding bhi la sakte hain. Official alerts aur evacuation instructions follow karein; temporary calm ko all-clear na samjhein.",
+        "real_world_connection": "Chang, Liu aur Kuo ne 2003 mein Geophysical Research Letters mein likha ki Vamei pehla recorded tropical cyclone formation tha jo equator ke 1.5 degree ke andar hua; naval ships ne 39 m/s sustained wind aur 54 m/s gusts report kiye, aur recurrence 100 se 400 saal estimate ki gayi.",
         "reality_check": {
-          "established": "Mature tropical cyclones mein relatively calm eye aur strong-wind eyewall ho sakti hai.",
-          "misconception": "Eye ke pass hote hi storm permanently khatam nahi ho jaata."
+          "established": "Tropical cyclones equator ke kareeb isliye rare hain ki wahan Coriolis force bahut kamzor hoti hai.",
+          "misconception": "Vamei ka banna is baat ka saboot nahi ki equatorial cyclone aam hain; yeh ek exceptional event tha."
         },
-        "status": "Proven: mature cyclone mein calm eye banti hai; storm khatam nahi hota",
+        "status": "Proven: Vamei 1.5 degree north par bana; recurrence 100-400 saal",
         "sources": [
+          {
+            "title": "Chang, Liu & Kuo 2003, GRL: Typhoon Vamei, an equatorial tropical cyclone",
+            "url": "https://agupubs.onlinelibrary.wiley.com/doi/10.1029/2002GL016365"
+          },
+          {
+            "title": "NASA: the anatomy of a hurricane",
+            "url": "https://science.nasa.gov/resource/anatomy-of-a-hurricane/"
+          },
           {
             "title": "NOAA: tropical cyclones and safety",
             "url": "https://www.noaa.gov/education/resource-collections/weather-atmosphere/hurricanes"
