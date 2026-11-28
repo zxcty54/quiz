@@ -1069,6 +1069,21 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
     if (path.contains('bssc_inter/reasoning')) candidatePaths.add(path.replaceAll('bssc_inter/reasoning', 'bssc_inter_reasoning'));
     if (path.contains('ssc/general')) candidatePaths.add(path.replaceAll('ssc/general', 'aptitude'));
     if (path.contains('bihar_amin')) candidatePaths.add(path.replaceAll('bihar_amin', 'bihar-amin'));
+
+    // content_base ka naya folder layout: bpsc/cce, bpsc/aedo aur bssc/<cgl|inter|ldc>.
+    // Purana cached sectional_data.json abhi bhi flat paths bhej sakta hai, isliye
+    // dono tarah ke paths try karo — set load na hone ka jhatka nahi lagega.
+    if (path.contains('sectional_mock/bpsc/set')) {
+      candidatePaths.add(path.replaceFirst('sectional_mock/bpsc/set', 'sectional_mock/bpsc/cce/set'));
+    }
+    for (final String exam in <String>['cgl', 'inter', 'ldc']) {
+      for (final String section in <String>['aptitude', 'reasoning', 'english', 'gk_gs', 'mathematics', 'computer']) {
+        final String flat = 'sectional_mock/bssc_$exam/$section';
+        final String nested = 'sectional_mock/bssc/$exam/$section';
+        if (path.contains(flat)) candidatePaths.add(path.replaceAll(flat, nested));
+        if (path.contains(nested)) candidatePaths.add(path.replaceAll(nested, flat));
+      }
+    }
     if (path.contains('bihar-amin')) candidatePaths.add(path.replaceAll('bihar-amin', 'bihar_amin'));
 
     List<String> expandedPaths = [];
