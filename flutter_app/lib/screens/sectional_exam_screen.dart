@@ -11,13 +11,26 @@ class SectionalExamGroup {
   final String upcomingText;
   final String pathPrefix; // set file path = '$pathPrefix$n.json'
 
+  /// Optional, JSON ke "set_numbers" se: jab set files contiguous na hon
+  /// (jaise bpsc/cce me set1-8 ke baad set10, set14, set18...). Khaali list
+  /// ka matlab purana behaviour — 1 se sets tak.
+  final List<int> numbers;
+
   const SectionalExamGroup({
     required this.title,
     required this.sets,
     required this.upcomingSets,
     required this.upcomingText,
     required this.pathPrefix,
+    this.numbers = const <int>[],
   });
+
+  /// Kaun kaun se set number dikhane aur launch karne hain.
+  List<int> get setNums =>
+      numbers.isEmpty ? <int>[for (int i = 1; i <= sets; i++) i] : numbers;
+
+  /// Locked "upcoming" rows isi number ke baad se shuru hoti hain.
+  int get lastSetNum => setNums.isEmpty ? sets : setNums.last;
 
   String launchTitle(int setNum) => '$title Set $setNum';
   String launchPath(int setNum) => '$pathPrefix$setNum.json';
@@ -93,12 +106,13 @@ class _SectionalExamScreenState extends State<SectionalExamScreen> {
     );
   }
 
-  int get _totalSets => widget.groups.fold<int>(0, (s, g) => s + g.sets);
+  int get _totalSets =>
+      widget.groups.fold<int>(0, (s, g) => s + g.setNums.length);
 
   int get _doneSets {
     int done = 0;
     for (final g in widget.groups) {
-      for (int n = 1; n <= g.sets; n++) {
+      for (final int n in g.setNums) {
         if (_progress[g.launchTitle(n)]?['status'] == 'COMPLETED') done++;
       }
     }
@@ -285,7 +299,7 @@ class _SectionalExamScreenState extends State<SectionalExamScreen> {
 
   Widget _groupCard(SectionalExamGroup group, bool isDark, Color textColor) {
     final List<Widget> rows = [];
-    for (int n = 1; n <= group.sets; n++) {
+    for (final int n in group.setNums) {
       final status = _progress[group.launchTitle(n)]?['status']?.toString();
       final bool isDone = status == 'COMPLETED';
       final bool isInProgress = status == 'IN_PROGRESS';
@@ -296,7 +310,7 @@ class _SectionalExamScreenState extends State<SectionalExamScreen> {
     // Upcoming (locked) sets sirf "All" filter me
     if (_filter == 'all') {
       for (int u = 1; u <= group.upcomingSets; u++) {
-        final int n = group.sets + u;
+        final int n = group.lastSetNum + u;
         rows.add(_lockedRow(group, n, isDark, textColor));
       }
     }

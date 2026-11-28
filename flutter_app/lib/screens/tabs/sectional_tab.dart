@@ -129,7 +129,20 @@ class _SectionalTabState extends State<SectionalTab> {
     if (mounted) setState(() => _isLoading = false);
   }
 
+  /// JSON se rang: "0xFF7C3AED" ya "#7C3AED" dono chalega.
+  Color? _jsonColor(dynamic data) {
+    if (data is! Map) return null;
+    final dynamic raw = data['color'];
+    if (raw is! String || raw.trim().isEmpty) return null;
+    String hex = raw.trim().replaceFirst('#', '');
+    if (hex.length == 6) hex = 'FF$hex';
+    final int? value = int.tryParse(hex, radix: 16);
+    return value == null ? null : Color(value);
+  }
+
   Color _resolveColor(String key, int index) {
+    final Color? fromJson = _jsonColor(_liveData[key]);
+    if (fromJson != null) return fromJson;
     switch (key) {
       case 'bpsc':
         return const Color(0xFF9D174D);
@@ -166,6 +179,10 @@ class _SectionalTabState extends State<SectionalTab> {
   }
 
   String _examIcon(String key) {
+    final dynamic d = _liveData[key];
+    if (d is Map && d['icon'] is String && (d['icon'] as String).isNotEmpty) {
+      return d['icon'] as String;
+    }
     switch (key) {
       case 'bpsc':
         return '🏛️';
@@ -296,7 +313,43 @@ class _SectionalTabState extends State<SectionalTab> {
     if (mounted) setState(() => _progress = data);
   }
 
-  // ---------- JSON -> Groups (purani wali exact logic, dono formats) ----------
+  // ---------- JSON -> Groups ----------
+  //
+  // sectional_data.json ka contract (sab kuch optional, sab live chalta hai,
+  // APK rebuild ki zaroorat nahi):
+  //
+  //   "<key>": {"title","total_sets","path_prefix","set_numbers",
+  //             "upcoming_sets","upcoming_text"}          // map format
+  //   "<key>": [ {"title","sets","folder","set_numbers",
+  //               "upcoming_sets","upcoming_text"}, ... ]  // list format
+  //   "<key>": {"display_name","badge","icon","color","family_title",
+  //             "family_badge","sub_label","items":[ ... ]}
+  //
+  //   folder/path_prefix  -> "sectional_mock/<family>/..." ; ek hi family
+  //                          wale saare keys apne aap EK card me jud jaate
+  //                          hain (bpsc/cce + bpsc/aedo -> "BPSC").
+  //   set_numbers         -> [1,2,3,10,14] jaise non-contiguous set live karo.
+  //   display_name/badge  -> card ka naam aur pill (single-key family).
+  //   family_title/badge  -> card ka naam aur pill (multi-key family).
+  //   sub_label           -> multi-key family me section titles ka prefix.
+  //   icon                -> koi bhi emoji.
+  //   color               -> "0xFF7C3AED" ya "#7C3AED".
+  //
+  // Naya exam add karna = ek naya key + uska folder. Naya set add karna =
+  // file upload karke sets/set_numbers badha dena. Dono bina rebuild ke.
+
+  /// JSON ke "set_numbers" (ya "numbers") se explicit set list.
+  List<int> _setNumbers(dynamic src) {
+    if (src is! Map) return const <int>[];
+    final dynamic raw = src['set_numbers'] ?? src['numbers'];
+    if (raw is! List) return const <int>[];
+    final List<int> out = <int>[];
+    for (final dynamic v in raw) {
+      final int? n = int.tryParse(v.toString());
+      if (n != null && n > 0) out.add(n);
+    }
+    return out;
+  }
 
   List<SectionalExamGroup> _groupsFor(String examKey) {
     final dynamic panelData = _liveData[examKey];
@@ -304,13 +357,15 @@ class _SectionalTabState extends State<SectionalTab> {
 
     // Map Format (total_sets)
     if (panelData is Map && panelData.containsKey('total_sets')) {
+      final List<int> nums = _setNumbers(panelData);
       return [
         SectionalExamGroup(
-          title: panelData['title'] ?? '🏛️ Exam Special Zone',
-          sets: panelData['total_sets'] ?? 10,
+          title: _clean(panelData['title'] ?? '🏛️ Exam Special Zone'),
+          sets: nums.isNotEmpty ? nums.length : (panelData['total_sets'] ?? 10),
           upcomingSets: panelData['upcoming_sets'] ?? 0,
           upcomingText: panelData['upcoming_text'] ?? "Coming Soon",
           pathPrefix: panelData['path_prefix'] ?? '$examKey/set',
+          numbers: nums,
         ),
       ];
     }
@@ -325,12 +380,14 @@ class _SectionalTabState extends State<SectionalTab> {
 
     return items.map<SectionalExamGroup>((item) {
       final String folder = item['folder'] ?? examKey;
+      final List<int> nums = _setNumbers(item);
       return SectionalExamGroup(
-        title: item['title'] ?? 'Sectional Mock',
-        sets: item['sets'] ?? 1,
+        title: _clean(item['title'] ?? 'Sectional Mock'),
+        sets: nums.isNotEmpty ? nums.length : (item['sets'] ?? 1),
         upcomingSets: item['upcoming_sets'] ?? 0,
         upcomingText: item['upcoming_text'] ?? "Live Tomorrow",
         pathPrefix: '$folder/set',
+        numbers: nums,
       );
     }).toList();
   }
@@ -388,8 +445,13 @@ class _SectionalTabState extends State<SectionalTab> {
     'bssc_ldc': 'LDC',
   };
 
-  String _subLabelFor(String key) =>
-      _subLabels[key] ?? key.replaceAll('_', ' ').toUpperCase();
+  String _subLabelFor(String key) {
+    final dynamic d = _liveData[key];
+    if (d is Map && d['sub_label'] is String && (d['sub_label'] as String).isNotEmpty) {
+      return (d['sub_label'] as String).toUpperCase();
+    }
+    return _subLabels[key] ?? key.replaceAll('_', ' ').toUpperCase();
+  }
 
   /// content_base ke JSON me kabhi HTML-escaped text chala jaata hai.
   String _clean(String text) =>
@@ -410,6 +472,7 @@ class _SectionalTabState extends State<SectionalTab> {
           upcomingSets: g.upcomingSets,
           upcomingText: g.upcomingText,
           pathPrefix: g.pathPrefix,
+          numbers: g.numbers,
         ));
       }
     }
@@ -417,6 +480,12 @@ class _SectionalTabState extends State<SectionalTab> {
   }
 
   String _familyTitle(_ExamFamily fam) {
+    for (final String key in fam.keys) {
+      final dynamic d = _liveData[key];
+      if (d is Map && d['family_title'] is String && (d['family_title'] as String).isNotEmpty) {
+        return _clean(d['family_title'] as String);
+      }
+    }
     if (fam.keys.length == 1) {
       return _clean(_formatExamTitle(fam.keys.first, _liveData[fam.keys.first]));
     }
@@ -434,6 +503,12 @@ class _SectionalTabState extends State<SectionalTab> {
   }
 
   String _familyBadge(_ExamFamily fam) {
+    for (final String key in fam.keys) {
+      final dynamic d = _liveData[key];
+      if (d is Map && d['family_badge'] is String && (d['family_badge'] as String).isNotEmpty) {
+        return _clean(d['family_badge'] as String);
+      }
+    }
     if (fam.keys.length == 1) {
       return _clean(_formatExamBadge(fam.keys.first, _liveData[fam.keys.first]));
     }
@@ -441,6 +516,12 @@ class _SectionalTabState extends State<SectionalTab> {
   }
 
   String _familyIcon(_ExamFamily fam) {
+    for (final String key in fam.keys) {
+      final dynamic d = _liveData[key];
+      if (d is Map && d['icon'] is String && (d['icon'] as String).isNotEmpty) {
+        return d['icon'] as String;
+      }
+    }
     if (fam.keys.length == 1) return _examIcon(fam.keys.first);
     switch (fam.id) {
       case 'bpsc':
@@ -454,6 +535,10 @@ class _SectionalTabState extends State<SectionalTab> {
   }
 
   Color _familyColor(_ExamFamily fam, int index) {
+    for (final String key in fam.keys) {
+      final Color? c = _jsonColor(_liveData[key]);
+      if (c != null) return c;
+    }
     if (fam.keys.length == 1) return _resolveColor(fam.keys.first, index);
     switch (fam.id) {
       case 'bpsc':
@@ -470,8 +555,8 @@ class _SectionalTabState extends State<SectionalTab> {
     int done = 0;
     int total = 0;
     for (final SectionalExamGroup g in _groupsForFamily(fam)) {
-      total += g.sets;
-      for (int n = 1; n <= g.sets; n++) {
+      total += g.setNums.length;
+      for (final int n in g.setNums) {
         if (_progress[g.launchTitle(n)]?['status'] == 'COMPLETED') done++;
       }
     }
@@ -484,7 +569,7 @@ class _SectionalTabState extends State<SectionalTab> {
     for (final _ExamFamily fam in families) {
       final counts = _familyCounts(fam);
       for (final SectionalExamGroup g in _groupsForFamily(fam)) {
-        for (int n = 1; n <= g.sets; n++) {
+        for (final int n in g.setNums) {
           final String title = g.launchTitle(n);
           final String? status = _progress[title]?['status']?.toString();
           if (status == 'IN_PROGRESS') {
