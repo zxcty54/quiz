@@ -5,7 +5,12 @@ import 'package:flutter/material.dart';
 /// sectional_data.json se bana ek section group (jaise "Reasoning Sets").
 /// Sets hamesha JSON ke count se auto-generate hote hain — kuch hardcoded nahi.
 class SectionalExamGroup {
+  /// Progress key isi se banti hai — family ke andar unique rakhi jaati hai
+  /// (collision ho to "INTER · 📐 General Mathematics Sets" jaisa prefix).
   final String title;
+
+  /// Screen par dikhne wala saaf naam. Khaali ho to [title] hi dikhta hai.
+  final String displayTitle;
   final int sets;
   final int upcomingSets;
   final String upcomingText;
@@ -18,6 +23,7 @@ class SectionalExamGroup {
 
   const SectionalExamGroup({
     required this.title,
+    this.displayTitle = '',
     required this.sets,
     required this.upcomingSets,
     required this.upcomingText,
@@ -32,8 +38,31 @@ class SectionalExamGroup {
   /// Locked "upcoming" rows isi number ke baad se shuru hoti hain.
   int get lastSetNum => setNums.isEmpty ? sets : setNums.last;
 
+  /// UI label (folder ke andar prefix dikhane ki zaroorat nahi).
+  String get uiTitle => displayTitle.isEmpty ? title : displayTitle;
+
   String launchTitle(int setNum) => '$title Set $setNum';
   String launchPath(int setNum) => '$pathPrefix$setNum.json';
+}
+
+/// Purane builds progress ko bina folder-prefix wale title par save karte the.
+/// Naya build title collision se bachne ke liye prefix jod sakta hai, isliye
+/// purana record naye key par copy kar dete hain — warna user ka kiya hua kaam
+/// gayab dikhta.
+Map<String, Map<String, dynamic>> withLegacyProgressAliases(
+  Map<String, Map<String, dynamic>> src,
+  Iterable<SectionalExamGroup> groups,
+) {
+  final Map<String, Map<String, dynamic>> out = Map<String, Map<String, dynamic>>.from(src);
+  for (final SectionalExamGroup g in groups) {
+    if (g.displayTitle.isEmpty || g.displayTitle == g.title) continue;
+    for (final int n in g.setNums) {
+      final String fresh = g.launchTitle(n);
+      final String legacy = '${g.displayTitle} Set $n';
+      if (!out.containsKey(fresh) && out.containsKey(legacy)) out[fresh] = out[legacy]!;
+    }
+  }
+  return out;
 }
 
 /// Sectional Mocks 2.0 — ek exam ke saare sets ki list,
@@ -94,7 +123,7 @@ class _SectionalExamScreenState extends State<SectionalExamScreen> {
 
   Future<void> _reloadProgress() async {
     final data = await widget.progressLoader();
-    if (mounted) setState(() => _progress = data);
+    if (mounted) setState(() => _progress = withLegacyProgressAliases(data, widget.groups));
   }
 
   void _launch(SectionalExamGroup group, int setNum) {
@@ -331,7 +360,7 @@ class _SectionalExamScreenState extends State<SectionalExamScreen> {
             children: [
               Expanded(
                 child: Text(
-                  group.title,
+                  group.uiTitle,
                   style: TextStyle(fontSize: 13, fontWeight: FontWeight.w900, color: textColor),
                 ),
               ),

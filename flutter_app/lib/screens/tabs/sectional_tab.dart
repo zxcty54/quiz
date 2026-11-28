@@ -5,6 +5,7 @@ import 'package:http/http.dart' as http;
 import 'package:shared_preferences/shared_preferences.dart';
 
 import '../sectional_exam_screen.dart';
+import '../sectional_family_screen.dart';
 
 // --- Content Proxy (Private content_base ka darwaza: Cloudflare Worker) ---
 const String _contentProxyBase =
@@ -130,9 +131,11 @@ class _SectionalTabState extends State<SectionalTab> {
   }
 
   /// JSON se rang: "0xFF7C3AED" ya "#7C3AED" dono chalega.
-  Color? _jsonColor(dynamic data) {
+  Color? _jsonColor(dynamic data) => _colorField(data, 'color');
+
+  Color? _colorField(dynamic data, String field) {
     if (data is! Map) return null;
-    final dynamic raw = data['color'];
+    final dynamic raw = data[field];
     if (raw is! String || raw.trim().isEmpty) return null;
     String hex = raw.trim().replaceFirst('#', '');
     if (hex.length == 6) hex = 'FF$hex';
@@ -310,7 +313,11 @@ class _SectionalTabState extends State<SectionalTab> {
 
   Future<void> _refreshProgress() async {
     final data = await _loadProgressMap();
-    if (mounted) setState(() => _progress = data);
+    if (!mounted) return;
+    final List<SectionalExamGroup> all = <SectionalExamGroup>[
+      for (final _ExamFamily f in _families()) ..._groupsForFamily(f),
+    ];
+    setState(() => _progress = withLegacyProgressAliases(data, all));
   }
 
   // ---------- JSON -> Groups ----------
@@ -457,27 +464,155 @@ class _SectionalTabState extends State<SectionalTab> {
   String _clean(String text) =>
       text.replaceAll('&amp;', '&').replaceAll('&#39;', "'");
 
-  List<SectionalExamGroup> _groupsForFamily(_ExamFamily fam) {
-    final bool multi = fam.keys.length > 1;
-    final List<SectionalExamGroup> out = <SectionalExamGroup>[];
-    for (final String key in fam.keys) {
-      final String label = _subLabelFor(key);
-      for (final SectionalExamGroup g in _groupsFor(key)) {
-        final String base = _clean(g.title);
-        out.add(SectionalExamGroup(
-          title: (multi && !base.toUpperCase().contains(label))
-              ? '$label · $base'
-              : base,
-          sets: g.sets,
-          upcomingSets: g.upcomingSets,
-          upcomingText: g.upcomingText,
-          pathPrefix: g.pathPrefix,
-          numbers: g.numbers,
-        ));
+  // ---------- LEVEL 2: family ke andar ke folder (CCE / AEO, CGL / INTER / LDC) ----------
+  //
+  // Hub card kholne par ek lambi flat list na aaye, isliye beech me folder
+  // level hai. Folder bhi JSON se hi tay hota hai:
+  //
+  //   sectional_mock/<family>/<folder>/<section>/set1.json  -> folder level HAI
+  //   sectional_mock/<family>/<section>/set1.json           -> folder level NAHI
+  //
+  // Aur poori tarah override ke liye item (ya dict-format key) par ye optional
+  // fields hain:
+  //   "sub_exam"        folder ka dikhne wala naam, jaise "AEO" / "10+2 INTER"
+  //   "sub_exam_badge"  folder tile ka pill (warna "<N> SETS")
+  //   "sub_exam_icon"   folder tile ka emoji
+  //   "sub_exam_color"  folder ka rang, "0xFF7C3AED" ya "#7C3AED"
+  //
+  // Ek hi family me ek hi folder ho to beech wala screen skip ho jaata hai aur
+  // card seedha sections kholta hai (jaise SSC, BTSC, Bihar SI).
+
+  /// Folder segment ke liye chhota sa display fallback. JSON ka "sub_exam"
+  /// hamesha jeetta hai.
+  static const Map<String, String> _folderNames = <String, String>{
+    'aedo': 'AEO',
+    'cce': 'CCE',
+    'cgl': 'CGL',
+    'inter': 'INTER',
+    'ldc': 'LDC',
+  };
+
+  /// pathPrefix "sectional_mock/<family>/<folder>/<section>/set" me se <folder>.
+  /// Set files seedhe "<family>/<section>/set" me hon to '' (koi folder nahi).
+  String _subIdOf(String pathPrefix) {
+    final Match? m = RegExp(r'sectional_mock/[^/]+/(.*)$').firstMatch(pathPrefix);
+    if (m == null) return '';
+    final List<String> segs = m.group(1)!.split('/')..removeWhere((String x) => x.isEmpty);
+    return segs.length >= 3 ? segs.first : '';
+  }
+
+  /// Ek JSON key ke item maps, usi order me jis order me _groupsFor groups deta hai.
+  List<dynamic> _rawItemsFor(String key) {
+    final dynamic d = _liveData[key];
+    if (d is Map && d.containsKey('total_sets')) return <dynamic>[d];
+    if (d is List) return d;
+    if (d is Map && d['items'] is List) return d['items'] as List;
+    return const <dynamic>[];
+  }
+
+  /// Pehle item par dhundo, warna key par (dict-format key ke liye).
+  String _jsonStr(dynamic raw, dynamic keyData, String field) {
+    for (final dynamic d in <dynamic>[raw, keyData]) {
+      if (d is Map && d[field] is String && (d[field] as String).trim().isNotEmpty) {
+        return (d[field] as String).trim();
       }
+    }
+    return '';
+  }
+
+  List<SectionalSubExam> _subExamsFor(_ExamFamily fam) {
+    final List<String> order = <String>[];
+    final Map<String, List<SectionalExamGroup>> groupsById = <String, List<SectionalExamGroup>>{};
+    final Map<String, String> nameById = <String, String>{};
+    final Map<String, String> badgeById = <String, String>{};
+    final Map<String, String> iconById = <String, String>{};
+    final Map<String, Color?> colorById = <String, Color?>{};
+
+    for (final String key in fam.keys) {
+      final dynamic keyData = _liveData[key];
+      final List<dynamic> raws = _rawItemsFor(key);
+      final List<SectionalExamGroup> groups = _groupsFor(key);
+      for (int i = 0; i < groups.length; i++) {
+        final SectionalExamGroup g = groups[i];
+        final dynamic raw = i < raws.length ? raws[i] : null;
+        final String explicit = _clean(_jsonStr(raw, keyData, 'sub_exam'));
+        final String folderId = _subIdOf(g.pathPrefix);
+        final String id = explicit.isNotEmpty
+            ? explicit.toLowerCase()
+            : (folderId.isNotEmpty ? folderId.toLowerCase() : 'key:${key.toLowerCase()}');
+        if (!groupsById.containsKey(id)) {
+          order.add(id);
+          groupsById[id] = <SectionalExamGroup>[];
+          nameById[id] = explicit.isNotEmpty
+              ? explicit.toUpperCase()
+              : (folderId.isNotEmpty
+                  ? (_folderNames[folderId] ?? folderId.replaceAll('_', ' ').toUpperCase())
+                  : _subLabelFor(key));
+          badgeById[id] = _clean(_jsonStr(raw, keyData, 'sub_exam_badge'));
+          iconById[id] = _jsonStr(raw, keyData, 'sub_exam_icon');
+          colorById[id] = _colorField(raw, 'sub_exam_color') ??
+              _jsonColor(raw) ??
+              _colorField(keyData, 'sub_exam_color');
+        }
+        groupsById[id]!.add(g);
+      }
+    }
+
+    // Ek hi section-title do folder me ho to progress key takraayegi, isliye
+    // sirf us haalat me title ke aage folder ka naam joda jaata hai. Screen
+    // par saaf naam hi dikhta hai (displayTitle).
+    final Map<String, Set<String>> bucketsByTitle = <String, Set<String>>{};
+    for (final String id in order) {
+      for (final SectionalExamGroup g in groupsById[id]!) {
+        final Set<String> seen = bucketsByTitle[g.title] ?? <String>{};
+        seen.add(id);
+        bucketsByTitle[g.title] = seen;
+      }
+    }
+
+    final List<SectionalSubExam> out = <SectionalSubExam>[];
+    for (int i = 0; i < order.length; i++) {
+      final String id = order[i];
+      final String name = nameById[id]!;
+      final List<SectionalExamGroup> groups = <SectionalExamGroup>[
+        for (final SectionalExamGroup g in groupsById[id]!)
+          (bucketsByTitle[g.title]!.length > 1 && !g.title.toUpperCase().contains(name))
+              ? SectionalExamGroup(
+                  title: '$name · ${g.title}',
+                  displayTitle: g.title,
+                  sets: g.sets,
+                  upcomingSets: g.upcomingSets,
+                  upcomingText: g.upcomingText,
+                  pathPrefix: g.pathPrefix,
+                  numbers: g.numbers,
+                )
+              : SectionalExamGroup(
+                  title: g.title,
+                  displayTitle: g.title,
+                  sets: g.sets,
+                  upcomingSets: g.upcomingSets,
+                  upcomingText: g.upcomingText,
+                  pathPrefix: g.pathPrefix,
+                  numbers: g.numbers,
+                ),
+      ];
+      final int total = groups.fold<int>(0, (int s2, SectionalExamGroup g) => s2 + g.setNums.length);
+      out.add(SectionalSubExam(
+        id: id,
+        name: name,
+        badge: badgeById[id]!.isNotEmpty ? badgeById[id]! : '$total SETS',
+        icon: iconById[id]!.isNotEmpty ? iconById[id]! : _familyIcon(fam),
+        color: colorById[id] ?? _familyColor(fam, i),
+        groups: groups,
+      ));
     }
     return out;
   }
+
+  /// Family ke saare section groups (folder ke hisaab se ordered).
+  List<SectionalExamGroup> _groupsForFamily(_ExamFamily fam) => <SectionalExamGroup>[
+        for (final SectionalSubExam s in _subExamsFor(fam)) ...s.groups,
+      ];
 
   String _familyTitle(_ExamFamily fam) {
     for (final String key in fam.keys) {
@@ -509,6 +644,8 @@ class _SectionalTabState extends State<SectionalTab> {
         return _clean(d['family_badge'] as String);
       }
     }
+    final List<SectionalSubExam> subs = _subExamsFor(fam);
+    if (subs.length > 1) return subs.map((SectionalSubExam x) => x.name).join(' • ');
     if (fam.keys.length == 1) {
       return _clean(_formatExamBadge(fam.keys.first, _liveData[fam.keys.first]));
     }
@@ -606,6 +743,30 @@ class _SectionalTabState extends State<SectionalTab> {
   }
 
   void _openExam(BuildContext context, _ExamFamily fam, int index) {
+    final List<SectionalSubExam> subs = _subExamsFor(fam);
+
+    // Ek se zyada folder ho (BPSC ke andar CCE + AEO) to pehle folder chuno,
+    // warna seedha sections ki list.
+    if (subs.length > 1) {
+      Navigator.push(
+        context,
+        MaterialPageRoute(
+          builder: (_) => SectionalFamilyScreen(
+            familyTitle: _familyTitle(fam),
+            familyBadge: _familyBadge(fam),
+            familyIcon: _familyIcon(fam),
+            color: _familyColor(fam, index),
+            isDarkMode: widget.isDarkMode,
+            subs: subs,
+            progressLoader: _loadProgressMap,
+            onLaunchCbtMock: widget.onLaunchCbtMock,
+            onShowUpcoming: _showUpcomingNotice,
+          ),
+        ),
+      ).then((_) => _refreshProgress());
+      return;
+    }
+
     Navigator.push(
       context,
       MaterialPageRoute(

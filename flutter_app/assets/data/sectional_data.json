@@ -22,28 +22,38 @@
       26,
       27,
       28
-    ]
+    ],
+    "sub_exam": "CCE",
+    "sub_exam_badge": "PRELIMS + MAINS"
   },
   "bpsc_aedo": [
     {
       "title": "📐 Quantitative Aptitude Sets",
       "sets": 5,
-      "folder": "sectional_mock/bpsc/aedo/aptitude"
+      "folder": "sectional_mock/bpsc/aedo/aptitude",
+      "sub_exam": "AEO",
+      "sub_exam_badge": "AGRI EXTENSION OFFICER"
     },
     {
       "title": "🧠 General Reasoning Sets",
       "sets": 5,
-      "folder": "sectional_mock/bpsc/aedo/reasoning"
+      "folder": "sectional_mock/bpsc/aedo/reasoning",
+      "sub_exam": "AEO",
+      "sub_exam_badge": "AGRI EXTENSION OFFICER"
     },
     {
       "title": "📖 General English Sets",
       "sets": 5,
-      "folder": "sectional_mock/bpsc/aedo/english"
+      "folder": "sectional_mock/bpsc/aedo/english",
+      "sub_exam": "AEO",
+      "sub_exam_badge": "AGRI EXTENSION OFFICER"
     },
     {
       "title": "📝 सामान्य हिंदी Sets",
       "sets": 5,
-      "folder": "sectional_mock/bpsc/aedo/hindi"
+      "folder": "sectional_mock/bpsc/aedo/hindi",
+      "sub_exam": "AEO",
+      "sub_exam_badge": "AGRI EXTENSION OFFICER"
     }
   ],
   "ssc": [
@@ -67,73 +77,94 @@
     {
       "title": "🧠 BSSC CGL Reasoning Sets",
       "sets": 5,
-      "folder": "sectional_mock/bssc/cgl/reasoning"
+      "folder": "sectional_mock/bssc/cgl/reasoning",
+      "sub_exam": "CGL",
+      "sub_exam_badge": "GRADUATE LEVEL"
     },
     {
       "title": "📐 BSSC CGL Mathematics / Aptitude Sets",
       "sets": 6,
-      "folder": "sectional_mock/bssc/cgl/aptitude"
+      "folder": "sectional_mock/bssc/cgl/aptitude",
+      "sub_exam": "CGL",
+      "sub_exam_badge": "GRADUATE LEVEL"
     }
   ],
   "bssc_inter": [
     {
       "title": "🧠 Mental Ability & Reasoning Sets",
       "sets": 5,
-      "folder": "sectional_mock/bssc/inter/reasoning"
+      "folder": "sectional_mock/bssc/inter/reasoning",
+      "sub_exam": "INTER",
+      "sub_exam_badge": "10+2 LEVEL"
     },
     {
       "title": "📐 General Mathematics Sets",
       "sets": 5,
-      "folder": "sectional_mock/bssc/inter/aptitude"
+      "folder": "sectional_mock/bssc/inter/aptitude",
+      "sub_exam": "INTER",
+      "sub_exam_badge": "10+2 LEVEL"
     }
   ],
   "bssc_ldc": [
     {
       "title": "🌍 General Knowledge & General Science Sets",
       "sets": 5,
-      "folder": "sectional_mock/bssc/ldc/gk_gs"
+      "folder": "sectional_mock/bssc/ldc/gk_gs",
+      "sub_exam": "LDC",
+      "sub_exam_badge": "CLERK GRADE"
     },
     {
       "title": "📐 General Mathematics Sets",
       "sets": 5,
-      "folder": "sectional_mock/bssc/ldc/mathematics"
+      "folder": "sectional_mock/bssc/ldc/mathematics",
+      "sub_exam": "LDC",
+      "sub_exam_badge": "CLERK GRADE"
     },
     {
       "title": "💻 Basic Computer & Office Skills Sets",
       "sets": 5,
-      "folder": "sectional_mock/bssc/ldc/computer"
+      "folder": "sectional_mock/bssc/ldc/computer",
+      "sub_exam": "LDC",
+      "sub_exam_badge": "CLERK GRADE"
     },
     {
       "title": "📖 General English Sets",
       "sets": 5,
-      "folder": "sectional_mock/bssc/ldc/english"
+      "folder": "sectional_mock/bssc/ldc/english",
+      "sub_exam": "LDC",
+      "sub_exam_badge": "CLERK GRADE"
     }
   ],
   "btsc": [
     {
       "title": "🏨 Hostel Manager — Hotel Management, Nutrition & Safety Sets",
       "sets": 5,
-      "folder": "sectional_mock/btsc/hostel_manager/hotel_management"
+      "folder": "sectional_mock/btsc/hostel_manager/hotel_management",
+      "sub_exam": "HOSTEL MANAGER"
     },
     {
       "title": "🌍 Hostel Manager — GK, GS & Current Affairs Sets",
       "sets": 5,
-      "folder": "sectional_mock/btsc/hostel_manager/gk_gs_ca"
+      "folder": "sectional_mock/btsc/hostel_manager/gk_gs_ca",
+      "sub_exam": "HOSTEL MANAGER"
     },
     {
       "title": "🧠 Hostel Manager — Reasoning & Quantitative Aptitude Sets",
       "sets": 5,
-      "folder": "sectional_mock/btsc/hostel_manager/reasoning_maths"
+      "folder": "sectional_mock/btsc/hostel_manager/reasoning_maths",
+      "sub_exam": "HOSTEL MANAGER"
     },
     {
       "title": "💻 Hostel Manager — ICT & Administrative Aptitude Sets",
       "sets": 5,
-      "folder": "sectional_mock/btsc/hostel_manager/ict_admin_aptitude"
+      "folder": "sectional_mock/btsc/hostel_manager/ict_admin_aptitude",
+      "sub_exam": "HOSTEL MANAGER"
     },
     {
       "title": "📖 Hostel Manager — General Hindi & English Sets",
       "sets": 5,
-      "folder": "sectional_mock/btsc/hostel_manager/hindi_english"
+      "folder": "sectional_mock/btsc/hostel_manager/hindi_english",
+      "sub_exam": "HOSTEL MANAGER"
     }
   ],
   "bihar_si": [
