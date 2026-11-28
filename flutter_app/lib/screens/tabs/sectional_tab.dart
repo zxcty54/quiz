@@ -464,26 +464,31 @@ class _SectionalTabState extends State<SectionalTab> {
   String _clean(String text) =>
       text.replaceAll('&amp;', '&').replaceAll('&#39;', "'");
 
-  // ---------- LEVEL 2: family ke andar ke folder (CCE / AEO, CGL / INTER / LDC) ----------
+  // ---------- FOLDER TREE: content_base ke folder hi app ke level hain ----------
   //
-  // Hub card kholne par ek lambi flat list na aaye, isliye beech me folder
-  // level hai. Folder bhi JSON se hi tay hota hai:
+  // Hub card -> folder -> sub-folder -> ... -> set files. Level kitne bhi hon,
+  // structure JSON ke folder path se khud ban jaata hai:
   //
-  //   sectional_mock/<family>/<folder>/<section>/set1.json  -> folder level HAI
-  //   sectional_mock/<family>/<section>/set1.json           -> folder level NAHI
+  //   sectional_mock/bpsc/aedo/aptitude/set1.json
+  //     -> BPSC card -> AEO -> APTITUDE -> Set 1..5
+  //   sectional_mock/bihar_si/set1.json
+  //     -> BIHAR SI card -> seedha Set 1..5
   //
-  // Aur poori tarah override ke liye item (ya dict-format key) par ye optional
-  // fields hain:
-  //   "sub_exam"        folder ka dikhne wala naam, jaise "AEO" / "10+2 INTER"
-  //   "sub_exam_badge"  folder tile ka pill (warna "<N> SETS")
-  //   "sub_exam_icon"   folder tile ka emoji
-  //   "sub_exam_color"  folder ka rang, "0xFF7C3AED" ya "#7C3AED"
+  // JSON se control (sab optional, kuch bhi na do to folder ke naam se default):
+  //   key level  "folders": {
+  //                  "aedo":            {"name":"AEO","badge":"...","icon":"🌾","color":"#BE123C"},
+  //                  "aedo/aptitude":   {"name":"Quantitative Aptitude"}
+  //                }
+  //                -> path family ke folder ke relative, kitna bhi gehra ho.
+  //   key level  "flatten": true   -> us family ke saare section ek hi list me
+  //   item level "sub_exam", "sub_exam_badge", "sub_exam_icon", "sub_exam_color"
+  //                -> family ke turant andar wale folder ka naam (chhota raasta)
   //
-  // Ek hi family me ek hi folder ho to beech wala screen skip ho jaata hai aur
-  // card seedha sections kholta hai (jaise SSC, BTSC, Bihar SI).
+  // Ek suvidha rule: jis folder me sirf ek sub-folder ho aur apni koi set file
+  // na ho, woh level skip ho jaata hai (btsc -> hostel_manager -> topics me se
+  // beech wala level hat jaata hai, kyunki wahan choice hi nahi hai).
 
-  /// Folder segment ke liye chhota sa display fallback. JSON ka "sub_exam"
-  /// hamesha jeetta hai.
+  /// Folder segment ke liye chhota display fallback. JSON hamesha jeetta hai.
   static const Map<String, String> _folderNames = <String, String>{
     'aedo': 'AEO',
     'cce': 'CCE',
@@ -492,13 +497,26 @@ class _SectionalTabState extends State<SectionalTab> {
     'ldc': 'LDC',
   };
 
-  /// pathPrefix "sectional_mock/<family>/<folder>/<section>/set" me se <folder>.
-  /// Set files seedhe "<family>/<section>/set" me hon to '' (koi folder nahi).
-  String _subIdOf(String pathPrefix) {
-    final Match? m = RegExp(r'sectional_mock/[^/]+/(.*)$').firstMatch(pathPrefix);
-    if (m == null) return '';
-    final List<String> segs = m.group(1)!.split('/')..removeWhere((String x) => x.isEmpty);
-    return segs.length >= 3 ? segs.first : '';
+  static const List<Color> _folderPalette = <Color>[
+    Color(0xFF7C3AED),
+    Color(0xFF0D9488),
+    Color(0xFFBE123C),
+    Color(0xFF1D4ED8),
+    Color(0xFFEA580C),
+    Color(0xFF059669),
+    Color(0xFF9333EA),
+    Color(0xFFB45309),
+  ];
+
+  /// pathPrefix se family-relative folder path:
+  /// "sectional_mock/bpsc/aedo/aptitude/set" -> "bpsc/aedo/aptitude".
+  String _relFolderOf(String pathPrefix) {
+    String p = pathPrefix;
+    final int i = p.indexOf('sectional_mock/');
+    if (i >= 0) p = p.substring(i + 'sectional_mock/'.length);
+    final int slash = p.lastIndexOf('/'); // aakhri hissa set-file prefix hai
+    if (slash > 0) p = p.substring(0, slash);
+    return p.replaceAll(RegExp(r'^/+|/+$'), '');
   }
 
   /// Ek JSON key ke item maps, usi order me jis order me _groupsFor groups deta hai.
@@ -520,13 +538,54 @@ class _SectionalTabState extends State<SectionalTab> {
     return '';
   }
 
-  List<SectionalSubExam> _subExamsFor(_ExamFamily fam) {
-    final List<String> order = <String>[];
-    final Map<String, List<SectionalExamGroup>> groupsById = <String, List<SectionalExamGroup>>{};
-    final Map<String, String> nameById = <String, String>{};
-    final Map<String, String> badgeById = <String, String>{};
-    final Map<String, String> iconById = <String, String>{};
-    final Map<String, Color?> colorById = <String, Color?>{};
+  /// key level "folders" map me is path ka metadata (relative ya poora path).
+  Map<String, dynamic> _folderMeta(_ExamFamily fam, String relPath, String fullPath) {
+    for (final String key in fam.keys) {
+      final dynamic d = _liveData[key];
+      if (d is! Map || d['folders'] is! Map) continue;
+      final Map<dynamic, dynamic> m = d['folders'] as Map;
+      for (final String probe in <String>[relPath, fullPath]) {
+        if (probe.isEmpty) continue;
+        final dynamic hit = m[probe];
+        if (hit is Map) return Map<String, dynamic>.from(hit);
+      }
+    }
+    return const <String, dynamic>{};
+  }
+
+  String _metaStr(Map<String, dynamic> meta, String field) {
+    final dynamic v = meta[field];
+    return (v is String && v.trim().isNotEmpty) ? _clean(v.trim()) : '';
+  }
+
+  /// Title ke shuru ka emoji — leaf folder ke tile ka icon isi se banta hai.
+  String _emojiOf(String title) {
+    final List<String> parts = title.trim().split(RegExp(r'\s+'));
+    if (parts.isEmpty) return '';
+    final String first = parts.first;
+    if (first.runes.length > 3) return '';
+    return first.runes.any((int r) => r > 0x2100) ? first : '';
+  }
+
+  /// Poora family folder tree. [colorIndex] hub card ki position hai.
+  SectionalFolder _familyFolder(_ExamFamily fam, int colorIndex) {
+    final Map<String, _NodeBuild> index = <String, _NodeBuild>{};
+
+    _NodeBuild nodeFor(List<String> segs) {
+      final String p = segs.join('/');
+      final _NodeBuild? hit = index[p];
+      if (hit != null) return hit;
+      final _NodeBuild n = _NodeBuild(List<String>.from(segs));
+      index[p] = n;
+      if (segs.length > 1) {
+        final _NodeBuild parent = nodeFor(segs.sublist(0, segs.length - 1));
+        if (!parent.children.containsKey(segs.last)) {
+          parent.children[segs.last] = n;
+          parent.childOrder.add(segs.last);
+        }
+      }
+      return n;
+    }
 
     for (final String key in fam.keys) {
       final dynamic keyData = _liveData[key];
@@ -535,84 +594,171 @@ class _SectionalTabState extends State<SectionalTab> {
       for (int i = 0; i < groups.length; i++) {
         final SectionalExamGroup g = groups[i];
         final dynamic raw = i < raws.length ? raws[i] : null;
+        final String rel = _relFolderOf(g.pathPrefix);
+        final List<String> segs = rel.isEmpty ? <String>[key] : rel.split('/');
+        nodeFor(segs).groups.add(g);
+
         final String explicit = _clean(_jsonStr(raw, keyData, 'sub_exam'));
-        final String folderId = _subIdOf(g.pathPrefix);
-        final String id = explicit.isNotEmpty
-            ? explicit.toLowerCase()
-            : (folderId.isNotEmpty ? folderId.toLowerCase() : 'key:${key.toLowerCase()}');
-        if (!groupsById.containsKey(id)) {
-          order.add(id);
-          groupsById[id] = <SectionalExamGroup>[];
-          nameById[id] = explicit.isNotEmpty
-              ? explicit.toUpperCase()
-              : (folderId.isNotEmpty
-                  ? (_folderNames[folderId] ?? folderId.replaceAll('_', ' ').toUpperCase())
-                  : _subLabelFor(key));
-          badgeById[id] = _clean(_jsonStr(raw, keyData, 'sub_exam_badge'));
-          iconById[id] = _jsonStr(raw, keyData, 'sub_exam_icon');
-          colorById[id] = _colorField(raw, 'sub_exam_color') ??
-              _jsonColor(raw) ??
-              _colorField(keyData, 'sub_exam_color');
+        if (explicit.isNotEmpty && segs.length >= 2) {
+          final _NodeBuild first = nodeFor(segs.sublist(0, 2));
+          if (first.overrideName.isEmpty) {
+            first.overrideName = explicit.toUpperCase();
+            first.overrideBadge = _clean(_jsonStr(raw, keyData, 'sub_exam_badge'));
+            first.overrideIcon = _jsonStr(raw, keyData, 'sub_exam_icon');
+            first.overrideColor = _colorField(raw, 'sub_exam_color') ??
+                _jsonColor(raw) ??
+                _colorField(keyData, 'sub_exam_color');
+          }
         }
-        groupsById[id]!.add(g);
       }
     }
 
-    // Ek hi section-title do folder me ho to progress key takraayegi, isliye
-    // sirf us haalat me title ke aage folder ka naam joda jaata hai. Screen
-    // par saaf naam hi dikhta hai (displayTitle).
-    final Map<String, Set<String>> bucketsByTitle = <String, Set<String>>{};
-    for (final String id in order) {
-      for (final SectionalExamGroup g in groupsById[id]!) {
-        final Set<String> seen = bucketsByTitle[g.title] ?? <String>{};
-        seen.add(id);
-        bucketsByTitle[g.title] = seen;
-      }
+    if (index.isEmpty) {
+      return SectionalFolder(
+        path: fam.id,
+        name: _familyTitle(fam),
+        badge: '0 SETS',
+        icon: _familyIcon(fam),
+        color: _familyColor(fam, colorIndex),
+        nameFromJson: true,
+        groups: const <SectionalExamGroup>[],
+        children: const <SectionalFolder>[],
+      );
     }
 
-    final List<SectionalSubExam> out = <SectionalSubExam>[];
-    for (int i = 0; i < order.length; i++) {
-      final String id = order[i];
-      final String name = nameById[id]!;
-      final List<SectionalExamGroup> groups = <SectionalExamGroup>[
-        for (final SectionalExamGroup g in groupsById[id]!)
-          (bucketsByTitle[g.title]!.length > 1 && !g.title.toUpperCase().contains(name))
-              ? SectionalExamGroup(
-                  title: '$name · ${g.title}',
-                  displayTitle: g.title,
-                  sets: g.sets,
-                  upcomingSets: g.upcomingSets,
-                  upcomingText: g.upcomingText,
-                  pathPrefix: g.pathPrefix,
-                  numbers: g.numbers,
-                )
-              : SectionalExamGroup(
-                  title: g.title,
-                  displayTitle: g.title,
-                  sets: g.sets,
-                  upcomingSets: g.upcomingSets,
-                  upcomingText: g.upcomingText,
-                  pathPrefix: g.pathPrefix,
-                  numbers: g.numbers,
-                ),
-      ];
-      final int total = groups.fold<int>(0, (int s2, SectionalExamGroup g) => s2 + g.setNums.length);
-      out.add(SectionalSubExam(
-        id: id,
-        name: name,
-        badge: badgeById[id]!.isNotEmpty ? badgeById[id]! : '$total SETS',
-        icon: iconById[id]!.isNotEmpty ? iconById[id]! : _familyIcon(fam),
-        color: colorById[id] ?? _familyColor(fam, i),
-        groups: groups,
-      ));
+    _NodeBuild root = index[fam.id] ?? index.values.first;
+    for (final _NodeBuild n in index.values) {
+      if (n.segs.length == 1) root = n;
     }
-    return out;
+
+    // Ek hi section title do alag folder me ho to progress key takraati hai,
+    // isliye sirf tab title me folder ka naam joda jaata hai. Screen par saaf
+    // naam hi dikhta hai (displayTitle) aur purana record migrate ho jaata hai.
+    final Map<String, Set<String>> parentsByTitle = <String, Set<String>>{};
+    for (final _NodeBuild n in index.values) {
+      final String parentPath = n.segs.length > 1 ? n.segs.sublist(0, n.segs.length - 1).join('/') : '';
+      for (final SectionalExamGroup g in n.groups) {
+        final Set<String> seen = parentsByTitle[g.title] ?? <String>{};
+        seen.add(parentPath);
+        parentsByTitle[g.title] = seen;
+      }
+    }
+    final Set<String> clash = <String>{
+      for (final MapEntry<String, Set<String>> e in parentsByTitle.entries)
+        if (e.value.length > 1) e.key,
+    };
+
+    return _toFolder(fam, root, colorIndex, 0, '', true, clash);
   }
 
-  /// Family ke saare section groups (folder ke hisaab se ordered).
-  List<SectionalExamGroup> _groupsForFamily(_ExamFamily fam) => <SectionalExamGroup>[
-        for (final SectionalSubExam s in _subExamsFor(fam)) ...s.groups,
+  SectionalFolder _toFolder(
+    _ExamFamily fam,
+    _NodeBuild n,
+    int colorIndex,
+    int childIndex,
+    String parentName,
+    bool isRoot,
+    Set<String> clash,
+  ) {
+    final String fullPath = n.segs.join('/');
+    final String relPath = n.segs.length > 1 ? n.segs.sublist(1).join('/') : '';
+    final Map<String, dynamic> meta = isRoot ? const <String, dynamic>{} : _folderMeta(fam, relPath, fullPath);
+    final String last = n.segs.last;
+
+    String name;
+    if (isRoot) {
+      name = _familyTitle(fam);
+    } else {
+      name = _metaStr(meta, 'name');
+      if (name.isEmpty) name = n.overrideName;
+      if (name.isEmpty) name = _folderNames[last] ?? last.replaceAll('_', ' ').toUpperCase();
+    }
+    final bool nameFromJson = isRoot || _metaStr(meta, 'name').isNotEmpty || n.overrideName.isNotEmpty;
+
+    List<SectionalFolder> kids = <SectionalFolder>[
+      for (int i = 0; i < n.childOrder.length; i++)
+        _toFolder(fam, n.children[n.childOrder[i]]!, colorIndex, i, name, false, clash),
+    ];
+
+    // "flatten": true -> is level ke neeche ka sab kuch ek hi list me.
+    bool flatten = meta['flatten'] == true;
+    if (isRoot) {
+      for (final String key in fam.keys) {
+        final dynamic d = _liveData[key];
+        if (d is Map && d['flatten'] == true) flatten = true;
+      }
+    }
+
+    final String prefix = (!isRoot && parentName.isNotEmpty) ? parentName : name;
+    List<SectionalExamGroup> own = <SectionalExamGroup>[
+      for (final SectionalExamGroup g in n.groups)
+        (clash.contains(g.title) && !g.title.toUpperCase().contains(prefix))
+            ? SectionalExamGroup(
+                title: '$prefix · ${g.title}',
+                displayTitle: g.title,
+                sets: g.sets,
+                upcomingSets: g.upcomingSets,
+                upcomingText: g.upcomingText,
+                pathPrefix: g.pathPrefix,
+                numbers: g.numbers,
+              )
+            : SectionalExamGroup(
+                title: g.title,
+                displayTitle: g.title,
+                sets: g.sets,
+                upcomingSets: g.upcomingSets,
+                upcomingText: g.upcomingText,
+                pathPrefix: g.pathPrefix,
+                numbers: g.numbers,
+              ),
+    ];
+
+    if (flatten && kids.isNotEmpty) {
+      own = <SectionalExamGroup>[
+        ...own,
+        for (final SectionalFolder k in kids) ...k.allGroups,
       ];
+      kids = <SectionalFolder>[];
+    }
+
+    final int total = own.fold<int>(0, (int s, SectionalExamGroup g) => s + g.setNums.length) +
+        kids.fold<int>(0, (int s, SectionalFolder k) => s + k.totalSets);
+
+    String badge = _metaStr(meta, 'badge');
+    if (badge.isEmpty && !isRoot) badge = n.overrideBadge;
+    if (badge.isEmpty) badge = '$total SETS';
+
+    String icon = _metaStr(meta, 'icon');
+    if (icon.isEmpty && !isRoot) icon = n.overrideIcon;
+    if (icon.isEmpty && own.isNotEmpty) {
+      final SectionalExamGroup g0 = own.first;
+      icon = _emojiOf(g0.displayTitle.isEmpty ? g0.title : g0.displayTitle);
+    }
+    if (icon.isEmpty) icon = isRoot ? _familyIcon(fam) : (kids.isNotEmpty ? '📁' : '📄');
+
+    Color? color = _colorField(meta, 'color');
+    if (color == null && !isRoot) color = n.overrideColor;
+    if (color == null) {
+      color = isRoot ? _familyColor(fam, colorIndex) : _folderPalette[childIndex % _folderPalette.length];
+    }
+
+    // Sirf ek sub-folder aur apni koi set file nahi -> beech ka level skip.
+    if (kids.length == 1 && own.isEmpty) return kids.first;
+
+    return SectionalFolder(
+      path: fullPath,
+      name: name,
+      badge: badge,
+      icon: icon,
+      color: color,
+      nameFromJson: nameFromJson,
+      groups: own,
+      children: kids,
+    );
+  }
+
+  /// Family ke saare section groups (folder tree ke order me).
+  List<SectionalExamGroup> _groupsForFamily(_ExamFamily fam) => _familyFolder(fam, 0).allGroups;
 
   String _familyTitle(_ExamFamily fam) {
     for (final String key in fam.keys) {
@@ -644,10 +790,14 @@ class _SectionalTabState extends State<SectionalTab> {
         return _clean(d['family_badge'] as String);
       }
     }
-    final List<SectionalSubExam> subs = _subExamsFor(fam);
-    if (subs.length > 1) return subs.map((SectionalSubExam x) => x.name).join(' • ');
     if (fam.keys.length == 1) {
       return _clean(_formatExamBadge(fam.keys.first, _liveData[fam.keys.first]));
+    }
+    // Kai key ek hi folder me: card ke pill par folder ke naam dikha do.
+    final List<SectionalFolder> kids = _familyFolder(fam, 0).children;
+    if (kids.length > 1) {
+      final String joined = kids.map((SectionalFolder k) => k.name).join(' • ');
+      return joined.length <= 24 ? joined : '${kids.length} FOLDERS';
     }
     return fam.keys.map(_subLabelFor).join(' • ');
   }
@@ -743,21 +893,18 @@ class _SectionalTabState extends State<SectionalTab> {
   }
 
   void _openExam(BuildContext context, _ExamFamily fam, int index) {
-    final List<SectionalSubExam> subs = _subExamsFor(fam);
+    final SectionalFolder root = _familyFolder(fam, index);
 
-    // Ek se zyada folder ho (BPSC ke andar CCE + AEO) to pehle folder chuno,
-    // warna seedha sections ki list.
-    if (subs.length > 1) {
+    // Jitne folder hain utne level: sub-folder ho to folder screen, warna
+    // seedha set files ki list.
+    if (root.children.isNotEmpty) {
       Navigator.push(
         context,
         MaterialPageRoute(
-          builder: (_) => SectionalFamilyScreen(
-            familyTitle: _familyTitle(fam),
-            familyBadge: _familyBadge(fam),
-            familyIcon: _familyIcon(fam),
-            color: _familyColor(fam, index),
+          builder: (_) => SectionalFolderScreen(
+            folder: root,
+            crumb: _familyTitle(fam),
             isDarkMode: widget.isDarkMode,
-            subs: subs,
             progressLoader: _loadProgressMap,
             onLaunchCbtMock: widget.onLaunchCbtMock,
             onShowUpcoming: _showUpcomingNotice,
@@ -776,7 +923,7 @@ class _SectionalTabState extends State<SectionalTab> {
           icon: _familyIcon(fam),
           color: _familyColor(fam, index),
           isDarkMode: widget.isDarkMode,
-          groups: _groupsForFamily(fam),
+          groups: root.allGroups,
           progressLoader: _loadProgressMap,
           onLaunchCbtMock: widget.onLaunchCbtMock,
           onShowUpcoming: _showUpcomingNotice,
@@ -1085,6 +1232,20 @@ class _SectionalTabState extends State<SectionalTab> {
       ),
     );
   }
+}
+
+/// Folder tree banate waqt ka mutable node (baad me SectionalFolder banta hai).
+class _NodeBuild {
+  final List<String> segs;
+  final List<String> childOrder = <String>[];
+  final Map<String, _NodeBuild> children = <String, _NodeBuild>{};
+  final List<SectionalExamGroup> groups = <SectionalExamGroup>[];
+  String overrideName = '';
+  String overrideBadge = '';
+  String overrideIcon = '';
+  Color? overrideColor;
+
+  _NodeBuild(this.segs);
 }
 
 /// Ek exam family = sectional_mock ke ek hi folder ke saare JSON keys.
