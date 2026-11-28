@@ -5,22 +5,64 @@ import 'package:flutter/material.dart';
 /// sectional_data.json se bana ek section group (jaise "Reasoning Sets").
 /// Sets hamesha JSON ke count se auto-generate hote hain — kuch hardcoded nahi.
 class SectionalExamGroup {
+  /// Progress key isi se banti hai — family ke andar unique rakhi jaati hai
+  /// (collision ho to "INTER · 📐 General Mathematics Sets" jaisa prefix).
   final String title;
+
+  /// Screen par dikhne wala saaf naam. Khaali ho to [title] hi dikhta hai.
+  final String displayTitle;
   final int sets;
   final int upcomingSets;
   final String upcomingText;
   final String pathPrefix; // set file path = '$pathPrefix$n.json'
 
+  /// Optional, JSON ke "set_numbers" se: jab set files contiguous na hon
+  /// (jaise bpsc/cce me set1-8 ke baad set10, set14, set18...). Khaali list
+  /// ka matlab purana behaviour — 1 se sets tak.
+  final List<int> numbers;
+
   const SectionalExamGroup({
     required this.title,
+    this.displayTitle = '',
     required this.sets,
     required this.upcomingSets,
     required this.upcomingText,
     required this.pathPrefix,
+    this.numbers = const <int>[],
   });
+
+  /// Kaun kaun se set number dikhane aur launch karne hain.
+  List<int> get setNums =>
+      numbers.isEmpty ? <int>[for (int i = 1; i <= sets; i++) i] : numbers;
+
+  /// Locked "upcoming" rows isi number ke baad se shuru hoti hain.
+  int get lastSetNum => setNums.isEmpty ? sets : setNums.last;
+
+  /// UI label (folder ke andar prefix dikhane ki zaroorat nahi).
+  String get uiTitle => displayTitle.isEmpty ? title : displayTitle;
 
   String launchTitle(int setNum) => '$title Set $setNum';
   String launchPath(int setNum) => '$pathPrefix$setNum.json';
+}
+
+/// Purane builds progress ko bina folder-prefix wale title par save karte the.
+/// Naya build title collision se bachne ke liye prefix jod sakta hai, isliye
+/// purana record naye key par copy kar dete hain — warna user ka kiya hua kaam
+/// gayab dikhta.
+Map<String, Map<String, dynamic>> withLegacyProgressAliases(
+  Map<String, Map<String, dynamic>> src,
+  Iterable<SectionalExamGroup> groups,
+) {
+  final Map<String, Map<String, dynamic>> out = Map<String, Map<String, dynamic>>.from(src);
+  for (final SectionalExamGroup g in groups) {
+    if (g.displayTitle.isEmpty || g.displayTitle == g.title) continue;
+    for (final int n in g.setNums) {
+      final String fresh = g.launchTitle(n);
+      final String legacy = '${g.displayTitle} Set $n';
+      if (!out.containsKey(fresh) && out.containsKey(legacy)) out[fresh] = out[legacy]!;
+    }
+  }
+  return out;
 }
 
 /// Sectional Mocks 2.0 — ek exam ke saare sets ki list,
@@ -81,7 +123,7 @@ class _SectionalExamScreenState extends State<SectionalExamScreen> {
 
   Future<void> _reloadProgress() async {
     final data = await widget.progressLoader();
-    if (mounted) setState(() => _progress = data);
+    if (mounted) setState(() => _progress = withLegacyProgressAliases(data, widget.groups));
   }
 
   void _launch(SectionalExamGroup group, int setNum) {
@@ -93,12 +135,13 @@ class _SectionalExamScreenState extends State<SectionalExamScreen> {
     );
   }
 
-  int get _totalSets => widget.groups.fold<int>(0, (s, g) => s + g.sets);
+  int get _totalSets =>
+      widget.groups.fold<int>(0, (s, g) => s + g.setNums.length);
 
   int get _doneSets {
     int done = 0;
     for (final g in widget.groups) {
-      for (int n = 1; n <= g.sets; n++) {
+      for (final int n in g.setNums) {
         if (_progress[g.launchTitle(n)]?['status'] == 'COMPLETED') done++;
       }
     }
@@ -285,7 +328,7 @@ class _SectionalExamScreenState extends State<SectionalExamScreen> {
 
   Widget _groupCard(SectionalExamGroup group, bool isDark, Color textColor) {
     final List<Widget> rows = [];
-    for (int n = 1; n <= group.sets; n++) {
+    for (final int n in group.setNums) {
       final status = _progress[group.launchTitle(n)]?['status']?.toString();
       final bool isDone = status == 'COMPLETED';
       final bool isInProgress = status == 'IN_PROGRESS';
@@ -296,7 +339,7 @@ class _SectionalExamScreenState extends State<SectionalExamScreen> {
     // Upcoming (locked) sets sirf "All" filter me
     if (_filter == 'all') {
       for (int u = 1; u <= group.upcomingSets; u++) {
-        final int n = group.sets + u;
+        final int n = group.lastSetNum + u;
         rows.add(_lockedRow(group, n, isDark, textColor));
       }
     }
@@ -317,7 +360,7 @@ class _SectionalExamScreenState extends State<SectionalExamScreen> {
             children: [
               Expanded(
                 child: Text(
-                  group.title,
+                  group.uiTitle,
                   style: TextStyle(fontSize: 13, fontWeight: FontWeight.w900, color: textColor),
                 ),
               ),
@@ -510,4 +553,3 @@ class _SectionalExamScreenState extends State<SectionalExamScreen> {
     );
   }
 }
-
