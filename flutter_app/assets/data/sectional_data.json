@@ -2,8 +2,30 @@
   "bpsc": {
     "title": "🏛️ BPSC PCS Special Zone",
     "total_sets": 6,
-    "path_prefix": "sectional_mock/bpsc/set"
+    "path_prefix": "sectional_mock/bpsc/cce/set"
   },
+  "bpsc_aedo": [
+    {
+      "title": "📐 Quantitative Aptitude Sets",
+      "sets": 5,
+      "folder": "sectional_mock/bpsc/aedo/aptitude"
+    },
+    {
+      "title": "🧠 General Reasoning Sets",
+      "sets": 5,
+      "folder": "sectional_mock/bpsc/aedo/reasoning"
+    },
+    {
+      "title": "📖 General English Sets",
+      "sets": 5,
+      "folder": "sectional_mock/bpsc/aedo/english"
+    },
+    {
+      "title": "📝 सामान्य हिंदी Sets",
+      "sets": 5,
+      "folder": "sectional_mock/bpsc/aedo/hindi"
+    }
+  ],
   "ssc": [
     {
       "title": "⚡ General Reasoning Sets",
@@ -25,33 +47,89 @@
     {
       "title": "🧠 BSSC CGL Reasoning Sets",
       "sets": 5,
-      "folder": "sectional_mock/bssc_cgl/reasoning"
+      "folder": "sectional_mock/bssc/cgl/reasoning"
     },
     {
       "title": "📐 BSSC CGL Mathematics / Aptitude Sets",
-      "sets": 7,
-      "folder": "sectional_mock/bssc_cgl/aptitude"
+      "sets": 6,
+      "folder": "sectional_mock/bssc/cgl/aptitude"
     }
   ],
   "bssc_inter": [
     {
       "title": "🧠 Mental Ability & Reasoning Sets",
       "sets": 5,
-      "folder": "sectional_mock/bssc_inter/reasoning"
+      "folder": "sectional_mock/bssc/inter/reasoning"
     },
     {
       "title": "📐 General Mathematics Sets",
       "sets": 5,
-      "folder": "sectional_mock/bssc_inter/aptitude"
+      "folder": "sectional_mock/bssc/inter/aptitude"
+    }
+  ],
+  "bssc_ldc": [
+    {
+      "title": "🌍 General Knowledge & General Science Sets",
+      "sets": 5,
+      "folder": "sectional_mock/bssc/ldc/gk_gs"
+    },
+    {
+      "title": "📐 General Mathematics Sets",
+      "sets": 5,
+      "folder": "sectional_mock/bssc/ldc/mathematics"
+    },
+    {
+      "title": "💻 Basic Computer & Office Skills Sets",
+      "sets": 5,
+      "folder": "sectional_mock/bssc/ldc/computer"
+    },
+    {
+      "title": "📖 General English Sets",
+      "sets": 5,
+      "folder": "sectional_mock/bssc/ldc/english"
+    }
+  ],
+  "btsc": [
+    {
+      "title": "🏨 Hostel Manager — Hotel Management, Nutrition & Safety Sets",
+      "sets": 5,
+      "folder": "sectional_mock/btsc/hostel_manager/hotel_management"
+    },
+    {
+      "title": "🌍 Hostel Manager — GK, GS & Current Affairs Sets",
+      "sets": 5,
+      "folder": "sectional_mock/btsc/hostel_manager/gk_gs_ca"
+    },
+    {
+      "title": "🧠 Hostel Manager — Reasoning & Quantitative Aptitude Sets",
+      "sets": 5,
+      "folder": "sectional_mock/btsc/hostel_manager/reasoning_maths"
+    },
+    {
+      "title": "💻 Hostel Manager — ICT & Administrative Aptitude Sets",
+      "sets": 5,
+      "folder": "sectional_mock/btsc/hostel_manager/ict_admin_aptitude"
+    },
+    {
+      "title": "📖 Hostel Manager — General Hindi & English Sets",
+      "sets": 5,
+      "folder": "sectional_mock/btsc/hostel_manager/hindi_english"
     }
   ],
   "bihar_si": [
     {
       "title": "🎯 Bihar SI Practice Sets",
-      "sets": 5,
+      "sets": 2,
       "folder": "sectional_mock/bihar_si",
-      "upcoming_sets": 2,
+      "upcoming_sets": 3,
       "upcoming_text": "Live Tomorrow 8 PM"
+    }
+  ],
+  "bihar_constable": [
+    {
+      "title": "🚓 Bihar Police Constable Mock Sets",
+      "sets": 5,
+      "folder": "sectional_mock/bihar_constable"
     }
   ]
 }

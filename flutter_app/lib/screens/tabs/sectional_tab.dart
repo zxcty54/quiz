@@ -139,6 +139,16 @@ class _SectionalTabState extends State<SectionalTab> {
         return const Color(0xFF6B21A8);
       case 'bssc_inter':
         return const Color(0xFF075985);
+      case 'bssc_ldc':
+        return const Color(0xFF4338CA);
+      case 'bpsc_aedo':
+        return const Color(0xFFBE123C);
+      case 'btsc':
+        return const Color(0xFF0D9488);
+      case 'bihar_constable':
+        return const Color(0xFFB45309);
+      case 'ssc_cgl_ntpc':
+        return const Color(0xFF166534);
       case 'bihar_si':
         return const Color(0xFFD97706);
       case 'bihar_amin':
@@ -165,6 +175,14 @@ class _SectionalTabState extends State<SectionalTab> {
         return '🎓';
       case 'bssc_inter':
         return '📗';
+      case 'bssc_ldc':
+        return '⌨️';
+      case 'bpsc_aedo':
+        return '📐';
+      case 'btsc':
+        return '🏨';
+      case 'bihar_constable':
+        return '🚓';
       case 'bihar_si':
         return '🚔';
       case 'bihar_amin':
@@ -185,6 +203,14 @@ class _SectionalTabState extends State<SectionalTab> {
         return 'BSSC CGL';
       case 'bssc_inter':
         return 'BSSC 10+2';
+      case 'bssc_ldc':
+        return 'BSSC LDC';
+      case 'bpsc_aedo':
+        return 'BPSC AEO';
+      case 'btsc':
+        return 'BTSC';
+      case 'bihar_constable':
+        return 'BIHAR CONSTABLE';
       case 'bihar_si':
         return 'BIHAR SI';
       case 'bihar_amin':
@@ -205,6 +231,14 @@ class _SectionalTabState extends State<SectionalTab> {
         return 'GRADUATE';
       case 'bssc_inter':
         return 'INTER LEVEL';
+      case 'bssc_ldc':
+        return 'CLERK / LDC';
+      case 'bpsc_aedo':
+        return 'AUDITING OFFICER';
+      case 'btsc':
+        return 'HOSTEL MANAGER';
+      case 'bihar_constable':
+        return 'POLICE';
       case 'bihar_si':
         return 'POLICE / DAROGA';
       case 'bihar_amin':
@@ -301,10 +335,141 @@ class _SectionalTabState extends State<SectionalTab> {
     }).toList();
   }
 
-  ({int done, int total}) _examCounts(String examKey) {
+  // ---------- Exam families ----------
+  // content_base me folder move hone par (jaise bpsc/cce + bpsc/aedo, ya
+  // bssc/cgl + bssc/inter + bssc/ldc) app ko apne aap ek card bana dena
+  // chahiye. Isliye family JSON ke folder/path_prefix se nikalti hai,
+  // kisi hardcoded exam list se nahi.
+
+  String _firstPath(dynamic data) {
+    if (data is Map && data['path_prefix'] is String) {
+      return data['path_prefix'] as String;
+    }
+    List<dynamic> items = const <dynamic>[];
+    if (data is List) {
+      items = data;
+    } else if (data is Map && data['items'] is List) {
+      items = data['items'] as List;
+    }
+    for (final dynamic it in items) {
+      if (it is Map && it['folder'] is String) return it['folder'] as String;
+    }
+    return '';
+  }
+
+  String _familyOf(String key, dynamic data) {
+    final Match? m = RegExp(r'sectional_mock/([^/]+)').firstMatch(_firstPath(data));
+    return (m != null) ? m.group(1)! : key;
+  }
+
+  List<_ExamFamily> _families() {
+    final Map<String, List<String>> byFamily = <String, List<String>>{};
+    final List<String> order = <String>[];
+    for (final String key in _liveData.keys) {
+      final String fam = _familyOf(key, _liveData[key]);
+      if (!byFamily.containsKey(fam)) {
+        byFamily[fam] = <String>[];
+        order.add(fam);
+      }
+      byFamily[fam]!.add(key);
+    }
+    return <_ExamFamily>[
+      for (final String fam in order) _ExamFamily(fam, byFamily[fam]!),
+    ];
+  }
+
+  static const Map<String, String> _subLabels = <String, String>{
+    'bpsc': 'CCE',
+    'bpsc_aedo': 'AEO',
+    'bpsc_tre_primary': 'TRE PRIMARY',
+    'bpsc_tre_middle': 'TRE MIDDLE',
+    'bssc_cgl': 'CGL',
+    'bssc_inter': 'INTER',
+    'bssc_ldc': 'LDC',
+  };
+
+  String _subLabelFor(String key) =>
+      _subLabels[key] ?? key.replaceAll('_', ' ').toUpperCase();
+
+  /// content_base ke JSON me kabhi HTML-escaped text chala jaata hai.
+  String _clean(String text) =>
+      text.replaceAll('&amp;', '&').replaceAll('&#39;', "'");
+
+  List<SectionalExamGroup> _groupsForFamily(_ExamFamily fam) {
+    final bool multi = fam.keys.length > 1;
+    final List<SectionalExamGroup> out = <SectionalExamGroup>[];
+    for (final String key in fam.keys) {
+      final String label = _subLabelFor(key);
+      for (final SectionalExamGroup g in _groupsFor(key)) {
+        final String base = _clean(g.title);
+        out.add(SectionalExamGroup(
+          title: (multi && !base.toUpperCase().contains(label))
+              ? '$label · $base'
+              : base,
+          sets: g.sets,
+          upcomingSets: g.upcomingSets,
+          upcomingText: g.upcomingText,
+          pathPrefix: g.pathPrefix,
+        ));
+      }
+    }
+    return out;
+  }
+
+  String _familyTitle(_ExamFamily fam) {
+    if (fam.keys.length == 1) {
+      return _clean(_formatExamTitle(fam.keys.first, _liveData[fam.keys.first]));
+    }
+    switch (fam.id) {
+      case 'bpsc':
+        return 'BPSC';
+      case 'bssc':
+        return 'BSSC';
+      case 'btsc':
+        return 'BTSC';
+      case 'bpsc_tre':
+        return 'BPSC TRE';
+    }
+    return fam.id.replaceAll('_', ' ').toUpperCase();
+  }
+
+  String _familyBadge(_ExamFamily fam) {
+    if (fam.keys.length == 1) {
+      return _clean(_formatExamBadge(fam.keys.first, _liveData[fam.keys.first]));
+    }
+    return fam.keys.map(_subLabelFor).join(' • ');
+  }
+
+  String _familyIcon(_ExamFamily fam) {
+    if (fam.keys.length == 1) return _examIcon(fam.keys.first);
+    switch (fam.id) {
+      case 'bpsc':
+        return '🏛️';
+      case 'bssc':
+        return '🎓';
+      case 'btsc':
+        return '🏨';
+    }
+    return '🎯';
+  }
+
+  Color _familyColor(_ExamFamily fam, int index) {
+    if (fam.keys.length == 1) return _resolveColor(fam.keys.first, index);
+    switch (fam.id) {
+      case 'bpsc':
+        return const Color(0xFF9D174D);
+      case 'bssc':
+        return const Color(0xFF6B21A8);
+      case 'btsc':
+        return const Color(0xFF0D9488);
+    }
+    return _resolveColor(fam.keys.first, index);
+  }
+
+  ({int done, int total}) _familyCounts(_ExamFamily fam) {
     int done = 0;
     int total = 0;
-    for (final g in _groupsFor(examKey)) {
+    for (final SectionalExamGroup g in _groupsForFamily(fam)) {
       total += g.sets;
       for (int n = 1; n <= g.sets; n++) {
         if (_progress[g.launchTitle(n)]?['status'] == 'COMPLETED') done++;
@@ -314,19 +479,19 @@ class _SectionalTabState extends State<SectionalTab> {
   }
 
   /// Next suggested set: pehle koi In-Progress, warna pehla bacha hua set.
-  Map<String, dynamic>? _nextCandidate(List<String> examKeys) {
+  Map<String, dynamic>? _nextCandidate(List<_ExamFamily> families) {
     Map<String, dynamic>? firstLeft;
-    for (final key in examKeys) {
-      final counts = _examCounts(key);
-      for (final g in _groupsFor(key)) {
+    for (final _ExamFamily fam in families) {
+      final counts = _familyCounts(fam);
+      for (final SectionalExamGroup g in _groupsForFamily(fam)) {
         for (int n = 1; n <= g.sets; n++) {
-          final title = g.launchTitle(n);
-          final status = _progress[title]?['status']?.toString();
+          final String title = g.launchTitle(n);
+          final String? status = _progress[title]?['status']?.toString();
           if (status == 'IN_PROGRESS') {
             return {
               'title': title,
               'path': g.launchPath(n),
-              'examKey': key,
+              'examTitle': _familyTitle(fam),
               'setNum': n,
               'inProgress': true,
               'done': counts.done,
@@ -337,7 +502,7 @@ class _SectionalTabState extends State<SectionalTab> {
             firstLeft = {
               'title': title,
               'path': g.launchPath(n),
-              'examKey': key,
+              'examTitle': _familyTitle(fam),
               'setNum': n,
               'inProgress': false,
               'done': counts.done,
@@ -355,18 +520,17 @@ class _SectionalTabState extends State<SectionalTab> {
     widget.onLaunchCbtMock(context, title, path);
   }
 
-  void _openExam(BuildContext context, String examKey, int index) {
-    final data = _liveData[examKey];
+  void _openExam(BuildContext context, _ExamFamily fam, int index) {
     Navigator.push(
       context,
       MaterialPageRoute(
         builder: (_) => SectionalExamScreen(
-          examTitle: _formatExamTitle(examKey, data),
-          badge: _formatExamBadge(examKey, data),
-          icon: _examIcon(examKey),
-          color: _resolveColor(examKey, index),
+          examTitle: _familyTitle(fam),
+          badge: _familyBadge(fam),
+          icon: _familyIcon(fam),
+          color: _familyColor(fam, index),
           isDarkMode: widget.isDarkMode,
-          groups: _groupsFor(examKey),
+          groups: _groupsForFamily(fam),
           progressLoader: _loadProgressMap,
           onLaunchCbtMock: widget.onLaunchCbtMock,
           onShowUpcoming: _showUpcomingNotice,
@@ -389,8 +553,8 @@ class _SectionalTabState extends State<SectionalTab> {
     final Color cardBg = isDark ? const Color(0xFF1E293B) : Colors.white;
     final Color borderColor = isDark ? const Color(0xFF334155) : const Color(0xFFE8EDF7);
 
-    final examKeys = _liveData.keys.toList();
-    final candidate = examKeys.isEmpty ? null : _nextCandidate(examKeys);
+    final List<_ExamFamily> families = _families();
+    final candidate = families.isEmpty ? null : _nextCandidate(families);
     final bool anyProgress = _progress.values.any((p) => p['status'] == 'COMPLETED' || p['status'] == 'IN_PROGRESS');
 
     return RefreshIndicator(
@@ -428,7 +592,7 @@ class _SectionalTabState extends State<SectionalTab> {
             ],
           ),
 
-          if (examKeys.isEmpty)
+          if (families.isEmpty)
             Padding(
               padding: const EdgeInsets.only(top: 40),
               child: Text(
@@ -477,7 +641,7 @@ class _SectionalTabState extends State<SectionalTab> {
 
             // Exams grid
             const SizedBox(height: 20),
-            _sectionHead('🏛️ Target Exams', '${examKeys.length} EXAMS', textColor),
+            _sectionHead('🏛️ Target Exams', '${families.length} EXAMS', textColor),
             const SizedBox(height: 10),
             GridView.builder(
               shrinkWrap: true,
@@ -488,18 +652,17 @@ class _SectionalTabState extends State<SectionalTab> {
                 mainAxisSpacing: 10,
                 childAspectRatio: 0.98,
               ),
-              itemCount: examKeys.length,
+              itemCount: families.length,
               itemBuilder: (ctx, i) {
-                final key = examKeys[i];
-                final data = _liveData[key];
-                final Color color = _resolveColor(key, i);
-                final counts = _examCounts(key);
+                final _ExamFamily fam = families[i];
+                final Color color = _familyColor(fam, i);
+                final counts = _familyCounts(fam);
                 final double pct = counts.total == 0 ? 0 : counts.done / counts.total;
                 return Material(
                   color: cardBg,
                   borderRadius: BorderRadius.circular(19),
                   child: InkWell(
-                    onTap: () => _openExam(ctx, key, i),
+                    onTap: () => _openExam(ctx, fam, i),
                     borderRadius: BorderRadius.circular(19),
                     child: Container(
                       padding: const EdgeInsets.all(13),
@@ -514,11 +677,11 @@ class _SectionalTabState extends State<SectionalTab> {
                             width: 42,
                             height: 42,
                             decoration: BoxDecoration(color: color.withValues(alpha: isDark ? 0.25 : 0.10), borderRadius: BorderRadius.circular(13)),
-                            child: Center(child: Text(_examIcon(key), style: const TextStyle(fontSize: 20))),
+                            child: Center(child: Text(_familyIcon(fam), style: const TextStyle(fontSize: 20))),
                           ),
                           const SizedBox(height: 10),
                           Text(
-                            _formatExamTitle(key, data),
+                            _familyTitle(fam),
                             maxLines: 1,
                             overflow: TextOverflow.ellipsis,
                             style: TextStyle(fontSize: 13.5, fontWeight: FontWeight.w900, color: textColor, letterSpacing: -0.2),
@@ -528,7 +691,10 @@ class _SectionalTabState extends State<SectionalTab> {
                             padding: const EdgeInsets.symmetric(horizontal: 7, vertical: 3),
                             decoration: BoxDecoration(color: color.withValues(alpha: isDark ? 0.25 : 0.10), borderRadius: BorderRadius.circular(99)),
                             child: Text(
-                              _formatExamBadge(key, data),
+                              _familyBadge(fam),
+                              maxLines: 1,
+                              softWrap: false,
+                              overflow: TextOverflow.ellipsis,
                               style: TextStyle(fontSize: 8.5, fontWeight: FontWeight.w900, color: color, letterSpacing: 0.6),
                             ),
                           ),
@@ -587,11 +753,10 @@ class _SectionalTabState extends State<SectionalTab> {
   }
 
   Widget _nextHero(BuildContext context, Map<String, dynamic> candidate) {
-    final String examKey = candidate['examKey'] as String;
     final int done = candidate['done'] as int;
     final int total = candidate['total'] as int;
     final bool inProgress = candidate['inProgress'] == true;
-    final examTitle = _formatExamTitle(examKey, _liveData[examKey]);
+    final String examTitle = candidate['examTitle'] as String;
     // Every available set is unlocked for this Google Play release.
     return InkWell(
       onTap: () => _launch(
@@ -674,4 +839,13 @@ class _SectionalTabState extends State<SectionalTab> {
       ),
     );
   }
+}
+
+/// Ek exam family = sectional_mock ke ek hi folder ke saare JSON keys.
+/// Example: bpsc/cce + bpsc/aedo -> ek "BPSC" card.
+class _ExamFamily {
+  final String id;
+  final List<String> keys;
+
+  const _ExamFamily(this.id, this.keys);
 }
